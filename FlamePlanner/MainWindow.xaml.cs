@@ -13,7 +13,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace _481FinalProject_FlamePlanner_
+namespace FlamePlanner
 {
     /// <summary>
     /// Interaction logic for MainWindow.xaml

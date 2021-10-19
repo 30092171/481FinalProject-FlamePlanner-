@@ -1,7 +1,7 @@
-﻿<Application x:Class="_481FinalProject_FlamePlanner_.App"
+﻿<Application x:Class="FlamePlanner.App"
              xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-             xmlns:local="clr-namespace:_481FinalProject_FlamePlanner_"
+             xmlns:local="clr-namespace:FlamePlanner"
              StartupUri="MainWindow.xaml">
     <Application.Resources>
          

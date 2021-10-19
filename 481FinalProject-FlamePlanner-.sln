@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.30503.244
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "481FinalProject-FlamePlanner-", "481FinalProject-FlamePlanner-.csproj", "{E8F964E7-B28A-48E3-BA79-1F0623D7CBFB}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FlamePlanner", "FlamePlanner\FlamePlanner.csproj", "{EFCC33C1-3812-45C7-9326-B061A871D3C1}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -11,10 +11,10 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{E8F964E7-B28A-48E3-BA79-1F0623D7CBFB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{E8F964E7-B28A-48E3-BA79-1F0623D7CBFB}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{E8F964E7-B28A-48E3-BA79-1F0623D7CBFB}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{E8F964E7-B28A-48E3-BA79-1F0623D7CBFB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EFCC33C1-3812-45C7-9326-B061A871D3C1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EFCC33C1-3812-45C7-9326-B061A871D3C1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EFCC33C1-3812-45C7-9326-B061A871D3C1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EFCC33C1-3812-45C7-9326-B061A871D3C1}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
