@@ -32,6 +32,7 @@
         
         <Frame x:Name="helpOverlayFrame" Grid.Row="0" Grid.RowSpan="2" Visibility="Hidden" NavigationUIVisibility="Hidden"/>
         <Button Content="Button" HorizontalAlignment="Left" Margin="593,305,0,0" Grid.Row="1" VerticalAlignment="Top"/>
+        <Button Content="Button" HorizontalAlignment="Left" Margin="799,402,0,0" Grid.Row="1" VerticalAlignment="Top"/>
         <!--Visability hidden, used to project info over the screen-->
 
     </Grid>
