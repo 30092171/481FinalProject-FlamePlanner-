@@ -96,7 +96,7 @@ namespace FlamePlanner
 
         private void helpButton_Click(object sender, RoutedEventArgs e)
         {
-            //Do help stuff
+            //Do help stuff, integrate the display to mw.helpOverlayFrame Can be altered depending on nav bar position
         }
     }
 }

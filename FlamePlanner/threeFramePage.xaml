@@ -24,8 +24,8 @@
             </Grid.RowDefinitions>
 
             <Rectangle Grid.Row="1" Fill="Black"/>
-            <Frame x:Name="topRightFrame" Grid.Row="0"/>
-            <Frame x:Name="bottomRightFrame" Grid.Row="2"/>
+            <Frame x:Name="topRightFrame" Grid.Row="0" NavigationUIVisibility="Hidden"/>
+            <Frame x:Name="bottomRightFrame" Grid.Row="2" NavigationUIVisibility="Hidden"/>
 
 
         </Grid>
@@ -47,7 +47,7 @@
 
             </StackPanel>
 
-            <Frame x:Name="leftFrame" Grid.Row="1"/>
+            <Frame x:Name="leftFrame" Grid.Row="1" NavigationUIVisibility="Hidden"/>
         </Grid>
         <Rectangle Grid.Column="1" Fill="Black"/>
         <!-- This is to seperate left from right sides-->
