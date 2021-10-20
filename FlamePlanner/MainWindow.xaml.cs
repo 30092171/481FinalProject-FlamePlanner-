@@ -20,9 +20,83 @@ namespace FlamePlanner
     /// </summary>
     public partial class MainWindow : Window
     {
+        private bool loggedIn;
+        public SolidColorBrush NAV_SELECT_COLOUR = Brushes.LightCoral; //Should be treated as a constant, kept it public for simplicity
+
         public MainWindow()
         {
             InitializeComponent();
+            mainFrame.Content = new startPage(this); //Program starts with the start page loaded in the main frame
+            this.loggedIn = false;
+            navBarStackPanel.Visibility = Visibility.Hidden; //Hides nav bar until user starts itinerary proccess
+        }
+
+        private void nav_itinerary_Click(object sender, RoutedEventArgs e)
+        {
+            //This should only matter if the page is not currently selected, we use button colour to track this
+            if (nav_itinerary.Background != NAV_SELECT_COLOUR)
+            {
+                resetNavButtonColours(Brushes.LightGray);
+                nav_itinerary.Background = NAV_SELECT_COLOUR;
+                //Navigate to itinary page
+            }
+        }
+
+        private void nav_map_Click(object sender, RoutedEventArgs e)
+        {
+            //This should only matter if the page is not currently selected, we use button colour to track this
+            if (nav_map.Background != NAV_SELECT_COLOUR)
+            {
+                resetNavButtonColours(Brushes.LightGray);
+                nav_map.Background = NAV_SELECT_COLOUR;
+                //Navigate to map page
+            }
+        }
+        /// <summary>
+        /// Resets all nav buttons to default unselected colour to which is usally lightGrey
+        /// </summary>
+        /// <param name="colour"></param>
+        private void resetNavButtonColours(SolidColorBrush colour) {
+            nav_itinerary.Background = colour;
+            nav_map.Background = colour;
+            nav_events.Background = colour;
+
+        }
+
+        private void nav_events_Click(object sender, RoutedEventArgs e)
+        {
+            //This should only matter if the page is not currently selected, we use button colour to track this
+            if (nav_events.Background != NAV_SELECT_COLOUR)
+            {
+                resetNavButtonColours(Brushes.LightGray);
+                nav_events.Background = NAV_SELECT_COLOUR;
+                //Navigate to events page
+            }
+            
+        }
+
+        private void logInOutButton_Click(object sender, RoutedEventArgs e)
+        {
+            TextBlock t = new TextBlock();
+            t.TextWrapping = TextWrapping.Wrap;
+            t.TextAlignment = TextAlignment.Center;
+
+            if (!this.loggedIn)
+            {
+                t.Text = "SIGN OUT";
+                this.loggedIn = true;
+            }
+            else
+            {
+                t.Text = "LOG IN / REGISTER";
+                this.loggedIn = false;
+            }
+            logInOutButton.Content = t;
+        }
+
+        private void helpButton_Click(object sender, RoutedEventArgs e)
+        {
+            //Do help stuff
         }
     }
 }
