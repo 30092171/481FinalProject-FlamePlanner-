@@ -11,7 +11,9 @@
     <None Remove="EricNamEvent.jpg" />
     <None Remove="FullLogo.png" />
     <None Remove="Logo.png" />
-    <None Remove="right-arrow.png" />
+    <None Remove="NickiMinajEvent.jpg" />
+    <None Remove="plus sign.jpg" />
+    <None Remove="right-arrow %281%29.png" />
     <None Remove="V.png" />
   </ItemGroup>
 
@@ -26,7 +28,9 @@
     <Resource Include="Logo.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Resource>
-    <Resource Include="right-arrow.png" />
+    <Resource Include="NickiMinajEvent.jpg" />
+    <Resource Include="plus sign.jpg" />
+    <Resource Include="right-arrow (1).png" />
     <Resource Include="V.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Resource>
