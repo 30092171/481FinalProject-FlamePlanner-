@@ -10,18 +10,16 @@ using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
 using System.Windows.Shapes;
 
 namespace FlamePlanner
 {
     /// <summary>
-    /// Interaction logic for Page1.xaml
+    /// Interaction logic for Window1.xaml
     /// </summary>
-    public partial class Page1 : Page
+    public partial class Window1 : Window
     {
-        private MainWindow mw;
-        public Page1(MainWindow mw)
+        public Window1()
         {
             InitializeComponent();
         }

@@ -8,8 +8,10 @@
 
   <ItemGroup>
     <None Remove="companyLogo.png" />
+    <None Remove="EricNamEvent.jpg" />
     <None Remove="FullLogo.png" />
     <None Remove="Logo.png" />
+    <None Remove="right-arrow.png" />
     <None Remove="V.png" />
   </ItemGroup>
 
@@ -17,12 +19,14 @@
     <Resource Include="companyLogo.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Resource>
+    <Resource Include="EricNamEvent.jpg" />
     <Resource Include="FullLogo.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Resource>
     <Resource Include="Logo.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Resource>
+    <Resource Include="right-arrow.png" />
     <Resource Include="V.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Resource>
