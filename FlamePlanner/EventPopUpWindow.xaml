@@ -7,6 +7,9 @@
         mc:Ignorable="d"
         Title="Window1" Height="450" Width="800">
     <Grid>
-        
+        <Image Margin="10,10,650,284" Stretch="Fill" Source="EricNamEvent.jpg" Height="140" Width="140"/>
+        <Label Content="Eric Nam: Before We Begin World Tour 2020" HorizontalAlignment="Center" Margin="0,10,0,0" VerticalAlignment="Top"/>
+        <TextBox HorizontalAlignment="Center" Margin="0,41,0,0" Text="TextBox" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" TextChanged="TextBox_TextChanged"/>
+
     </Grid>
 </Window>
