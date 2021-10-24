@@ -7,9 +7,20 @@
         mc:Ignorable="d"
         Title="Window1" Height="450" Width="800">
     <Grid>
-        <Image Margin="10,10,650,284" Stretch="Fill" Source="EricNamEvent.jpg" Height="140" Width="140"/>
+        <Image Margin="10,10,596,217" Stretch="Fill" Source="EricNamEvent.jpg"/>
         <Label Content="Eric Nam: Before We Begin World Tour 2020" HorizontalAlignment="Center" Margin="0,10,0,0" VerticalAlignment="Top"/>
-        <TextBox HorizontalAlignment="Center" Margin="0,41,0,0" Text="TextBox" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" TextChanged="TextBox_TextChanged"/>
-
+        <Button HorizontalAlignment="Left" Margin="154,359,0,0" VerticalAlignment="Top" Height="50" Width="50" Background="White" Click="Button_Click">
+            <Image HorizontalAlignment="Center" Height="50" VerticalAlignment="Center" Width="50" Source="/plus sign.jpg"/>
+        </Button>
+        <TextBlock HorizontalAlignment="Center" Margin="0,41,0,0" Text="Time: 7:00pm - 11:00pm" TextWrapping="Wrap" VerticalAlignment="Top"/>
+        <TextBlock HorizontalAlignment="Center" Margin="0,124,0,0" Text="Description: A regular in Korea's music scene, Eric has promoted two mini albums and multiple singles in Korea. He has charted at #1 on several occasions and held shows in the U.A.E., Australia, Canada, Malaysia, Morocco, and the United States." TextWrapping="Wrap" VerticalAlignment="Top" Height="88" Width="308"/>
+        <TextBlock HorizontalAlignment="Left" Margin="246,217,0,0" Text="Links: https://www.ericnam.com/
+                   https://www.instagram.com/ericnam/?hl=en
+                   https://www.youtube.com/channel/UCPuVYvsthxkc52kNYnEHUcA
+                   https://open.spotify.com/artist/2FLqlgckDKdmpBrvLAT5BM" TextWrapping="Wrap" VerticalAlignment="Top" Height="102" Width="261"/>
+        <TextBlock HorizontalAlignment="Center" Margin="0,64,0,0" Text="Date: March 3, 2020" TextWrapping="Wrap" VerticalAlignment="Top"/>
+        <TextBlock HorizontalAlignment="Center" Margin="0,86,0,0" Text="Location: MacEwan Hall (402 Collegiate Blvd NW, Calgary, AB T2N 1N4)" TextWrapping="Wrap" VerticalAlignment="Top"/>
+        <Label Content="Booked?" HorizontalAlignment="Left" Margin="465,371,0,0" VerticalAlignment="Top"/>
+        <Button Content="NO" HorizontalAlignment="Left" Margin="526,359,0,0" VerticalAlignment="Top" Height="50" Width="50"/>
     </Grid>
 </Window>
