@@ -10,6 +10,10 @@
     <None Remove="companyLogo.png" />
     <None Remove="FullLogo.png" />
     <None Remove="Logo.png" />
+    <None Remove="Resources\calgary.png" />
+    <None Remove="Resources\mapMarker.ico" />
+    <None Remove="Resources\negativeIcon.png" />
+    <None Remove="Resources\plusIcon.png" />
     <None Remove="V.png" />
   </ItemGroup>
 
@@ -23,6 +27,10 @@
     <Resource Include="Logo.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Resource>
+    <Resource Include="Resources\calgary.png" />
+    <Resource Include="Resources\mapMarker.ico" />
+    <Resource Include="Resources\negativeIcon.png" />
+    <Resource Include="Resources\plusIcon.png" />
     <Resource Include="V.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Resource>
