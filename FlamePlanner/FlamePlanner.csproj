@@ -7,22 +7,40 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <None Remove="CalgaryStampedeEvent.jpg" />
     <None Remove="companyLogo.png" />
+    <None Remove="CulturalFestivalEvent.png" />
+    <None Remove="EricNamEvent.jpg" />
     <None Remove="FullLogo.png" />
+    <None Remove="HalloweenEvent.jpg" />
+    <None Remove="LobsterFestEvent.jpg" />
     <None Remove="Logo.png" />
+    <None Remove="NickiMinajEvent.jpg" />
+    <None Remove="plus sign.jpg" />
+    <None Remove="QuestionMarkSymbol.jpg" />
+    <None Remove="right-arrow %281%29.png" />
     <None Remove="V.png" />
   </ItemGroup>
 
   <ItemGroup>
+    <Resource Include="CalgaryStampedeEvent.jpg" />
     <Resource Include="companyLogo.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Resource>
+    <Resource Include="CulturalFestivalEvent.png" />
+    <Resource Include="EricNamEvent.jpg" />
     <Resource Include="FullLogo.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Resource>
+    <Resource Include="HalloweenEvent.jpg" />
+    <Resource Include="LobsterFestEvent.jpg" />
     <Resource Include="Logo.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Resource>
+    <Resource Include="NickiMinajEvent.jpg" />
+    <Resource Include="plus sign.jpg" />
+    <Resource Include="QuestionMarkSymbol.jpg" />
+    <Resource Include="right-arrow (1).png" />
     <Resource Include="V.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Resource>
