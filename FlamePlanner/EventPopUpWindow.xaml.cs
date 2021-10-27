@@ -17,11 +17,13 @@ namespace FlamePlanner
     /// <summary>
     /// Interaction logic for Window1.xaml
     /// </summary>
-    public partial class Window1 : Window
+    public partial class EventPopUpWindow : Window
     {
-        public Window1()
+        private MainWindow mw;
+        public EventPopUpWindow(MainWindow mw)
         {
             InitializeComponent();
+            this.mw = mw;
         }
     }
 }

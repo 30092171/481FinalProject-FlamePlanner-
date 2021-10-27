@@ -20,9 +20,11 @@ namespace FlamePlanner
     /// </summary>
     public partial class EventControls : Page
     {
-        public EventControls()
+        private MainWindow mw;
+        public EventControls(MainWindow mw)
         {
             InitializeComponent();
+            this.mw = mw;
         }
     }
 }

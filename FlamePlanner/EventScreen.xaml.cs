@@ -16,18 +16,29 @@ using System.Windows.Shapes;
 namespace FlamePlanner
 {
     /// <summary>
-    /// Interaction logic for Page1.xaml
+    /// Interaction logic for EventScreen.xaml
     /// </summary>
-    public partial class Page1 : Page
+    public partial class EventScreen : Page
     {
         private MainWindow mw;
-        public Page1(MainWindow mw)
+        public EventScreen(MainWindow mw)
         {
             InitializeComponent();
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
+
+        }
+
+        private void Event_Display_Button_Click(object sender, RoutedEventArgs e)
+        {
+            var tag = ((Button)sender).Tag; //allows for us to determine which of the events were clicked
+            //MessageBox.Show(tag.ToString()); //Displays tag content, for debugging
+            EventPopUpWindow epw = new EventPopUpWindow(mw);
+            //populate epw via getters and setters here?
+            epw.ShowDialog(); //Displays event info pop up and locks main window
+
 
         }
     }

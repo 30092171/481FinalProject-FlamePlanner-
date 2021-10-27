@@ -29,8 +29,8 @@
         <DatePicker HorizontalAlignment="Left" Margin="275,100,0,0" VerticalAlignment="Top"/>
         <Label Content="Search:" HorizontalAlignment="Left" Margin="620,19,0,0" VerticalAlignment="Top"/>
         <TextBox HorizontalAlignment="Left" Margin="668,23,0,0" Text="" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
-        <Image HorizontalAlignment="Left" Height="52" Margin="918,105,0,0" VerticalAlignment="Top" Width="55" Source="/QuestionMarkSymbol.jpg"/>
-        <Ellipse HorizontalAlignment="Left" Height="50" Margin="921,100,0,0" Stroke="Black" VerticalAlignment="Top" Width="50"/>
+        <Button x:Name="EventSearchButton" Content="Go" HorizontalAlignment="Left" Margin="801,23,0,0" VerticalAlignment="Top" Height="18" Width="32" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="10"/>
+
 
     </Grid>
 </Page>
