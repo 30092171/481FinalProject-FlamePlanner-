@@ -52,6 +52,12 @@ namespace FlamePlanner
                     
         }
 
+        public void ResetAllFrames() {
+            topRightFrame.Content = null;
+            bottomRightFrame.Content = null;
+            leftFrame.Content = null;
+        }
+
         private void createNewItineraryButton_Click(object sender, RoutedEventArgs e)
         {
             //Create New ITINERARY (Prompt to save?)
