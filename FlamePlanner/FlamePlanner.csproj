@@ -28,7 +28,6 @@
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Resource>
     <Resource Include="Resources\calgary.png" />
-    <Resource Include="Resources\mapMarker.ico" />
     <Resource Include="Resources\negativeIcon.png" />
     <Resource Include="Resources\plusIcon.png" />
     <Resource Include="V.png">

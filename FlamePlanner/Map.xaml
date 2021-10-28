@@ -5,7 +5,7 @@
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
       xmlns:local="clr-namespace:FlamePlanner"
       mc:Ignorable="d" 
-      d:DesignHeight="450" d:DesignWidth="800"
+      d:DesignHeight="400" d:DesignWidth="700"
       Title="Map"
     xmlns:System="clr-namespace:System;assembly=System.Runtime">
 
@@ -14,15 +14,19 @@
             <ScrollViewer Width="{Binding ActualWidth, ElementName=canvas, Mode=OneWay}" Height="{Binding ActualHeight, ElementName=canvas, Mode=OneWay}" HorizontalScrollBarVisibility="Visible">
                 <Grid>
                     <Image Source="Resources/calgary.png"/>
-                    <Button x:Name="poi1" Width="60" Height="60" Background="{x:Null}" BorderBrush="{x:Null}" Margin="423,320,793,552">
-                        <Image Source="Resources/mapMarker.ico"  Width="50" Height="50"/>
+                    <Image Source="Resources/blue.png"  Width="40" Height="40" Margin="691,407,545,485"/>
+                    <Button x:Name="poi1" Width="60" Height="60" Background="{x:Null}" BorderBrush="{x:Null}" Margin="516,505,700,367">
+                        <Image Source="Resources/redMarker.png"  Width="50" Height="50"/>
                     </Button>
-                    <Button x:Name="poi2" Width="60" Height="60" Background="{x:Null}" BorderBrush="{x:Null}" Margin="900,344,316,528">
-                        <Image Source="Resources/mapMarker.ico"  Width="50" Height="50"/>
+                    <Button x:Name="poi2" Width="60" Height="60" Background="{x:Null}" BorderBrush="{x:Null}" Margin="893,546,323,326">
+                        <Image Source="Resources/blueMarker.png"  Width="50" Height="50"/>
                     </Button>
-                    <Button x:Name="poi3" Width="60" Height="60" Background="{x:Null}" BorderBrush="{x:Null}" Margin="622,157,594,715">
-                        <Image Source="Resources/mapMarker.ico"  Width="50" Height="50"/>
+                    <Button x:Name="poi3" Width="60" Height="60" Background="{x:Null}" BorderBrush="{x:Null}" Margin="595,79,621,793">
+                        <Image Source="Resources/redMarker.png"  Width="50" Height="50"/>
                     </Button>
+                    <Label x:Name="label" Content="6 Street SW" HorizontalAlignment="Left" Margin="510,474,0,0" VerticalAlignment="Top" Background="{DynamicResource {x:Static SystemColors.WindowBrushKey}}"/>
+                    <Label x:Name="label_Copy" Content="Prince Island Park" HorizontalAlignment="Left" Margin="574,48,0,0" VerticalAlignment="Top" Background="{DynamicResource {x:Static SystemColors.WindowBrushKey}}"/>
+                    <Label x:Name="label_Copy1" Content="Stampede" HorizontalAlignment="Left" Margin="891,522,0,0" VerticalAlignment="Top" Background="{DynamicResource {x:Static SystemColors.WindowBrushKey}}"/>
                 </Grid>
             </ScrollViewer>
         </Canvas>
