@@ -19,9 +19,26 @@ namespace FlamePlanner
     /// </summary>
     public partial class itineraryLoadWindow : Window
     {
-        public itineraryLoadWindow()
+        private MainWindow mw;
+        public itineraryLoadWindow(MainWindow mw)
         {
             InitializeComponent();
+            this.mw = mw;
+        }
+
+        private void loadItinerary_Click(object sender, RoutedEventArgs e)
+        {
+            if (itineraryList.SelectedItem != null)
+            {
+                string selectedName = itineraryList.SelectedItem.ToString();
+                //Communicate to mw here somehow to load itinerary
+                this.Close();
+            }
+        }
+
+        private void itineraryList_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            //Load preview frame here
         }
     }
 }

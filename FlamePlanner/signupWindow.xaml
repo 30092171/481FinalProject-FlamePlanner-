@@ -11,24 +11,44 @@
     <Grid>
         <StackPanel Orientation="Vertical" HorizontalAlignment="Center"  VerticalAlignment="Center">
 
-            <TextBlock Width="200" Height="40" FontSize="20" HorizontalAlignment="Center" VerticalAlignment="Center">
-                Signup Screen
+            <TextBlock Width="200" Height="40" FontSize="20" HorizontalAlignment="Center" VerticalAlignment="Center" TextAlignment="Center">
+                <Underline>Sign Up Screen</Underline>           
             </TextBlock>
-            <TextBox Width="200" Height="40" Canvas.Top="50" Canvas.Left="20">
-                Type your username
-            </TextBox>
-            <TextBox Width="200" Height="40" Canvas.Top="50" Canvas.Left="20">
-                Type your Email
-            </TextBox>
-            <TextBox Width="200" Height="40" Canvas.Top="50" Canvas.Left="20">
-                Type your Password
-            </TextBox>
-            <TextBox Width="200" Height="40" Canvas.Top="50" Canvas.Left="20">
-                Type your Confirmed Password
-            </TextBox>
+            <TextBlock Width="auto" Height="40" FontSize="12" HorizontalAlignment="Center" VerticalAlignment="Center" TextAlignment="Center">
+                Please enter the following information <LineBreak/>
+                to create an account
+            </TextBlock>
+            <TextBlock x:Name="errorMessageBlock" Width="auto" Height="40" FontSize="12" HorizontalAlignment="Center" VerticalAlignment="Center" TextAlignment="Center" Foreground="Red" Visibility="Collapsed">
+                Account Registration Unsuccesful! <LineBreak/>
+                Please Try Again.
+            </TextBlock>
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" Width="275">
+                <TextBlock Width="75" Height="40" Padding="0,10,10,0">
+                    Username:
+                </TextBlock>
 
-            <Button x:Name="startCreateButton" Width="50" Height="30" Margin="100,0" FontSize="10">
-                <TextBlock TextWrapping="Wrap" TextAlignment="Center">Signup and Login</TextBlock>
+                <TextBox x:Name="usernameField" Width="200" Height="40" Padding="0,10,0,0"/>
+
+
+            </StackPanel>
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" Width="275">
+                <TextBlock Width="75" Height="40" Padding="0,10,10,0">
+                    Password:
+                </TextBlock>
+
+                <PasswordBox x:Name="confirmPasswordField" Width="200" Height="40" Canvas.Top="50" Canvas.Left="20"/>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" Width="275">
+                <TextBlock Width="75" Height="40" Padding="0,5,10,0">
+                   Confirm <LineBreak/>
+                    Password:
+                </TextBlock>
+
+                <PasswordBox x:Name="passwordField" Width="200" Height="40" Canvas.Top="50" Canvas.Left="20"/>
+            </StackPanel>
+
+            <Button x:Name="signUpButton" Width="110" Height="30" Margin="100,20" FontSize="12" Click="signUpButton_Click">
+                <TextBlock TextWrapping="Wrap" TextAlignment="Center">Register Account</TextBlock>
             </Button>
         </StackPanel>
 

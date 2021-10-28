@@ -20,7 +20,7 @@ namespace FlamePlanner
     /// </summary>
     public partial class MainWindow : Window
     {
-        private bool loggedIn;
+        public bool loggedIn;
         public SolidColorBrush NAV_SELECT_COLOUR = Brushes.LightCoral; //Should be treated as a constant, kept it public for simplicity
 
         public MainWindow()
@@ -91,15 +91,20 @@ namespace FlamePlanner
 
             if (!this.loggedIn)
             {
-                t.Text = "SIGN OUT";
-                this.loggedIn = true;
+                mainSignupLoginWindow mslw = new mainSignupLoginWindow(this);
+                mslw.ShowDialog(); //Displays log in window (locks main window)
+                
+                //not needed anymore as this is done at the end of the log in and sign up windows
+                //t.Text = "SIGN OUT";
+                //this.loggedIn = true;
             }
-            else
+            else //button says sign out
             {
                 t.Text = "LOG IN / REGISTER";
                 this.loggedIn = false;
+                logInOutButton.Content = t;
             }
-            logInOutButton.Content = t;
+            //logInOutButton.Content = t;
         }
 
         private void helpButton_Click(object sender, RoutedEventArgs e)

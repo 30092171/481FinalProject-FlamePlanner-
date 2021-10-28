@@ -14,14 +14,34 @@ using System.Windows.Shapes;
 
 namespace FlamePlanner
 {
+
+    
     /// <summary>
     /// Interaction logic for mainSignupLoginWindow.xaml
     /// </summary>
     public partial class mainSignupLoginWindow : Window
     {
-        public mainSignupLoginWindow()
+        private MainWindow mw;
+        public mainSignupLoginWindow(MainWindow mw)
         {
             InitializeComponent();
+            this.mw = mw;
+            this.MaxWidth = mw.Width;
+        }
+
+        private void logInButton_Click(object sender, RoutedEventArgs e)
+        {
+            Login lw = new Login(mw);
+            this.Close();
+            lw.ShowDialog();
+            
+        }
+
+        private void signUpButton_Click(object sender, RoutedEventArgs e)
+        {
+            signupWindow sw = new signupWindow(mw);
+            this.Close();
+            sw.ShowDialog();
         }
     }
 }

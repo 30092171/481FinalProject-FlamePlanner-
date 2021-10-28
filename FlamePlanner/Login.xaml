@@ -11,19 +11,35 @@
     <Grid>
         <StackPanel Orientation="Vertical" HorizontalAlignment="Center"  VerticalAlignment="Center">
 
-            <TextBox Width="200" Height="40" HorizontalAlignment="Center" VerticalAlignment="Center">
-                Login
-            </TextBox>
-            <TextBox Width="200" Height="40" Canvas.Top="50" Canvas.Left="20">
-                Type Username here
-            </TextBox>
-            <TextBox Width="200" Height="40" Canvas.Top="50" Canvas.Left="20">
-                Type Password here
-            </TextBox>
+            <TextBlock Width="200" Height="40" HorizontalAlignment="Center" VerticalAlignment="Center" TextAlignment="Center" FontSize="16" Padding="0,10,0,0">
+                <Underline>Log In</Underline>
+            </TextBlock>
+            <TextBlock x:Name="errorMessageBlock" Width="200" Height="40" HorizontalAlignment="Center" VerticalAlignment="Center" TextAlignment="Center" FontSize="12" Foreground="Red" Visibility="Collapsed">
+                Log In Unsuccesful! <LineBreak/>
+                Please Try Again.
+            </TextBlock>
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" Width="275">
+                <TextBlock Width="75" Height="40" Padding="0,10,10,0">
+                    Username:
+                </TextBlock>
 
-            <Button x:Name="startCreateButton" Width="50" Height="30" Margin="100,0" FontSize="10">
+                <TextBox x:Name="usernameField" Width="200" Height="40" Padding="0,10,0,0"/>
+                
+
+            </StackPanel>
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" Width="275">
+                <TextBlock Width="75" Height="40" Padding="0,10,10,0">
+                    Password:
+                </TextBlock>
+
+                <PasswordBox x:Name="passwordField" Width="200" Height="40" Canvas.Top="50" Canvas.Left="20"/>
+            </StackPanel>
+            
+
+            <Button x:Name="submitLogInButton" Width="50" Height="30" Margin="100,0" FontSize="10" Click="submitLogInButton_Click">
                 <TextBlock TextWrapping="Wrap" TextAlignment="Center">Login</TextBlock>
             </Button>
+            
         </StackPanel>
         <Image  Source="/FullLogo.png" Height="120" Width="150" HorizontalAlignment="Center" VerticalAlignment ="Bottom" Stretch="Fill"/>
         <Image  Source="/companyLogo.png" Height="120" Width="200" HorizontalAlignment="Center" VerticalAlignment="Top" Stretch="Fill"/>

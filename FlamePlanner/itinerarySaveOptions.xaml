@@ -10,12 +10,14 @@
         <Rectangle Fill="White"/>
         <StackPanel Orientation="Vertical" HorizontalAlignment="Center" VerticalAlignment="Center">
 
-            <TextBlock TextWrapping="Wrap" TextAlignment="Center" FontSize="30">If you haven't already, please login or signup</TextBlock>
+            <TextBlock TextWrapping="Wrap" TextAlignment="Center" FontSize="25" Margin="0,0,0,20">
+                To access this feature you need an account within our system. <LineBreak/>
+                Please Log in or Sign Up via the Buttons below.</TextBlock>
             <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center" Orientation="Horizontal">
-                <Button x:Name="startCreateButton" Width="150" Height="75" Margin="100,0" FontSize="20">
+                <Button x:Name="loginButton" Width="150" Height="75" Margin="100,0" FontSize="20" Click="logInButton_Click">
                     <TextBlock TextWrapping="Wrap" TextAlignment="Center">LOGIN</TextBlock>
                 </Button>
-                <Button x:Name="startLoadButton" Width="150" Height="75" Margin="100,0" FontSize="20">
+                <Button x:Name="signUpButton" Width="150" Height="75" Margin="100,0" FontSize="20" Click="signUpButton_Click">
                     <TextBlock TextWrapping="Wrap" TextAlignment="Center">SIGNUP</TextBlock>
                 </Button>
             </StackPanel>

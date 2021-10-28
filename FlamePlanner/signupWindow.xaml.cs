@@ -19,9 +19,31 @@ namespace FlamePlanner
     /// </summary>
     public partial class signupWindow : Window
     {
-        public signupWindow()
+        private bool success = true;
+        private MainWindow mw;
+        public signupWindow(MainWindow mw)
         {
             InitializeComponent();
+            this.mw = mw;
+        }
+
+        private void signUpButton_Click(object sender, RoutedEventArgs e)
+        {
+            if (!success)//if sign up unsuccessful (dummy for now)
+            {
+                this.errorMessageBlock.Visibility = Visibility.Visible;
+            }
+            else //Sign Up successful
+            {
+                //post data to mw somehow
+                TextBlock t = new TextBlock();
+                t.TextWrapping = TextWrapping.Wrap;
+                t.TextAlignment = TextAlignment.Center;
+                t.Text = "SIGN OUT";
+                mw.logInOutButton.Content = t;
+                mw.loggedIn = true;
+                this.Close();
+            }
         }
     }
 }

@@ -19,9 +19,27 @@ namespace FlamePlanner
     /// </summary>
     public partial class itinerarySaveOptions : Window
     {
-        public itinerarySaveOptions()
+        private MainWindow mw;
+        public itinerarySaveOptions(MainWindow mw)
         {
             InitializeComponent();
+            this.mw = mw;
         }
+
+        private void logInButton_Click(object sender, RoutedEventArgs e)
+        {
+            Login lw = new Login(mw);
+            this.Close();
+            lw.ShowDialog();
+
+        }
+
+        private void signUpButton_Click(object sender, RoutedEventArgs e)
+        {
+            signupWindow sw = new signupWindow(mw);
+            this.Close();
+            sw.ShowDialog();
+        }
+
     }
 }

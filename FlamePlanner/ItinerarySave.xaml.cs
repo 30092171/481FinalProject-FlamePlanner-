@@ -19,9 +19,27 @@ namespace FlamePlanner
     /// </summary>
     public partial class ItinerarySave : Window
     {
-        public ItinerarySave()
+        private MainWindow mw;
+        public ItinerarySave(MainWindow mw)
         {
             InitializeComponent();
+            this.mw = mw;
+
+        }
+
+        private void saveItineraryButton_Click(object sender, RoutedEventArgs e)
+        {
+            string itinName = itineraryNameField.Text;
+            //Ensure field (itinerart name) has been populated by user (maybe suggest default)
+            if (itinName != "")
+            {
+                itinerarySavePrompt ispw = new itinerarySavePrompt(mw);
+
+                //Save itinerary in mw under name somehow
+
+                this.Close();
+                ispw.ShowDialog();
+            }
         }
     }
 }

@@ -7,42 +7,45 @@
         mc:Ignorable="d"
         Title="itinerarySavePrompt" Height="450" Width="800">
     <Grid>
-        <StackPanel Orientation="Vertical" HorizontalAlignment="Center"  VerticalAlignment="Center">
-
-            <TextBlock Width="200" Height="40" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="20">
-                List of saved itineraries:
+        <StackPanel Orientation="Vertical" HorizontalAlignment="Center"  VerticalAlignment="Center" Width="400">
+            
+            <TextBlock Width="400" Height="40" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="20" TextAlignment="Center">
+            <Underline>List of Saved Itineraries on this Account</Underline>
             </TextBlock>
-            <TextBlock Width="200" Height="40" HorizontalAlignment="Center" VerticalAlignment="Center">
+            
+            <ListView x:Name="savedList" MaxHeight="360" Width="400">    
+                <TextBlock Width="200" Height="40" HorizontalAlignment="Center" VerticalAlignment="Center">
                 Itinerary 1
-            </TextBlock>
-            <TextBlock Width="200" Height="40" HorizontalAlignment="Center" VerticalAlignment="Center">
+                </TextBlock>
+                <TextBlock Width="200" Height="40" HorizontalAlignment="Center" VerticalAlignment="Center">
                 Itinerary 2
-            </TextBlock>
-            <TextBlock Width="200" Height="40" HorizontalAlignment="Center" VerticalAlignment="Center">
+                </TextBlock>
+                <TextBlock Width="200" Height="40" HorizontalAlignment="Center" VerticalAlignment="Center">
                 Itinerary 3
-            </TextBlock>
-            <TextBlock Width="200" Height="40" HorizontalAlignment="Center" VerticalAlignment="Center">
+                </TextBlock>
+                <TextBlock Width="200" Height="40" HorizontalAlignment="Center" VerticalAlignment="Center">
                 Itinerary 4
-            </TextBlock>
-            <TextBlock Width="200" Height="40" HorizontalAlignment="Center" VerticalAlignment="Center">
+                </TextBlock>
+                <TextBlock Width="200" Height="40" HorizontalAlignment="Center" VerticalAlignment="Center">
                 Itinerary 5
-            </TextBlock>
-            <TextBlock Width="200" Height="40" HorizontalAlignment="Center" VerticalAlignment="Center">
+                </TextBlock>
+                <TextBlock Width="200" Height="40" HorizontalAlignment="Center" VerticalAlignment="Center">
                 Itinerary 6
-            </TextBlock>
+                </TextBlock>
+            </ListView>
 
-            <Button x:Name="startCreateButton" Width="100" Height="75" Margin="100,0" FontSize="10">
+            <Button x:Name="returnButton" Width="100" Height="75" Margin="100,0" FontSize="10" Click="returnButton_Click">
                 <TextBlock TextWrapping="Wrap" TextAlignment="Center" FontSize="20">Return to Menu</TextBlock>
             </Button>
         </StackPanel>
 
         <StackPanel Orientation="Vertical" HorizontalAlignment="Left"  VerticalAlignment="Center">
-            <Image  Source="/FullLogo.png" Height="150" Width="200" HorizontalAlignment="Left" VerticalAlignment ="Center" Stretch="Fill"/>
+            <Image  Source="/FullLogo.png" Height="150" Width="150" HorizontalAlignment="Left" VerticalAlignment ="Center" Stretch="Fill"/>
             <Image  Source="/companyLogo.png" Height="75" Width="110" HorizontalAlignment="Center" VerticalAlignment="Center" Stretch="Fill"/>
         </StackPanel>
 
         <StackPanel Orientation="Vertical" HorizontalAlignment="Right"  VerticalAlignment="Center">
-            <Image  Source="/FullLogo.png" Height="150" Width="200" HorizontalAlignment="Left" VerticalAlignment ="Center" Stretch="Fill"/>
+            <Image  Source="/FullLogo.png" Height="150" Width="150" HorizontalAlignment="Left" VerticalAlignment ="Center" Stretch="Fill"/>
             <Image  Source="/companyLogo.png" Height="75" Width="110" HorizontalAlignment="Center" VerticalAlignment="Center" Stretch="Fill"/>
         </StackPanel>
     </Grid>

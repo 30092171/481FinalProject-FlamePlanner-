@@ -19,9 +19,16 @@ namespace FlamePlanner
     /// </summary>
     public partial class itinerarySavePrompt : Window
     {
-        public itinerarySavePrompt()
+        private MainWindow mw;
+        public itinerarySavePrompt(MainWindow mw)
         {
             InitializeComponent();
+            this.mw = mw;
+        }
+
+        private void returnButton_Click(object sender, RoutedEventArgs e)
+        {
+            this.Close(); //This is just an info page, can close right away
         }
     }
 }

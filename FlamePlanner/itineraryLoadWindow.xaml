@@ -14,30 +14,14 @@
         </Grid.ColumnDefinitions>
         <Rectangle Fill="White" Grid.ColumnSpan="3"/>
 
-        <Grid x:Name="itineraryDisplay" Grid.Column="1" Grid.ColumnSpan="2">
-
-            <TextBlock HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="20">ITINERARY SCREEN
-            </TextBlock>
-
-
-
-
-        </Grid>
-
         <Grid Grid.Column="0">
-            <Grid.RowDefinitions>
-                <RowDefinition Height="105*"/>
-                <RowDefinition Height="539*"/>
-            </Grid.RowDefinitions>
 
             <StackPanel Grid.Row="1" Orientation="Vertical" HorizontalAlignment="Center" VerticalAlignment="Center">
-                <StackPanel Orientation="Horizontal">
-                    <Button x:Name="itineraryDropdown" Width="280" Height="40" RenderTransformOrigin="0.508,1.021">
-                        <TextBlock TextWrapping="Wrap" TextAlignment="Center">CHOOSE AN ITINERARY TO LOAD</TextBlock>
-                    </Button>
-
-                </StackPanel>
-                <ListBox HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,0,0,0" >
+                <TextBlock Width="280" Height="50" TextAlignment="Center" Padding="0,15,0,0" FontSize="16" Background="LightGray">
+                    <Bold><Underline>CHOOSE AN ITINERARY TO LOAD</Underline></Bold>
+                </TextBlock>
+                   
+                <ListBox x:Name="itineraryList" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,0,0,0" MaxHeight="250" SelectionChanged="itineraryList_SelectionChanged">
 
                     <ListBoxItem Content="Itinerary 1" FontSize="20" Margin="175,0,0,0"/>
                     <ListBoxItem Content="Itinerary 2" FontSize="20" Margin="175,0,0,0"/>
@@ -48,19 +32,18 @@
                     <ListBoxItem Content="Itinerary 7" FontSize="20" Margin="175,0,0,0"/>
                 </ListBox>
 
-                <Button x:Name="saveItinerary" Width="280" Height="40" VerticalAlignment="Center">
+                <Button x:Name="loadItinerary" Width="280" Height="40" VerticalAlignment="Center" Click="loadItinerary_Click">
                     <TextBlock TextWrapping="Wrap" FontSize="20" TextAlignment="Center">Load Itinerary</TextBlock>
                 </Button>
 
             </StackPanel>
-            <TextBlock x:Name="bookmark" Width="280" Height="80" VerticalAlignment="Center">
-                <TextBlock TextWrapping="Wrap" FontSize="20" TextAlignment="Center">A reminder will be sent 7 days in advance for your upcoming itineraries</TextBlock>
-            </TextBlock>
+            
 
 
         </Grid>
         <Rectangle Grid.Column="1" Fill="Black"/>
         <!-- This is to seperate left from right sides-->
+        <Frame x:Name="previewFrame" Grid.Column="2"></Frame>
 
     </Grid>
 

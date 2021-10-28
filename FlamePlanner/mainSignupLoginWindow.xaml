@@ -12,10 +12,10 @@
         <StackPanel Orientation="Vertical" HorizontalAlignment="Center" VerticalAlignment="Center">
 
             <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center" Orientation="Horizontal">
-                <Button x:Name="startCreateButton" Width="250" Height="200" Margin="100,0" FontSize="20">
+                <Button x:Name="logInButton" Width="250" Height="100" Margin="100,0" FontSize="20" Click="logInButton_Click">
                     <TextBlock TextWrapping="Wrap" TextAlignment="Center">LOGIN</TextBlock>
                 </Button>
-                <Button x:Name="startLoadButton" Width="250" Height="200" Margin="100,0" FontSize="20">
+                <Button x:Name="signUpButton" Width="250" Height="100" Margin="100,0" FontSize="20" Click="signUpButton_Click">
                     <TextBlock TextWrapping="Wrap" TextAlignment="Center">SIGNUP</TextBlock>
                 </Button>
             </StackPanel>

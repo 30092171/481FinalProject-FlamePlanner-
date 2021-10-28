@@ -61,16 +61,41 @@ namespace FlamePlanner
         private void createNewItineraryButton_Click(object sender, RoutedEventArgs e)
         {
             //Create New ITINERARY (Prompt to save?)
+            if (!mw.loggedIn)
+            {
+                itinerarySaveOptions isow = new itinerarySaveOptions(mw);
+                isow.ShowDialog();
+            }
         }
 
         private void loadItineraryButton_Click(object sender, RoutedEventArgs e)
         {
             //Load another itinerary (Have they logged in?) Prompt to save?
+            if (!mw.loggedIn)
+            {
+                itinerarySaveOptions isow = new itinerarySaveOptions(mw);
+                isow.ShowDialog();
+            }
+            else //logged in
+            {
+                itineraryLoadWindow ilw = new itineraryLoadWindow(mw);
+                ilw.ShowDialog();
+            }
         }
 
         private void saveButton_Click(object sender, RoutedEventArgs e)
         {
             //Save itinerary (Have they logged in?)
+            if (!mw.loggedIn)
+            {
+                itinerarySaveOptions isow = new itinerarySaveOptions(mw);
+                isow.ShowDialog();
+            }
+            else //logged in
+            {
+                ItinerarySave isw = new ItinerarySave(mw);
+                isw.ShowDialog();
+            }
         }
     }
 }
