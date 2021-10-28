@@ -26,7 +26,7 @@
                 </TransformGroup>
             </Image.RenderTransform>
         </Image>
-        <Button x:Name="EventDownButton" HorizontalAlignment="Center" Height="24" Margin="0,447,0,0" VerticalAlignment="Top" Width="32" Content="\/"/>
+        <Button x:Name="EventDownButton" HorizontalAlignment="Center" Height="24" Margin="0,447,0,0" VerticalAlignment="Top" Width="50" Content="\/"/>
         <Image HorizontalAlignment="Left" Height="163" Margin="82,264,0,0" VerticalAlignment="Top" Width="167" Source="/NickiMinajEvent.jpg"/>
         <Image HorizontalAlignment="Center" Height="179" Margin="0,41,0,0" VerticalAlignment="Top" Width="137" Source="/HalloweenEvent.jpg"/>
         <Image HorizontalAlignment="Left" Height="179" Margin="732,256,0,0" VerticalAlignment="Top" Width="147" Source="/CulturalFestivalEvent.png"/>
@@ -43,7 +43,7 @@
                 </TransformGroup>
             </Image.RenderTransform>
         </Image>
-        <Button x:Name="EventUpButton" HorizontalAlignment="Center" Height="24" Margin="0,10,0,0" VerticalAlignment="Top" Width="32" Content="/\"/>
+        <Button x:Name="EventUpButton" HorizontalAlignment="Center" Height="24" Margin="0,10,0,0" VerticalAlignment="Top" Width="50" Content="/\"/>
         <Button HorizontalAlignment="Left" Margin="530,196,0,0" VerticalAlignment="Top" Background="White" Click="Event_Display_Button_Click" Tag="2">
             <Image HorizontalAlignment="Center" Height="20" VerticalAlignment="Top" Width="20" Source="/right-arrow (1).png"/>
         </Button>

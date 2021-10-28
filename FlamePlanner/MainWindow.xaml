@@ -16,7 +16,7 @@
         <Image x:Name="topLeftLogo" HorizontalAlignment="Left" Height="75"  Grid.Row="0" VerticalAlignment="Top" Width="75" Source="/Logo.png"/>
         <Image x:Name="vLogo" HorizontalAlignment="Left" Height="75" Grid.Row="0" VerticalAlignment="Top" Width="75" Source="/V.png" Margin="65,0,0,0" Stretch="Fill" />
         
-        <Frame x:Name="mainFrame" Grid.Row="1" Height="auto" Width="auto" NavigationUIVisibility="Hidden"/>
+        <Frame x:Name="mainFrame" Grid.Row="1" NavigationUIVisibility="Hidden"/>
 
         <StackPanel x:Name="navBarStackPanel" HorizontalAlignment="Center" Height="59" VerticalAlignment="Center" Width="900" Orientation="Horizontal" Grid.Row="0">
             <Button x:Name="nav_itinerary" Content="ITINERARY" Margin="5" HorizontalAlignment="center" Width="290" FontSize="20" Click="nav_itinerary_Click" Background="LightGray"/>

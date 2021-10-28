@@ -29,6 +29,7 @@ namespace FlamePlanner
             mainFrame.Content = new startPage(this); //Program starts with the start page loaded in the main frame
             this.loggedIn = false;
             navBarStackPanel.Visibility = Visibility.Hidden; //Hides nav bar until user starts itinerary proccess
+            helpButton.Visibility = Visibility.Hidden;
         }
 
         private void nav_itinerary_Click(object sender, RoutedEventArgs e)
@@ -103,7 +104,25 @@ namespace FlamePlanner
 
         private void helpButton_Click(object sender, RoutedEventArgs e)
         {
-            //Do help stuff, integrate the display to mw.helpOverlayFrame Can be altered depending on nav bar position
+            //Three Frame is Displayed
+            if (mainFrame.Content.GetType() == typeof(threeFramePage))
+            {
+                if (nav_itinerary.Background == NAV_SELECT_COLOUR) //Itinerary Screen
+                {
+
+                }
+                else if (nav_events.Background == NAV_SELECT_COLOUR) //Events screen
+                {
+                    helpOverlayFrame.Visibility = Visibility.Visible;
+                    helpOverlayFrame.Content = new eventHelpOverlay(this);
+                }
+                else if (nav_map.Background == NAV_SELECT_COLOUR) //Map screen
+                {
+
+                }
+                
+            }
+            
         }
     }
 }
