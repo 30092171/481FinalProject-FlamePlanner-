@@ -11,8 +11,8 @@
     <Grid Background="AliceBlue">
         <Label Content="Filter" HorizontalAlignment="Left" Margin="90,19,0,0" VerticalAlignment="Top"/>
         <Label Content="Date" HorizontalAlignment="Left" Margin="91,75,0,0" VerticalAlignment="Top"/>
-        <ComboBox Margin="140,23,623,115" >
-            
+        <ComboBox Margin="140,23,623,115" SelectedIndex="0" >
+                <TextBlock Text="NONE" TextWrapping="Wrap"/>
                 <TextBlock Text="Family" TextWrapping="Wrap"/>
                 <TextBlock Text="Concert" TextWrapping="Wrap"/>
                 <TextBlock Text="Food and Drink" TextWrapping="Wrap"/>
@@ -27,7 +27,7 @@
         <DatePicker HorizontalAlignment="Left" Margin="126,101,0,0" VerticalAlignment="Top"/>
         <Label Content="to" HorizontalAlignment="Left" Margin="240,100,0,0" VerticalAlignment="Top"/>
         <DatePicker HorizontalAlignment="Left" Margin="275,100,0,0" VerticalAlignment="Top"/>
-        <Label Content="Search:" HorizontalAlignment="Left" Margin="620,19,0,0" VerticalAlignment="Top"/>
+        <Label Content="Event Search:" HorizontalAlignment="Left" Margin="590,19,0,0" VerticalAlignment="Top"/>
         <TextBox HorizontalAlignment="Left" Margin="668,23,0,0" Text="" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
         <Button x:Name="EventSearchButton" Content="Go" HorizontalAlignment="Left" Margin="801,23,0,0" VerticalAlignment="Top" Height="18" Width="32" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="10"/>
 

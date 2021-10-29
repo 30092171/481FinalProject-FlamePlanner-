@@ -20,24 +20,37 @@ namespace FlamePlanner
     /// </summary>
     public partial class Map : Page
     {
-        public Map()
+        private MainWindow mw;
+        public Map(MainWindow mw)
         {
             InitializeComponent();
+            this.mw = mw;
         }
         private void poi1_Click(object sender, RoutedEventArgs e)
         {
-            MapEvent me = new MapEvent("6 Street SW");
-            me.ShowDialog();
+            //MapEvent me = new MapEvent("6 Street SW");
+            // me.ShowDialog();
+            EventPopUpWindow epw = new EventPopUpWindow(mw);
+            epw.EventName = "6 Street SW";
+            epw.ShowDialog();
+
+
         }
         private void poi2_Click(object sender, RoutedEventArgs e)
         {
-            MapEvent me = new MapEvent("Stampede");
-            me.ShowDialog();
+            //MapEvent me = new MapEvent("Stampede");
+            // me.ShowDialog();
+            EventPopUpWindow epw = new EventPopUpWindow(mw);
+            epw.EventName = "Stampede";
+            epw.ShowDialog();
         }
         private void poi3_Click(object sender, RoutedEventArgs e)
         {
-            MapEvent me = new MapEvent("Prince Island Park");
-            me.ShowDialog();
+            //MapEvent me = new MapEvent("Prince Island Park");
+            // me.ShowDialog();
+            EventPopUpWindow epw = new EventPopUpWindow(mw);
+            epw.EventName = "Prince Island Park";
+            epw.ShowDialog();
         }
     }
 }

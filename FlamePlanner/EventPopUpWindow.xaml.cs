@@ -19,11 +19,20 @@ namespace FlamePlanner
     /// </summary>
     public partial class EventPopUpWindow : Window
     {
+        public string EventName;
         private MainWindow mw;
-        public EventPopUpWindow(MainWindow mw)
+        public EventPopUpWindow(MainWindow mw) //Later we will add more parameters so that construction is easier
         {
             InitializeComponent();
             this.mw = mw;
+        }
+
+        private void AddButton_Click(object sender, RoutedEventArgs e)
+        {
+            MapEvent me = new MapEvent(mw,this.EventName,this);
+            me.ShowDialog();
+
+
         }
     }
 }

@@ -15,18 +15,13 @@
     <None Remove="HalloweenEvent.jpg" />
     <None Remove="LobsterFestEvent.jpg" />
     <None Remove="Logo.png" />
+    <None Remove="NickiMinajEvent.jpg" />
     <None Remove="Resources\blue.png" />
     <None Remove="Resources\blueMarker.png" />
     <None Remove="Resources\calgary.png" />
     <None Remove="Resources\mapMarker.ico" />
     <None Remove="Resources\negativeIcon.png" />
-    <None Remove="Resources\plusIcon.png" />
     <None Remove="Resources\redMarker.png" />
-    <None Remove="NickiMinajEvent.jpg" />
-    <None Remove="plus sign.jpg" />
-    <None Remove="QuestionMarkSymbol.jpg" />
-    <None Remove="right-arrow %281%29.png" />
-    <None Remove="V.png" />
   </ItemGroup>
 
   <ItemGroup>
@@ -46,6 +41,9 @@
     <Resource Include="HalloweenEvent.jpg" />
     <Resource Include="LobsterFestEvent.jpg" />
     <Resource Include="Logo.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="NickiMinajEvent.jpg">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Resource>
     <Resource Include="Resources\blue.png">
@@ -69,6 +67,15 @@
     <Resource Include="V.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Resource>
+	  <Resource Include="plus sign.jpg">
+	    <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+	  </Resource>
+	  <Resource Include="QuestionMarkSymbol.jpg">
+	    <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+	  </Resource>
+	  <Resource Include="right-arrow (1).png">
+	    <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+	  </Resource>
   </ItemGroup>
 
 </Project>

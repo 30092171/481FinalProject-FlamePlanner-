@@ -20,9 +20,11 @@ namespace FlamePlanner
     /// </summary>
     public partial class MapBottom : UserControl
     {
-        public MapBottom()
+        private MainWindow mw;
+        public MapBottom(MainWindow mw)
         {
             InitializeComponent();
+            this.mw = mw;
         }
     }
 }

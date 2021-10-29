@@ -51,6 +51,13 @@ namespace FlamePlanner
                 resetNavButtonColours(Brushes.LightGray);
                 nav_map.Background = NAV_SELECT_COLOUR;
                 //Navigate to map page
+                if (mainFrame.Content.GetType() == typeof(threeFramePage))
+                {
+                    threeFramePage tfp = mainFrame.Content as threeFramePage;
+                    tfp.topRightFrame.Content = new Map(this);
+                    tfp.bottomRightFrame.Content = new MapBottom(this);
+                    //ensure itinerary frame is loaded in left, if it is not load it...
+                }
             }
         }
         /// <summary>

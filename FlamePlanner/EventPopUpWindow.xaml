@@ -9,7 +9,7 @@
     <Grid>
         <Image x:Name="EventImage" Margin="10,10,596,217" Source="EricNamEvent.jpg"/>
         <Label x:Name="EventTitle" Content="Eric Nam: Before We Begin World Tour 2020" HorizontalAlignment="Center" Margin="0,10,0,0" VerticalAlignment="Top" FontSize="17" FontWeight="Bold"/>
-        <Button x:Name="AddButton" HorizontalAlignment="Left" Margin="154,359,0,0" VerticalAlignment="Top" Height="50" Width="50" Background="White">
+        <Button x:Name="AddButton" HorizontalAlignment="Left" Margin="154,359,0,0" VerticalAlignment="Top" Height="50" Width="50" Background="White" Click="AddButton_Click">
             <Image HorizontalAlignment="Center" Height="50" VerticalAlignment="Center" Width="50" Source="/plus sign.jpg"/>
         </Button>
         <TextBlock x:Name="TimeLabel" HorizontalAlignment="Center" Margin="0,41,0,0" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="15">

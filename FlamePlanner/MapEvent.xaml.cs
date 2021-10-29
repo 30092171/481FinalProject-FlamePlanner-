@@ -19,19 +19,31 @@ namespace FlamePlanner
     /// </summary>
     public partial class MapEvent : Window
     {
-        public MapEvent()
-        {
-            InitializeComponent();
-        }
-        public MapEvent(string eventName)
+        private MainWindow mw;
+        private EventPopUpWindow epw = null;
+
+        public MapEvent(MainWindow mw, string eventName)
         {
             InitializeComponent();
             event_label.Content = eventName;
+            this.mw = mw;
+        }
+
+        public MapEvent(MainWindow mw, string eventName, EventPopUpWindow epw)
+        {
+            InitializeComponent();
+            event_label.Content = eventName;
+            this.mw = mw;
+            this.epw = epw;
         }
 
         private void button_Click(object sender, RoutedEventArgs e)
         {
             this.Close();
+            if (epw != null)
+            {
+                epw.BookedLabel.Text = "Yes";
+            }
         }
     }
 }
