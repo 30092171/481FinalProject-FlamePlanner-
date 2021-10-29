@@ -15,6 +15,13 @@
     <None Remove="HalloweenEvent.jpg" />
     <None Remove="LobsterFestEvent.jpg" />
     <None Remove="Logo.png" />
+    <None Remove="Resources\blue.png" />
+    <None Remove="Resources\blueMarker.png" />
+    <None Remove="Resources\calgary.png" />
+    <None Remove="Resources\mapMarker.ico" />
+    <None Remove="Resources\negativeIcon.png" />
+    <None Remove="Resources\plusIcon.png" />
+    <None Remove="Resources\redMarker.png" />
     <None Remove="NickiMinajEvent.jpg" />
     <None Remove="plus sign.jpg" />
     <None Remove="QuestionMarkSymbol.jpg" />
@@ -41,10 +48,24 @@
     <Resource Include="Logo.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Resource>
-    <Resource Include="NickiMinajEvent.jpg" />
-    <Resource Include="plus sign.jpg" />
-    <Resource Include="QuestionMarkSymbol.jpg" />
-    <Resource Include="right-arrow (1).png" />
+    <Resource Include="Resources\blue.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Resources\blueMarker.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Resources\calgary.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Resources\negativeIcon.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Resources\plusIcon.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Resources\redMarker.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
     <Resource Include="V.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Resource>
