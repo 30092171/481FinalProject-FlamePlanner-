@@ -20,9 +20,11 @@ namespace FlamePlanner
     /// </summary>
     public partial class Itinerary_bottom : Page
     {
-        public Itinerary_bottom()
+        private MainWindow mw;
+        public Itinerary_bottom(MainWindow mw)
         {
             InitializeComponent();
+            this.mw = mw;
         }
 
         private void ComboBox_SelectionChanged(object sender, SelectionChangedEventArgs e)

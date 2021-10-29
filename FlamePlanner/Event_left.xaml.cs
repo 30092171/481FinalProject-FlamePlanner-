@@ -20,9 +20,11 @@ namespace FlamePlanner
     /// </summary>
     public partial class Event_left : Page
     {
-        public Event_left()
+        private MainWindow mw;
+        public Event_left(MainWindow mw)
         {
             InitializeComponent();
+            this.mw = mw;
         }
 
         private void createNewItineraryButton_Click(object sender, RoutedEventArgs e)

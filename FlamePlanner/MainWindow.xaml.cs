@@ -40,6 +40,19 @@ namespace FlamePlanner
                 resetNavButtonColours(Brushes.LightGray);
                 nav_itinerary.Background = NAV_SELECT_COLOUR;
                 //Navigate to itinary page
+                if (mainFrame.Content != null && mainFrame.Content.GetType() == typeof(threeFramePage))
+                {
+                    threeFramePage tfp = mainFrame.Content as threeFramePage;
+                    tfp.topRightFrame.Content = new Itinerarypage(this);
+                    tfp.bottomRightFrame.Content = new MapBottom(this);
+                    
+                    if (tfp.leftFrame.Content == null || tfp.leftFrame.Content.GetType() != typeof(Itinerary_leftpannel))
+                    {
+                        Itinerary_leftpannel ilp = new Itinerary_leftpannel(this);
+                        tfp.leftFrame.Content = ilp;
+                    }
+                    //ensure itinerary frame is loaded in left, if it is not load it...
+                }
             }
         }
 
@@ -51,11 +64,16 @@ namespace FlamePlanner
                 resetNavButtonColours(Brushes.LightGray);
                 nav_map.Background = NAV_SELECT_COLOUR;
                 //Navigate to map page
-                if (mainFrame.Content.GetType() == typeof(threeFramePage))
+                if (mainFrame.Content != null && mainFrame.Content.GetType() == typeof(threeFramePage))
                 {
                     threeFramePage tfp = mainFrame.Content as threeFramePage;
                     tfp.topRightFrame.Content = new Map(this);
                     tfp.bottomRightFrame.Content = new MapBottom(this);
+                    if(tfp.leftFrame.Content == null || tfp.leftFrame.Content.GetType() != typeof(Event_left))
+                    {
+                        Event_left el = new Event_left(this);
+                        tfp.leftFrame.Content = el;
+                    }
                     //ensure itinerary frame is loaded in left, if it is not load it...
                 }
             }
@@ -79,11 +97,16 @@ namespace FlamePlanner
                 resetNavButtonColours(Brushes.LightGray);
                 nav_events.Background = NAV_SELECT_COLOUR;
                 //Navigate to events page
-                if (mainFrame.Content.GetType() == typeof(threeFramePage))
+                if (mainFrame.Content != null && mainFrame.Content.GetType() == typeof(threeFramePage))
                 {
                     threeFramePage tfp = mainFrame.Content as threeFramePage;
                     tfp.topRightFrame.Content = new EventScreen(this);
                     tfp.bottomRightFrame.Content = new EventControls(this);
+                    if (tfp.leftFrame.Content == null || tfp.leftFrame.Content.GetType() != typeof(Event_left))
+                    {
+                        Event_left el = new Event_left(this);
+                        tfp.leftFrame.Content = el;
+                    }
                     //ensure itinerary frame is loaded in left, if it is not load it...
                 }
             }
@@ -117,7 +140,7 @@ namespace FlamePlanner
         private void helpButton_Click(object sender, RoutedEventArgs e)
         {
             //Three Frame is Displayed
-            if (mainFrame.Content.GetType() == typeof(threeFramePage))
+            if (mainFrame.Content != null && mainFrame.Content.GetType() == typeof(threeFramePage))
             {
                 if (nav_itinerary.Background == NAV_SELECT_COLOUR) //Itinerary Screen
                 {

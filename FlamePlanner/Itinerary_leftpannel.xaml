@@ -12,22 +12,24 @@
         <Grid.RowDefinitions>
             <RowDefinition Height="0" />
             <RowDefinition Height="16*" />
-            <RowDefinition Height="1*" />
-            <RowDefinition Height="1*" />
+            <RowDefinition Height="2*" />
+            <RowDefinition Height="2*" />
         </Grid.RowDefinitions>
 
- 
 
-        <Grid Grid.Row="1">
+        <ScrollViewer Grid.Row="1" HorizontalScrollBarVisibility="Disabled" VerticalScrollBarVisibility="Auto">
+        <Grid>
             <Grid.RowDefinitions>
-                <RowDefinition Height="1*"/>
-                <RowDefinition Height="2*"/>
-                <RowDefinition Height="2*"/>
-                <RowDefinition Height="2*"/>
-                <RowDefinition Height="4*"/>
-            </Grid.RowDefinitions>
+                <RowDefinition Height="50"/>
+                <RowDefinition Height="100"/>
+                <RowDefinition Height="100"/>
+                <RowDefinition Height="100"/>
+                </Grid.RowDefinitions>
 
-            <TextBlock Grid.Row="0" HorizontalAlignment="Center" Margin="0,6,0,0" Text="Booked" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="20"/>
+                <Rectangle Grid.Row="0" Fill="LightGray"/>
+                <TextBlock Grid.Row="0" HorizontalAlignment="Center" Margin="0,6,0,0" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="23">
+                    <Underline>Booked</Underline>
+                </TextBlock>
 
 
             <Border Grid.Row="1" Background="White" BorderThickness="2" BorderBrush="Black" Margin="0,2,0,2">
@@ -48,9 +50,10 @@
             <CheckBox Grid.Row="3" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="70,0,0,0" Checked="CheckBox_Checked" />
             <Button Content="x" Grid.Row="3" HorizontalAlignment="Right" VerticalAlignment="Top" Width="25" Height="25" Margin="0,6,6,0"/>
 
-        </Grid>
-        <TextBlock TextAlignment="Center" HorizontalAlignment="Center" Grid.Row="2" Text="Username: User123" TextWrapping="Wrap" VerticalAlignment="Center" Height="29" Width="309"/>
-        <Button x:Name="deleteButton" Content="Delete" HorizontalAlignment="Center" Grid.Row="3" VerticalAlignment="Center" Height="25" Width="309"/>
-
+            </Grid>
+        </ScrollViewer>
+        <TextBlock TextAlignment="Center" HorizontalAlignment="Center" Grid.Row="2" Text="Username: User123" TextWrapping="Wrap" VerticalAlignment="Bottom" Height="29" Width="309" Background="AliceBlue"/>
+        <Button x:Name="deleteButton" Content="Delete Itinerary" HorizontalAlignment="Center" Grid.Row="3" VerticalAlignment="Top" Height="35" Width="309"  Margin="0,5,0,0"/>
+        
     </Grid>
 </Page>

@@ -69,43 +69,58 @@
         <Border Grid.Column="0" Grid.Row="2" BorderBrush="Black" BorderThickness="2" Grid.ColumnSpan="8"  />
         <Border Grid.Column="0" Grid.Row="3" BorderBrush="Black" BorderThickness="2" Grid.ColumnSpan="8" />
         <Border Grid.Column="0" Grid.Row="4" BorderBrush="Black" BorderThickness="2" Grid.ColumnSpan="8" />
-        <Border Grid.Column="0" Grid.Row="5" BorderBrush="Black" BorderThickness="2" Grid.ColumnSpan="8" >
-            <Image Margin="23,247,842,-225" Stretch="Fill" Source="/leftArrow2.jpg" RenderTransformOrigin="0.5,0.5">
-                <Image.RenderTransform>
-                    <TransformGroup>
-                        <ScaleTransform/>
-                        <SkewTransform/>
-                        <RotateTransform Angle="270"/>
-                        <TranslateTransform/>
-                    </TransformGroup>
-                </Image.RenderTransform>
-            </Image>
-        </Border>
+        <Border Grid.Column="0" Grid.Row="5" BorderBrush="Black" BorderThickness="2" Grid.ColumnSpan="8" />
+
+
+
         <Border Grid.Column="0" Grid.Row="6" BorderBrush="Black" BorderThickness="2" Grid.ColumnSpan="8" />
         <Border Grid.Column="0" Grid.Row="7" BorderBrush="Black" BorderThickness="2" Grid.ColumnSpan="8" />
-        <Image Margin="22,6,22,18" Stretch="Fill" Source="/leftArrow2.jpg" Grid.Row="1" RenderTransformOrigin="0.5,0.5">
+
+        <Button x:Name="TimeUpButton" Grid.Row="1" Background="Transparent">
+        <Image Margin="22,6,22,18" Stretch="Fill" Source="/leftArrow2.jpg" RenderTransformOrigin="0.5,0.5">
             <Image.RenderTransform>
                 <TransformGroup>
-                    <ScaleTransform/>
+                    <ScaleTransform ScaleX="0.5" ScaleY="0.5"/>
                     <SkewTransform/>
                     <RotateTransform Angle="90"/>
                     <TranslateTransform/>
                 </TransformGroup>
             </Image.RenderTransform>
         </Image>
-        <Image Margin="24,14,21,10" Stretch="Fill" Source="/leftArrow2.jpg" Grid.Column="1"/>
+        </Button>
+
+        <Button x:Name="TimeDownButton" Grid.Row="8" Grid.Column="0" Background="Transparent">
+            <Image Stretch="Uniform" Source="/leftArrow2.jpg" RenderTransformOrigin="0.5,0.5">
+                <Image.RenderTransform>
+                    <TransformGroup>
+                        <ScaleTransform ScaleX="0.5" ScaleY="0.5"/>
+                        <SkewTransform/>
+                        <RotateTransform Angle="270"/>
+                        <TranslateTransform/>
+                    </TransformGroup>
+                </Image.RenderTransform>
+            </Image>
+        </Button>
+
+        <Button x:Name="DateLeftButton" Grid.Column="1" Background="Transparent">
+            <Image Margin="24,14,21,10" Stretch="Fill" Source="/leftArrow2.jpg" Width="35" Height="30"/>
+        </Button>
         <Border Grid.Column="8" Grid.Row="8" BorderBrush="Black" BorderThickness="2">
+            <Button x:Name="customEventButton" Grid.Column="8"  Grid.Row="8" Background="Transparent">
             <Image Grid.Column="8" Margin="32,10,32,10" Grid.Row="8" Stretch="Fill" Source="/plus sign.jpg"/>
+            </Button>
         </Border>
-        <Image Margin="31,14,15,10" Stretch="Fill" Source="/leftArrow2.jpg" Grid.Column="7" RenderTransformOrigin="0.5,0.5">
-            <Image.RenderTransform>
-                <TransformGroup>
-                    <ScaleTransform/>
-                    <SkewTransform/>
-                    <RotateTransform Angle="180"/>
-                    <TranslateTransform/>
-                </TransformGroup>
-            </Image.RenderTransform>
-        </Image>
+        <Button x:Name="DateRightButton" Background="Transparent" Grid.Column="7" >
+            <Image Margin="31,14,15,10" Stretch="Fill" Source="/leftArrow2.jpg" RenderTransformOrigin="0.5,0.5">
+                <Image.RenderTransform>
+                    <TransformGroup>
+                        <ScaleTransform ScaleX="0.5" ScaleY="0.5"/>
+                        <SkewTransform/>
+                        <RotateTransform Angle="180"/>
+                        <TranslateTransform/>
+                    </TransformGroup>
+                </Image.RenderTransform>
+            </Image>
+        </Button>
     </Grid>
 </Page>

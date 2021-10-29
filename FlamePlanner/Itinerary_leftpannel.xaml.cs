@@ -20,9 +20,11 @@ namespace FlamePlanner
     /// </summary>
     public partial class Itinerary_leftpannel : Page
     {
-        public Itinerary_leftpannel()
+        private MainWindow mw;
+        public Itinerary_leftpannel(MainWindow mw)
         {
             InitializeComponent();
+            this.mw = mw;
         }
 
         private void CheckBox_Checked(object sender, RoutedEventArgs e)

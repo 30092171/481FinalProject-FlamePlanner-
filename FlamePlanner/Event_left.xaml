@@ -15,14 +15,15 @@
         </Grid.ColumnDefinitions>
 
         <Grid.RowDefinitions>
-            <RowDefinition Height="1*"/>
+            <RowDefinition Height="0.5*"/>
             <RowDefinition Height="2*"/>
-            <RowDefinition Height="10*"/>
+            <RowDefinition Height="450"/>
+            <RowDefinition Height="1*"/>
         </Grid.RowDefinitions>
 
 
 
-        <TextBlock Grid.Row="1" TextAlignment="Center" HorizontalAlignment="Center" TextWrapping="Wrap" VerticalAlignment="Center" FontSize="24" Background="#FFB7D1CE">Sat 25, <LineBreak/> Septemer 2021</TextBlock>
+        <TextBlock Grid.Row="1" TextAlignment="Center" HorizontalAlignment="Center" TextWrapping="Wrap" VerticalAlignment="Center" FontSize="24" Background="LightYellow">Sat 25, <LineBreak/> Septemer 2021</TextBlock>
         <Image Margin="24,24,255,25" Grid.Row="1" Stretch="Fill" Source="/Event_leftArrow.png"/>
         <Image Margin="254,24,25,25" Grid.Row="1" Stretch="Fill" Source="/Event_leftArrow.png" RenderTransformOrigin="0.5,0.5">
             <Image.RenderTransform>
@@ -49,25 +50,31 @@
                 <RowDefinition Height="1*"/>
                 <RowDefinition Height="1*"/>
                 <RowDefinition Height="1*"/>
+                <RowDefinition Height="1*"/>
             </Grid.RowDefinitions>
-            <TextBlock Grid.Row="0" TextAlignment="Center" FontSize="18" VerticalAlignment="Center" HorizontalAlignment="Center">10:00</TextBlock>
-            <TextBlock Grid.Row="1" TextAlignment="Center" FontSize="18" VerticalAlignment="Center" HorizontalAlignment="Center">12:00</TextBlock>
-            <TextBlock Grid.Row="2" TextAlignment="Center" FontSize="18" VerticalAlignment="Center" HorizontalAlignment="Center">13:00</TextBlock>
-            <TextBlock Grid.Row="3" TextAlignment="Center" FontSize="18" VerticalAlignment="Center" HorizontalAlignment="Center">14:00</TextBlock>
-            <TextBlock Grid.Row="4" TextAlignment="Center" FontSize="18" VerticalAlignment="Center" HorizontalAlignment="Center">15:00</TextBlock>
-            <TextBlock Grid.Row="5" TextAlignment="Center" FontSize="18" VerticalAlignment="Center" HorizontalAlignment="Center">16:00</TextBlock>
 
-            <TextBlock TextAlignment="Center" Grid.Column="1" Grid.Row="2" Grid.RowSpan="3" Background="#FF5BEED3" Margin="10,0,10,0">Bird Watching</TextBlock>
+            <Button Grid.Row="0" Grid.Column="0" Margin="10">/\</Button>
+            <Button Grid.Row="7" Grid.Column="0" Margin="10">\/</Button>
+            
+            <TextBlock Grid.Row="1" TextAlignment="Center" FontSize="18" VerticalAlignment="Center" HorizontalAlignment="Center">10:00</TextBlock>
+            <TextBlock Grid.Row="2" TextAlignment="Center" FontSize="18" VerticalAlignment="Center" HorizontalAlignment="Center">12:00</TextBlock>
+            <TextBlock Grid.Row="3" TextAlignment="Center" FontSize="18" VerticalAlignment="Center" HorizontalAlignment="Center">13:00</TextBlock>
+            <TextBlock Grid.Row="4" TextAlignment="Center" FontSize="18" VerticalAlignment="Center" HorizontalAlignment="Center">14:00</TextBlock>
+            <TextBlock Grid.Row="5" TextAlignment="Center" FontSize="18" VerticalAlignment="Center" HorizontalAlignment="Center">15:00</TextBlock>
+            <TextBlock Grid.Row="6" TextAlignment="Center" FontSize="18" VerticalAlignment="Center" HorizontalAlignment="Center">16:00</TextBlock>
 
-            <Border Grid.Row="0" BorderBrush="Black" BorderThickness="2" Grid.RowSpan="6" />
-            <Border Grid.Row="0" BorderBrush="Black" BorderThickness="2" Grid.ColumnSpan="2" />
+            <TextBlock TextAlignment="Center" Grid.Column="1" Grid.Row="2" Grid.RowSpan="3" Background="#FF5BEED3" Margin="10,0,10,0" FontSize="20">Bird Watching</TextBlock>
+
+            <Border Grid.Row="1" BorderBrush="Black" BorderThickness="2" Grid.RowSpan="6" />
             <Border Grid.Row="1" BorderBrush="Black" BorderThickness="2" Grid.ColumnSpan="2" />
             <Border Grid.Row="2" BorderBrush="Black" BorderThickness="2" Grid.ColumnSpan="2" />
             <Border Grid.Row="3" BorderBrush="Black" BorderThickness="2" Grid.ColumnSpan="2" />
             <Border Grid.Row="4" BorderBrush="Black" BorderThickness="2" Grid.ColumnSpan="2" />
             <Border Grid.Row="5" BorderBrush="Black" BorderThickness="2" Grid.ColumnSpan="2" />
+            <Border Grid.Row="6" BorderBrush="Black" BorderThickness="2" Grid.ColumnSpan="2" />
         </Grid>
 
 
+     <TextBlock TextAlignment="Center" HorizontalAlignment="Center" Grid.Row="3" Text="Not Logged In" TextWrapping="Wrap" VerticalAlignment="Top" Height="29" Width="309" Background="LightYellow"/>
     </Grid>
 </Page>

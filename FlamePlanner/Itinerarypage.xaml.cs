@@ -20,9 +20,11 @@ namespace FlamePlanner
     /// </summary>
     public partial class Itinerarypage : Page
     {
-        public Itinerarypage()
+        private MainWindow mw;
+        public Itinerarypage(MainWindow mw)
         {
             InitializeComponent();
+            this.mw = mw;
         }
     }
 }
