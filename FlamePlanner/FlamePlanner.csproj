@@ -10,7 +10,6 @@
     <None Remove="companyLogo.png" />
     <None Remove="FullLogo.png" />
     <None Remove="Logo.png" />
-    <None Remove="rightArrow.png" />
     <None Remove="V.png" />
   </ItemGroup>
 
@@ -24,7 +23,6 @@
     <Resource Include="Logo.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Resource>
-    <Resource Include="rightArrow.png" />
     <Resource Include="V.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Resource>
