@@ -8,30 +8,37 @@
         Title="MainWindow" Height="770" Width="1300">
 
     <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="247*"/>
+            <ColumnDefinition Width="393*"/>
+        </Grid.ColumnDefinitions>
         <Grid.RowDefinitions>
             <RowDefinition Height="75"/>
             <RowDefinition Height="645"/>
         </Grid.RowDefinitions>
+
         <Rectangle Grid.Row="0" Fill="Linen" />
         <Image x:Name="topLeftLogo" HorizontalAlignment="Left" Height="75"  Grid.Row="0" VerticalAlignment="Top" Width="75" Source="/Logo.png"/>
         <Image x:Name="vLogo" HorizontalAlignment="Left" Height="75" Grid.Row="0" VerticalAlignment="Top" Width="75" Source="/V.png" Margin="65,0,0,0" Stretch="Fill" />
         
         <Frame x:Name="mainFrame" Grid.Row="1" NavigationUIVisibility="Hidden"/>
 
-        <StackPanel x:Name="navBarStackPanel" HorizontalAlignment="Center" Height="59" VerticalAlignment="Center" Width="900" Orientation="Horizontal" Grid.Row="0">
+
+        <StackPanel x:Name="navBarStackPanel" HorizontalAlignment="Left" Height="59" VerticalAlignment="Center" Width="900" Orientation="Horizontal" Grid.ColumnSpan="2" Margin="190,0,0,0">
             <Button x:Name="nav_itinerary" Content="ITINERARY" Margin="5" HorizontalAlignment="center" Width="290" FontSize="20" Click="nav_itinerary_Click" Background="LightGray"/>
             <Button x:Name="nav_map" Content="MAP" Margin="5" HorizontalAlignment="center" Width="290" FontSize="20" Background="LightGray" Click="nav_map_Click"/>
             <Button x:Name="nav_events" Content="EVENTS" Margin="5" HorizontalAlignment="center" Width="290" FontSize="20" Background="LightGray" Click="nav_events_Click"/>
         </StackPanel>
-        <Button x:Name="helpButton" Grid.Row="0" HorizontalAlignment="Right" Width="50" Height="50" Margin="10" FontSize="17" Background="LightCyan" Click="helpButton_Click">
+        <Button x:Name="helpButton" Grid.Row="0" HorizontalAlignment="Left" Width="50" Height="50" Margin="726,12,0,13" FontSize="17" Background="LightCyan" Click="helpButton_Click" Grid.Column="1">
             <TextBlock TextAlignment="Center" TextWrapping="Wrap">HELP<LineBreak/>?</TextBlock>
         </Button>
-        <Button x:Name="logInOutButton" Grid.Row="0" HorizontalAlignment="Right" Width="100" Height="50" Margin="10,10,70,10" FontSize="15" Background="LightGoldenrodYellow" Click="logInOutButton_Click">
+        <Button x:Name="logInOutButton" Grid.Row="0" HorizontalAlignment="Left" Width="100" Height="50" Margin="616,12,0,13" FontSize="15" Background="LightGoldenrodYellow" Click="logInOutButton_Click" Grid.Column="1">
             <TextBlock TextWrapping="Wrap">LOG IN / REGISTER</TextBlock>
         </Button>
-        
-        <Frame x:Name="helpOverlayFrame" Grid.Row="0" Grid.RowSpan="2" Visibility="Hidden" NavigationUIVisibility="Hidden"/> <!--Visability hidden, used to project info over the screen-->
+
+        <Frame x:Name="helpOverlayFrame" Grid.Row="0" Grid.RowSpan="2" Visibility="Hidden" NavigationUIVisibility="Hidden" Grid.ColumnSpan="2"/>
+        <!--Visability hidden, used to project info over the screen-->
 
     </Grid>
-    
+
 </Window>

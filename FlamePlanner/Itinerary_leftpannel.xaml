@@ -1,0 +1,64 @@
+﻿<Page x:Class="FlamePlanner.Itinerary_leftpannel"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:FlamePlanner"
+      mc:Ignorable="d"       
+      d:DesignHeight="650" d:DesignWidth="300"
+      Title="Itinerary_leftpannel">
+
+    <Grid Background="White" Margin="-29,28,0,0">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="3*" />
+            <RowDefinition Height="16*" />
+            <RowDefinition Height="1*" />
+            <RowDefinition Height="1*" />
+        </Grid.RowDefinitions>
+
+        <StackPanel Grid.Row="0" Orientation="Vertical" HorizontalAlignment="Center" VerticalAlignment="Center">
+            <StackPanel Orientation="Horizontal">
+                <Button x:Name="createNewItineraryButton" Width="140" Height="40" Click="createNewItineraryButton_Click">SAVE</Button>
+                <Button x:Name="loadItineraryButton" Width="140" Height="40" Click="loadItineraryButton_Click">
+                    <TextBlock TextWrapping="Wrap" TextAlignment="Center">LOAD</TextBlock>
+                </Button>
+            </StackPanel>
+            <Button x:Name="saveButton" Height="40" Click="saveButton_Click">NEW</Button>
+        </StackPanel>
+
+        <Grid Grid.Row="1">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="1*"/>
+                <RowDefinition Height="2*"/>
+                <RowDefinition Height="2*"/>
+                <RowDefinition Height="2*"/>
+                <RowDefinition Height="4*"/>
+            </Grid.RowDefinitions>
+
+            <TextBlock Grid.Row="0" HorizontalAlignment="Center" Margin="0,6,0,0" Text="Booked" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="20"/>
+
+
+            <Border Grid.Row="1" Background="White" BorderThickness="2" BorderBrush="Black" Margin="0,2,0,2">
+                <TextBlock TextAlignment="Center" HorizontalAlignment="Center" VerticalAlignment="Center"><LineBreak/><Run Text="Bird Watching"/><LineBreak/><Run Text="2021/6/10"/><LineBreak/><Run Text="15:00 - 18:00"/></TextBlock>
+            </Border>
+            <CheckBox Grid.Row="1" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="70,0,0,0" Checked="CheckBox_Checked" />
+            <Button Content="x" Grid.Row="1" HorizontalAlignment="Right" VerticalAlignment="Top" Width="25" Height="25" Margin="0,6,6,0"/>
+           
+            <Border Grid.Row="2" Background="White" BorderThickness="2" BorderBrush="Black" Margin="0,2,0,2">
+                <TextBlock TextAlignment="Center" HorizontalAlignment="Center" VerticalAlignment="Center"><LineBreak/><Run Text="Monkey Watching"/><LineBreak/><Run Text="2021/10/1"/><LineBreak/><Run Text="13:00 - 15:00"/></TextBlock>
+            </Border>
+            <CheckBox Grid.Row="2" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="70,0,0,0" Checked="CheckBox_Checked" />
+            <Button Content="x" Grid.Row="2" HorizontalAlignment="Right" VerticalAlignment="Top" Width="25" Height="25" Margin="0,6,6,0"/>
+
+            <Border Grid.Row="3" Background="White" BorderThickness="2" BorderBrush="Black" Margin="0,2,0,2">
+                <TextBlock TextAlignment="Center" HorizontalAlignment="Center" VerticalAlignment="Center"><LineBreak/><Run Text="Insect Watching"/><LineBreak/><Run Text="2021/02/20"/><LineBreak/><Run Text="18:00 - 20:00"/></TextBlock>
+            </Border>
+            <CheckBox Grid.Row="3" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="70,0,0,0" Checked="CheckBox_Checked" />
+            <Button Content="x" Grid.Row="3" HorizontalAlignment="Right" VerticalAlignment="Top" Width="25" Height="25" Margin="0,6,6,0"/>
+
+        </Grid>
+        <TextBlock TextAlignment="Center" HorizontalAlignment="Center" Grid.Row="2" Text="ID: 458759651236SMITH" TextWrapping="Wrap" VerticalAlignment="Center" Height="29" Width="309"/>
+        <Button Content="Delete" HorizontalAlignment="Center" Grid.Row="3" VerticalAlignment="Center" Height="25" Width="309"/>
+
+    </Grid>
+</Page>
