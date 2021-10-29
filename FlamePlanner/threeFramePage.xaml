@@ -5,7 +5,7 @@
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
       xmlns:local="clr-namespace:FlamePlanner"
       mc:Ignorable="d" 
-      d:DesignHeight="645" d:DesignWidth="1280"
+      d:DesignHeight="645" d:DesignWidth="1290"
       Title="threeFramePage">
 
     <Grid x:Name="_3tierColGrid">
@@ -24,7 +24,7 @@
             </Grid.RowDefinitions>
 
             <Rectangle Grid.Row="1" Fill="Black"/>
-            <Frame x:Name="topRightFrame" Grid.Row="0" NavigationUIVisibility="Hidden"/>
+            <Frame x:Name="topRightFrame" Grid.Row="0" NavigationUIVisibility="Hidden" Height="auto" Width="auto"/>
             <Frame x:Name="bottomRightFrame" Grid.Row="2" NavigationUIVisibility="Hidden"/>
 
 
