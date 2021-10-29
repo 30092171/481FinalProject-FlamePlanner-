@@ -10,16 +10,17 @@ using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
+using System.Windows.Navigation;
 using System.Windows.Shapes;
 
 namespace FlamePlanner
 {
     /// <summary>
-    /// Interaction logic for Itinerary_window.xaml
+    /// Interaction logic for Event_left.xaml
     /// </summary>
-    public partial class Itinerary_window : Window
+    public partial class Event_left : Page
     {
-        public Itinerary_window()
+        public Event_left()
         {
             InitializeComponent();
         }

@@ -33,13 +33,9 @@
             <RowDefinition Height="1*"/>
         </Grid.RowDefinitions>
 
-        <Button Grid.Column="8" Grid.Row="8" Width="40" Height="40" HorizontalAlignment="Center" VerticalAlignment="Center"></Button>
-
         <StackPanel Orientation="Horizontal" Grid.Column="1" Grid.Row="1" Grid.ColumnSpan="7" Background="#FFCD8383" />
         <!--Stackpanel is here just to add color to the date panel-->
         <StackPanel Orientation="Vertical" Grid.Column="0" Grid.Row="2" Grid.RowSpan="6" Background="#FFB5D150" />
-
-
 
         <TextBlock Grid.Column="1" Grid.Row="1" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="16"> Sat, 25 <LineBreak /> September</TextBlock>
         <TextBlock Grid.Column="2" Grid.Row="1" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="16"> Sun, 26 <LineBreak /> September</TextBlock>
@@ -70,27 +66,6 @@
                 </TransformGroup>
             </Image.RenderTransform>
         </Image>
-        <Image Grid.Column="1" Margin="21,6,21,6" Stretch="Fill" Source="pack://siteoforigin:,,,/leftArrow.png" RenderTransformOrigin="0.548,0.497"/>
-        <Image Margin="31,5,33,5" Stretch="Fill" Source="pack://siteoforigin:,,,/leftArrow.png" RenderTransformOrigin="0.548,0.497" Grid.Row="1">
-            <Image.RenderTransform>
-                <TransformGroup>
-                    <ScaleTransform/>
-                    <SkewTransform/>
-                    <RotateTransform Angle="90"/>
-                    <TranslateTransform/>
-                </TransformGroup>
-            </Image.RenderTransform>
-        </Image>
-        <Image Margin="28,1,36,9" Stretch="Fill" Source="pack://siteoforigin:,,,/leftArrow.png" RenderTransformOrigin="0.548,0.497" Grid.Row="8">
-            <Image.RenderTransform>
-                <TransformGroup>
-                    <ScaleTransform/>
-                    <SkewTransform/>
-                    <RotateTransform Angle="270"/>
-                    <TranslateTransform/>
-                </TransformGroup>
-            </Image.RenderTransform>
-        </Image>
 
 
         <Border Grid.Column="1" Grid.Row="1" BorderBrush="Black" BorderThickness="2" Grid.RowSpan="7" />
@@ -105,9 +80,43 @@
         <Border Grid.Column="0" Grid.Row="2" BorderBrush="Black" BorderThickness="2" Grid.ColumnSpan="8"  />
         <Border Grid.Column="0" Grid.Row="3" BorderBrush="Black" BorderThickness="2" Grid.ColumnSpan="8" />
         <Border Grid.Column="0" Grid.Row="4" BorderBrush="Black" BorderThickness="2" Grid.ColumnSpan="8" />
-        <Border Grid.Column="0" Grid.Row="5" BorderBrush="Black" BorderThickness="2" Grid.ColumnSpan="8" />
+        <Border Grid.Column="0" Grid.Row="5" BorderBrush="Black" BorderThickness="2" Grid.ColumnSpan="8" >
+            <Image Margin="23,247,842,-225" Stretch="Fill" Source="/leftArrow2.jpg" RenderTransformOrigin="0.5,0.5">
+                <Image.RenderTransform>
+                    <TransformGroup>
+                        <ScaleTransform/>
+                        <SkewTransform/>
+                        <RotateTransform Angle="270"/>
+                        <TranslateTransform/>
+                    </TransformGroup>
+                </Image.RenderTransform>
+            </Image>
+        </Border>
         <Border Grid.Column="0" Grid.Row="6" BorderBrush="Black" BorderThickness="2" Grid.ColumnSpan="8" />
         <Border Grid.Column="0" Grid.Row="7" BorderBrush="Black" BorderThickness="2" Grid.ColumnSpan="8" />
-
+        <Image Margin="22,6,22,18" Stretch="Fill" Source="/leftArrow2.jpg" Grid.Row="1" RenderTransformOrigin="0.5,0.5">
+            <Image.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="90"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </Image.RenderTransform>
+        </Image>
+        <Image Margin="24,14,21,10" Stretch="Fill" Source="/leftArrow2.jpg" Grid.Column="1"/>
+        <Image Margin="14,14,30,10" Stretch="Fill" Source="/leftArrow2.jpg" Grid.Column="7" RenderTransformOrigin="0.5,0.5">
+            <Image.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="180"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </Image.RenderTransform>
+        </Image>
+        <Border Grid.Column="8" Grid.Row="8" BorderBrush="Black" BorderThickness="2">
+        <Image Grid.Column="8" Margin="32,10,32,10" Grid.Row="8" Stretch="Fill" Source="/plus sign.jpg"/>
+        </Border>
     </Grid>
 </Page>
