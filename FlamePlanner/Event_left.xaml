@@ -20,12 +20,7 @@
             <RowDefinition Height="10*"/>
         </Grid.RowDefinitions>
 
-        <StackPanel Grid.Row="0" Orientation="Horizontal" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,10,0,0">
-            <Button x:Name="createNewItineraryButton" Width="140" Height="40" Click="createNewItineraryButton_Click" FontSize="20">Load</Button>
-            <Button x:Name="loadItineraryButton" Width="140" Height="40" Click="loadItineraryButton_Click">
-                <TextBlock TextWrapping="Wrap" TextAlignment="Center" FontSize="20">Save</TextBlock>
-            </Button>
-        </StackPanel>
+
 
         <TextBlock Grid.Row="1" TextAlignment="Center" HorizontalAlignment="Center" TextWrapping="Wrap" VerticalAlignment="Center" FontSize="24" Background="#FFB7D1CE">Sat 25, <LineBreak/> Septemer 2021</TextBlock>
         <Image Margin="24,24,255,25" Grid.Row="1" Stretch="Fill" Source="/Event_leftArrow.png"/>

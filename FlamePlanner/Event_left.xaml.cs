@@ -24,5 +24,10 @@ namespace FlamePlanner
         {
             InitializeComponent();
         }
+
+        private void createNewItineraryButton_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
 }
