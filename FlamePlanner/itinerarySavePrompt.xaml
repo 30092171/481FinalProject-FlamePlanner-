@@ -1,0 +1,52 @@
+﻿<Window x:Class="FlamePlanner.itinerarySavePrompt"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:FlamePlanner"
+        mc:Ignorable="d"
+        Title="itinerarySavePrompt" Height="450" Width="800">
+    <Grid>
+        <StackPanel Orientation="Vertical" HorizontalAlignment="Center"  VerticalAlignment="Center" Width="400">
+            
+            <TextBlock Width="400" Height="40" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="20" TextAlignment="Center">
+            <Underline>List of Saved Itineraries on this Account</Underline>
+            </TextBlock>
+            
+            <ListView x:Name="savedList" MaxHeight="360" Width="400">    
+                <TextBlock Width="200" Height="40" HorizontalAlignment="Center" VerticalAlignment="Center">
+                Itinerary 1
+                </TextBlock>
+                <TextBlock Width="200" Height="40" HorizontalAlignment="Center" VerticalAlignment="Center">
+                Itinerary 2
+                </TextBlock>
+                <TextBlock Width="200" Height="40" HorizontalAlignment="Center" VerticalAlignment="Center">
+                Itinerary 3
+                </TextBlock>
+                <TextBlock Width="200" Height="40" HorizontalAlignment="Center" VerticalAlignment="Center">
+                Itinerary 4
+                </TextBlock>
+                <TextBlock Width="200" Height="40" HorizontalAlignment="Center" VerticalAlignment="Center">
+                Itinerary 5
+                </TextBlock>
+                <TextBlock Width="200" Height="40" HorizontalAlignment="Center" VerticalAlignment="Center">
+                Itinerary 6
+                </TextBlock>
+            </ListView>
+
+            <Button x:Name="returnButton" Width="100" Height="75" Margin="100,0" FontSize="10" Click="returnButton_Click">
+                <TextBlock TextWrapping="Wrap" TextAlignment="Center" FontSize="20">Return to Menu</TextBlock>
+            </Button>
+        </StackPanel>
+
+        <StackPanel Orientation="Vertical" HorizontalAlignment="Left"  VerticalAlignment="Center">
+            <Image  Source="/FullLogo.png" Height="150" Width="150" HorizontalAlignment="Left" VerticalAlignment ="Center" Stretch="Fill"/>
+            <Image  Source="/companyLogo.png" Height="75" Width="110" HorizontalAlignment="Center" VerticalAlignment="Center" Stretch="Fill"/>
+        </StackPanel>
+
+        <StackPanel Orientation="Vertical" HorizontalAlignment="Right"  VerticalAlignment="Center">
+            <Image  Source="/FullLogo.png" Height="150" Width="150" HorizontalAlignment="Left" VerticalAlignment ="Center" Stretch="Fill"/>
+            <Image  Source="/companyLogo.png" Height="75" Width="110" HorizontalAlignment="Center" VerticalAlignment="Center" Stretch="Fill"/>
+        </StackPanel>
+    </Grid>
+</Window>

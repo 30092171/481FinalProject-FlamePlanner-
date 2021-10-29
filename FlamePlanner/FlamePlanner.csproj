@@ -7,8 +7,13 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <None Remove="CalgaryStampedeEvent.jpg" />
     <None Remove="companyLogo.png" />
+    <None Remove="CulturalFestivalEvent.png" />
+    <None Remove="EricNamEvent.jpg" />
     <None Remove="FullLogo.png" />
+    <None Remove="HalloweenEvent.jpg" />
+    <None Remove="LobsterFestEvent.jpg" />
     <None Remove="Logo.png" />
     <None Remove="Resources\blue.png" />
     <None Remove="Resources\blueMarker.png" />
@@ -17,16 +22,29 @@
     <None Remove="Resources\negativeIcon.png" />
     <None Remove="Resources\plusIcon.png" />
     <None Remove="Resources\redMarker.png" />
+    <None Remove="NickiMinajEvent.jpg" />
+    <None Remove="plus sign.jpg" />
+    <None Remove="QuestionMarkSymbol.jpg" />
+    <None Remove="right-arrow %281%29.png" />
     <None Remove="V.png" />
   </ItemGroup>
 
   <ItemGroup>
+    <PackageReference Include="MaterialDesignColors" Version="2.0.3" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="CalgaryStampedeEvent.jpg" />
     <Resource Include="companyLogo.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Resource>
+    <Resource Include="CulturalFestivalEvent.png" />
+    <Resource Include="EricNamEvent.jpg" />
     <Resource Include="FullLogo.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Resource>
+    <Resource Include="HalloweenEvent.jpg" />
+    <Resource Include="LobsterFestEvent.jpg" />
     <Resource Include="Logo.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Resource>

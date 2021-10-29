@@ -1,0 +1,50 @@
+﻿<Window x:Class="FlamePlanner.itineraryLoadWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:FlamePlanner"
+        mc:Ignorable="d"
+        Title="itinerarySavePage" Height="645" Width="1280">
+    <Grid x:Name="itineraryScreen">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="400*"/>
+            <ColumnDefinition Width="3*"/>
+            <ColumnDefinition Width="967*"/>
+        </Grid.ColumnDefinitions>
+        <Rectangle Fill="White" Grid.ColumnSpan="3"/>
+
+        <Grid Grid.Column="0">
+
+            <StackPanel Grid.Row="1" Orientation="Vertical" HorizontalAlignment="Center" VerticalAlignment="Center">
+                <TextBlock Width="280" Height="50" TextAlignment="Center" Padding="0,15,0,0" FontSize="16" Background="LightGray">
+                    <Bold><Underline>CHOOSE AN ITINERARY TO LOAD</Underline></Bold>
+                </TextBlock>
+                   
+                <ListBox x:Name="itineraryList" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,0,0,0" MaxHeight="250" SelectionChanged="itineraryList_SelectionChanged">
+
+                    <ListBoxItem Content="Itinerary 1" FontSize="20" Margin="175,0,0,0"/>
+                    <ListBoxItem Content="Itinerary 2" FontSize="20" Margin="175,0,0,0"/>
+                    <ListBoxItem Content="Itinerary 3" FontSize="20" Margin="175,0,0,0"/>
+                    <ListBoxItem Content="Itinerary 4" FontSize="20" Margin="175,0,0,0"/>
+                    <ListBoxItem Content="Itinerary 5" FontSize="20" Margin="175,0,0,0"/>
+                    <ListBoxItem Content="Itinerary 6" FontSize="20" Margin="175,0,0,0"/>
+                    <ListBoxItem Content="Itinerary 7" FontSize="20" Margin="175,0,0,0"/>
+                </ListBox>
+
+                <Button x:Name="loadItinerary" Width="280" Height="40" VerticalAlignment="Center" Click="loadItinerary_Click">
+                    <TextBlock TextWrapping="Wrap" FontSize="20" TextAlignment="Center">Load Itinerary</TextBlock>
+                </Button>
+
+            </StackPanel>
+            
+
+
+        </Grid>
+        <Rectangle Grid.Column="1" Fill="Black"/>
+        <!-- This is to seperate left from right sides-->
+        <Frame x:Name="previewFrame" Grid.Column="2"></Frame>
+
+    </Grid>
+
+</Window>
