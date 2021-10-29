@@ -10,10 +10,13 @@
     <None Remove="companyLogo.png" />
     <None Remove="FullLogo.png" />
     <None Remove="Logo.png" />
+    <None Remove="Resources\blue.png" />
+    <None Remove="Resources\blueMarker.png" />
     <None Remove="Resources\calgary.png" />
     <None Remove="Resources\mapMarker.ico" />
     <None Remove="Resources\negativeIcon.png" />
     <None Remove="Resources\plusIcon.png" />
+    <None Remove="Resources\redMarker.png" />
     <None Remove="V.png" />
   </ItemGroup>
 
@@ -27,9 +30,24 @@
     <Resource Include="Logo.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Resource>
-    <Resource Include="Resources\calgary.png" />
-    <Resource Include="Resources\negativeIcon.png" />
-    <Resource Include="Resources\plusIcon.png" />
+    <Resource Include="Resources\blue.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Resources\blueMarker.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Resources\calgary.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Resources\negativeIcon.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Resources\plusIcon.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Resources\redMarker.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
     <Resource Include="V.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Resource>

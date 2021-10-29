@@ -7,8 +7,8 @@
              mc:Ignorable="d" d:DesignWidth="800" Height="164">
     <Grid>
         <Label x:Name="label" Content="Filter" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" FontSize="24"/>
-        <ComboBox x:Name="comboBox" HorizontalAlignment="Left" Margin="77,10,0,0" VerticalAlignment="Top" Width="318" Height="42" SelectedIndex="0">
-            <MenuItem FontSize="24" Header="Concerts"/>
+        <ComboBox x:Name="comboBox" HorizontalAlignment="Left" Margin="77,10,0,0" VerticalAlignment="Top" Width="318" Height="42" SelectedIndex="0" FontSize="24">
+            <ComboBoxItem FontSize="24" Content="Concerts"/>
         </ComboBox>
         <Label x:Name="label_Copy" Content="Address - 9 Ave SW" HorizontalAlignment="Left" Margin="10,57,0,0" VerticalAlignment="Top" FontSize="24"/>
         <GroupBox x:Name="groupBox" Header="Key" Margin="400,0,10,10" FontSize="18">
@@ -21,7 +21,7 @@
                 <Label x:Name="label1_Copy1" Content="Other POIs" HorizontalAlignment="Left" Margin="242,6,0,0" VerticalAlignment="Top"/>
             </Grid>
         </GroupBox>
-        <TextBox x:Name="searchBox" Text="Map Search" TextWrapping="Wrap" FontSize="24" Margin="10,104,405,25"/>
+        <TextBox x:Name="searchBox" Text="Map Search" TextWrapping="Wrap" FontSize="24" Margin="10,104,430,25"/>
 
     </Grid>
 </UserControl>

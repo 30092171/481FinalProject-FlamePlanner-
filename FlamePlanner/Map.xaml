@@ -15,13 +15,13 @@
                 <Grid>
                     <Image Source="Resources/calgary.png"/>
                     <Image Source="Resources/blue.png"  Width="40" Height="40" Margin="691,407,545,485"/>
-                    <Button x:Name="poi1" Width="60" Height="60" Background="{x:Null}" BorderBrush="{x:Null}" Margin="516,505,700,367">
+                    <Button x:Name="poi1" Width="60" Height="60" Background="{x:Null}" BorderBrush="{x:Null}" Margin="516,505,700,367" Click="poi1_Click">
                         <Image Source="Resources/redMarker.png"  Width="50" Height="50"/>
                     </Button>
-                    <Button x:Name="poi2" Width="60" Height="60" Background="{x:Null}" BorderBrush="{x:Null}" Margin="893,546,323,326">
+                    <Button x:Name="poi2" Width="60" Height="60" Background="{x:Null}" BorderBrush="{x:Null}" Margin="893,546,323,326" Click="poi2_Click">
                         <Image Source="Resources/blueMarker.png"  Width="50" Height="50"/>
                     </Button>
-                    <Button x:Name="poi3" Width="60" Height="60" Background="{x:Null}" BorderBrush="{x:Null}" Margin="595,79,621,793">
+                    <Button x:Name="poi3" Width="60" Height="60" Background="{x:Null}" BorderBrush="{x:Null}" Margin="595,79,621,793" Click="poi3_Click">
                         <Image Source="Resources/redMarker.png"  Width="50" Height="50"/>
                     </Button>
                     <Label x:Name="label" Content="6 Street SW" HorizontalAlignment="Left" Margin="510,474,0,0" VerticalAlignment="Top" Background="{DynamicResource {x:Static SystemColors.WindowBrushKey}}"/>

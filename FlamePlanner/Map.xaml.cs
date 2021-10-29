@@ -24,5 +24,20 @@ namespace FlamePlanner
         {
             InitializeComponent();
         }
+        private void poi1_Click(object sender, RoutedEventArgs e)
+        {
+            MapEvent me = new MapEvent("6 Street SW");
+            me.ShowDialog();
+        }
+        private void poi2_Click(object sender, RoutedEventArgs e)
+        {
+            MapEvent me = new MapEvent("Stampede");
+            me.ShowDialog();
+        }
+        private void poi3_Click(object sender, RoutedEventArgs e)
+        {
+            MapEvent me = new MapEvent("Prince Island Park");
+            me.ShowDialog();
+        }
     }
 }
