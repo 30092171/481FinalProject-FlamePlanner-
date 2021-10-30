@@ -1,0 +1,22 @@
+﻿<Window x:Class="FlamePlanner.deleteConfirmation"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:FlamePlanner"
+        mc:Ignorable="d"
+        Title="Delete Itinerary Confirmation" Height="450" Width="800">
+    <Grid>
+        <StackPanel Orientation="Vertical">
+            <Label FontSize="25" HorizontalAlignment="Center" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Margin="0,100,0,0">Are you sure you wish to delete your itinerary?</Label>
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0,60,0,0">
+                <StackPanel Orientation="Vertical" Margin="15,0">
+                <Button x:Name="deleteButton" Height="70" FontSize="15" Width="200" Click="deleteButton_Click">Yes, Delete The Itinerary</Button>
+                    <Label>
+                        <Italic>This Action Can Not Be Undone</Italic> </Label>
+                </StackPanel>
+                <Button x:Name="goBackButton" Height="70" Width="200" FontSize="15" VerticalAlignment="Top" Margin="15,0" Click="goBackButton_Click">No, Go Back</Button>
+            </StackPanel>
+        </StackPanel>
+    </Grid>
+</Window>

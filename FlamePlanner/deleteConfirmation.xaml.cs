@@ -10,32 +10,32 @@ using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
 using System.Windows.Shapes;
 
 namespace FlamePlanner
 {
     /// <summary>
-    /// Interaction logic for Itinerary_leftpannel.xaml
+    /// Interaction logic for deleteConfirmation.xaml
     /// </summary>
-    public partial class Itinerary_leftpannel : Page
+    public partial class deleteConfirmation : Window
     {
         private MainWindow mw;
-        public Itinerary_leftpannel(MainWindow mw)
+        public deleteConfirmation(MainWindow mw)
         {
             InitializeComponent();
             this.mw = mw;
         }
 
-        private void CheckBox_Checked(object sender, RoutedEventArgs e)
-        {
-
-        }
-
         private void deleteButton_Click(object sender, RoutedEventArgs e)
         {
-            deleteConfirmation dc = new deleteConfirmation(mw);
-            dc.ShowDialog();
+            //Delete Itinerary From MainWind
+            this.Close();
+        }
+
+        private void goBackButton_Click(object sender, RoutedEventArgs e)
+        {
+            //Go back
+            this.Close();
         }
     }
 }

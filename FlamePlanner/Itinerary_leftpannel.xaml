@@ -39,25 +39,28 @@
             </Border>
             <CheckBox Grid.Row="1" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="70,0,0,0" Checked="CheckBox_Checked" />
             <Button Content="x" Grid.Row="1" HorizontalAlignment="Right" VerticalAlignment="Top" Width="25" Height="25" Margin="0,6,6,0"/>
-           
-            <Border Grid.Row="2" Background="White" BorderThickness="2" BorderBrush="Black" Margin="0,2,0,2">
+            <Button Content=">" Grid.Row="1" HorizontalAlignment="Right" VerticalAlignment="Bottom" Width="25" Height="25" Margin="0,0,6,6"/>
+
+                <Border Grid.Row="2" Background="White" BorderThickness="2" BorderBrush="Black" Margin="0,2,0,2">
                 <TextBlock TextAlignment="Center" HorizontalAlignment="Center" VerticalAlignment="Center">
                     <LineBreak/><Run Text="Animal Dance"/><LineBreak/><Run Text="2021/09/29"/><LineBreak/><Run Text="12:00 - 15:00"/>
                 </TextBlock>
             </Border>
             <CheckBox Grid.Row="2" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="70,0,0,0" Checked="CheckBox_Checked" />
             <Button Content="x" Grid.Row="2" HorizontalAlignment="Right" VerticalAlignment="Top" Width="25" Height="25" Margin="0,6,6,0"/>
+            <Button Content=">" Grid.Row="2" HorizontalAlignment="Right" VerticalAlignment="Bottom" Width="25" Height="25" Margin="0,0,6,6"/>
 
-            <Border Grid.Row="3" Background="White" BorderThickness="2" BorderBrush="Black" Margin="0,2,0,2">
+                <Border Grid.Row="3" Background="White" BorderThickness="2" BorderBrush="Black" Margin="0,2,0,2">
                 <TextBlock TextAlignment="Center" HorizontalAlignment="Center" VerticalAlignment="Center"><LineBreak/><Run Text="Mokey Singing"/><LineBreak/><Run Text="2021/10/01"/><LineBreak/><Run Text="13:00 - 14:00"/></TextBlock>
             </Border>
             <CheckBox Grid.Row="3" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="70,0,0,0" Checked="CheckBox_Checked" />
             <Button Content="x" Grid.Row="3" HorizontalAlignment="Right" VerticalAlignment="Top" Width="25" Height="25" Margin="0,6,6,0"/>
+            <Button Content=">" Grid.Row="3" HorizontalAlignment="Right" VerticalAlignment="Bottom" Width="25" Height="25" Margin="0,0,6,6"/>
 
             </Grid>
         </ScrollViewer>
         <TextBlock TextAlignment="Center" HorizontalAlignment="Center" Grid.Row="2" Text="Username: User123" TextWrapping="Wrap" VerticalAlignment="Bottom" Height="29" Width="309" Background="AliceBlue"/>
-        <Button x:Name="deleteButton" Content="Delete Itinerary" HorizontalAlignment="Center" Grid.Row="3" VerticalAlignment="Top" Height="35" Width="309"  Margin="0,5,0,0"/>
+        <Button x:Name="deleteButton" Content="Delete Itinerary" HorizontalAlignment="Center" Grid.Row="3" VerticalAlignment="Top" Height="35" Width="309"  Margin="0,5,0,0" Click="deleteButton_Click"/>
         
     </Grid>
 </Page>

@@ -16,26 +16,21 @@ using System.Windows.Shapes;
 namespace FlamePlanner
 {
     /// <summary>
-    /// Interaction logic for Itinerary_leftpannel.xaml
+    /// Interaction logic for mapHelpOverlay.xaml
     /// </summary>
-    public partial class Itinerary_leftpannel : Page
+    public partial class mapHelpOverlay : Page
     {
         private MainWindow mw;
-        public Itinerary_leftpannel(MainWindow mw)
+        public mapHelpOverlay(MainWindow mw)
         {
             InitializeComponent();
             this.mw = mw;
         }
 
-        private void CheckBox_Checked(object sender, RoutedEventArgs e)
+        private void ExitButton_Click(object sender, RoutedEventArgs e)
         {
-
-        }
-
-        private void deleteButton_Click(object sender, RoutedEventArgs e)
-        {
-            deleteConfirmation dc = new deleteConfirmation(mw);
-            dc.ShowDialog();
+            mw.helpOverlayFrame.Content = null;
+            mw.helpOverlayFrame.Visibility = Visibility.Hidden;
         }
     }
 }

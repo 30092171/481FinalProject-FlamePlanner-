@@ -144,6 +144,8 @@ namespace FlamePlanner
             {
                 if (nav_itinerary.Background == NAV_SELECT_COLOUR) //Itinerary Screen
                 {
+                    helpOverlayFrame.Visibility = Visibility.Visible;
+                    helpOverlayFrame.Content = new itineraryHelpOverlay(this);
 
                 }
                 else if (nav_events.Background == NAV_SELECT_COLOUR) //Events screen
@@ -153,7 +155,8 @@ namespace FlamePlanner
                 }
                 else if (nav_map.Background == NAV_SELECT_COLOUR) //Map screen
                 {
-
+                    helpOverlayFrame.Visibility = Visibility.Visible;
+                    helpOverlayFrame.Content = new mapHelpOverlay(this);
                 }
                 
             }

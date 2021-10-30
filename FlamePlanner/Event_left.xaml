@@ -66,12 +66,12 @@
             <Button Grid.Row="0" Grid.Column="0" Margin="10">/\</Button>
             <Button Grid.Row="7" Grid.Column="0" Margin="10">\/</Button>
             
-            <TextBlock Grid.Row="1" TextAlignment="Center" FontSize="18" VerticalAlignment="Center" HorizontalAlignment="Center">10:00</TextBlock>
-            <TextBlock Grid.Row="2" TextAlignment="Center" FontSize="18" VerticalAlignment="Center" HorizontalAlignment="Center">12:00</TextBlock>
-            <TextBlock Grid.Row="3" TextAlignment="Center" FontSize="18" VerticalAlignment="Center" HorizontalAlignment="Center">13:00</TextBlock>
-            <TextBlock Grid.Row="4" TextAlignment="Center" FontSize="18" VerticalAlignment="Center" HorizontalAlignment="Center">14:00</TextBlock>
-            <TextBlock Grid.Row="5" TextAlignment="Center" FontSize="18" VerticalAlignment="Center" HorizontalAlignment="Center">15:00</TextBlock>
-            <TextBlock Grid.Row="6" TextAlignment="Center" FontSize="18" VerticalAlignment="Center" HorizontalAlignment="Center">16:00</TextBlock>
+            <TextBlock Grid.Row="1" TextAlignment="Center" FontSize="18" VerticalAlignment="Center" HorizontalAlignment="Center">10:00am</TextBlock>
+            <TextBlock Grid.Row="2" TextAlignment="Center" FontSize="18" VerticalAlignment="Center" HorizontalAlignment="Center">11:00am</TextBlock>
+            <TextBlock Grid.Row="3" TextAlignment="Center" FontSize="18" VerticalAlignment="Center" HorizontalAlignment="Center">12:00pm</TextBlock>
+            <TextBlock Grid.Row="4" TextAlignment="Center" FontSize="18" VerticalAlignment="Center" HorizontalAlignment="Center">1:00pm</TextBlock>
+            <TextBlock Grid.Row="5" TextAlignment="Center" FontSize="18" VerticalAlignment="Center" HorizontalAlignment="Center">2:00pm</TextBlock>
+            <TextBlock Grid.Row="6" TextAlignment="Center" FontSize="18" VerticalAlignment="Center" HorizontalAlignment="Center">3:00pm</TextBlock>
 
             <TextBlock TextAlignment="Center" Grid.Column="1" Grid.Row="2" Grid.RowSpan="3" Background="#FF5BEED3" Margin="10,0,10,0" FontSize="20">Bird Watching</TextBlock>
 

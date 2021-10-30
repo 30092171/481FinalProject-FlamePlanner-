@@ -11,20 +11,25 @@
             <ComboBoxItem  Content="NONE"/>
             <ComboBoxItem  Content="Concerts"/>
         </ComboBox>
-        <Label x:Name="label_Copy" Content="Address: 9 Ave SW" HorizontalAlignment="Left" Margin="10,57,0,0" VerticalAlignment="Top" FontSize="24"/>
+        <StackPanel Orientation="Horizontal" Margin="10,57,0,0">
+            <Label x:Name="label_Copy" Content="Address: " HorizontalAlignment="Left"  VerticalAlignment="Top" FontSize="24"/>
+            <TextBox x:Name="addressSearchbox" VerticalAlignment="Top" Width="225" Height="30" Margin="0,8,0,0" VerticalContentAlignment="Center">9 Ave SW</TextBox>
+            <Button x:Name="addressSearchGoButton" Width="50" Height="30" VerticalAlignment="Top" Margin="5,8,0,0" Content="Go"/>
+        </StackPanel>
         <GroupBox x:Name="groupBox" Header="Key" Margin="400,0,10,10" FontSize="18">
             <Grid>
                 <Image x:Name="image" HorizontalAlignment="Left" Height="40" Margin="5,0,0,0" VerticalAlignment="Top" Width="40" Source="Resources/blue.png"/>
-                <Label x:Name="label1" Content="Map Centre" HorizontalAlignment="Left" Margin="50,6,0,0" VerticalAlignment="Top"/>
+                <Label x:Name="label1" Content="Selected Address" HorizontalAlignment="Left" Margin="50,6,0,0" VerticalAlignment="Top"/>
                 <Image x:Name="image_Copy" HorizontalAlignment="Left" Height="40" Margin="5,45,0,0" VerticalAlignment="Top" Width="40" Source="Resources/blueMarker.png"/>
-                <Label x:Name="label1_Copy" Content="Events" HorizontalAlignment="Left" Margin="50,0,0,0" VerticalAlignment="Center"/>
+                <Label x:Name="label1_Copy" Content="Event" HorizontalAlignment="Left" Margin="50,0,0,0" VerticalAlignment="Center"/>
                 <Image x:Name="image_Copy1" HorizontalAlignment="Left" Height="40" Margin="197,6,0,0" VerticalAlignment="Top" Width="40" Source="/Resources/redMarker.png"/>
                 <Label x:Name="label1_Copy1" Content="Point of Interest" HorizontalAlignment="Left" Margin="240,6,0,0" VerticalAlignment="Top"/>
             </Grid>
         </GroupBox>
         <StackPanel Orientation="Horizontal" Width="400" HorizontalAlignment="Left" VerticalAlignment="Bottom" Margin="10,0,0,25">
-            <TextBox x:Name="searchBox" Text="Location Search" TextWrapping="Wrap" FontSize="24" Width="300" Margin="5,0,5,0" />
-            <Button Width="50" Content="Go"/>
+            <Label FontSize="24">Search: </Label>
+            <TextBox x:Name="eventSearchbox" Text="Event Search" TextWrapping="Wrap" Height="30" Width="241" Margin="5,0,5,0" VerticalContentAlignment="Center"/>
+            <Button x:Name="eventSearchGoButton" Width="50" Height="30" VerticalAlignment="Top" Margin="0,6,0,0" Content="Go"/>
         </StackPanel>
             
 
