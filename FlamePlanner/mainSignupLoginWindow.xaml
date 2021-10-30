@@ -5,7 +5,7 @@
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
       xmlns:local="clr-namespace:FlamePlanner"
       mc:Ignorable="d" d:DesignWidth="800"
-      Title="mainSignupLoginWindow" Height="457">
+      Title="Log In or Sign Up" Height="457">
 
     <Grid>
         <Rectangle Fill="white"/>

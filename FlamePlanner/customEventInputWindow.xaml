@@ -1,21 +1,21 @@
-﻿<Window x:Class="FlamePlanner.MapEvent"
+﻿<Window x:Class="FlamePlanner.customEventInputWindow"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:FlamePlanner"
         mc:Ignorable="d"
-        Title="MapEvent" Height="350" Width="845">
+        Title="Custom Event" Height="630" Width="470">
     <Grid>
 
 
-        <Label x:Name="label" Content="Event: " HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" FontSize="24"/>
-        <Label x:Name="event_label" Content="&lt;event here&gt;" HorizontalAlignment="Left" Margin="95,10,0,0" VerticalAlignment="Top" FontSize="24"/>
+        <Label x:Name="label" Content="Event Name: " HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" FontSize="24"/>
+        <TextBox x:Name="nameInput" HorizontalAlignment="Left" Margin="160,17,0,0" VerticalAlignment="Top" FontSize="20" Width="250" Text="Enter Event Name Here"/>
+
         <Label x:Name="label_Copy" Content="Date:" HorizontalAlignment="Left" Margin="10,57,0,0" VerticalAlignment="Top" FontSize="24"/>
         <DatePicker x:Name="datePicker" HorizontalAlignment="Left" Margin="80,57,0,0" VerticalAlignment="Top" Height="42" FontSize="24"/>
 
-        <Button x:Name="button" Content="✓" HorizontalAlignment="Left" Margin="306,211,0,0" VerticalAlignment="Top" FontSize="36" Width="120" Click="button_Click"/>
-
+        <Button x:Name="submitButton" Content="✓" HorizontalAlignment="Left" Margin="321,523,0,0" VerticalAlignment="Top" FontSize="36" Width="120" Click="submitButton_Click"/>
         <Label x:Name="startTime" Content="Time:" HorizontalAlignment="Left" Margin="10,109,0,0" VerticalAlignment="Top" FontSize="24"/>
         <ComboBox x:Name="hour1" HorizontalAlignment="Left" Margin="82,109,0,0" VerticalAlignment="Top" Width="56" FontSize="24" SelectedIndex="11">
             <ComboBoxItem Content="1"/>
@@ -89,24 +89,11 @@
             <ComboBoxItem Content="PM"/>
         </ComboBox>
 
+        <Label HorizontalAlignment="Left" VerticalAlignment="Top" FontSize="24" Margin="5,215,0,0">Location:</Label>
+        <TextBox x:Name="locationInput" HorizontalAlignment="Left"  VerticalAlignment="Top" FontSize="20" Width="250" Text="Enter Location Here" Margin="121,222,0,0"/>
 
-        <StackPanel Orientation="Vertical" Margin="0,0,0,0" HorizontalAlignment="Right" Background="AliceBlue" Width="400"> <!--Can be collapsed to hide restrictions-->
-            <Label Content="Restrictions: " HorizontalAlignment="Left"  VerticalAlignment="Top" FontSize="24"/>
-            <TextBlock HorizontalAlignment="Left" Margin="0,20,0,0">
-            The Item you have selected has restrictions around its Time or Dates
-            </TextBlock>
+        <Label HorizontalAlignment="Left" VerticalAlignment="Top" FontSize="24" Margin="10,262,0,0">Description:</Label>
+        <TextBox x:Name="descriptionInput" HorizontalAlignment="Left" TextWrapping="Wrap"   VerticalAlignment="Top" FontSize="20" Width="400" Height="200" Text="Enter Event Details Here" Margin="21,304,0,0"/>
 
-            <StackPanel Orientation="Horizontal">
-                <Label Content="Time Restrictions: " HorizontalAlignment="Left" Margin="0,20,0,0" VerticalAlignment="Top" FontSize="20"/>
-                <TextBlock x:Name="timeRestrictBlock"  Margin="0,25,0,0" FontSize="20" Foreground="DarkRed">10:00am to 4:00pm</TextBlock>
-            </StackPanel>
-
-
-            <Label Content="Date Restrictions: " HorizontalAlignment="Left" Margin="0,20,0,0" VerticalAlignment="Top" FontSize="20"/>
-            <TextBlock x:Name="dateRestrictBlock"  Margin="25,0,0,0" FontSize="20" Foreground="DarkRed">Mondays, Wednesdays, Fridays</TextBlock>
-
-
-
-        </StackPanel>
     </Grid>
 </Window>

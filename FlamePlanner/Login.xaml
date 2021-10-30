@@ -6,7 +6,7 @@
       xmlns:local="clr-namespace:FlamePlanner"
       mc:Ignorable="d" 
       d:DesignHeight="450" d:DesignWidth="800"
-      Title="Login">
+      Title="Log In">
 
     <Grid>
         <StackPanel Orientation="Vertical" HorizontalAlignment="Center"  VerticalAlignment="Center">

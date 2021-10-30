@@ -10,27 +10,26 @@ using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
 using System.Windows.Shapes;
 
 namespace FlamePlanner
 {
     /// <summary>
-    /// Interaction logic for Itinerarypage.xaml
+    /// Interaction logic for customEventInputWindow.xaml
     /// </summary>
-    public partial class Itinerarypage : Page
+    public partial class customEventInputWindow : Window
     {
         private MainWindow mw;
-        public Itinerarypage(MainWindow mw)
+        public customEventInputWindow(MainWindow mw)
         {
             InitializeComponent();
             this.mw = mw;
         }
 
-        private void customEventButton_Click(object sender, RoutedEventArgs e)
+        private void submitButton_Click(object sender, RoutedEventArgs e)
         {
-            customEventInputWindow ceiw = new customEventInputWindow(mw);
-            ceiw.ShowDialog();
+            //Create event in mainWindow somehow
+            this.Close();
         }
     }
 }

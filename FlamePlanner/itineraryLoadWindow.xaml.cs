@@ -39,6 +39,12 @@ namespace FlamePlanner
         private void itineraryList_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
             //Load preview frame here
+            string selection = itineraryList.SelectedItem.ToString();
+
+            //Somehow indicate to the main window which itinerary should be loaded
+
+            this.previewFrame.Content = new Itinerarypage(mw);
+
         }
     }
 }

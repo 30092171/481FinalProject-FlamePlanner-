@@ -106,7 +106,7 @@
             <Image Stretch="Uniform" Source="/leftArrow2.jpg" Width="35" Height="30"/>
         </Button>
         <Border Grid.Column="7" Grid.Row="8" BorderBrush="DarkRed" BorderThickness="2">
-            <Button x:Name="customEventButton" Grid.Column="8"  Grid.Row="8" Background="Transparent" Padding="5">
+            <Button x:Name="customEventButton" Grid.Column="8"  Grid.Row="8" Background="Transparent" Padding="5" Click="customEventButton_Click">
                 <Image Grid.Column="8" Grid.Row="8" Stretch="Uniform" Source="/plus sign.jpg"/>
             </Button>
         </Border>

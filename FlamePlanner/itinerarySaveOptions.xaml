@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:FlamePlanner"
         mc:Ignorable="d"
-        Title="itinerarySaveOptions" Height="450" Width="800">
+        Title="You Must Be Logged In" Height="450" Width="800">
     <Grid>
         <Rectangle Fill="White"/>
         <StackPanel Orientation="Vertical" HorizontalAlignment="Center" VerticalAlignment="Center">
