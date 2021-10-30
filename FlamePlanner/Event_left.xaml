@@ -5,17 +5,16 @@
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
       xmlns:local="clr-namespace:FlamePlanner"
       mc:Ignorable="d" 
-      d:DesignHeight="650" d:DesignWidth="300"
+      d:DesignHeight="600" d:DesignWidth="290"
       Title="Event_left">
 
-    <Grid Background="White" Margin="-29,28,0,0">
+    <Grid Background="White">
 
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="1*" />
         </Grid.ColumnDefinitions>
 
         <Grid.RowDefinitions>
-            <RowDefinition Height="0.5*"/>
             <RowDefinition Height="2*"/>
             <RowDefinition Height="450"/>
             <RowDefinition Height="1*"/>
@@ -23,20 +22,31 @@
 
 
 
-        <TextBlock Grid.Row="1" TextAlignment="Center" HorizontalAlignment="Center" TextWrapping="Wrap" VerticalAlignment="Center" FontSize="24" Background="LightYellow">Sat 25, <LineBreak/> Septemer 2021</TextBlock>
-        <Image Margin="24,24,255,25" Grid.Row="1" Stretch="Fill" Source="/Event_leftArrow.png"/>
-        <Image Margin="254,24,25,25" Grid.Row="1" Stretch="Fill" Source="/Event_leftArrow.png" RenderTransformOrigin="0.5,0.5">
-            <Image.RenderTransform>
-                <TransformGroup>
-                    <ScaleTransform/>
-                    <SkewTransform/>
-                    <RotateTransform Angle="180"/>
-                    <TranslateTransform/>
-                </TransformGroup>
-            </Image.RenderTransform>
-        </Image>
+        <StackPanel Orientation="Horizontal" Grid.Row="0" HorizontalAlignment="Center">
 
-        <Grid Grid.Row="2">
+            <Button x:Name="leftDateButton" Grid.Row="0" HorizontalAlignment="Center" Width="40" Height="40" Background="Transparent" Margin="10,0,0,0">
+                <Image Source="/Event_leftArrow.png" Stretch="Fill"/>
+            </Button>
+            
+            <TextBlock Grid.Row="0" TextAlignment="Center" HorizontalAlignment="Center" TextWrapping="Wrap" VerticalAlignment="Center" FontSize="24" Background="Linen" Margin="10,0">Sat 25, <LineBreak/> Septemer 2021</TextBlock>
+
+        
+
+            <Button x:Name="rightDateButton" Grid.Row="0" HorizontalAlignment="Center" Width="40" Height="40" Background="Transparent" Margin="0,0,10,0" Padding="0,0,0,0">
+                <Image   Source="/Event_leftArrow.png" RenderTransformOrigin="0.5,0.5" Stretch="Fill">
+                <Image.RenderTransform>
+                    <TransformGroup>
+                        <ScaleTransform/>
+                        <SkewTransform/>
+                        <RotateTransform Angle="180"/>
+                        <TranslateTransform/>
+                    </TransformGroup>
+                </Image.RenderTransform>
+                </Image>
+            </Button>
+        </StackPanel>
+
+        <Grid Grid.Row="1">
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="1*"/>
                 <ColumnDefinition Width="2*"/>
@@ -75,6 +85,6 @@
         </Grid>
 
 
-     <TextBlock TextAlignment="Center" HorizontalAlignment="Center" Grid.Row="3" Text="Not Logged In" TextWrapping="Wrap" VerticalAlignment="Top" Height="29" Width="309" Background="LightYellow"/>
+     <TextBlock TextAlignment="Center" HorizontalAlignment="Center" Grid.Row="2" Text="Not Logged In" TextWrapping="Wrap" VerticalAlignment="Top" Height="29" Width="290" Background="LightYellow"/>
     </Grid>
 </Page>

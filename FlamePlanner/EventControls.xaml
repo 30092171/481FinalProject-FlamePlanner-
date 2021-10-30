@@ -8,28 +8,28 @@
       d:DesignHeight="160" d:DesignWidth="981"
       Title="EventControls">
 
-    <Grid Background="AliceBlue">
-        <Label Content="Filter" HorizontalAlignment="Left" Margin="90,19,0,0" VerticalAlignment="Top"/>
-        <Label Content="Date" HorizontalAlignment="Left" Margin="91,75,0,0" VerticalAlignment="Top"/>
-        <ComboBox Margin="140,23,623,115" SelectedIndex="0" >
-                <TextBlock Text="NONE" TextWrapping="Wrap"/>
-                <TextBlock Text="Family" TextWrapping="Wrap"/>
-                <TextBlock Text="Concert" TextWrapping="Wrap"/>
-                <TextBlock Text="Food and Drink" TextWrapping="Wrap"/>
-                <TextBlock Text="Festivals and Special Events" TextWrapping="Wrap"/>
-                <TextBlock Text="Film and Video" TextWrapping="Wrap"/>
-                <TextBlock Text="Museums, Galleries and Exhibitions" TextWrapping="Wrap"/>
-                <TextBlock Text="Shopping and Markets" TextWrapping="Wrap"/>
-                <TextBlock Text="Sports and Recreation" TextWrapping="Wrap"/>
-                <TextBlock Text="Theatre, Comedy and Performing Arts" TextWrapping="Wrap"/>
-            
+    <Grid Background="#FFE4E0E0">
+        <Label Content="Filter:" HorizontalAlignment="Left" Margin="10,13,0,0" VerticalAlignment="Top" FontSize="24"/>
+        <Label Content="Date:" HorizontalAlignment="Left" Margin="10,0,0,0" VerticalAlignment="Center" FontSize="24"/>
+        <ComboBox Margin="78,14,685,104" SelectedIndex="0" Height="42" VerticalContentAlignment="Center">
+            <TextBlock Text="NONE" TextWrapping="Wrap"/>
+            <TextBlock Text="Family" TextWrapping="Wrap"/>
+            <TextBlock Text="Concert" TextWrapping="Wrap"/>
+            <TextBlock Text="Food and Drink" TextWrapping="Wrap"/>
+            <TextBlock Text="Festivals and Special Events" TextWrapping="Wrap"/>
+            <TextBlock Text="Film and Video" TextWrapping="Wrap"/>
+            <TextBlock Text="Museums, Galleries and Exhibitions" TextWrapping="Wrap"/>
+            <TextBlock Text="Shopping and Markets" TextWrapping="Wrap"/>
+            <TextBlock Text="Sports and Recreation" TextWrapping="Wrap"/>
+            <TextBlock Text="Theatre, Comedy and Performing Arts" TextWrapping="Wrap"/>
+
         </ComboBox>
-        <DatePicker HorizontalAlignment="Left" Margin="126,101,0,0" VerticalAlignment="Top"/>
-        <Label Content="to" HorizontalAlignment="Left" Margin="240,100,0,0" VerticalAlignment="Top"/>
-        <DatePicker HorizontalAlignment="Left" Margin="275,100,0,0" VerticalAlignment="Top"/>
-        <Label Content="Event Search:" HorizontalAlignment="Left" Margin="590,19,0,0" VerticalAlignment="Top"/>
-        <TextBox HorizontalAlignment="Left" Margin="668,23,0,0" Text="" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
-        <Button x:Name="EventSearchButton" Content="Go" HorizontalAlignment="Left" Margin="801,23,0,0" VerticalAlignment="Top" Height="18" Width="32" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="10"/>
+        <DatePicker HorizontalAlignment="Left" Margin="75,100,0,0" VerticalAlignment="Top"/>
+        <Label Content="to" HorizontalAlignment="Left" Margin="192,100,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.206,0.539"/>
+        <DatePicker HorizontalAlignment="Left" Margin="228,100,0,0" VerticalAlignment="Top"/>
+        <Label Content="Event Search:" HorizontalAlignment="Left" Margin="513,10,0,0" VerticalAlignment="Top" FontSize="24"/>
+        <TextBox HorizontalAlignment="Left" Margin="668,22,0,0" Text="" TextWrapping="Wrap" VerticalAlignment="Top" Width="150" FontSize="17"/>
+        <Button x:Name="EventSearchButton" Content="Go" HorizontalAlignment="Left" Margin="823,26,0,0" VerticalAlignment="Top" Height="18" Width="32" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="10"/>
 
 
     </Grid>

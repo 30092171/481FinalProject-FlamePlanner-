@@ -44,7 +44,7 @@ namespace FlamePlanner
                 {
                     threeFramePage tfp = mainFrame.Content as threeFramePage;
                     tfp.topRightFrame.Content = new Itinerarypage(this);
-                    tfp.bottomRightFrame.Content = new MapBottom(this);
+                    tfp.bottomRightFrame.Content = new Itinerary_bottom(this);
                     
                     if (tfp.leftFrame.Content == null || tfp.leftFrame.Content.GetType() != typeof(Itinerary_leftpannel))
                     {

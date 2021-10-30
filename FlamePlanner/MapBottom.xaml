@@ -5,13 +5,13 @@
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:FlamePlanner"
              mc:Ignorable="d" d:DesignWidth="800" Height="164">
-    <Grid>
-        <Label x:Name="label" Content="Filter" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" FontSize="24"/>
-        <ComboBox x:Name="comboBox" HorizontalAlignment="Left" Margin="77,10,0,0" VerticalAlignment="Top" Width="318" Height="42" SelectedIndex="0" FontSize="24">
-            <ComboBoxItem FontSize="24" Content="None"/>
-            <ComboBoxItem FontSize="24" Content="Concerts"/>
+    <Grid Background="#FFE4E0E0">
+        <Label x:Name="label" Content="Filter:" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" FontSize="24"/>
+        <ComboBox x:Name="comboBox" HorizontalAlignment="Left" Margin="77,10,0,0" VerticalAlignment="Top" Width="318" Height="42" SelectedIndex="0" VerticalContentAlignment="Center">
+            <ComboBoxItem  Content="NONE"/>
+            <ComboBoxItem  Content="Concerts"/>
         </ComboBox>
-        <Label x:Name="label_Copy" Content="Address - 9 Ave SW" HorizontalAlignment="Left" Margin="10,57,0,0" VerticalAlignment="Top" FontSize="24"/>
+        <Label x:Name="label_Copy" Content="Address: 9 Ave SW" HorizontalAlignment="Left" Margin="10,57,0,0" VerticalAlignment="Top" FontSize="24"/>
         <GroupBox x:Name="groupBox" Header="Key" Margin="400,0,10,10" FontSize="18">
             <Grid>
                 <Image x:Name="image" HorizontalAlignment="Left" Height="40" Margin="5,0,0,0" VerticalAlignment="Top" Width="40" Source="Resources/blue.png"/>

@@ -40,14 +40,26 @@ namespace FlamePlanner
 
             if (type == 0)
             {
-                //Load itinerary pages
+                leftFrame.Content = new Itinerary_leftpannel(mw);
+                bottomRightFrame.Content = new Itinerary_bottom(mw);
+                topRightFrame.Content = new Itinerarypage(mw);
+                mw.nav_itinerary.Background = mw.NAV_SELECT_COLOUR;
+
             }
             else if (type == 1)
             {
                 //Load map pages
+                leftFrame.Content = new Event_left(mw);
+                bottomRightFrame.Content = new MapBottom(mw);
+                topRightFrame.Content = new Map(mw);
+                mw.nav_map.Background = mw.NAV_SELECT_COLOUR;
             }
-            else { 
+            else {
                 //Load events pages
+                leftFrame.Content = new Event_left(mw);
+                bottomRightFrame.Content = new EventControls(mw);
+                topRightFrame.Content = new EventScreen(mw);
+                mw.nav_events.Background = mw.NAV_SELECT_COLOUR;
             }
                     
         }

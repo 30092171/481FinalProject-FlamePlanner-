@@ -8,7 +8,7 @@
       d:DesignHeight="650" d:DesignWidth="300"
       Title="Itinerary_leftpannel">
 
-    <Grid Background="White" Margin="-29,28,0,0">
+    <Grid Background="White">
         <Grid.RowDefinitions>
             <RowDefinition Height="0" />
             <RowDefinition Height="16*" />
@@ -26,26 +26,30 @@
                 <RowDefinition Height="100"/>
                 </Grid.RowDefinitions>
 
-                <Rectangle Grid.Row="0" Fill="LightGray"/>
+                <Rectangle Grid.Row="0" Fill="AliceBlue"/>
                 <TextBlock Grid.Row="0" HorizontalAlignment="Center" Margin="0,6,0,0" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="23">
                     <Underline>Booked</Underline>
                 </TextBlock>
 
 
             <Border Grid.Row="1" Background="White" BorderThickness="2" BorderBrush="Black" Margin="0,2,0,2">
-                <TextBlock TextAlignment="Center" HorizontalAlignment="Center" VerticalAlignment="Center"><LineBreak/><Run Text="Bird Watching"/><LineBreak/><Run Text="2021/6/10"/><LineBreak/><Run Text="15:00 - 18:00"/></TextBlock>
+                <TextBlock TextAlignment="Center" HorizontalAlignment="Center" VerticalAlignment="Center">
+                    <LineBreak/><Run Text="Bird Watching"/><LineBreak/><Run Text="2021/09/25"/><LineBreak/><Run Text="10:00 - 12:00"/>
+                </TextBlock>
             </Border>
             <CheckBox Grid.Row="1" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="70,0,0,0" Checked="CheckBox_Checked" />
             <Button Content="x" Grid.Row="1" HorizontalAlignment="Right" VerticalAlignment="Top" Width="25" Height="25" Margin="0,6,6,0"/>
            
             <Border Grid.Row="2" Background="White" BorderThickness="2" BorderBrush="Black" Margin="0,2,0,2">
-                <TextBlock TextAlignment="Center" HorizontalAlignment="Center" VerticalAlignment="Center"><LineBreak/><Run Text="Monkey Watching"/><LineBreak/><Run Text="2021/10/1"/><LineBreak/><Run Text="13:00 - 15:00"/></TextBlock>
+                <TextBlock TextAlignment="Center" HorizontalAlignment="Center" VerticalAlignment="Center">
+                    <LineBreak/><Run Text="Animal Dance"/><LineBreak/><Run Text="2021/09/29"/><LineBreak/><Run Text="12:00 - 15:00"/>
+                </TextBlock>
             </Border>
             <CheckBox Grid.Row="2" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="70,0,0,0" Checked="CheckBox_Checked" />
             <Button Content="x" Grid.Row="2" HorizontalAlignment="Right" VerticalAlignment="Top" Width="25" Height="25" Margin="0,6,6,0"/>
 
             <Border Grid.Row="3" Background="White" BorderThickness="2" BorderBrush="Black" Margin="0,2,0,2">
-                <TextBlock TextAlignment="Center" HorizontalAlignment="Center" VerticalAlignment="Center"><LineBreak/><Run Text="Insect Watching"/><LineBreak/><Run Text="2021/02/20"/><LineBreak/><Run Text="18:00 - 20:00"/></TextBlock>
+                <TextBlock TextAlignment="Center" HorizontalAlignment="Center" VerticalAlignment="Center"><LineBreak/><Run Text="Mokey Singing"/><LineBreak/><Run Text="2021/10/01"/><LineBreak/><Run Text="13:00 - 14:00"/></TextBlock>
             </Border>
             <CheckBox Grid.Row="3" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="70,0,0,0" Checked="CheckBox_Checked" />
             <Button Content="x" Grid.Row="3" HorizontalAlignment="Right" VerticalAlignment="Top" Width="25" Height="25" Margin="0,6,6,0"/>

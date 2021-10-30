@@ -11,8 +11,10 @@
     <None Remove="companyLogo.png" />
     <None Remove="CulturalFestivalEvent.png" />
     <None Remove="EricNamEvent.jpg" />
+    <None Remove="Event_leftArrow.png" />
     <None Remove="FullLogo.png" />
     <None Remove="HalloweenEvent.jpg" />
+    <None Remove="leftArrow2.jpg" />
     <None Remove="LobsterFestEvent.jpg" />
     <None Remove="Logo.png" />
     <None Remove="NickiMinajEvent.jpg" />
@@ -35,10 +37,16 @@
     </Resource>
     <Resource Include="CulturalFestivalEvent.png" />
     <Resource Include="EricNamEvent.jpg" />
+    <Resource Include="Event_leftArrow.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
     <Resource Include="FullLogo.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Resource>
     <Resource Include="HalloweenEvent.jpg" />
+    <Resource Include="leftArrow2.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
     <Resource Include="LobsterFestEvent.jpg" />
     <Resource Include="Logo.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
