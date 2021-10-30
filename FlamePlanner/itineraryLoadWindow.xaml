@@ -5,10 +5,10 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:FlamePlanner"
         mc:Ignorable="d"
-        Title="Load Itinerary" Height="645" Width="1280">
+        Title="Load Itinerary" Height="645" Width="1400">
     <Grid x:Name="itineraryScreen">
         <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="400*"/>
+            <ColumnDefinition Width="370*"/>
             <ColumnDefinition Width="3*"/>
             <ColumnDefinition Width="967*"/>
         </Grid.ColumnDefinitions>

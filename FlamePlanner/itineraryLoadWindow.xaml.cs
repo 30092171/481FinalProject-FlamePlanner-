@@ -43,7 +43,9 @@ namespace FlamePlanner
 
             //Somehow indicate to the main window which itinerary should be loaded
 
-            this.previewFrame.Content = new Itinerarypage(mw);
+            Itinerarypage ip = new Itinerarypage(mw);
+            ip.customEventButton.Visibility = Visibility.Collapsed; //Hides + button as it is a preview
+            this.previewFrame.Content = ip;
 
         }
     }
