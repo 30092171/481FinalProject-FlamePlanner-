@@ -28,7 +28,7 @@
                 <Image Source="/Event_leftArrow.png" Stretch="Fill"/>
             </Button>
             
-            <TextBlock Grid.Row="0" TextAlignment="Center" HorizontalAlignment="Center" TextWrapping="Wrap" VerticalAlignment="Center" FontSize="24" Background="Linen" Margin="10,0">Sat 25, <LineBreak/> Septemer 2021</TextBlock>
+            <TextBlock Grid.Row="0" TextAlignment="Center" HorizontalAlignment="Center" TextWrapping="Wrap" VerticalAlignment="Center" FontSize="24" Background="Linen" Margin="10,0">Sat 25, <LineBreak/> September 2021</TextBlock>
 
         
 
