@@ -51,7 +51,7 @@
             <Button Content=">" Grid.Row="2" HorizontalAlignment="Right" VerticalAlignment="Bottom" Width="25" Height="25" Margin="0,0,6,6"/>
 
                 <Border Grid.Row="3" Background="White" BorderThickness="2" BorderBrush="Black" Margin="0,2,0,2">
-                <TextBlock TextAlignment="Center" HorizontalAlignment="Center" VerticalAlignment="Center"><LineBreak/><Run Text="Mokey Singing"/><LineBreak/><Run Text="2021/10/01"/><LineBreak/><Run Text="13:00 - 14:00"/></TextBlock>
+                <TextBlock TextAlignment="Center" HorizontalAlignment="Center" VerticalAlignment="Center"><LineBreak/><Run Text="Monkey Singing"/><LineBreak/><Run Text="2021/10/01"/><LineBreak/><Run Text="13:00 - 14:00"/></TextBlock>
             </Border>
             <CheckBox Grid.Row="3" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="70,0,0,0" Checked="CheckBox_Checked" />
             <Button Content="x" Grid.Row="3" HorizontalAlignment="Right" VerticalAlignment="Top" Width="25" Height="25" Margin="0,6,6,0"/>
