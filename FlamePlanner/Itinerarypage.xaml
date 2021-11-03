@@ -52,9 +52,9 @@
         <TextBlock Grid.Column="0" Grid.Row="6" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="20">2:00pm</TextBlock>
         <TextBlock Grid.Column="0" Grid.Row="7" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="20">3:00pm</TextBlock>
 
-        <TextBlock x:Name="Event1" TextAlignment="Center" Grid.Column="1" Grid.Row="2" Grid.RowSpan="2"  HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Foreground="Black" Background="#FF5BEED3">Bird Watching <LineBreak /> 10:00 - 12:00</TextBlock>
-        <TextBlock x:Name="Event2" TextAlignment="Center" Grid.Column="5" Grid.Row="4" Grid.RowSpan="3"  HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Foreground="Black" Background="#FF5BEED3">Animal Dance <LineBreak /> 12:00 - 15:00</TextBlock>
-        <TextBlock x:Name="Event3" TextAlignment="Center" Grid.Column="7" Grid.Row="5" Grid.RowSpan="1"  HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Foreground="Black" Background="#FF5BEED3">Monkey singing <LineBreak /> 13:00 - 14:00</TextBlock>
+        <TextBlock x:Name="Event1" TextAlignment="Center" Grid.Column="1" Grid.Row="2" Grid.RowSpan="2"  HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Foreground="Black" Background="#FF5BEED3">Bird Watching <LineBreak /> 10:00am - 12:00pm</TextBlock>
+        <TextBlock x:Name="Event2" TextAlignment="Center" Grid.Column="5" Grid.Row="4" Grid.RowSpan="3"  HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Foreground="Black" Background="#FF5BEED3">Animal Dance <LineBreak /> 12:00am - 3:00pm</TextBlock>
+        <TextBlock x:Name="Event3" TextAlignment="Center" Grid.Column="7" Grid.Row="5" Grid.RowSpan="1"  HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Foreground="Black" Background="#FF5BEED3">Monkey singing <LineBreak /> 1:00pm - 2:00pm</TextBlock>
 
 
         <Border Grid.Column="1" Grid.Row="1" BorderBrush="Black" BorderThickness="2" Grid.RowSpan="7" />
@@ -76,6 +76,13 @@
         <Border Grid.Column="0" Grid.Row="6" BorderBrush="Black" BorderThickness="2" Grid.ColumnSpan="8" />
         <Border Grid.Column="0" Grid.Row="7" BorderBrush="Black" BorderThickness="2" Grid.ColumnSpan="8" />
 
+
+        <Button x:Name="printButton" Grid.Row="0" Background="Transparent">
+            <TextBlock Background="LightGray" FontSize="20" FontWeight="Bold">
+                PRINT
+            </TextBlock>
+        </Button>
+        
         <Button x:Name="TimeUpButton" Grid.Row="1" Background="Transparent">
         <Image Stretch="Uniform" Source="/leftArrow2.jpg" RenderTransformOrigin="0.5,0.5">
             <Image.RenderTransform>

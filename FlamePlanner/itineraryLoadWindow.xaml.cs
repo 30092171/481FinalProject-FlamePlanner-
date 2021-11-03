@@ -45,6 +45,7 @@ namespace FlamePlanner
 
             Itinerarypage ip = new Itinerarypage(mw);
             ip.customEventButton.Visibility = Visibility.Collapsed; //Hides + button as it is a preview
+            ip.printButton.Visibility = Visibility.Collapsed;
             this.previewFrame.Content = ip;
 
         }
