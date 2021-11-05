@@ -1,17 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows;
+﻿using System.Windows;
 using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
 using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
-using System.Windows.Shapes;
 
 namespace FlamePlanner
 {
@@ -21,6 +10,10 @@ namespace FlamePlanner
     public partial class Map : Page
     {
         private MainWindow mw;
+        private bool mouseHeld = false;
+        private double lastX = 0;
+        private double lastY = 0;
+
         public Map(MainWindow mw)
         {
             InitializeComponent();
@@ -51,6 +44,42 @@ namespace FlamePlanner
             EventPopUpWindow epw = new EventPopUpWindow(mw);
             epw.EventName = "Prince Island Park";
             epw.ShowDialog();
+        }
+
+        private void mapGrid_MouseMove(object sender, MouseEventArgs e)
+        {
+            if (mouseHeld)
+            {
+                Thickness margin = mapGrid.Margin;
+                margin.Left = mapGrid.Margin.Left + (e.GetPosition(null).X - lastX);
+                margin.Top = mapGrid.Margin.Top + (e.GetPosition(null).Y - lastY);
+                
+                mapGrid.Margin = margin;
+                lastX = e.GetPosition(null).X;
+                lastY = e.GetPosition(null).Y;
+
+               
+
+            }
+        }
+
+        private void mapGrid_MouseDown(object sender, MouseButtonEventArgs e)
+        {
+            mouseHeld = true;
+            lastX = e.GetPosition(null).X;
+            lastY = e.GetPosition(null).Y;
+            
+
+        }
+
+        private void mapGrid_MouseUp(object sender, MouseButtonEventArgs e)
+        {
+            mouseHeld = false;
+        }
+
+        private void plusButton_Click(object sender, RoutedEventArgs e)
+        {
+
         }
     }
 }
