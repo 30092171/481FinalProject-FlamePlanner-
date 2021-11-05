@@ -11,35 +11,43 @@
 
     <Grid x:Name="overGrid" Background="#FF2D2D30">
         <Canvas x:Name="canvas">
-            <ScrollViewer x:Name="mapScroller" Width="{Binding ActualWidth, ElementName=canvas, Mode=OneWay}" Height="{Binding ActualHeight, ElementName=canvas, Mode=OneWay}" HorizontalScrollBarVisibility="Visible">
-                <Grid x:Name="mapGrid" MouseMove="mapGrid_MouseMove" MouseDown="mapGrid_MouseDown" MouseUp="mapGrid_MouseUp" Margin="0,0,0,0">
+            <ScrollViewer x:Name="mapScroller" Width="{Binding ActualWidth, ElementName=canvas, Mode=OneWay}" Height="{Binding ActualHeight, ElementName=canvas, Mode=OneWay}" HorizontalScrollBarVisibility="Hidden" VerticalScrollBarVisibility="Hidden">
+                <Grid x:Name="mapGrid" MouseMove="mapGrid_MouseMove" MouseDown="mapGrid_MouseDown" MouseUp="mapGrid_MouseUp" Margin="0,0,0,0" RenderTransformOrigin="0.5,0.5">
+                    <Grid.RenderTransform>
+                        <TransformGroup>
+                            <ScaleTransform x:Name="mapScale" ScaleX="1" ScaleY="1"/>
+                            <SkewTransform/>
+                            <RotateTransform/>
+                            <TranslateTransform/>
+                        </TransformGroup>
+                    </Grid.RenderTransform>
                     <Image x:Name="mapImage"  Source="Resources/calgary.png" Stretch="None"/>
                     <Image Source="Resources/blue.png"  Width="40" Height="40" Margin="691,407,545,485"/>
-                    <Button x:Name="poi1" Width="75" Height="auto" Background="{x:Null}" BorderBrush="{x:Null}" Margin="517,495,699,377" Click="poi1_Click">
+                    <Button x:Name="poi1" Width="75" Height="80" Background="{x:Null}" BorderBrush="{x:Null}" Margin="517,495,699,377" Click="poi1_Click">
                         <StackPanel>
                             <Label x:Name="label" Content="6 Street SW" HorizontalAlignment="Left" VerticalAlignment="Top" Background="{DynamicResource {x:Static SystemColors.WindowBrushKey}}"/>
                             <Image Source="Resources/redMarker.png"  Width="50" Height="50"/>
                         </StackPanel>
                     </Button>
-                    <Button x:Name="poi2" Width="65" Height="auto" Background="{x:Null}" BorderBrush="{x:Null}" Margin="894,535,322,337" Click="poi2_Click">
+                    <Button x:Name="poi2" Width="65" Height="80" Background="{x:Null}" BorderBrush="{x:Null}" Margin="894,535,322,337" Click="poi2_Click">
                         <StackPanel>
                             <Label x:Name="label_Copy1" Content="Stampede" HorizontalAlignment="Left" VerticalAlignment="Top" Background="{DynamicResource {x:Static SystemColors.WindowBrushKey}}"/>
                             <Image Source="Resources/blueMarker.png"  Width="50" Height="50"/>
                         </StackPanel>
                     </Button>
-                    <Button x:Name="poi3" Width="105" Height="auto" Background="{x:Null}" BorderBrush="{x:Null}" Margin="596,56,620,816" Click="poi3_Click">
+                    <Button x:Name="poi3" Width="105" Height="80" Background="{x:Null}" BorderBrush="{x:Null}" Margin="596,56,620,816" Click="poi3_Click">
                         <StackPanel>
                             <Label x:Name="label_Copy" Content="Prince Island Park" HorizontalAlignment="Left" VerticalAlignment="Top" Background="{DynamicResource {x:Static SystemColors.WindowBrushKey}}"/>
                             <Image Source="Resources/redMarker.png"  Width="50" Height="50"/>
                         </StackPanel>
                     </Button>
-                    
-                    
-                    
+
+
+
                 </Grid>
             </ScrollViewer>
         </Canvas>
-        <Button x:Name="minusButton" Width="60" Height="60" VerticalAlignment="Bottom" HorizontalAlignment="Right" Margin="0,0,25,25">
+        <Button x:Name="minusButton" Width="60" Height="60" VerticalAlignment="Bottom" HorizontalAlignment="Right" Margin="0,0,25,25" Click="minusButton_Click">
             <Image Source="Resources/negativeIcon.png"  Width="50" Height="50"/>
         </Button>
         <Button x:Name="plusButton" Width="60" Height="60" VerticalAlignment="Bottom" HorizontalAlignment="Right" Margin="0,0,25,85" Click="plusButton_Click">

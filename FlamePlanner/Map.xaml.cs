@@ -79,7 +79,14 @@ namespace FlamePlanner
 
         private void plusButton_Click(object sender, RoutedEventArgs e)
         {
+            mapScale.ScaleX = 2*mapScale.ScaleX;
+            mapScale.ScaleY = 2 * mapScale.ScaleY;
+        }
 
+        private void minusButton_Click(object sender, RoutedEventArgs e)
+        {
+            mapScale.ScaleX = mapScale.ScaleX/2;
+            mapScale.ScaleY = mapScale.ScaleY/2;
         }
     }
 }
