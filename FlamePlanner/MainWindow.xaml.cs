@@ -23,9 +23,14 @@ namespace FlamePlanner
         public bool loggedIn;
         public SolidColorBrush NAV_SELECT_COLOUR = Brushes.LightCoral; //Should be treated as a constant, kept it public for simplicity
 
+        public Dictionary<string, Account> AccountDatabase; //Dictioary of accounts. Key = Username, Value = Account Object
+
         public MainWindow()
         {
             InitializeComponent();
+
+            this.AccountDatabase = new Dictionary<string, Account>();
+
             mainFrame.Content = new startPage(this); //Program starts with the start page loaded in the main frame
             this.loggedIn = false;
             navBarStackPanel.Visibility = Visibility.Hidden; //Hides nav bar until user starts itinerary proccess
