@@ -13,17 +13,18 @@
         <Button x:Name="ExitButton" HorizontalAlignment="Right" VerticalAlignment="Top" Width="53" Height="53" Margin="10" Background="Red" Content="X" FontSize="25" Click="ExitButton_Click"></Button>
 
 
-        <Border x:Name="navBarDescriptionBorder" VerticalAlignment="Top" Margin="185,0,206,0" BorderThickness="3" BorderBrush="LightCoral"  MouseEnter="navBarDescriptionBorder_MouseEnter" MouseLeave="navBarDescriptionBorder_MouseLeave">
-            <Rectangle Fill="Transparent" Height="88"/>
+        <Border x:Name="navBarDescriptionBorder" VerticalAlignment="Top" Margin="185,0,181,0" BorderBrush="LightCoral" BorderThickness="3" MouseEnter="navBarDescriptionBorder_MouseEnter" MouseLeave="navBarDescriptionBorder_MouseLeave">
+            <Rectangle Fill="Transparent" Height="75"/>
         </Border>
 
         <Border BorderBrush="LightCoral" BorderThickness="3" VerticalAlignment="Top" Margin="379,164,62,0" x:Name="currentPageDescriptionBorder" MouseEnter="currentPageDescriptionBorder_MouseEnter" MouseLeave="currentPageDescriptionBorder_MouseLeave">
             <Rectangle Fill="Transparent" Height="291"/>
         </Border>
 
-        <Border x:Name="logInHelpTextBorder" BorderBrush="LightCoral" BorderThickness="3" VerticalAlignment="Top" Margin="1094,2,62,0" MouseEnter="logInHelpTextBorder_MouseEnter" MouseLeave="logInHelpTextBorder_MouseLeave" >
-            <Rectangle Height="90" Fill="Transparent"/>
+        <Border x:Name="logInHelpTextBorder" VerticalAlignment="Top" Margin="1119,0,63,0" BorderThickness="3" BorderBrush="LightCoral" MouseEnter="logInHelpTextBorder_MouseEnter" MouseLeave="logInHelpTextBorder_MouseLeave">
+            <Rectangle Fill="Transparent" Height="75"/>
         </Border>
+
         <Border x:Name="bottomDescriptionBorder" VerticalAlignment="Top" Margin="301,553,10,0" BorderThickness="3" BorderBrush="LightCoral" MouseEnter="bottomDescriptionBorder_MouseEnter" MouseLeave="bottomDescriptionBorder_MouseLeave">
             <Rectangle Fill="Transparent" Height="163"/>
 

@@ -27,7 +27,7 @@
 
         <Border x:Name="bottomDescriptionBorder" VerticalAlignment="Top" Margin="306,571,0,0" BorderBrush="LightCoral" BorderThickness="3" MouseEnter="bottomDescriptionBorder_MouseEnter" MouseLeave="bottomDescriptionBorder_MouseLeave" >
             <Rectangle Fill="Transparent" Height="178"/>
-        </Border >
+        </Border>
 
         <Border x:Name="leftDescriptionBorder" VerticalAlignment="Top" Margin="0,86,1033,0" BorderBrush="LightCoral" BorderThickness="3" MouseEnter="leftDescriptionBorder_MouseEnter" MouseLeave="leftDescriptionBorder_MouseLeave" >
             <Rectangle Fill="Transparent" Height="654"/>

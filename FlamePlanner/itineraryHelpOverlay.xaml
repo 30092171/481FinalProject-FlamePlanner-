@@ -12,7 +12,28 @@
         <Rectangle Fill="Gray" Opacity="0.6"/>
         <Button x:Name="ExitButton" HorizontalAlignment="Right" VerticalAlignment="Top" Width="53" Height="53" Margin="10" Background="Red" Content="X" FontSize="25" Click="ExitButton_Click"></Button>
 
-        <Border x:Name="navDetailsBorder" VerticalAlignment="Top" Margin="300,65,224,0" BorderBrush="LightCoral" BorderThickness="3" MouseEnter="navDetailsBorder_MouseEnter" MouseLeave="navDetailsBorder_MouseLeave">
+
+        <Border x:Name="navDetailsBorder" VerticalAlignment="Top" Margin="185,0,181,0" BorderBrush="LightCoral" BorderThickness="3" MouseEnter="navDetailsBorder_MouseEnter" MouseLeave="navDetailsBorder_MouseLeave">
+            <Rectangle Fill="Transparent" Height="75"/>
+        </Border>
+
+        <Border x:Name="screenDetailsBorder" VerticalAlignment="Top" Margin="296,118,10,0" BorderBrush="LightCoral" BorderThickness="3" MouseEnter="screenDetailsBorder_MouseEnter" MouseLeave="screenDetailsBorder_MouseLeave">
+            <Rectangle Fill="Transparent" Height="386"/>
+        </Border>
+
+        <Border x:Name="logInDetailsBorder" VerticalAlignment="Top" Margin="1119,0,63,0" BorderThickness="3" BorderBrush="LightCoral" MouseEnter="logInDetailsBorder_MouseEnter" MouseLeave="logInDetailsBorder_MouseLeave">
+            <Rectangle Fill="Transparent" Height="75"/>
+        </Border>
+
+        <Border x:Name="bottomDetailsBorder" VerticalAlignment="Top" Margin="306,571,0,0" BorderBrush="LightCoral" BorderThickness="3" MouseEnter="bottomDetailsBorder_MouseEnter" MouseLeave="bottomDetailsBorder_MouseLeave">
+            <Rectangle Fill="Transparent" Height="178"/>
+        </Border>
+
+        <Border x:Name="leftDetailsBorder" VerticalAlignment="Top" Margin="0,86,1033,0" BorderBrush="LightCoral" BorderThickness="3" MouseEnter="leftDetailsBorder_MouseEnter" MouseLeave="leftDetailsBorder_MouseLeave">
+            <Rectangle Fill="Transparent" Height="654"/>
+        </Border>
+
+        <Border  VerticalAlignment="Top" Margin="264,81,260,0" BorderBrush="Transparent" BorderThickness="3" >
             <TextBlock x:Name="navDetails" TextWrapping="Wrap" Height="116"  Background="White" TextAlignment="Center" FontSize="15" Visibility="Hidden">
             The three above buttons are how you naviagte to the main pages of the Application. <LineBreak/>
             The <Bold>Itinerary</Bold> Screen is where you can view a expanded view of your itinerary and controls associated with it<LineBreak/>
@@ -21,7 +42,10 @@
             </TextBlock>
         </Border>
 
-        <Border x:Name="screenDetailsBorder" VerticalAlignment="Top" Margin="619,236,10,0" BorderBrush="LightCoral" BorderThickness="3" MouseEnter="screenDetailsBorder_MouseEnter" MouseLeave="screenDetailsBorder_MouseLeave">
+
+       
+
+        <Border  VerticalAlignment="Top" Margin="593,213,36,0" BorderBrush="Transparent" BorderThickness="3" MouseEnter="screenDetailsBorder_MouseEnter">
             <TextBlock x:Name="screenDetails" TextWrapping="Wrap" Height="168" Width="auto"  Background="White" TextAlignment="Left" FontSize="15" Visibility="Hidden">
             You are currently viewing the <Bold>Itinerary</Bold> page. <LineBreak/>
             In this page you can customize your currently loaded itinerary.<LineBreak/>
@@ -32,13 +56,16 @@
             </TextBlock>
         </Border>
 
-        <Border x:Name="logInDetailsBorder" VerticalAlignment="Top" Margin="1088,65,68,0" BorderBrush="LightCoral" BorderThickness="3" MouseEnter="logInDetailsBorder_MouseEnter" MouseLeave="logInDetailsBorder_MouseLeave">
+        
+        <Border  VerticalAlignment="Top" Margin="1088,86,68,0" BorderBrush="Transparent" BorderThickness="3" >
             <TextBlock x:Name="loginDetails" TextWrapping="Wrap" Height="116"  Background="White" TextAlignment="Center" FontSize="15" Visibility="Hidden">
             The Above button is how you Log in, <LineBreak/>Sign up, or Sign out of our Account System
             </TextBlock>
         </Border>
 
-        <Border x:Name="bottomDetailsBorder" VerticalAlignment="Top" Margin="744,614,36,0" BorderBrush="LightCoral" BorderThickness="3" MouseEnter="bottomDetailsBorder_MouseEnter" MouseLeave="bottomDetailsBorder_MouseLeave">
+        
+        
+        <Border  VerticalAlignment="Top" Margin="744,614,36,0" BorderBrush="Transparent" BorderThickness="3" MouseEnter="bottomDetailsBorder_MouseEnter">
             <TextBlock x:Name="bottomDetails" TextWrapping="Wrap" Height="96"  Background="White" TextAlignment="Center" FontSize="15" Visibility="Hidden">
             Here is the Itinerary Screen Controls.<LineBreak/>
             Here you can filter what your itinerary displays by event types and <LineBreak/>
@@ -46,7 +73,10 @@
             </TextBlock>
         </Border>
 
-        <Border x:Name="leftDetailsBorder" VerticalAlignment="Top" Margin="10,291,709,0" BorderBrush="LightCoral" BorderThickness="3" MouseEnter="leftDetailsBorder_MouseEnter" MouseLeave="leftDetailsBorder_MouseLeave">
+        <Label Content="Please Move Your Mouse Over a Red Box Near the Content You Are Having Trouble With" Background="AntiqueWhite" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Margin="787,416,10,261" MouseEnter="screenDetailsBorder_MouseEnter"/>
+
+
+        <Border  VerticalAlignment="Top" Margin="220,249,499,0" BorderBrush="Transparent" BorderThickness="3" >
             <TextBlock x:Name="leftDetails" TextWrapping="Wrap" Height="328"  Background="White" TextAlignment="Left" FontSize="15" Visibility="Hidden">
             To the left you will see Itinary controls and which events are currently loaded in your itinerary.<LineBreak/> <LineBreak/>
             The Create, Load, and Save buttons on the top relate to the <LineBreak/>
@@ -59,8 +89,7 @@
             </TextBlock>
         </Border>
 
-        <Label Content="Please Move Your Mouse Over a Red Box Near the Content You Are Having Trouble With" Background="AntiqueWhite" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Margin="657,458,140,219" />
-
+        
 
     </Grid>
 </Page>
