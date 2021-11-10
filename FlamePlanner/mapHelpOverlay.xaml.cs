@@ -36,61 +36,61 @@ namespace FlamePlanner
         private void navDescriptionBorder_MouseEnter(object sender, MouseEventArgs e)
         {
             navDescription.Visibility = Visibility.Visible;
-            navDescriptionBorder.BorderBrush = Brushes.Transparent;
+            //navDescriptionBorder.BorderBrush = Brushes.Transparent;
         }
 
         private void navDescriptionBorder_MouseLeave(object sender, MouseEventArgs e)
         {
             navDescription.Visibility = Visibility.Hidden;
-            navDescriptionBorder.BorderBrush = Brushes.LightCoral;
+            //navDescriptionBorder.BorderBrush = Brushes.LightCoral;
         }
 
         private void logInDescriptionBorder_MouseEnter(object sender, MouseEventArgs e)
         {
             logInDescription.Visibility = Visibility.Visible;
-            logInDescriptionBorder.BorderBrush = Brushes.Transparent;
+            //logInDescriptionBorder.BorderBrush = Brushes.Transparent;
         }
 
         private void logInDescriptionBorder_MouseLeave(object sender, MouseEventArgs e)
         {
             logInDescription.Visibility = Visibility.Hidden;
-            logInDescriptionBorder.BorderBrush = Brushes.LightCoral;
+            //logInDescriptionBorder.BorderBrush = Brushes.LightCoral;
         }
 
         private void screenDescriptionBorder_MouseEnter(object sender, MouseEventArgs e)
         {
             screenDesciption.Visibility = Visibility.Visible;
-            screenDescriptionBorder.BorderBrush = Brushes.Transparent;
+            //screenDescriptionBorder.BorderBrush = Brushes.Transparent;
         }
 
         private void screenDescriptionBorder_MouseLeave(object sender, MouseEventArgs e)
         {
             screenDesciption.Visibility = Visibility.Hidden;
-            screenDescriptionBorder.BorderBrush = Brushes.LightCoral;
+            //screenDescriptionBorder.BorderBrush = Brushes.LightCoral;
         }
 
         private void bottomDescriptionBorder_MouseEnter(object sender, MouseEventArgs e)
         {
             bottomDescription.Visibility = Visibility.Visible;
-            bottomDescriptionBorder.BorderBrush = Brushes.Transparent;
+           // bottomDescriptionBorder.BorderBrush = Brushes.Transparent;
         }
 
         private void bottomDescriptionBorder_MouseLeave(object sender, MouseEventArgs e)
         {
             bottomDescription.Visibility = Visibility.Hidden;
-            bottomDescriptionBorder.BorderBrush = Brushes.LightCoral;
+            //bottomDescriptionBorder.BorderBrush = Brushes.LightCoral;
         }
 
         private void leftDescriptionBorder_MouseEnter(object sender, MouseEventArgs e)
         {
             leftDescription.Visibility = Visibility.Visible;
-            leftDescriptionBorder.BorderBrush = Brushes.Transparent;
+            //leftDescriptionBorder.BorderBrush = Brushes.Transparent;
         }
 
         private void leftDescriptionBorder_MouseLeave(object sender, MouseEventArgs e)
         {
             leftDescription.Visibility = Visibility.Hidden;
-            leftDescriptionBorder.BorderBrush = Brushes.LightCoral;
+            //leftDescriptionBorder.BorderBrush = Brushes.LightCoral;
         }
     }
 }

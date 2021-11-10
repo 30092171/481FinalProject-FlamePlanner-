@@ -30,7 +30,7 @@ namespace FlamePlanner
         private void ExitButton_Click(object sender, RoutedEventArgs e)
         {
             mw.helpOverlayFrame.Content = null;
-            //mw.helpOverlayFrame.Visibility = Visibility.Hidden;
+            mw.helpOverlayFrame.Visibility = Visibility.Hidden;
         }
 
         private void logInHelpTextBorder_MouseEnter(object sender, MouseEventArgs e)
