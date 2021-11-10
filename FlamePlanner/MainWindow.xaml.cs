@@ -24,6 +24,7 @@ namespace FlamePlanner
         public SolidColorBrush NAV_SELECT_COLOUR = Brushes.LightCoral; //Should be treated as a constant, kept it public for simplicity
 
         public Dictionary<string, Account> AccountDatabase; //Dictioary of accounts. Key = Username, Value = Account Object
+        public string currentAcount = ""; //string representing username of the current account
 
         public MainWindow()
         {
@@ -31,10 +32,30 @@ namespace FlamePlanner
 
             this.AccountDatabase = new Dictionary<string, Account>();
 
+            Account GuestAccount = new Account("Guest", "1234"); //dummy guest account for users who do not log in
+            this.AccountDatabase["Guest"] = GuestAccount; //Adds account to database
+            this.currentAcount = "Guest"; //Current username is Guest
+            this.loggedIn = false; //No one has logged in yet
+
             mainFrame.Content = new startPage(this); //Program starts with the start page loaded in the main frame
-            this.loggedIn = false;
             navBarStackPanel.Visibility = Visibility.Hidden; //Hides nav bar until user starts itinerary proccess
             helpButton.Visibility = Visibility.Hidden;
+        }
+
+        /// <summary>
+        ///  Resets current account to guest
+        /// </summary>
+        /// <param name="wipe"> If true, will reset stored guest account; false, just swithes currentAccount field</param>
+        public void backToGuestAccount(bool wipe)
+        {
+            this.currentAcount = "Guest";
+            this.loggedIn = false;
+
+            if (wipe)
+            {
+                this.AccountDatabase.Remove("Guest");
+                this.AccountDatabase["Guest"] = new Account("Guest", "1234");
+            }
         }
 
         private void nav_itinerary_Click(object sender, RoutedEventArgs e)

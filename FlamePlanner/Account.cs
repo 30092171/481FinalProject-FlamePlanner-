@@ -15,6 +15,7 @@ namespace FlamePlanner
 
         public string username; //username
         public List<Itinerary> itineraryList; //List of accounts itineraries
+        public int selectedItinerary = 0; //integer representing index of list of the selected itinerary for the account
 
         private string password; //Private password for 'Security' :)
 
@@ -31,6 +32,7 @@ namespace FlamePlanner
             this.password = pWord;
             this.itineraryList = new List<Itinerary>();
         }
+
 
         /// <summary>
         /// Tests whether argument is equal to the account password
