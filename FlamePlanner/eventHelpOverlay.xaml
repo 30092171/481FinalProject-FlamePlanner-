@@ -11,30 +11,44 @@
     <Grid>
         <Rectangle Fill="Gray" Opacity="0.6"/>
         <Button x:Name="ExitButton" HorizontalAlignment="Right" VerticalAlignment="Top" Width="53" Height="53" Margin="10" Background="Red" Content="X" FontSize="25" Click="ExitButton_Click"></Button>
-        <TextBlock TextWrapping="Wrap" Height="116" VerticalAlignment="Top" Margin="271,80,253,0" Background="White" TextAlignment="Center" FontSize="15">
-            The three above buttons are how you naviagte to the main pages of the Application. <LineBreak/>
-            The <Bold>Itinerary</Bold> Screen is where you can view a expanded view of your itinerary and controls associated with it<LineBreak/>
-            The <Bold>Maps</Bold> Screen allows you to view a Map of Calgary and find events based on geo location.<LineBreak/>
-            The <Bold>Events</Bold> Screen allows you to find/browse events occuring wihtin a specific date range<LineBreak/>
-        </TextBlock>
-        <TextBlock TextWrapping="Wrap" Height="168" Width="auto" VerticalAlignment="Top" Margin="530,259,92,0" Background="White" TextAlignment="Left" FontSize="15">
-            You are currently viewing the <Bold>Events</Bold> page. <LineBreak/>
-            In this page you can browse various events occuring in calgary during your selected date range. <LineBreak/>
-            Each event's photo is displayed in the main screen section. <LineBreak/>
-            At the bottom of every event image, <LineBreak/>  
-            <Run Foreground="Transparent">IND</Run>you can click the + symbol to add the event to your itinerary or<LineBreak/> 
-            <Run Foreground="Transparent">IND</Run>you can click the > symbol to display more detailed information on the event you selected
-        </TextBlock>
-        <TextBlock TextWrapping="Wrap" Height="116" VerticalAlignment="Top" Margin="1090,80,66,0" Background="White" TextAlignment="Center" FontSize="15">
-            The Above button is how you Log in, <LineBreak/>Sign up, or Sign out of our Account System
-        </TextBlock>
-        <TextBlock TextWrapping="Wrap" Height="96" VerticalAlignment="Top" Margin="744,614,36,0" Background="White" TextAlignment="Center" FontSize="15">
-            Here is the Event Screen Controls.<LineBreak/>
-            Here you can filter for event types, <LineBreak/>
-            customize the date range for events, or<LineBreak/>
-            search for a specific event within your selected date range.
-        </TextBlock>
-        <TextBlock TextWrapping="Wrap" Height="340" VerticalAlignment="Top" Margin="196,225,832,0" Background="White" TextAlignment="Left" FontSize="15">
+
+        <Border x:Name="navBarDescriptionBorder" VerticalAlignment="Top" Margin="271,80,253,0" BorderThickness="3" BorderBrush="LightCoral" MouseEnter="navBarDescriptionBorder_MouseEnter" MouseLeave="navBarDescriptionBorder_MouseLeave">
+            <TextBlock x:Name="navBarDescription" TextWrapping="Wrap" Height="116" Background="White" TextAlignment="Center" FontSize="15" Visibility="Hidden">
+                The three above buttons are how you naviagte to the main pages of the Application. <LineBreak/>
+                The <Bold>Itinerary</Bold> Screen is where you can view a expanded view of your itinerary and controls associated with it<LineBreak/>
+                The <Bold>Maps</Bold> Screen allows you to view a Map of Calgary and find events based on geo location.<LineBreak/>
+                The <Bold>Events</Bold> Screen allows you to find/browse events occuring wihtin a specific date range<LineBreak/>
+            </TextBlock>
+        </Border>
+
+        <Border x:Name="currentPageDescriptionBorder" VerticalAlignment="Top" Margin="530,259,92,0" BorderThickness="3" BorderBrush="LightCoral" MouseEnter="currentPageDescriptionBorder_MouseEnter" MouseLeave="currentPageDescriptionBorder_MouseLeave">
+            <TextBlock x:Name="currentPageDescription" TextWrapping="Wrap" Height="168" Width="auto"  Background="White" TextAlignment="Left" FontSize="15" Visibility="Hidden">
+              You are currently viewing the <Bold>Events</Bold> page. <LineBreak/>
+              In this page you can browse various events occuring in calgary during your selected date range. <LineBreak/>
+              Each event's photo is displayed in the main screen section. <LineBreak/>
+             At the bottom of every event image, <LineBreak/>  
+             <Run Foreground="Transparent">IND</Run>you can click the + symbol to add the event to your itinerary or<LineBreak/> 
+             <Run Foreground="Transparent">IND</Run>you can click the > symbol to display more detailed information on the event you selected
+            </TextBlock>
+        </Border>
+
+        <Border x:Name="logInHelpTextBorder" VerticalAlignment="Top" Margin="1090,80,66,0" BorderBrush="LightCoral" BorderThickness="3" MouseEnter="logInHelpTextBorder_MouseEnter" MouseLeave="logInHelpTextBorder_MouseLeave">
+            <TextBlock x:Name="logInHelpText" TextWrapping="Wrap" Height="116"  Background="White" TextAlignment="Center" FontSize="15" Visibility="Hidden">
+                The Above button is how you Log in, <LineBreak/>Sign up, or Sign out of our Account System
+            </TextBlock>
+        </Border>
+
+        <Border x:Name="bottomDescriptionBorder" VerticalAlignment="Top" Margin="744,614,36,0" BorderThickness="3" BorderBrush="LightCoral" MouseEnter="bottomDescriptionBorder_MouseEnter" MouseLeave="bottomDescriptionBorder_MouseLeave">
+            <TextBlock x:Name="bottomDescription" TextWrapping="Wrap" Height="96"  Background="White" TextAlignment="Center" FontSize="15" Visibility="Hidden">
+             Here is the Event Screen Controls.<LineBreak/>
+             Here you can filter for event types, <LineBreak/>
+             customize the date range for events, or<LineBreak/>
+             search for a specific event within your selected date range.
+            </TextBlock>
+        </Border>
+
+        <Border x:Name="leftDescriptionBorder" VerticalAlignment="Top" Margin="185,225,832,0" BorderBrush="LightCoral" BorderThickness="3" MouseEnter="leftDescriptionBorder_MouseEnter" MouseLeave="leftDescriptionBorder_MouseLeave">
+            <TextBlock x:Name="leftDescription" TextWrapping="Wrap" Height="340"  Background="White" TextAlignment="Left" FontSize="15" Visibility="Hidden">
             To the left you will see Itinary controls and a single day initinary view.<LineBreak/> <LineBreak/>
             The Create, Load, and Save buttons on the top relate to the <LineBreak/>
             creation/storage operations on itineraries within your account. <LineBreak/>
@@ -42,6 +56,9 @@
             Underneath the Itinerary Buttons is simply a single-day view of your currently selected itinerary.<LineBreak/>
             The very bottom displays your username or current logged in status.
 
-        </TextBlock>
+            </TextBlock>
+        </Border>
+
+        <Label Content="Please Move Your Mouse Over a Red Box Near the Content You Are Having Trouble With" Background="AntiqueWhite" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Margin="530,460,250,221"/>
     </Grid>
 </Page>

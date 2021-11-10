@@ -11,29 +11,43 @@
     <Grid>
         <Rectangle Fill="Gray" Opacity="0.6"/>
         <Button x:Name="ExitButton" HorizontalAlignment="Right" VerticalAlignment="Top" Width="53" Height="53" Margin="10" Background="Red" Content="X" FontSize="25" Click="ExitButton_Click"></Button>
-        <TextBlock TextWrapping="Wrap" Height="116" VerticalAlignment="Top" Margin="296,42,228,0" Background="White" TextAlignment="Center" FontSize="15">
+
+        <Border x:Name="navDetailsBorder" VerticalAlignment="Top" Margin="300,65,224,0" BorderBrush="LightCoral" BorderThickness="3" MouseEnter="navDetailsBorder_MouseEnter" MouseLeave="navDetailsBorder_MouseLeave">
+            <TextBlock x:Name="navDetails" TextWrapping="Wrap" Height="116"  Background="White" TextAlignment="Center" FontSize="15" Visibility="Hidden">
             The three above buttons are how you naviagte to the main pages of the Application. <LineBreak/>
             The <Bold>Itinerary</Bold> Screen is where you can view a expanded view of your itinerary and controls associated with it<LineBreak/>
             The <Bold>Maps</Bold> Screen allows you to view a Map of Calgary and find events based on geo location.<LineBreak/>
             The <Bold>Events</Bold> Screen allows you to find/browse events occuring wihtin a specific date range<LineBreak/>
-        </TextBlock>
-        <TextBlock TextWrapping="Wrap" Height="168" Width="auto" VerticalAlignment="Top" Margin="612,207,10,0" Background="White" TextAlignment="Left" FontSize="15">
+            </TextBlock>
+        </Border>
+
+        <Border x:Name="screenDetailsBorder" VerticalAlignment="Top" Margin="619,236,10,0" BorderBrush="LightCoral" BorderThickness="3" MouseEnter="screenDetailsBorder_MouseEnter" MouseLeave="screenDetailsBorder_MouseLeave">
+            <TextBlock x:Name="screenDetails" TextWrapping="Wrap" Height="168" Width="auto"  Background="White" TextAlignment="Left" FontSize="15" Visibility="Hidden">
             You are currently viewing the <Bold>Itinerary</Bold> page. <LineBreak/>
             In this page you can customize your currently loaded itinerary.<LineBreak/>
             Each time row indicates the start of the label going until the next label, so if 10:00am is highlighted it means the event spans from 10:00am-11:00am.<LineBreak/>
             The arrows above and below the times allow you to switch between time frames.<LineBreak/>
             The arrows above the grid, pointing left and right, allow you to cycle between weekly date ranges.<LineBreak/>
             The + at the bottom right allows you to add a custom event to the itinerary.
-        </TextBlock>
-        <TextBlock TextWrapping="Wrap" Height="116" VerticalAlignment="Top" Margin="1090,80,66,0" Background="White" TextAlignment="Center" FontSize="15">
+            </TextBlock>
+        </Border>
+
+        <Border x:Name="logInDetailsBorder" VerticalAlignment="Top" Margin="1088,65,68,0" BorderBrush="LightCoral" BorderThickness="3" MouseEnter="logInDetailsBorder_MouseEnter" MouseLeave="logInDetailsBorder_MouseLeave">
+            <TextBlock x:Name="loginDetails" TextWrapping="Wrap" Height="116"  Background="White" TextAlignment="Center" FontSize="15" Visibility="Hidden">
             The Above button is how you Log in, <LineBreak/>Sign up, or Sign out of our Account System
-        </TextBlock>
-        <TextBlock TextWrapping="Wrap" Height="96" VerticalAlignment="Top" Margin="744,614,36,0" Background="White" TextAlignment="Center" FontSize="15">
+            </TextBlock>
+        </Border>
+
+        <Border x:Name="bottomDetailsBorder" VerticalAlignment="Top" Margin="744,614,36,0" BorderBrush="LightCoral" BorderThickness="3" MouseEnter="bottomDetailsBorder_MouseEnter" MouseLeave="bottomDetailsBorder_MouseLeave">
+            <TextBlock x:Name="bottomDetails" TextWrapping="Wrap" Height="96"  Background="White" TextAlignment="Center" FontSize="15" Visibility="Hidden">
             Here is the Itinerary Screen Controls.<LineBreak/>
             Here you can filter what your itinerary displays by event types and <LineBreak/>
             select the date of the week you are viewing.<LineBreak/>
-        </TextBlock>
-        <TextBlock TextWrapping="Wrap" Height="328" VerticalAlignment="Top" Margin="10,291,718,0" Background="White" TextAlignment="Left" FontSize="15">
+            </TextBlock>
+        </Border>
+
+        <Border x:Name="leftDetailsBorder" VerticalAlignment="Top" Margin="10,291,709,0" BorderBrush="LightCoral" BorderThickness="3" MouseEnter="leftDetailsBorder_MouseEnter" MouseLeave="leftDetailsBorder_MouseLeave">
+            <TextBlock x:Name="leftDetails" TextWrapping="Wrap" Height="328"  Background="White" TextAlignment="Left" FontSize="15" Visibility="Hidden">
             To the left you will see Itinary controls and which events are currently loaded in your itinerary.<LineBreak/> <LineBreak/>
             The Create, Load, and Save buttons on the top relate to the <LineBreak/>
             creation/storage operations on itineraries within your account. <LineBreak/>
@@ -42,7 +56,11 @@
             You can toggle which events are disoplayed by clicking the checkbox on the left of the event.<LineBreak/>
             If you click the x on the top right of an event it will be deleted from you itinerary, or you can select the > to see more details about the event.<LineBreak/>
             Your Username or log in status is displayed at the bottom as well as a button allowing you to delete the current itinerary.
-        </TextBlock>
+            </TextBlock>
+        </Border>
+
+        <Label Content="Please Move Your Mouse Over a Red Box Near the Content You Are Having Trouble With" Background="AntiqueWhite" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Margin="657,458,140,219" />
+
 
     </Grid>
 </Page>
