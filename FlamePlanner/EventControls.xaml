@@ -13,15 +13,11 @@
         <Label Content="Date:" HorizontalAlignment="Left" Margin="10,0,0,0" VerticalAlignment="Center" FontSize="24"/>
         <ComboBox Margin="78,14,685,104" SelectedIndex="0" Height="42" VerticalContentAlignment="Center">
             <TextBlock Text="NONE" TextWrapping="Wrap"/>
-            <TextBlock Text="Family" TextWrapping="Wrap"/>
-            <TextBlock Text="Concert" TextWrapping="Wrap"/>
             <TextBlock Text="Food and Drink" TextWrapping="Wrap"/>
-            <TextBlock Text="Festivals and Special Events" TextWrapping="Wrap"/>
-            <TextBlock Text="Film and Video" TextWrapping="Wrap"/>
+            <TextBlock Text="Special Events" TextWrapping="Wrap"/>
             <TextBlock Text="Museums, Galleries and Exhibitions" TextWrapping="Wrap"/>
             <TextBlock Text="Shopping and Markets" TextWrapping="Wrap"/>
             <TextBlock Text="Sports and Recreation" TextWrapping="Wrap"/>
-            <TextBlock Text="Theatre, Comedy and Performing Arts" TextWrapping="Wrap"/>
 
         </ComboBox>
         <DatePicker HorizontalAlignment="Left" Margin="75,100,0,0" VerticalAlignment="Top"/>
