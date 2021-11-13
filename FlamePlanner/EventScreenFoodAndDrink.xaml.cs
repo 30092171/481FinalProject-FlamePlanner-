@@ -20,9 +20,36 @@ namespace FlamePlanner
     /// </summary>
     public partial class EventScreenFoodAndDrink : Page
     {
-        public EventScreenFoodAndDrink()
+        private MainWindow mw;
+        public EventScreenFoodAndDrink(MainWindow mw)
         {
             InitializeComponent();
+        }
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void Event_Display_Button_Click(object sender, RoutedEventArgs e)
+        {
+            var tag = ((Button)sender).Tag; //allows for us to determine which of the events were clicked
+            //MessageBox.Show(tag.ToString()); //Displays tag content, for debugging
+            EventPopUpWindow epw = new EventPopUpWindow(mw);
+            //populate epw via getters and setters here?
+            epw.ShowDialog(); //Displays event info pop up and locks main window
+
+
+        }
+
+        private void Event_Up_Button_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void Event_Down_Button_Click(object sender, RoutedEventArgs e)
+        {
+            EventScreen eventscreen = new EventScreen(mw);
+            this.NavigationService.Navigate(eventscreen);
         }
     }
 }

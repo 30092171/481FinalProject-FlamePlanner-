@@ -41,5 +41,16 @@ namespace FlamePlanner
 
 
         }
+
+        private void Event_Up_Button_Click(object sender, RoutedEventArgs e)
+        {
+            EventScreenFoodAndDrink eventscreenfoodanddrink = new EventScreenFoodAndDrink(mw);
+            this.NavigationService.Navigate(eventscreenfoodanddrink);
+        }
+
+        private void Event_Down_Button_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
 }
