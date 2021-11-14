@@ -21,9 +21,11 @@ namespace FlamePlanner
     public partial class EventScreen : Page
     {
         private MainWindow mw;
+
         public EventScreen(MainWindow mw)
         {
             InitializeComponent();
+            this.mw = mw;
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)
@@ -50,7 +52,8 @@ namespace FlamePlanner
 
         private void Event_Down_Button_Click(object sender, RoutedEventArgs e)
         {
-
+            EventScreenSportsAndRecreation eventscreensportsandrecreation = new EventScreenSportsAndRecreation(mw);
+            this.NavigationService.Navigate(eventscreensportsandrecreation);
         }
     }
 }

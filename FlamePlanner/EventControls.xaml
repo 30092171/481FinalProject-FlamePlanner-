@@ -11,7 +11,7 @@
     <Grid Background="#FFE4E0E0">
         <Label Content="Filter:" HorizontalAlignment="Left" Margin="10,13,0,0" VerticalAlignment="Top" FontSize="24"/>
         <Label Content="Date:" HorizontalAlignment="Left" Margin="10,0,0,0" VerticalAlignment="Center" FontSize="24"/>
-        <ComboBox Margin="78,14,685,104" SelectedIndex="0" Height="42" VerticalContentAlignment="Center">
+        <ComboBox x:Name="cb" Margin="78,14,685,104" SelectedIndex="0" Height="42" VerticalContentAlignment="Center" DropDownClosed="cbValueType_DropDownClosed">
             <TextBlock Text="NONE" TextWrapping="Wrap"/>
             <TextBlock Text="Food and Drink" TextWrapping="Wrap"/>
             <TextBlock Text="Special Events" TextWrapping="Wrap"/>

@@ -24,7 +24,9 @@ namespace FlamePlanner
         public EventScreenFoodAndDrink(MainWindow mw)
         {
             InitializeComponent();
+            this.mw = mw;
         }
+
         private void Button_Click(object sender, RoutedEventArgs e)
         {
 
@@ -43,7 +45,8 @@ namespace FlamePlanner
 
         private void Event_Up_Button_Click(object sender, RoutedEventArgs e)
         {
-
+            EventScreenSportsAndRecreation eventscreensportsandrecreation = new EventScreenSportsAndRecreation(mw);
+            this.NavigationService.Navigate(eventscreensportsandrecreation);
         }
 
         private void Event_Down_Button_Click(object sender, RoutedEventArgs e)

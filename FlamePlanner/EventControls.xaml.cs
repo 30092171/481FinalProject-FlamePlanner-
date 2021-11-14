@@ -26,5 +26,20 @@ namespace FlamePlanner
             InitializeComponent();
             this.mw = mw;
         }
+
+        private void cbValueType_DropDownClosed(object sender, EventArgs e)
+        {
+            {
+                if (cb.SelectedIndex == 1)
+                {
+                    if (mw.mainFrame.Content.GetType() == typeof(threeFramePage))
+                    {
+                        threeFramePage tfp = mw.mainFrame.Content as threeFramePage;
+                        tfp.topRightFrame.Content = new EventScreen(mw);
+
+                    }
+                }
+            }
+        }
     }
 }
