@@ -14,19 +14,24 @@
     <None Remove="ChefsTableDinnerEvent.jpg" />
     <None Remove="CocktailClassEvent.jpg" />
     <None Remove="companyLogo.png" />
+    <None Remove="CountryChristmasEvent.jpg" />
     <None Remove="CulturalFestivalEvent.png" />
     <None Remove="CurlingsCapitalEvent.jpg" />
     <None Remove="EricNamEvent.jpg" />
     <None Remove="Event_leftArrow.png" />
+    <None Remove="FashionAndArtsEvent.jpg" />
     <None Remove="FullLogo.png" />
+    <None Remove="GlassFusionEvent.jpg" />
     <None Remove="HalloweenEvent.jpg" />
     <None Remove="HarvestNightsEvent.jpg" />
+    <None Remove="JobFairEvent.jpg" />
     <None Remove="leftArrow2.jpg" />
     <None Remove="LobsterFestEvent.jpg" />
     <None Remove="Logo.png" />
     <None Remove="MediterraneanFoodEvent.jpg" />
     <None Remove="NewYearsEveEvent.jpg" />
     <None Remove="NickiMinajEvent.jpg" />
+    <None Remove="PuptoberfestEvent.jpg" />
     <None Remove="Resources\blue.png" />
     <None Remove="Resources\blueMarker.png" />
     <None Remove="Resources\calgary.png" />
@@ -34,6 +39,7 @@
     <None Remove="Resources\negativeIcon.png" />
     <None Remove="Resources\redMarker.png" />
     <None Remove="SoccerEvent.jpg" />
+    <None Remove="TimAndTheGloryBoysEvent.jpg" />
     <None Remove="WineTastingEvent.jpg" />
     <None Remove="YonexCanadaOpenEvent.jpg" />
   </ItemGroup>
@@ -52,17 +58,21 @@
     <Resource Include="companyLogo.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Resource>
+    <Resource Include="CountryChristmasEvent.jpg" />
     <Resource Include="CulturalFestivalEvent.png" />
     <Resource Include="CurlingsCapitalEvent.jpg" />
     <Resource Include="EricNamEvent.jpg" />
     <Resource Include="Event_leftArrow.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Resource>
+    <Resource Include="FashionAndArtsEvent.jpg" />
     <Resource Include="FullLogo.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Resource>
+    <Resource Include="GlassFusionEvent.jpg" />
     <Resource Include="HalloweenEvent.jpg" />
     <Resource Include="HarvestNightsEvent.jpg" />
+    <Resource Include="JobFairEvent.jpg" />
     <Resource Include="leftArrow2.jpg">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Resource>
@@ -75,6 +85,7 @@
     <Resource Include="NickiMinajEvent.jpg">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Resource>
+    <Resource Include="PuptoberfestEvent.jpg" />
     <Resource Include="Resources\blue.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Resource>
@@ -94,6 +105,7 @@
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Resource>
     <Resource Include="SoccerEvent.jpg" />
+    <Resource Include="TimAndTheGloryBoysEvent.jpg" />
     <Resource Include="V.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Resource>

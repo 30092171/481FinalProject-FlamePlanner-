@@ -28,7 +28,7 @@
         </Image>
         <Button x:Name="EventDownButton" HorizontalAlignment="Center" Height="24" Margin="0,447,0,0" VerticalAlignment="Top" Width="50" Content="\/" Click="Event_Down_Button_Click"/>
         <Image HorizontalAlignment="Left" Height="160" Margin="333,273,0,0" VerticalAlignment="Top" Width="308" Source="/HarvestNightsEvent.jpg"/>
-        <Image HorizontalAlignment="Center" Height="166" Margin="0,59,0,0" VerticalAlignment="Top" Width="322" Source="/WineTastingEvent.jpg"/>
+        <Image HorizontalAlignment="Center" Height="161" Margin="0,59,0,0" VerticalAlignment="Top" Width="322" Source="/WineTastingEvent.jpg"/>
         <Image HorizontalAlignment="Left" Height="142" Margin="675,285,0,0" VerticalAlignment="Top" Width="284" Source="/ChefsTableDinnerEvent.jpg"/>
         <Image HorizontalAlignment="Left" Height="144" Margin="673,76,0,0" VerticalAlignment="Top" Width="288" Source="/NewYearsEveEvent.jpg"/>
         <Image HorizontalAlignment="Left" Height="144" Margin="22,284,0,0" VerticalAlignment="Top" Width="287" Source="/MediterraneanFoodEvent.jpg"/>
