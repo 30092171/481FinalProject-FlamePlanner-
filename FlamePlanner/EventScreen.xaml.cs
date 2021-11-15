@@ -52,8 +52,8 @@ namespace FlamePlanner
 
         private void Event_Down_Button_Click(object sender, RoutedEventArgs e)
         {
-            EventScreenSportsAndRecreation eventscreensportsandrecreation = new EventScreenSportsAndRecreation(mw);
-            this.NavigationService.Navigate(eventscreensportsandrecreation);
+            EventScreenSpecialEvents eventscreenspecialevents = new EventScreenSpecialEvents(mw);
+            this.NavigationService.Navigate(eventscreenspecialevents);
         }
     }
 }
