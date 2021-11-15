@@ -39,6 +39,15 @@ namespace FlamePlanner
 
                     }
                 }
+                if (cb.SelectedIndex == 2)
+                {
+                    if (mw.mainFrame.Content.GetType() == typeof(threeFramePage))
+                    {
+                        threeFramePage tfp = mw.mainFrame.Content as threeFramePage;
+                        tfp.topRightFrame.Content = new EventScreenSpecialEvents(mw);
+
+                    }
+                }
                 if (cb.SelectedIndex == 5)
                 {
                     if (mw.mainFrame.Content.GetType() == typeof(threeFramePage))

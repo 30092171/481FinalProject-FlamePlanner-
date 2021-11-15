@@ -9,7 +9,71 @@
       Title="EventScreenSportsAndRecreation">
 
     <Grid Background="White">
-        <TextBlock HorizontalAlignment="Center" Text="TextBlock" TextWrapping="Wrap" VerticalAlignment="Center" FontSize="20"/>
+        <Image HorizontalAlignment="Left" Height="152" Margin="30,67,0,0" VerticalAlignment="Top" Width="270" Source="/YonexCanadaOpenEvent.jpg"/>
+        <Button HorizontalAlignment="Left" Margin="30,197,0,0" VerticalAlignment="Top" Height="22" Width="22" Background="White" Click="Button_Click">
+            <Image HorizontalAlignment="Center" Height="20" VerticalAlignment="Center" Width="20" Source="/plus sign.jpg" Stretch="Uniform"/>
+        </Button>
+        <Button HorizontalAlignment="Left" Margin="276,195,0,0" VerticalAlignment="Top" Background="White" Click="Event_Display_Button_Click" Tag="13">
+            <Image HorizontalAlignment="Center" Height="20" VerticalAlignment="Top" Width="20" Source="/right-arrow (1).png" Stretch="Uniform"/>
+        </Button>
+        <Image Margin="473,451,472,11" Stretch="Fill" Source="right-arrow.png" RenderTransformOrigin="0.5,0.5">
+            <Image.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform ScaleX="0.951" ScaleY="1.051"/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="90"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </Image.RenderTransform>
+        </Image>
+        <Button x:Name="EventDownButton" HorizontalAlignment="Center" Height="24" Margin="0,447,0,0" VerticalAlignment="Top" Width="50" Content="\/" Click="Event_Down_Button_Click"/>
+        <Image HorizontalAlignment="Center" Height="147" Margin="0,72,0,0" VerticalAlignment="Top" Width="294" Source="/BoxingEvent.jpg"/>
+        <Image HorizontalAlignment="Left" Height="169" Margin="686,50,0,0" VerticalAlignment="Top" Width="241" Source="/CalgaryFlamesEvent.jpg"/>
+        <Image HorizontalAlignment="Left" Height="170" Margin="686,259,0,0" VerticalAlignment="Top" Width="241" Source="/CalgaryStampedersEvent.jpg"/>
+        <Image HorizontalAlignment="Center" Height="170" Margin="0,258,0,0" VerticalAlignment="Top" Width="256" Source="/CurlingsCapitalEvent.jpg"/>
+        <Image HorizontalAlignment="Left" Height="147" Margin="18,270,0,0" VerticalAlignment="Top" Width="296" Source="/SoccerEvent.jpg"/>
+        <Image Margin="472,12,473,450" Stretch="Fill" Source="right-arrow.png" RenderTransformOrigin="0.5,0.5">
+            <Image.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform ScaleX="0.951" ScaleY="1.051"/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="270                                      "/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </Image.RenderTransform>
+        </Image>
+        <Button x:Name="EventUpButton" HorizontalAlignment="Center" Height="24" Margin="0,10,0,0" VerticalAlignment="Top" Width="50" Content="/\" Click="Event_Up_Button_Click"/>
+        <Button HorizontalAlignment="Left" Margin="288,393,0,0" VerticalAlignment="Top" Background="White" Click="Event_Display_Button_Click" Tag="16">
+            <Image HorizontalAlignment="Center" Height="20" VerticalAlignment="Top" Width="20" Source="/right-arrow (1).png"/>
+        </Button>
+        <Button HorizontalAlignment="Left" Margin="18,395,0,0" VerticalAlignment="Top" Height="22" Width="22" Background="White" Click="Button_Click">
+            <Image HorizontalAlignment="Center" Height="20" VerticalAlignment="Center" Width="20" Source="/plus sign.jpg" Stretch="Fill"/>
+        </Button>
+        <Button HorizontalAlignment="Left" Margin="358,406,0,0" VerticalAlignment="Top" Height="22" Width="22" Background="White" Click="Button_Click">
+            <Image HorizontalAlignment="Center" Height="20" VerticalAlignment="Center" Width="20" Source="/plus sign.jpg"/>
+        </Button>
+        <Button HorizontalAlignment="Left" Margin="589,404,0,0" VerticalAlignment="Top" Background="White" Click="Event_Display_Button_Click" Tag="17">
+            <Image HorizontalAlignment="Center" Height="20" VerticalAlignment="Top" Width="20" Source="/right-arrow (1).png"/>
+        </Button>
+        <Button HorizontalAlignment="Left" Margin="903,404,0,0" VerticalAlignment="Top" Background="White" Click="Event_Display_Button_Click" Tag="18">
+            <Image HorizontalAlignment="Center" Height="20" VerticalAlignment="Top" Width="20" Source="/right-arrow (1).png"/>
+        </Button>
+        <Button HorizontalAlignment="Left" Margin="686,406,0,0" VerticalAlignment="Top" Height="22" Width="22" Background="White" Click="Button_Click">
+            <Image HorizontalAlignment="Center" Height="20" VerticalAlignment="Center" Width="20" Source="/plus sign.jpg"/>
+        </Button>
+        <Button HorizontalAlignment="Left" Margin="903,195,0,0" VerticalAlignment="Top" Background="White" Width="24" Click="Event_Display_Button_Click" Tag="15">
+            <Image HorizontalAlignment="Center" Height="20" VerticalAlignment="Top" Width="20" Source="/right-arrow (1).png" Stretch="Fill"/>
+        </Button>
+        <Button HorizontalAlignment="Left" Margin="686,197,0,0" VerticalAlignment="Top" Height="22" Width="22" Background="White" Click="Button_Click">
+            <Image HorizontalAlignment="Center" Height="20" VerticalAlignment="Center" Width="20" Source="/plus sign.jpg" Stretch="Fill"/>
+        </Button>
+        <Button HorizontalAlignment="Left" Margin="608,195,0,0" VerticalAlignment="Top" Background="White" Width="24" Click="Event_Display_Button_Click" Tag="14">
+            <Image HorizontalAlignment="Center" Height="20" VerticalAlignment="Top" Width="20" Source="/right-arrow (1).png" Stretch="Fill"/>
+        </Button>
+        <Button HorizontalAlignment="Left" Margin="338,197,0,0" VerticalAlignment="Top" Height="22" Width="22" Background="White" Click="Button_Click">
+            <Image HorizontalAlignment="Center" Height="20" VerticalAlignment="Center" Width="20" Source="/plus sign.jpg" Stretch="Fill"/>
+        </Button>
 
     </Grid>
+
 </Page>

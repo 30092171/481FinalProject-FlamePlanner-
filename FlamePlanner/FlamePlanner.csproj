@@ -7,11 +7,15 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <None Remove="BoxingEvent.jpg" />
+    <None Remove="CalgaryFlamesEvent.jpg" />
     <None Remove="CalgaryStampedeEvent.jpg" />
+    <None Remove="CalgaryStampedersEvent.jpg" />
     <None Remove="ChefsTableDinnerEvent.jpg" />
     <None Remove="CocktailClassEvent.jpg" />
     <None Remove="companyLogo.png" />
     <None Remove="CulturalFestivalEvent.png" />
+    <None Remove="CurlingsCapitalEvent.jpg" />
     <None Remove="EricNamEvent.jpg" />
     <None Remove="Event_leftArrow.png" />
     <None Remove="FullLogo.png" />
@@ -29,7 +33,9 @@
     <None Remove="Resources\mapMarker.ico" />
     <None Remove="Resources\negativeIcon.png" />
     <None Remove="Resources\redMarker.png" />
+    <None Remove="SoccerEvent.jpg" />
     <None Remove="WineTastingEvent.jpg" />
+    <None Remove="YonexCanadaOpenEvent.jpg" />
   </ItemGroup>
 
   <ItemGroup>
@@ -37,13 +43,17 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Resource Include="BoxingEvent.jpg" />
+    <Resource Include="CalgaryFlamesEvent.jpg" />
     <Resource Include="CalgaryStampedeEvent.jpg" />
+    <Resource Include="CalgaryStampedersEvent.jpg" />
     <Resource Include="ChefsTableDinnerEvent.jpg" />
     <Resource Include="CocktailClassEvent.jpg" />
     <Resource Include="companyLogo.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Resource>
     <Resource Include="CulturalFestivalEvent.png" />
+    <Resource Include="CurlingsCapitalEvent.jpg" />
     <Resource Include="EricNamEvent.jpg" />
     <Resource Include="Event_leftArrow.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
@@ -83,6 +93,7 @@
     <Resource Include="Resources\redMarker.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Resource>
+    <Resource Include="SoccerEvent.jpg" />
     <Resource Include="V.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Resource>
@@ -96,6 +107,7 @@
 	    <CopyToOutputDirectory>Always</CopyToOutputDirectory>
 	  </Resource>
 	  <Resource Include="WineTastingEvent.jpg" />
+	  <Resource Include="YonexCanadaOpenEvent.jpg" />
   </ItemGroup>
 
 </Project>
