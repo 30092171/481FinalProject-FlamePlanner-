@@ -8,15 +8,20 @@
 
   <ItemGroup>
     <None Remove="CalgaryStampedeEvent.jpg" />
+    <None Remove="ChefsTableDinnerEvent.jpg" />
+    <None Remove="CocktailClassEvent.jpg" />
     <None Remove="companyLogo.png" />
     <None Remove="CulturalFestivalEvent.png" />
     <None Remove="EricNamEvent.jpg" />
     <None Remove="Event_leftArrow.png" />
     <None Remove="FullLogo.png" />
     <None Remove="HalloweenEvent.jpg" />
+    <None Remove="HarvestNightsEvent.jpg" />
     <None Remove="leftArrow2.jpg" />
     <None Remove="LobsterFestEvent.jpg" />
     <None Remove="Logo.png" />
+    <None Remove="MediterraneanFoodEvent.jpg" />
+    <None Remove="NewYearsEveEvent.jpg" />
     <None Remove="NickiMinajEvent.jpg" />
     <None Remove="Resources\blue.png" />
     <None Remove="Resources\blueMarker.png" />
@@ -24,6 +29,7 @@
     <None Remove="Resources\mapMarker.ico" />
     <None Remove="Resources\negativeIcon.png" />
     <None Remove="Resources\redMarker.png" />
+    <None Remove="WineTastingEvent.jpg" />
   </ItemGroup>
 
   <ItemGroup>
@@ -32,6 +38,8 @@
 
   <ItemGroup>
     <Resource Include="CalgaryStampedeEvent.jpg" />
+    <Resource Include="ChefsTableDinnerEvent.jpg" />
+    <Resource Include="CocktailClassEvent.jpg" />
     <Resource Include="companyLogo.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Resource>
@@ -44,6 +52,7 @@
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Resource>
     <Resource Include="HalloweenEvent.jpg" />
+    <Resource Include="HarvestNightsEvent.jpg" />
     <Resource Include="leftArrow2.jpg">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Resource>
@@ -51,6 +60,8 @@
     <Resource Include="Logo.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Resource>
+    <Resource Include="MediterraneanFoodEvent.jpg" />
+    <Resource Include="NewYearsEveEvent.jpg" />
     <Resource Include="NickiMinajEvent.jpg">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Resource>
@@ -84,6 +95,7 @@
 	  <Resource Include="right-arrow (1).png">
 	    <CopyToOutputDirectory>Always</CopyToOutputDirectory>
 	  </Resource>
+	  <Resource Include="WineTastingEvent.jpg" />
   </ItemGroup>
 
 </Project>
