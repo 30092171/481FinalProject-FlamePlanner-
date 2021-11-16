@@ -12,7 +12,29 @@
         <Rectangle Fill="Gray" Opacity="0.6"/>
         <Button x:Name="ExitButton" HorizontalAlignment="Right" VerticalAlignment="Top" Width="53" Height="53" Margin="10" Background="Red" Content="X" FontSize="25" Click="ExitButton_Click"></Button>
 
-        <Border x:Name="navDescriptionBorder" VerticalAlignment="Top" Margin="296,42,228,0" BorderBrush="LightCoral" BorderThickness="3" MouseEnter="navDescriptionBorder_MouseEnter" MouseLeave="navDescriptionBorder_MouseLeave">
+
+        <Border x:Name="navDescriptionBorder" VerticalAlignment="Top" Margin="185,0,181,0" BorderBrush="LightCoral" BorderThickness="3" MouseEnter="navDescriptionBorder_MouseEnter" MouseLeave="navDescriptionBorder_MouseLeave">
+            <Rectangle Fill="Transparent" Height="75"/>
+        </Border>
+
+        <Border x:Name="screenDescriptionBorder" VerticalAlignment="Top" Margin="296,118,10,0" BorderBrush="LightCoral" BorderThickness="3" MouseEnter="screenDescriptionBorder_MouseEnter" MouseLeave="screenDescriptionBorder_MouseLeave"  >
+            <Rectangle Fill="Transparent" Height="386"/>
+        </Border>
+
+        <Border x:Name="logInDescriptionBorder" VerticalAlignment="Top" Margin="1119,0,63,0" BorderThickness="3" BorderBrush="LightCoral" MouseEnter="logInDescriptionBorder_MouseEnter" MouseLeave="logInDescriptionBorder_MouseLeave">
+            <Rectangle Fill="Transparent" Height="75"/>
+        </Border>
+
+        <Border x:Name="bottomDescriptionBorder" VerticalAlignment="Top" Margin="306,571,0,0" BorderBrush="LightCoral" BorderThickness="3" MouseEnter="bottomDescriptionBorder_MouseEnter" MouseLeave="bottomDescriptionBorder_MouseLeave" >
+            <Rectangle Fill="Transparent" Height="178"/>
+        </Border>
+
+        <Border x:Name="leftDescriptionBorder" VerticalAlignment="Top" Margin="0,86,1033,0" BorderBrush="LightCoral" BorderThickness="3" MouseEnter="leftDescriptionBorder_MouseEnter" MouseLeave="leftDescriptionBorder_MouseLeave" >
+            <Rectangle Fill="Transparent" Height="654"/>
+
+        </Border>
+
+        <Border  VerticalAlignment="Top" Margin="296,80,228,0" BorderBrush="Transparent" BorderThickness="3" >
             <TextBlock x:Name="navDescription" TextWrapping="Wrap" Height="116"  Background="White" TextAlignment="Center" FontSize="15" Visibility="Hidden">
             The three above buttons are how you naviagte to the main pages of the Application. <LineBreak/>
             The <Bold>Itinerary</Bold> Screen is where you can view a expanded view of your itinerary and controls associated with it<LineBreak/>
@@ -21,8 +43,10 @@
             </TextBlock>
         </Border>
 
-        <Border x:Name="screenDescriptionBorder" VerticalAlignment="Top" Margin="594,256,10,0" BorderBrush="LightCoral" BorderThickness="3" MouseEnter="screenDescriptionBorder_MouseEnter" MouseLeave="screenDescriptionBorder_MouseLeave">
-            <TextBlock x:Name="screenDesciption" TextWrapping="Wrap" Height="168" Width="auto"  Background="White" TextAlignment="Left" FontSize="15" Visibility="Hidden">
+
+
+        <Border VerticalAlignment="Top" Margin="594,330,10,0" BorderBrush="Transparent" BorderThickness="3" MouseEnter="screenDescriptionBorder_MouseEnter">
+            <TextBlock x:Name="screenDesciption" TextWrapping="Wrap" Height="168" Width="auto"  Background="White" TextAlignment="Left" FontSize="15" Visibility="Hidden" >
             You are currently viewing the <Bold>Map</Bold> page. <LineBreak/>
             In this page you can view a map of calgary and find events based on location. <LineBreak/>
             Click and drag the map to naviagte the map in the vertical or horizontal dirrections. <LineBreak/>
@@ -32,13 +56,15 @@
         </Border>
 
 
-        <Border x:Name="logInDescriptionBorder" VerticalAlignment="Top" Margin="1090,80,66,0" BorderThickness="3" BorderBrush="LightCoral" MouseEnter="logInDescriptionBorder_MouseEnter" MouseLeave="logInDescriptionBorder_MouseLeave">
+
+        <Border  VerticalAlignment="Top" Margin="1090,80,66,0" BorderThickness="3" BorderBrush="Transparent" >
             <TextBlock x:Name="logInDescription" TextWrapping="Wrap" Height="116"  Background="White" TextAlignment="Center" FontSize="15" Visibility="Hidden">
             The Above button is how you Log in, <LineBreak/>Sign up, or Sign out of our Account System
             </TextBlock>
         </Border>
 
-        <Border x:Name="bottomDescriptionBorder" VerticalAlignment="Top" Margin="726,541,36,0" BorderBrush="LightCoral" BorderThickness="3" MouseEnter="bottomDescriptionBorder_MouseEnter" MouseLeave="bottomDescriptionBorder_MouseLeave">
+
+        <Border VerticalAlignment="Top" Margin="752,609,10,0" BorderBrush="Transparent" BorderThickness="3" MouseEnter="bottomDescriptionBorder_MouseEnter">
             <TextBlock x:Name="bottomDescription" TextWrapping="Wrap" Height="125"  Background="White" TextAlignment="Center" FontSize="15" Visibility="Hidden">
             Below are the Map Screen Controls and Key.<LineBreak/>
             Here you can filter what types of icons the map displays, <LineBreak/>
@@ -48,7 +74,8 @@
             </TextBlock>
         </Border>
 
-        <Border x:Name="leftDescriptionBorder" VerticalAlignment="Top" Margin="185,225,832,0" BorderBrush="LightCoral" BorderThickness="3" MouseEnter="leftDescriptionBorder_MouseEnter" MouseLeave="leftDescriptionBorder_MouseLeave">
+
+        <Border  VerticalAlignment="Top" Margin="185,225,832,0" BorderBrush="Transparent" BorderThickness="3" >
             <TextBlock x:Name="leftDescription" TextWrapping="Wrap" Height="340"  Background="White" TextAlignment="Left" FontSize="15" Visibility="Hidden">
             To the left you will see Itinary controls and a single day initinary view.<LineBreak/> <LineBreak/>
             The Create, Load, and Save buttons on the top relate to the <LineBreak/>
@@ -59,7 +86,7 @@
 
             </TextBlock>
         </Border>
-        <Label Content="Please Move Your Mouse Over a Red Box Near the Content You Are Having Trouble With" Background="AntiqueWhite" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Margin="500,169,297,508" />
+        <Label Content="Please Move Your Mouse Over a Red Box Near the Content You Are Having Trouble With" Background="AntiqueWhite" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Margin="540,225,257,452" MouseEnter="screenDescriptionBorder_MouseEnter"/>
 
     </Grid>
 </Page>
