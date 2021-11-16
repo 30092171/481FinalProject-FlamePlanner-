@@ -16,13 +16,12 @@ using System.Windows.Shapes;
 namespace FlamePlanner
 {
     /// <summary>
-    /// Interaction logic for EventScreen.xaml
+    /// Interaction logic for EventScreenSpecialEvents.xaml
     /// </summary>
-    public partial class EventScreen : Page
+    public partial class EventScreenSpecialEvents : Page
     {
         private MainWindow mw;
-
-        public EventScreen(MainWindow mw)
+        public EventScreenSpecialEvents(MainWindow mw)
         {
             InitializeComponent();
             this.mw = mw;
@@ -46,14 +45,14 @@ namespace FlamePlanner
 
         private void Event_Up_Button_Click(object sender, RoutedEventArgs e)
         {
-            EventScreenFoodAndDrink eventscreenfoodanddrink = new EventScreenFoodAndDrink(mw);
-            this.NavigationService.Navigate(eventscreenfoodanddrink);
+            EventScreen eventscreen = new EventScreen(mw);
+            this.NavigationService.Navigate(eventscreen);
         }
 
         private void Event_Down_Button_Click(object sender, RoutedEventArgs e)
         {
-            EventScreenSpecialEvents eventscreenspecialevents = new EventScreenSpecialEvents(mw);
-            this.NavigationService.Navigate(eventscreenspecialevents);
+            EventScreenSportsAndRecreation eventscreensportsandrecreation = new EventScreenSportsAndRecreation(mw);
+            this.NavigationService.Navigate(eventscreensportsandrecreation);
         }
     }
 }

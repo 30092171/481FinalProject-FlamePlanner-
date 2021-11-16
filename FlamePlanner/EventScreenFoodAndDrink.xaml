@@ -1,4 +1,4 @@
-﻿<Page x:Class="FlamePlanner.EventScreen"
+﻿<Page x:Class="FlamePlanner.EventScreenFoodAndDrink"
       xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
       xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
       xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
@@ -6,14 +6,14 @@
       xmlns:local="clr-namespace:FlamePlanner"
       mc:Ignorable="d" 
       d:DesignHeight="481" d:DesignWidth="971"
-      Title="Page1">
+      Title="EventScreenFoodAndDrink">
 
     <Grid Background="White">
-        <Image HorizontalAlignment="Left" Height="165" Margin="81,41,0,0" VerticalAlignment="Top" Width="165" Source="/EricNamEvent.jpg"/>
-        <Button HorizontalAlignment="Left" Margin="81,184,0,0" VerticalAlignment="Top" Height="22" Width="22" Background="White" Click="Button_Click">
+        <Image HorizontalAlignment="Left" Height="132" Margin="38,92,0,0" VerticalAlignment="Top" Width="255" Source="/CocktailClassEvent.jpg"/>
+        <Button HorizontalAlignment="Left" Margin="38,197,0,0" VerticalAlignment="Top" Height="22" Width="22" Background="White" Click="Button_Click">
             <Image HorizontalAlignment="Center" Height="20" VerticalAlignment="Center" Width="20" Source="/plus sign.jpg" Stretch="Uniform"/>
         </Button>
-        <Button HorizontalAlignment="Left" Margin="222,182,0,0" VerticalAlignment="Top" Background="White" Click="Event_Display_Button_Click" Tag="1">
+        <Button HorizontalAlignment="Left" Margin="269,196,0,0" VerticalAlignment="Top" Background="White" Click="Event_Display_Button_Click" Tag="7">
             <Image HorizontalAlignment="Center" Height="20" VerticalAlignment="Top" Width="20" Source="/right-arrow (1).png" Stretch="Uniform"/>
         </Button>
         <Image Margin="473,451,472,11" Stretch="Fill" Source="right-arrow.png" RenderTransformOrigin="0.5,0.5">
@@ -27,51 +27,50 @@
             </Image.RenderTransform>
         </Image>
         <Button x:Name="EventDownButton" HorizontalAlignment="Center" Height="24" Margin="0,447,0,0" VerticalAlignment="Top" Width="50" Content="\/" Click="Event_Down_Button_Click"/>
-        <Image HorizontalAlignment="Left" Height="163" Margin="82,264,0,0" VerticalAlignment="Top" Width="167" Source="/NickiMinajEvent.jpg" Stretch="Fill"/>
-        <Image HorizontalAlignment="Center" Height="179" Margin="0,41,0,0" VerticalAlignment="Top" Width="137" Source="/HalloweenEvent.jpg"/>
-        <Image HorizontalAlignment="Left" Height="179" Margin="732,256,0,0" VerticalAlignment="Top" Width="147" Source="/CulturalFestivalEvent.png"/>
-        <Image HorizontalAlignment="Left" Height="179" Margin="745,41,0,0" VerticalAlignment="Top" Width="117" Source="/CalgaryStampedeEvent.jpg"/>
-        <Image HorizontalAlignment="Left" Height="172" Margin="333,255,0,0" VerticalAlignment="Top" Width="308" Source="/LobsterFestEvent.jpg"/>
+        <Image HorizontalAlignment="Left" Height="160" Margin="333,273,0,0" VerticalAlignment="Top" Width="308" Source="/HarvestNightsEvent.jpg"/>
+        <Image HorizontalAlignment="Center" Height="161" Margin="0,59,0,0" VerticalAlignment="Top" Width="322" Source="/WineTastingEvent.jpg"/>
+        <Image HorizontalAlignment="Left" Height="142" Margin="675,285,0,0" VerticalAlignment="Top" Width="284" Source="/ChefsTableDinnerEvent.jpg"/>
+        <Image HorizontalAlignment="Left" Height="144" Margin="673,76,0,0" VerticalAlignment="Top" Width="288" Source="/NewYearsEveEvent.jpg"/>
+        <Image HorizontalAlignment="Left" Height="144" Margin="22,284,0,0" VerticalAlignment="Top" Width="287" Source="/MediterraneanFoodEvent.jpg"/>
         <Image Margin="472,12,473,450" Stretch="Fill" Source="right-arrow.png" RenderTransformOrigin="0.5,0.5">
             <Image.RenderTransform>
                 <TransformGroup>
                     <ScaleTransform ScaleX="0.951" ScaleY="1.051"/>
                     <SkewTransform/>
-                    <RotateTransform Angle="270
-                                     "/>
+                    <RotateTransform Angle="270                                      "/>
                     <TranslateTransform/>
                 </TransformGroup>
             </Image.RenderTransform>
         </Image>
         <Button x:Name="EventUpButton" HorizontalAlignment="Center" Height="24" Margin="0,10,0,0" VerticalAlignment="Top" Width="50" Content="/\" Click="Event_Up_Button_Click"/>
-        <Button HorizontalAlignment="Left" Margin="530,196,0,0" VerticalAlignment="Top" Background="White" Click="Event_Display_Button_Click" Tag="2">
-            <Image HorizontalAlignment="Center" Height="20" VerticalAlignment="Top" Width="20" Source="/right-arrow (1).png" Stretch="Fill"/>
-        </Button>
-        <Button HorizontalAlignment="Left" Margin="417,198,0,0" VerticalAlignment="Top" Height="22" Width="22" Background="White" Click="Button_Click">
-            <Image HorizontalAlignment="Center" Height="20" VerticalAlignment="Center" Width="20" Source="/plus sign.jpg" Stretch="Fill"/>
-        </Button>
-        <Button HorizontalAlignment="Left" Margin="225,403,0,0" VerticalAlignment="Top" Background="White" Click="Event_Display_Button_Click" Tag="4">
+        <Button HorizontalAlignment="Left" Margin="285,404,0,0" VerticalAlignment="Top" Background="White" Click="Event_Display_Button_Click" Tag="10">
             <Image HorizontalAlignment="Center" Height="20" VerticalAlignment="Top" Width="20" Source="/right-arrow (1).png"/>
         </Button>
-        <Button HorizontalAlignment="Left" Margin="82,405,0,0" VerticalAlignment="Top" Height="22" Width="22" Background="White" Click="Button_Click">
+        <Button HorizontalAlignment="Left" Margin="22,406,0,0" VerticalAlignment="Top" Height="22" Width="22" Background="White" Click="Button_Click">
             <Image HorizontalAlignment="Center" Height="20" VerticalAlignment="Center" Width="20" Source="/plus sign.jpg" Stretch="Fill"/>
         </Button>
         <Button HorizontalAlignment="Left" Margin="333,405,0,0" VerticalAlignment="Top" Height="22" Width="22" Background="White" Click="Button_Click">
             <Image HorizontalAlignment="Center" Height="20" VerticalAlignment="Center" Width="20" Source="/plus sign.jpg"/>
         </Button>
-        <Button HorizontalAlignment="Left" Margin="615,403,0,0" VerticalAlignment="Top" Background="White" Click="Event_Display_Button_Click" Tag="5">
+        <Button HorizontalAlignment="Left" Margin="617,403,0,0" VerticalAlignment="Top" Background="White" Click="Event_Display_Button_Click" Tag="11">
             <Image HorizontalAlignment="Center" Height="20" VerticalAlignment="Top" Width="20" Source="/right-arrow (1).png"/>
         </Button>
-        <Button HorizontalAlignment="Left" Margin="851,411,0,0" VerticalAlignment="Top" Background="White" Click="Event_Display_Button_Click" Tag="6">
+        <Button HorizontalAlignment="Left" Margin="935,403,0,0" VerticalAlignment="Top" Background="White" Click="Event_Display_Button_Click" Tag="12">
             <Image HorizontalAlignment="Center" Height="20" VerticalAlignment="Top" Width="20" Source="/right-arrow (1).png"/>
         </Button>
-        <Button HorizontalAlignment="Left" Margin="732,413,0,0" VerticalAlignment="Top" Height="22" Width="22" Background="White" Click="Button_Click">
+        <Button HorizontalAlignment="Left" Margin="675,405,0,0" VerticalAlignment="Top" Height="22" Width="22" Background="White" Click="Button_Click">
             <Image HorizontalAlignment="Center" Height="20" VerticalAlignment="Center" Width="20" Source="/plus sign.jpg"/>
         </Button>
-        <Button HorizontalAlignment="Left" Margin="838,196,0,0" VerticalAlignment="Top" Background="White" Width="24" Click="Event_Display_Button_Click" Tag="3">
+        <Button HorizontalAlignment="Left" Margin="937,196,0,0" VerticalAlignment="Top" Background="White" Width="24" Click="Event_Display_Button_Click" Tag="9">
             <Image HorizontalAlignment="Center" Height="20" VerticalAlignment="Top" Width="20" Source="/right-arrow (1).png" Stretch="Fill"/>
         </Button>
-        <Button HorizontalAlignment="Left" Margin="745,198,0,0" VerticalAlignment="Top" Height="22" Width="22" Background="White" Click="Button_Click">
+        <Button HorizontalAlignment="Left" Margin="673,198,0,0" VerticalAlignment="Top" Height="22" Width="22" Background="White" Click="Button_Click">
+            <Image HorizontalAlignment="Center" Height="20" VerticalAlignment="Center" Width="20" Source="/plus sign.jpg" Stretch="Fill"/>
+        </Button>
+        <Button HorizontalAlignment="Left" Margin="622,196,0,0" VerticalAlignment="Top" Background="White" Width="24" Click="Event_Display_Button_Click" Tag="8">
+            <Image HorizontalAlignment="Center" Height="20" VerticalAlignment="Top" Width="20" Source="/right-arrow (1).png" Stretch="Fill"/>
+        </Button>
+        <Button HorizontalAlignment="Left" Margin="324,198,0,0" VerticalAlignment="Top" Height="22" Width="22" Background="White" Click="Button_Click">
             <Image HorizontalAlignment="Center" Height="20" VerticalAlignment="Center" Width="20" Source="/plus sign.jpg" Stretch="Fill"/>
         </Button>
 
