@@ -59,5 +59,25 @@ namespace FlamePlanner
                 }
             }
         }
+
+        private void Event_Search_Button_Click(object sender, RoutedEventArgs e)
+        {
+            string var;
+            string calgaryFlames = "calgary flames";
+            string wineEvent = "wine";
+            var = textBox.Text;
+            if (String.Equals(var, calgaryFlames))
+            {
+                threeFramePage tfp = mw.mainFrame.Content as threeFramePage;
+                tfp.topRightFrame.Content = new EventSearchCalgaryFlames(mw);
+                textBox.Text = String.Empty;
+            }
+            if (String.Equals(var, wineEvent))
+            {
+                threeFramePage tfp = mw.mainFrame.Content as threeFramePage;
+                tfp.topRightFrame.Content = new EventSearchWine(mw);
+                textBox.Text = String.Empty;
+            }
+        }
     }
 }

@@ -24,8 +24,8 @@
         <Label Content="to" HorizontalAlignment="Left" Margin="192,100,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.206,0.539"/>
         <DatePicker HorizontalAlignment="Left" Margin="228,100,0,0" VerticalAlignment="Top"/>
         <Label Content="Event Search:" HorizontalAlignment="Left" Margin="513,10,0,0" VerticalAlignment="Top" FontSize="24"/>
-        <TextBox HorizontalAlignment="Left" Margin="668,22,0,0" Text="" TextWrapping="Wrap" VerticalAlignment="Top" Width="150" FontSize="17"/>
-        <Button x:Name="EventSearchButton" Content="Go" HorizontalAlignment="Left" Margin="823,26,0,0" VerticalAlignment="Top" Height="18" Width="32" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="10"/>
+        <TextBox x:Name="textBox" HorizontalAlignment="Left" Margin="668,22,0,0" Text="" TextWrapping="Wrap" VerticalAlignment="Top" Width="150" FontSize="17"/>
+        <Button x:Name="EventSearchButton" Content="Go" HorizontalAlignment="Left" Margin="823,26,0,0" VerticalAlignment="Top" Height="18" Width="32" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="10" Click="Event_Search_Button_Click"/>
 
 
     </Grid>
