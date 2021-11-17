@@ -1,0 +1,18 @@
+﻿<UserControl x:Class="FlamePlanner.MapEventButton"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:FlamePlanner"
+             mc:Ignorable="d">
+    <Grid>
+        <Button x:Name="button" Background="{x:Null}" BorderBrush="{x:Null}" Click="button_Click">
+            <StackPanel>
+                <Label x:Name="label" HorizontalAlignment="Left" VerticalAlignment="Top" Background="{DynamicResource {x:Static SystemColors.WindowBrushKey}}" Content="Placeholder"/>
+                <Image x:Name="marker" Source="Resources/redMarker.png"  Width="50" Height="50"/>
+            </StackPanel>
+        </Button>
+
+
+    </Grid>
+</UserControl>

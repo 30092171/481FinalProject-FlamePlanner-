@@ -23,27 +23,36 @@
                     </Grid.RenderTransform>
                     <Image x:Name="mapImage"  Source="Resources/calgary.png" Stretch="None"/>
                     <Image Source="Resources/blue.png"  Width="40" Height="40" Margin="691,407,545,485"/>
-                    <Button x:Name="poi1" Width="75" Height="80" Background="{x:Null}" BorderBrush="{x:Null}" Margin="517,495,699,377" Click="poi1_Click">
-                        <StackPanel>
-                            <Label x:Name="label" Content="6 Street SW" HorizontalAlignment="Left" VerticalAlignment="Top" Background="{DynamicResource {x:Static SystemColors.WindowBrushKey}}"/>
-                            <Image Source="Resources/redMarker.png"  Width="50" Height="50"/>
-                        </StackPanel>
-                    </Button>
-                    <Button x:Name="poi2" Width="65" Height="80" Background="{x:Null}" BorderBrush="{x:Null}" Margin="894,535,322,337" Click="poi2_Click">
-                        <StackPanel>
-                            <Label x:Name="label_Copy1" Content="Stampede" HorizontalAlignment="Left" VerticalAlignment="Top" Background="{DynamicResource {x:Static SystemColors.WindowBrushKey}}"/>
-                            <Image Source="Resources/blueMarker.png"  Width="50" Height="50"/>
-                        </StackPanel>
-                    </Button>
-                    <Button x:Name="poi3" Width="105" Height="80" Background="{x:Null}" BorderBrush="{x:Null}" Margin="596,56,620,816" Click="poi3_Click">
-                        <StackPanel>
-                            <Label x:Name="label_Copy" Content="Prince Island Park" HorizontalAlignment="Left" VerticalAlignment="Top" Background="{DynamicResource {x:Static SystemColors.WindowBrushKey}}"/>
-                            <Image Source="Resources/redMarker.png"  Width="50" Height="50"/>
-                        </StackPanel>
-                    </Button>
-
-
-
+                    <local:MapEventButton HorizontalAlignment="Left" Margin="530,495,0,0" VerticalAlignment="Top" Click="poi1_Click" Text="6 Street SW"/>
+                    <local:MapEventButton HorizontalAlignment="Left" Margin="886,524,0,0" VerticalAlignment="Top" Click="poi2_Click" Text="Stampede" Source="/Resources/blueMarker.png"/>
+                    <local:MapEventButton HorizontalAlignment="Left" Margin="604,38,0,0" VerticalAlignment="Top" Text="Prince Island Park" Click="poi3_Click"/>
+                    <local:MapEventButton HorizontalAlignment="Left" Margin="157,26,0,0" VerticalAlignment="Top" Text="Hillhurst"/>
+                    <local:MapEventButton HorizontalAlignment="Left" Margin="186,475,0,0" VerticalAlignment="Top" Text="14 Street SW" Source="/Resources/blueMarker.png"/>
+                    <local:MapEventButton HorizontalAlignment="Left" Margin="72,656,0,0" VerticalAlignment="Top" Text="Buckmaster Park"/>
+                    <local:MapEventButton HorizontalAlignment="Left" Margin="422,289,0,0" VerticalAlignment="Top" Text="University"/>
+                    <local:MapEventButton HorizontalAlignment="Left" Margin="750,656,0,0" VerticalAlignment="Top" Text="Talisman Centre"/>
+                    <local:MapEventButton HorizontalAlignment="Left" Margin="204,828,0,0" VerticalAlignment="Top" Text="South MR Park"/>
+                    <local:MapEventButton HorizontalAlignment="Left" Margin="886,676,0,0" VerticalAlignment="Top" Text="Stampede Grandstand"/>
+                    <local:MapEventButton HorizontalAlignment="Left" Margin="976,564,0,0" VerticalAlignment="Top" Text="Saddledome"/>
+                    <local:MapEventButton HorizontalAlignment="Left" Margin="804,446,0,0" VerticalAlignment="Top" Text="Sunterra Market"/>
+                    <local:MapEventButton HorizontalAlignment="Left" Margin="630,455,0,0" VerticalAlignment="Top" Text="Memorial Park"/>
+                    <local:MapEventButton HorizontalAlignment="Left" Margin="895,289,0,0" VerticalAlignment="Top" Text="City Hall"/>
+                    <local:MapEventButton HorizontalAlignment="Left" Margin="744,190,0,0" VerticalAlignment="Top" Text="Sun Life Plaza"/>
+                    <local:MapEventButton HorizontalAlignment="Left" Margin="609,131,0,0" VerticalAlignment="Top" Text="Eau Claire"/>
+                    <local:MapEventButton HorizontalAlignment="Left" Margin="303,116,0,0" VerticalAlignment="Top" Text="Livingston" Source="/Resources/blueMarker.png"/>
+                    <local:MapEventButton HorizontalAlignment="Left" Margin="79,338,0,0" VerticalAlignment="Top" Text="Sunalta"/>
+                    <local:MapEventButton HorizontalAlignment="Left" Margin="289,484,0,0" VerticalAlignment="Top" Text="11 Street SW"/>
+                    <local:MapEventButton HorizontalAlignment="Left" Margin="536,838,0,0" VerticalAlignment="Top" Text="Elbow Islands Park"/>
+                    <local:MapEventButton HorizontalAlignment="Left" Margin="816,818,0,0" VerticalAlignment="Top" Text="Erlton"/>
+                    <local:MapEventButton HorizontalAlignment="Left" Margin="904,770,0,0" VerticalAlignment="Top" Text="25 Ave SE" Source="/Resources/blueMarker.png"/>
+                    <local:MapEventButton HorizontalAlignment="Left" Margin="510,575,0,0" VerticalAlignment="Top" Text="WCHS"/>
+                    <local:MapEventButton HorizontalAlignment="Left" Margin="616,347,0,0" VerticalAlignment="Top" Text="Gulf Canada Square"/>
+                    <local:MapEventButton HorizontalAlignment="Left" Margin="987,318,0,0" VerticalAlignment="Top" Text="7 Ave SE" Source="/Resources/blueMarker.png"/>
+                    <local:MapEventButton HorizontalAlignment="Left" Margin="670,211,0,0" VerticalAlignment="Top" Text="5 Ave Place SW"/>
+                    <local:MapEventButton HorizontalAlignment="Left" Margin="698,524,0,0" VerticalAlignment="Top" Source="/Resources/blueMarker.png" Text="13 Ave SW"/>
+                    <local:MapEventButton HorizontalAlignment="Left" Margin="412,656,0,0" VerticalAlignment="Top" Text="Royal Ave SW" Source="/Resources/blueMarker.png"/>
+                    <local:MapEventButton HorizontalAlignment="Left" Margin="690,730,0,0" VerticalAlignment="Top" Text="Mission"/>
+                    <local:MapEventButton HorizontalAlignment="Left" Margin="1162,136,0,0" VerticalAlignment="Top" Text="Centre Ave" Source="/Resources/blueMarker.png"/>
                 </Grid>
             </ScrollViewer>
         </Canvas>
