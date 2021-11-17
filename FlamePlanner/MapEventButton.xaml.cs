@@ -15,7 +15,6 @@ namespace FlamePlanner
         public static readonly DependencyProperty SourceDependency = DependencyProperty.Register("Source", typeof(ImageSource), typeof(MapEventButton),
             new PropertyMetadata(null, new PropertyChangedCallback(ChangedSource)));
         public static readonly RoutedEvent ClickEvent = EventManager.RegisterRoutedEvent("Click", RoutingStrategy.Bubble, typeof(RoutedEventHandler), typeof(MapEventButton));
-        public int FilterTag { get; set; } //Use this integer for filtering
         public ImageSource Source
         {
             get => GetValue(SourceDependency) as ImageSource;
