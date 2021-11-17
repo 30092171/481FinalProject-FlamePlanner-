@@ -39,7 +39,7 @@ namespace FlamePlanner
         /// </summary>
         /// <param name="testPassword"></param>
         /// <returns></returns>
-        bool CheckPassword(string testPassword)
+        public bool CheckPassword(string testPassword)
         {
             return this.password.Equals(testPassword);
         }
