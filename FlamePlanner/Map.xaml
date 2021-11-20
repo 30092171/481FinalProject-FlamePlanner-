@@ -23,27 +23,27 @@
                     </Grid.RenderTransform>
                     <Image x:Name="mapImage"  Source="Resources/calgary.png" Stretch="None"/>
                     <Image Source="Resources/blue.png"  Width="40" Height="40" Margin="691,407,545,485"/>
-                    <local:MapEventButton HorizontalAlignment="Left" Margin="530,495,0,0" VerticalAlignment="Top" Click="poi1_Click" Text="6 Street SW" Tag="Family"/>
-                    <local:MapEventButton HorizontalAlignment="Left" Margin="886,524,0,0" VerticalAlignment="Top" Click="poi2_Click" Text="Stampede" Source="/Resources/blueMarker.png" Tag="Concert"/>
-                    <local:MapEventButton HorizontalAlignment="Left" Margin="604,38,0,0" VerticalAlignment="Top" Text="Prince Island Park" Click="poi3_Click" Tag="Food"/>
-                    <local:MapEventButton HorizontalAlignment="Left" Margin="157,26,0,0" VerticalAlignment="Top" Text="Hillhurst" Tag="Food"/>
-                    <local:MapEventButton HorizontalAlignment="Left" Margin="186,475,0,0" VerticalAlignment="Top" Text="14 Street SW" Source="/Resources/blueMarker.png" Tag="Special"/>
-                    <local:MapEventButton HorizontalAlignment="Left" Margin="72,656,0,0" VerticalAlignment="Top" Text="Buckmaster Park" Tag="Video"/>
-                    <local:MapEventButton HorizontalAlignment="Left" Margin="422,289,0,0" VerticalAlignment="Top" Text="University" Tag="Exhibit"/>
-                    <local:MapEventButton HorizontalAlignment="Left" Margin="750,656,0,0" VerticalAlignment="Top" Text="Talisman Centre" Tag="Shop"/>
-                    <local:MapEventButton HorizontalAlignment="Left" Margin="204,828,0,0" VerticalAlignment="Top" Text="South MR Park" Tag="Sport"/>
-                    <local:MapEventButton HorizontalAlignment="Left" Margin="886,676,0,0" VerticalAlignment="Top" Text="Stampede Grandstand" Tag="Theatre"/>
-                    <local:MapEventButton HorizontalAlignment="Left" Margin="976,564,0,0" VerticalAlignment="Top" Text="Saddledome" Tag="Family"/>
-                    <local:MapEventButton HorizontalAlignment="Left" Margin="804,446,0,0" VerticalAlignment="Top" Text="Sunterra Market" Tag="Concert"/>
-                    <local:MapEventButton HorizontalAlignment="Left" Margin="630,455,0,0" VerticalAlignment="Top" Text="Memorial Park" Tag="Food"/>
-                    <local:MapEventButton HorizontalAlignment="Left" Margin="895,289,0,0" VerticalAlignment="Top" Text="City Hall" Tag="Special"/>
-                    <local:MapEventButton HorizontalAlignment="Left" Margin="744,190,0,0" VerticalAlignment="Top" Text="Sun Life Plaza" Tag="Video"/>
-                    <local:MapEventButton HorizontalAlignment="Left" Margin="609,131,0,0" VerticalAlignment="Top" Text="Eau Claire" Tag="Exhibit"/>
-                    <local:MapEventButton HorizontalAlignment="Left" Margin="303,116,0,0" VerticalAlignment="Top" Text="Livingston" Source="/Resources/blueMarker.png" Tag="Shop"/>
-                    <local:MapEventButton HorizontalAlignment="Left" Margin="79,338,0,0" VerticalAlignment="Top" Text="Sunalta" Tag="Sport"/>
-                    <local:MapEventButton HorizontalAlignment="Left" Margin="289,484,0,0" VerticalAlignment="Top" Text="11 Street SW" Tag="Theatre"/>
-                    <local:MapEventButton HorizontalAlignment="Left" Margin="536,838,0,0" VerticalAlignment="Top" Text="Elbow Islands Park" Tag="Family"/>
-                    <local:MapEventButton HorizontalAlignment="Left" Margin="816,818,0,0" VerticalAlignment="Top" Text="Erlton" Tag="Special"/>
+                    <local:MapEventButton Margin="530,495,670,0" VerticalAlignment="Top" Click="poi1_Click" Text="6 Street SW" Tag="Family"/>
+                    <local:MapEventButton Margin="886,524,320,0" VerticalAlignment="Top" Click="poi2_Click" Text="Stampede" Source="/Resources/blueMarker.png" Tag="Concert"/>
+                    <local:MapEventButton Margin="604,38,560,0" VerticalAlignment="Top" Text="Prince Island Park" Click="poi3_Click" Tag="Food"/>
+                    <local:MapEventButton Margin="157,26,1060,0" VerticalAlignment="Top" Text="Hillhurst" Tag="Food"/>
+                    <local:MapEventButton Margin="186,475,1005,0" VerticalAlignment="Top" Text="14 Street SW" Source="/Resources/blueMarker.png" Tag="Special"/>
+                    <local:MapEventButton Margin="72,656,1105,0" VerticalAlignment="Top" Text="Buckmaster Park" Tag="Video"/>
+                    <local:MapEventButton Margin="422,289,790,0" VerticalAlignment="Top" Text="University" Tag="Exhibit"/>
+                    <local:MapEventButton Margin="750,656,430,0" VerticalAlignment="Top" Text="Talisman Centre" Tag="Shop"/>
+                    <local:MapEventButton Margin="204,828,982,0" VerticalAlignment="Top" Text="South MR Park" Tag="Sport"/>
+                    <local:MapEventButton Margin="886,676,260,0" VerticalAlignment="Top" Text="Stampede Grandstand" Tag="Theatre"/>
+                    <local:MapEventButton Margin="976,564,222,0" VerticalAlignment="Top" Text="Saddledome" Tag="Family"/>
+                    <local:MapEventButton Margin="804,446,373,0" VerticalAlignment="Top" Text="Sunterra Market" Tag="Concert"/>
+                    <local:MapEventButton Margin="630,455,555,0" VerticalAlignment="Top" Text="Memorial Park" Tag="Food"/>
+                    <local:MapEventButton Margin="895,289,325,0" VerticalAlignment="Top" Text="City Hall" Tag="Special"/>
+                    <local:MapEventButton Margin="744,190,448,0" VerticalAlignment="Top" Text="Sun Life Plaza" Tag="Video"/>
+                    <local:MapEventButton Margin="609,131,602,0" VerticalAlignment="Top" Text="Eau Claire" Tag="Exhibit"/>
+                    <local:MapEventButton Margin="303,116,906,0" VerticalAlignment="Top" Text="Livingston" Source="/Resources/blueMarker.png" Tag="Shop"/>
+                    <local:MapEventButton Margin="79,338,1143,0" VerticalAlignment="Top" Text="Sunalta" Tag="Sport"/>
+                    <local:MapEventButton Margin="289,484,907,0" VerticalAlignment="Top" Text="11 Street SW" Tag="Theatre"/>
+                    <local:MapEventButton Margin="536,838,631,0" VerticalAlignment="Top" Text="Elbow Islands Park" Tag="Family"/>
+                    <local:MapEventButton HorizontalAlignment="Left" Margin="816,818,408,0" VerticalAlignment="Top" Text="Erlton" Tag="Special"/>
                     <local:MapEventButton HorizontalAlignment="Left" Margin="904,770,0,0" VerticalAlignment="Top" Text="25 Ave SE" Source="/Resources/blueMarker.png" Tag="Concert"/>
                     <local:MapEventButton HorizontalAlignment="Left" Margin="510,575,0,0" VerticalAlignment="Top" Text="WCHS" Tag="Food"/>
                     <local:MapEventButton HorizontalAlignment="Left" Margin="616,347,0,0" VerticalAlignment="Top" Text="Gulf Canada Square" Tag="Special"/>
