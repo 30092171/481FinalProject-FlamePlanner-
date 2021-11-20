@@ -14,8 +14,7 @@ namespace FlamePlanner
     {
 
         public string username; //username
-        public List<Itinerary> itineraryList; //List of accounts itineraries
-        public int selectedItinerary = 0; //integer representing index of list of the selected itinerary for the account
+        public Dictionary<string,Itinerary> itineraryDict; //Dictioray of account's itineraries key=title value=itinerary object
 
 
         private string password; //Private password for 'Security' :)
@@ -31,14 +30,14 @@ namespace FlamePlanner
         {
             this.username = uName;
             this.password = pWord;
-            this.itineraryList = new List<Itinerary>();
+            this.itineraryDict = new Dictionary<string, Itinerary>();
         }
 
         public Account(Account a2)
         {
             this.username = a2.username;
             this.password = a2.password;
-            this.itineraryList = new List<Itinerary>(a2.itineraryList);
+            this.itineraryDict = new Dictionary<string,Itinerary>(a2.itineraryDict);
         }
 
 
