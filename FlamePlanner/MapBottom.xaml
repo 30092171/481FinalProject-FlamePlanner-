@@ -7,9 +7,17 @@
              mc:Ignorable="d" d:DesignWidth="800" Height="164">
     <Grid Background="#FFE4E0E0">
         <Label x:Name="label" Content="Filter:" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" FontSize="24"/>
-        <ComboBox x:Name="comboBox" HorizontalAlignment="Left" Margin="77,10,0,0" VerticalAlignment="Top" Width="318" Height="42" SelectedIndex="0" VerticalContentAlignment="Center">
-            <ComboBoxItem  Content="NONE"/>
-            <ComboBoxItem  Content="Concerts"/>
+        <ComboBox x:Name="comboBox" HorizontalAlignment="Left" Margin="77,10,0,0" VerticalAlignment="Top" Width="318" Height="42" SelectedIndex="0" VerticalContentAlignment="Center" SelectionChanged="comboBox_SelectionChanged">
+            <TextBlock Text="NONE" TextWrapping="Wrap"/>
+            <TextBlock Text="Family" TextWrapping="Wrap"/>
+            <TextBlock Text="Concert" TextWrapping="Wrap"/>
+            <TextBlock Text="Food and Drink" TextWrapping="Wrap"/>
+            <TextBlock Text="Festivals and Special Events" TextWrapping="Wrap"/>
+            <TextBlock Text="Film and Video" TextWrapping="Wrap"/>
+            <TextBlock Text="Museums, Galleries and Exhibitions" TextWrapping="Wrap"/>
+            <TextBlock Text="Shopping and Markets" TextWrapping="Wrap"/>
+            <TextBlock Text="Sports and Recreation" TextWrapping="Wrap"/>
+            <TextBlock Text="Theatre, Comedy and Performing Arts" TextWrapping="Wrap"/>
         </ComboBox>
         <StackPanel Orientation="Horizontal" Margin="10,57,0,0">
             <Label x:Name="label_Copy" Content="Address: " HorizontalAlignment="Left"  VerticalAlignment="Top" FontSize="24"/>
