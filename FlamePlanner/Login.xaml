@@ -14,10 +14,14 @@
             <TextBlock Width="200" Height="40" HorizontalAlignment="Center" VerticalAlignment="Center" TextAlignment="Center" FontSize="16" Padding="0,10,0,0">
                 <Underline>Log In</Underline>
             </TextBlock>
-            <TextBlock x:Name="errorMessageBlock" Width="200" Height="40" HorizontalAlignment="Center" VerticalAlignment="Center" TextAlignment="Center" FontSize="12" Foreground="Red" Visibility="Collapsed">
-                Log In Unsuccesful! <LineBreak/>
-                Please Try Again.
-            </TextBlock>
+            <Button x:Name="errorMessageBlock1" Click="errorMessage1_Click" Width="200" Height="40" HorizontalAlignment="Center" VerticalAlignment="Center"  FontSize="12" Foreground="Red" Visibility="Collapsed">
+            </Button>
+            <Button x:Name="errorMessageBlock2" Click="errorMessage2_Click" Width="200" Height="40" HorizontalAlignment="Center" VerticalAlignment="Center"  FontSize="12" Foreground="Red" Visibility="Collapsed">
+            </Button>
+            <Button x:Name="errorMessageBlock3" Click="errorMessage3_Click" Width="200" Height="40" HorizontalAlignment="Center" VerticalAlignment="Center"  FontSize="12" Foreground="Red" Visibility="Collapsed">
+            </Button>
+            <Button x:Name="errorMessageBlock4" Click="errorMessage4_Click" Width="200" Height="40" HorizontalAlignment="Center" VerticalAlignment="Center"  FontSize="12" Foreground="Red" Visibility="Collapsed">
+            </Button>
             <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" Width="275">
                 <TextBlock Width="75" Height="40" Padding="0,10,10,0">
                     Username:

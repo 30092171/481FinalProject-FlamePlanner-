@@ -50,6 +50,10 @@
             <Button x:Name="signUpButton" Width="110" Height="30" Margin="100,20" FontSize="12" Click="signUpButton_Click">
                 <TextBlock TextWrapping="Wrap" TextAlignment="Center">Register Account</TextBlock>
             </Button>
+            <Button x:Name="errorMessageBlock1" Click="errorMessage1_Click" Width="200" Height="40" HorizontalAlignment="Center" VerticalAlignment="Center"  FontSize="12" Foreground="Red" Visibility="Collapsed">
+            </Button>
+            <Button x:Name="errorMessageBlock2" Click="errorMessage2_Click" Width="200" Height="40" HorizontalAlignment="Center" VerticalAlignment="Center"  FontSize="12" Foreground="Red" Visibility="Collapsed">
+            </Button>
         </StackPanel>
 
         <StackPanel Orientation="Vertical" HorizontalAlignment="Left"  VerticalAlignment="Center">

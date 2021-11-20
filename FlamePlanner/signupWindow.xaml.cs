@@ -19,7 +19,7 @@ namespace FlamePlanner
     /// </summary>
     public partial class signupWindow : Window
     {
-        private bool success = true;
+        private bool success = false;
         private MainWindow mw;
         public signupWindow(MainWindow mw)
         {
@@ -29,9 +29,59 @@ namespace FlamePlanner
 
         private void signUpButton_Click(object sender, RoutedEventArgs e)
         {
-            if (!success)//if sign up unsuccessful (dummy for now)
+
+            //Check if confirmed password and passwords arent the same then don't log in
+            if (!passwordField.Password.Equals(confirmPasswordField.Password) && !confirmPasswordField.Password.Equals(passwordField.Password))
             {
-                this.errorMessageBlock.Visibility = Visibility.Visible;
+                success = false;
+                errorMessage1_Click(sender, e);
+            }
+
+            //Check if there is already a username in the database and if the username is blank
+            if (mw.AccountDatabase.ContainsKey(usernameField.Text) && !usernameField.Text.Equals(""))
+            {
+                success = false;
+                errorMessage2_Click(sender, e);
+            }
+
+            //Add username and password into account database if username/password are not blank, username does not exist in database and if the confirmed password equals password
+       else if (!mw.AccountDatabase.ContainsKey(usernameField.Text) && !usernameField.Text.Equals("") && !passwordField.Password.Equals("") && passwordField.Password.Equals(confirmPasswordField.Password)) {
+                Account newAccount = new Account(usernameField.Text, passwordField.Password);
+                mw.AccountDatabase[usernameField.Text] = newAccount;
+                mw.currentAcount = usernameField.Text;
+                success = true;
+            }
+            //If username and password already exist then don't log in
+            else {
+                success = false;
+                if (passwordField.Password.Equals(""))
+                {
+                    errorMessage4_Click(sender, e);
+                }
+                else
+                {
+                    if (usernameField.Text.Equals(""))
+                    {
+                        errorMessage3_Click(sender, e);
+                    }
+                    
+                }
+
+            }
+
+            if (!passwordField.Password.Equals(confirmPasswordField.Password) && !confirmPasswordField.Password.Equals(passwordField.Password))
+            {
+                success = false;
+            }
+
+
+
+
+            if (success == false)//if sign up unsuccessful (dummy for now)
+            {
+                mw.loggedIn = false;
+
+
             }
             else //Sign Up successful
             {
@@ -42,8 +92,30 @@ namespace FlamePlanner
                 t.Text = "SIGN OUT";
                 mw.logInOutButton.Content = t;
                 mw.loggedIn = true;
+                mw.currentAcount = usernameField.Text;
                 this.Close();
             }
         }
+
+        private void errorMessage1_Click(object sender, RoutedEventArgs e)
+        {
+            MessageBox.Show("Wrong confirmed password, signup Unsuccesful!", "My App", MessageBoxButton.OK);
+        }
+
+        private void errorMessage2_Click(object sender, RoutedEventArgs e)
+        {
+            MessageBox.Show("User already exists, signup Unsuccesful!", "My App", MessageBoxButton.OK);
+        }
+
+        private void errorMessage3_Click(object sender, RoutedEventArgs e)
+        {
+            MessageBox.Show("You have not entered a username, signup Unsuccesful!", "My App", MessageBoxButton.OK);
+        }
+
+        private void errorMessage4_Click(object sender, RoutedEventArgs e)
+        {
+            MessageBox.Show("You have not entered a password or confirmed password, signup Unsuccesful!", "My App", MessageBoxButton.OK);
+        }
+
     }
 }
