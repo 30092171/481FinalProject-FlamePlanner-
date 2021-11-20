@@ -34,6 +34,13 @@ namespace FlamePlanner
             this.itineraryList = new List<Itinerary>();
         }
 
+        public Account(Account a2)
+        {
+            this.username = a2.username;
+            this.password = a2.password;
+            this.itineraryList = new List<Itinerary>(a2.itineraryList);
+        }
+
 
         /// <summary>
         /// Tests whether argument is equal to the account password
