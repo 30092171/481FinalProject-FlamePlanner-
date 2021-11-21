@@ -45,12 +45,12 @@
         <TextBlock Grid.Column="6" Grid.Row="1" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="16"> Thu, 30 <LineBreak /> September</TextBlock>
         <TextBlock Grid.Column="7" Grid.Row="1" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="16"> Fri, 1 <LineBreak /> October</TextBlock>
 
-        <TextBlock Grid.Column="0" Grid.Row="2" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="20">10:00am</TextBlock>
-        <TextBlock Grid.Column="0" Grid.Row="3" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="20">11:00am</TextBlock>
-        <TextBlock Grid.Column="0" Grid.Row="4" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="20">12:00pm</TextBlock>
-        <TextBlock Grid.Column="0" Grid.Row="5" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="20">1:00pm</TextBlock>
-        <TextBlock Grid.Column="0" Grid.Row="6" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="20">2:00pm</TextBlock>
-        <TextBlock Grid.Column="0" Grid.Row="7" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="20">3:00pm</TextBlock>
+        <TextBlock Grid.Column="0" x:Name="timerow1" Grid.Row="2" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="20">1:00am</TextBlock>
+        <TextBlock Grid.Column="0" x:Name="timerow2" Grid.Row="3" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="20">2:00am</TextBlock>
+        <TextBlock Grid.Column="0" x:Name="timerow3" Grid.Row="4" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="20">3:00pm</TextBlock>
+        <TextBlock Grid.Column="0" x:Name="timerow4" Grid.Row="5" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="20">4:00pm</TextBlock>
+        <TextBlock Grid.Column="0" x:Name="timerow5" Grid.Row="6" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="20">5:00pm</TextBlock>
+        <TextBlock Grid.Column="0" x:Name="timerow6" Grid.Row="7" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="20">6:00pm</TextBlock>
 
         <TextBlock x:Name="Event1" TextAlignment="Center" Grid.Column="1" Grid.Row="2" Grid.RowSpan="2"  HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Foreground="Black" Background="#FF5BEED3">Bird Watching <LineBreak /> 10:00am - 12:00pm</TextBlock>
         <TextBlock x:Name="Event2" TextAlignment="Center" Grid.Column="5" Grid.Row="4" Grid.RowSpan="3"  HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Foreground="Black" Background="#FF5BEED3">Animal Dance <LineBreak /> 12:00am - 3:00pm</TextBlock>
