@@ -8,9 +8,9 @@
       d:DesignHeight="400" d:DesignWidth="700"
       Title="MapLarge">
 
-    <Grid MouseMove="map_MouseMove" MouseDown="map_MouseDown" MouseUp="map_MouseUp" MouseWheel="map_MouseWheel">
+    <Grid MouseMove="map_MouseMove" MouseDown="map_MouseDown" MouseUp="map_MouseUp" MouseWheel="map_MouseWheel" Background="#FF2D2D30">
         <Canvas ClipToBounds="True">
-            <Grid x:Name="mapGrid" Margin="-500,-750,0,0">
+            <Grid x:Name="mapGrid" Margin="-1550,-1600,0,0" RenderTransformOrigin="0.5,0.42">
                 <Grid.RenderTransform>
                     <TransformGroup>
                         <ScaleTransform x:Name="mapScale" ScaleX="0.5" ScaleY="0.5"/>
@@ -20,6 +20,7 @@
                     </TransformGroup>
                 </Grid.RenderTransform>
                 <Image x:Name="mapImage" Source="Resources/calgaryLarge.jpg" Stretch="None"/>
+                <local:LargeMapCanvas x:Name="pointCanvas" Source="Resources/redMarker.png" Source2="/Resources/blueMarker.png"/>
             </Grid>
         </Canvas>
         <Button x:Name="minusButton" Width="60" Height="60" VerticalAlignment="Bottom" HorizontalAlignment="Right" Margin="0,0,25,25" Click="minusButton_Click">

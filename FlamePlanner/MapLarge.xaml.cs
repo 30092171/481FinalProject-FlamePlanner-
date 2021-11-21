@@ -20,8 +20,8 @@ namespace FlamePlanner
     /// </summary>
     public partial class MapLarge : Page
     {
-        private static int NUMPOINTS = 50;
-        private static int ICONSIZE = 20;
+        private static int NUMPOINTS = 75;
+        private static int ICONSIZE = 100;
         private static double SCROLLSENSITIVITY = 0.05;
         private bool mouseHeld = false;
         private Point lastPoint;
@@ -30,25 +30,21 @@ namespace FlamePlanner
         {
             InitializeComponent();
             random = new Random();
-            //PopulateDummyPoints();
+            PopulateDummyPoints();
         }
 
-        private Thickness RandomPair()
+        private Rect RandomPair()
         {
-            return new Thickness(
-                random.Next(0, (int)mapImage.Width - ICONSIZE),
-                random.Next(0, (int)mapImage.Height - ICONSIZE), 0, 0);
+            int x = random.Next(0, (int)mapImage.Source.Width - ICONSIZE);
+            int y = random.Next(0, (int)mapImage.Source.Height - ICONSIZE);
+            return new Rect(x, y, ICONSIZE, ICONSIZE);
         }
 
         private void PopulateDummyPoints()
         {
             for (int i = 0; i < NUMPOINTS; ++i)
             {
-                Thickness t = RandomPair();
-                MapEventButton m = new MapEventButton(true, ICONSIZE, ICONSIZE);
-                mapGrid.Children.Add(m);
-                m.Margin = t;
-                
+                pointCanvas.points.Add(RandomPair());
             }
         }
 
@@ -98,6 +94,34 @@ namespace FlamePlanner
         {
             mapScale.ScaleX = mapScale.ScaleX / 2;
             mapScale.ScaleY = mapScale.ScaleY / 2;
+        }
+    }
+    public class LargeMapCanvas : Canvas
+    {
+        private Random random = new Random();
+        public List<Rect> points = new List<Rect>();
+        public static readonly DependencyProperty SourceDependency = DependencyProperty.Register("Source", typeof(ImageSource), typeof(LargeMapCanvas));
+        public static readonly DependencyProperty Source2Dependency = DependencyProperty.Register("Source2", typeof(ImageSource), typeof(LargeMapCanvas));
+        public ImageSource Source
+        {
+            get => GetValue(SourceDependency) as ImageSource;
+            set => SetValue(SourceDependency, value);
+        }
+        public ImageSource Source2
+        {
+            get => GetValue(Source2Dependency) as ImageSource;
+            set => SetValue(Source2Dependency, value);
+        }
+        protected override void OnRender(DrawingContext dc)
+        {
+            //base.OnRender(dc);
+            foreach(Rect i in points)
+            {
+                if(random.Next(3) == 1)
+                    dc.DrawImage(Source2, i);
+                else
+                    dc.DrawImage(Source, i);
+            }
         }
     }
 }
