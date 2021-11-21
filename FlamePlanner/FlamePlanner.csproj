@@ -35,6 +35,7 @@
     <None Remove="Resources\blue.png" />
     <None Remove="Resources\blueMarker.png" />
     <None Remove="Resources\calgary.png" />
+    <None Remove="Resources\calgaryLarge.jpg" />
     <None Remove="Resources\mapMarker.ico" />
     <None Remove="Resources\negativeIcon.png" />
     <None Remove="Resources\redMarker.png" />
@@ -94,6 +95,9 @@
     </Resource>
     <Resource Include="Resources\calgary.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Resources\calgaryLarge.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Resource>
     <Resource Include="Resources\negativeIcon.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>

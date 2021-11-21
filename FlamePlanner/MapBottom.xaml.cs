@@ -42,7 +42,7 @@ namespace FlamePlanner
                 else
                 {
                     EventFilter b;
-                    if (!Enum.TryParse<EventFilter>(m.Tag.ToString(), out b))
+                    if (!Enum.TryParse(m.Tag.ToString(), out b))
                         b = EventFilter.NONE;
                     if (m.Tag != null && 
                         (f == EventFilter.NONE || b == f))
@@ -55,6 +55,13 @@ namespace FlamePlanner
                     }
                 }
             }
+        }
+
+        private void addressSearchGoButton_Click(object sender, RoutedEventArgs e)
+        {
+            //change view
+            threeFramePage tfp = mw.mainFrame.Content as threeFramePage;
+            tfp.topRightFrame.Content = new Map(mw);
         }
     }
     public enum EventFilter

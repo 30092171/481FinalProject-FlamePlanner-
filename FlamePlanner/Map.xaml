@@ -9,52 +9,57 @@
       Title="Map"
     xmlns:System="clr-namespace:System;assembly=System.Runtime">
 
-    <Grid x:Name="overGrid" Background="#FF2D2D30">
-        <Canvas x:Name="canvas">
-            <ScrollViewer x:Name="mapScroller" Width="{Binding ActualWidth, ElementName=canvas, Mode=OneWay}" Height="{Binding ActualHeight, ElementName=canvas, Mode=OneWay}" HorizontalScrollBarVisibility="Hidden" VerticalScrollBarVisibility="Hidden">
-                <Grid x:Name="mapGrid" MouseMove="mapGrid_MouseMove" MouseDown="mapGrid_MouseDown" MouseUp="mapGrid_MouseUp" Margin="0,0,0,0" RenderTransformOrigin="0.5,0.5">
-                    <Grid.RenderTransform>
-                        <TransformGroup>
-                            <ScaleTransform x:Name="mapScale" ScaleX="1" ScaleY="1"/>
-                            <SkewTransform/>
-                            <RotateTransform/>
-                            <TranslateTransform/>
-                        </TransformGroup>
-                    </Grid.RenderTransform>
-                    <Image x:Name="mapImage"  Source="Resources/calgary.png" Stretch="None"/>
-                    <Image Source="Resources/blue.png"  Width="40" Height="40" Margin="691,407,545,485"/>
-                    <local:MapEventButton Margin="530,495,670,0" VerticalAlignment="Top" Click="poi1_Click" Text="6 Street SW" Tag="Family"/>
-                    <local:MapEventButton Margin="886,524,320,0" VerticalAlignment="Top" Click="poi2_Click" Text="Stampede" Source="/Resources/blueMarker.png" Tag="Concert"/>
-                    <local:MapEventButton Margin="604,38,560,0" VerticalAlignment="Top" Text="Prince Island Park" Click="poi3_Click" Tag="Food"/>
-                    <local:MapEventButton Margin="157,26,1060,0" VerticalAlignment="Top" Text="Hillhurst" Tag="Food"/>
-                    <local:MapEventButton Margin="186,475,1005,0" VerticalAlignment="Top" Text="14 Street SW" Source="/Resources/blueMarker.png" Tag="Special"/>
-                    <local:MapEventButton Margin="72,656,1105,0" VerticalAlignment="Top" Text="Buckmaster Park" Tag="Video"/>
-                    <local:MapEventButton Margin="422,289,790,0" VerticalAlignment="Top" Text="University" Tag="Exhibit"/>
-                    <local:MapEventButton Margin="750,656,430,0" VerticalAlignment="Top" Text="Talisman Centre" Tag="Shop"/>
-                    <local:MapEventButton Margin="204,828,982,0" VerticalAlignment="Top" Text="South MR Park" Tag="Sport"/>
-                    <local:MapEventButton Margin="886,676,260,0" VerticalAlignment="Top" Text="Stampede Grandstand" Tag="Theatre"/>
-                    <local:MapEventButton Margin="976,564,222,0" VerticalAlignment="Top" Text="Saddledome" Tag="Family"/>
-                    <local:MapEventButton Margin="804,446,373,0" VerticalAlignment="Top" Text="Sunterra Market" Tag="Concert"/>
-                    <local:MapEventButton Margin="630,455,555,0" VerticalAlignment="Top" Text="Memorial Park" Tag="Food"/>
-                    <local:MapEventButton Margin="895,289,325,0" VerticalAlignment="Top" Text="City Hall" Tag="Special"/>
-                    <local:MapEventButton Margin="744,190,448,0" VerticalAlignment="Top" Text="Sun Life Plaza" Tag="Video"/>
-                    <local:MapEventButton Margin="609,131,602,0" VerticalAlignment="Top" Text="Eau Claire" Tag="Exhibit"/>
-                    <local:MapEventButton Margin="303,116,906,0" VerticalAlignment="Top" Text="Livingston" Source="/Resources/blueMarker.png" Tag="Shop"/>
-                    <local:MapEventButton Margin="79,338,1143,0" VerticalAlignment="Top" Text="Sunalta" Tag="Sport"/>
-                    <local:MapEventButton Margin="289,484,907,0" VerticalAlignment="Top" Text="11 Street SW" Tag="Theatre"/>
-                    <local:MapEventButton Margin="536,838,631,0" VerticalAlignment="Top" Text="Elbow Islands Park" Tag="Family"/>
-                    <local:MapEventButton HorizontalAlignment="Left" Margin="816,818,408,0" VerticalAlignment="Top" Text="Erlton" Tag="Special"/>
-                    <local:MapEventButton HorizontalAlignment="Left" Margin="904,770,0,0" VerticalAlignment="Top" Text="25 Ave SE" Source="/Resources/blueMarker.png" Tag="Concert"/>
-                    <local:MapEventButton HorizontalAlignment="Left" Margin="510,575,0,0" VerticalAlignment="Top" Text="WCHS" Tag="Food"/>
-                    <local:MapEventButton HorizontalAlignment="Left" Margin="616,347,0,0" VerticalAlignment="Top" Text="Gulf Canada Square" Tag="Special"/>
-                    <local:MapEventButton HorizontalAlignment="Left" Margin="987,318,0,0" VerticalAlignment="Top" Text="7 Ave SE" Source="/Resources/blueMarker.png" Tag="Video"/>
-                    <local:MapEventButton HorizontalAlignment="Left" Margin="670,211,0,0" VerticalAlignment="Top" Text="5 Ave Place SW" Tag="Exhibit"/>
-                    <local:MapEventButton HorizontalAlignment="Left" Margin="698,524,0,0" VerticalAlignment="Top" Source="/Resources/blueMarker.png" Text="13 Ave SW" Tag="Shop"/>
-                    <local:MapEventButton HorizontalAlignment="Left" Margin="412,656,0,0" VerticalAlignment="Top" Text="Royal Ave SW" Source="/Resources/blueMarker.png" Tag="Sport"/>
-                    <local:MapEventButton HorizontalAlignment="Left" Margin="690,730,0,0" VerticalAlignment="Top" Text="Mission" Tag="Theatre"/>
-                    <local:MapEventButton HorizontalAlignment="Left" Margin="1162,136,0,0" VerticalAlignment="Top" Text="Centre Ave" Source="/Resources/blueMarker.png" Tag="Family"/>
-                </Grid>
-            </ScrollViewer>
+    <Grid x:Name="overGrid" MouseMove="map_MouseMove" MouseDown="map_MouseDown" MouseUp="map_MouseUp" MouseWheel="map_MouseWheel" Background="#FF2D2D30">
+        <Canvas ClipToBounds="True">
+            <Grid x:Name="mapGrid" Margin="-150,-150,0,0" RenderTransformOrigin="0.5,0.5">
+                <Grid.RenderTransform>
+                    <TransformGroup>
+                        <ScaleTransform x:Name="mapScale" ScaleX="1" ScaleY="1"/>
+                        <SkewTransform/>
+                        <RotateTransform/>
+                        <TranslateTransform/>
+                    </TransformGroup>
+                </Grid.RenderTransform>
+                <Image x:Name="mapImage" Source="Resources/calgary.png" Stretch="None"/>
+                <Image Source="Resources/blue.png"  Width="40" Height="40" Margin="642,403,636,489"/>
+                <local:MapEventButton Margin="944,586,0,0" HorizontalAlignment="Left" VerticalAlignment="Top" Text="Stampede" Tag="Special" Source="/Resources/blueMarker.png" Click="stampede_Click"/>
+                <local:MapEventButton Margin="631,27,0,0" HorizontalAlignment="Left" VerticalAlignment="Top" Text="Prince Island Park" Tag="Family"/>
+                <local:MapEventButton Margin="90,658,0,0" HorizontalAlignment="Left" VerticalAlignment="Top" Text="Buckmaster Park" Tag="Family"/>
+                <local:MapEventButton Margin="771,664,0,0" HorizontalAlignment="Left" VerticalAlignment="Top" Text="Talisman Centre" Tag="Sport"/>
+                <local:MapEventButton Margin="226,836,0,0" HorizontalAlignment="Left" VerticalAlignment="Top" Text="South MR Park" Tag="Family"/>
+                <local:MapEventButton Margin="904,690,0,0" HorizontalAlignment="Left" VerticalAlignment="Top" Text="Stampede Grandstand" Tag="Special" Source="/Resources/blueMarker.png"/>
+                <local:MapEventButton Margin="996,560,0,0" HorizontalAlignment="Left" VerticalAlignment="Top" Text="Saddledome" Tag="Special"/>
+                <local:MapEventButton Margin="826,456,0,0" HorizontalAlignment="Left" VerticalAlignment="Top" Text="Sunterra Market" Tag="Shop"/>
+                <local:MapEventButton Margin="744,190,448,0" HorizontalAlignment="Left" VerticalAlignment="Top" Text="Sun Life Plaza" Tag="Family"/>
+                <local:MapEventButton Margin="609,131,602,0" HorizontalAlignment="Left" VerticalAlignment="Top" Text="Eau Claire Market" Tag="Shop"/>
+                <local:MapEventButton Margin="1174,142,0,0" HorizontalAlignment="Left" VerticalAlignment="Top" Text="McDougal Park" Tag="Sport"/>
+                <local:MapEventButton HorizontalAlignment="Left" Margin="10,383,0,0" VerticalAlignment="Top" Text="The Sentry Box" Tag="Shop"/>
+                <local:MapEventButton HorizontalAlignment="Left" Margin="112,380,0,0" VerticalAlignment="Top" Text="Sunalta Park" Tag="Family"/>
+                <local:MapEventButton HorizontalAlignment="Left" Margin="212,303,0,0" VerticalAlignment="Top" Text="Shaw Millennium Park" Tag="Family"/>
+                <local:MapEventButton HorizontalAlignment="Left" Margin="493,87,0,0" VerticalAlignment="Top" Text="Peace Bridge" Tag="Exhibit"/>
+                <local:MapEventButton HorizontalAlignment="Left" Margin="674,546,0,0" VerticalAlignment="Top" Text="Pigeonhole" Tag="Food"/>
+                <local:MapEventButton HorizontalAlignment="Left" Margin="413,555,0,0" VerticalAlignment="Top" Text="The Coup" Tag="Food"/>
+                <local:MapEventButton HorizontalAlignment="Left" Margin="704,303,0,0" VerticalAlignment="Top" Text="The Palace Theatre" Tag="Concert" Source="/Resources/blueMarker.png"/>
+                <local:MapEventButton HorizontalAlignment="Left" Margin="811,347,0,0" VerticalAlignment="Top" Text="Jack Singer Concert Hall" Tag="Concert" Source="/Resources/blueMarker.png"/>
+                <local:MapEventButton HorizontalAlignment="Left" Margin="932,320,0,0" VerticalAlignment="Top" Text="Central Library" Tag="Exhibit"/>
+                <local:MapEventButton HorizontalAlignment="Left" Margin="293,329,0,0" VerticalAlignment="Top" Text="Ground Zero Theatre" Tag="Video"/>
+                <local:MapEventButton HorizontalAlignment="Left" Margin="552,266,0,0" VerticalAlignment="Top" Text="Globe Cinema" Tag="Video"/>
+                <local:MapEventButton HorizontalAlignment="Left" Margin="671,440,0,0" VerticalAlignment="Top" Text="Calgary Cinematheque" Tag="Video"/>
+                <local:MapEventButton HorizontalAlignment="Left" Margin="902,515,0,0" VerticalAlignment="Top" Text="BMO Centre" Tag="Special" Source="/Resources/blueMarker.png"/>
+                <local:MapEventButton HorizontalAlignment="Left" Margin="1130,373,0,0" VerticalAlignment="Top" Text="Fort Calgary" Tag="Exhibit"/>
+                <local:MapEventButton HorizontalAlignment="Left" Margin="489,480,0,0" VerticalAlignment="Top" Text="Lougheed Historic Site" Tag="Exhibit"/>
+                <local:MapEventButton HorizontalAlignment="Left" Margin="56,47,0,0" VerticalAlignment="Top" Text="Queen E Playground" Tag="Family"/>
+                <local:MapEventButton HorizontalAlignment="Left" Margin="445,808,0,0" VerticalAlignment="Top" Text="Earl Grey Park" Tag="Family"/>
+                <local:MapEventButton HorizontalAlignment="Left" Margin="468,403,0,0" VerticalAlignment="Top" Text="Atmosphere" Tag="Sport"/>
+                <local:MapEventButton HorizontalAlignment="Left" Margin="1072,586,0,0" VerticalAlignment="Top" Text="ENMAX Park" Tag="Family"/>
+                <local:MapEventButton HorizontalAlignment="Left" Margin="318,111,0,0" VerticalAlignment="Top" Text="Kensington Pub" Tag="Food"/>
+                <local:MapEventButton HorizontalAlignment="Left" Margin="583,551,0,0" VerticalAlignment="Top" Text="Ship &amp; Anchor" Tag="Food"/>
+                <local:MapEventButton HorizontalAlignment="Left" Margin="960,0,0,0" VerticalAlignment="Center" Text="Live Nation" Tag="Concert" Source="/Resources/blueMarker.png"/>
+                <local:MapEventButton HorizontalAlignment="Left" Margin="1020,500,0,0" VerticalAlignment="Top" Text="TransAlta Performing Arts" Tag="Theatre"/>
+                <local:MapEventButton HorizontalAlignment="Left" Margin="756,376,0,0" VerticalAlignment="Top" Text="LunchBox Theatre" Tag="Theatre"/>
+                <local:MapEventButton HorizontalAlignment="Left" Margin="558,343,0,0" VerticalAlignment="Top" Text="Painted Fish Family Theatre" Tag="Theatre"/>
+                <local:MapEventButton HorizontalAlignment="Left" Margin="201,551,0,0" VerticalAlignment="Top" Text="Halloween Thriller" Tag="Special" Source="/Resources/blueMarker.png" Click="thriller_Click"/>
+            </Grid>
         </Canvas>
         <Button x:Name="minusButton" Width="60" Height="60" VerticalAlignment="Bottom" HorizontalAlignment="Right" Margin="0,0,25,25" Click="minusButton_Click">
             <Image Source="Resources/negativeIcon.png"  Width="50" Height="50"/>

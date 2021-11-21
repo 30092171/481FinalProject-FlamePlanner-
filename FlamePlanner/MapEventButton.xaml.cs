@@ -34,19 +34,12 @@ namespace FlamePlanner
         {
             InitializeComponent();
         }
-
         private void button_Click(object sender, RoutedEventArgs e)
-        {
-            RaiseEvent(new RoutedEventArgs(ClickEvent));
-        }
+            => RaiseEvent(new RoutedEventArgs(ClickEvent));
 
         private static void ChangedText(DependencyObject d, DependencyPropertyChangedEventArgs e)
-        {
-            (d as MapEventButton).label.Content = e.NewValue;
-        }
+            => (d as MapEventButton).label.Content = e.NewValue;
         private static void ChangedSource(DependencyObject d, DependencyPropertyChangedEventArgs e)
-        {
-            (d as MapEventButton).marker.Source = e.NewValue as ImageSource;
-        }
+            => (d as MapEventButton).marker.Source = e.NewValue as ImageSource;
     }
 }
