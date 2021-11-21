@@ -56,6 +56,12 @@ namespace FlamePlanner
                 }
             }
         }
+
+        private void addressSearchGoButton_Click(object sender, RoutedEventArgs e)
+        {
+            //change view
+            threeFramePage tfp = mw.mainFrame.Content as threeFramePage;
+        }
     }
     public enum EventFilter
     {

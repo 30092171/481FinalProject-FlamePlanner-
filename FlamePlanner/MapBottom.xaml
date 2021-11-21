@@ -22,7 +22,7 @@
         <StackPanel Orientation="Horizontal" Margin="10,57,0,0">
             <Label x:Name="label_Copy" Content="Address: " HorizontalAlignment="Left"  VerticalAlignment="Top" FontSize="24"/>
             <TextBox x:Name="addressSearchbox" VerticalAlignment="Top" Width="225" Height="30" Margin="0,8,0,0" VerticalContentAlignment="Center">9 Ave SW</TextBox>
-            <Button x:Name="addressSearchGoButton" Width="50" Height="30" VerticalAlignment="Top" Margin="5,8,0,0" Content="Go"/>
+            <Button x:Name="addressSearchGoButton" Width="50" Height="30" VerticalAlignment="Top" Margin="5,8,0,0" Content="Go" Click="addressSearchGoButton_Click"/>
         </StackPanel>
         <GroupBox x:Name="groupBox" Header="Key" Margin="400,0,10,10" FontSize="18">
             <Grid>

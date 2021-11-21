@@ -1,6 +1,8 @@
-﻿using System.Windows;
+﻿using System;
+using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Input;
+using System.Windows.Media.Imaging;
 
 namespace FlamePlanner
 {
@@ -9,72 +11,63 @@ namespace FlamePlanner
     /// </summary>
     public partial class Map : Page
     {
+        private static double SCROLLSENSITIVITY = 0.1;
         private MainWindow mw;
         private bool mouseHeld = false;
-        private double lastX = 0;
-        private double lastY = 0;
+        private Point lastPoint;
 
         public Map(MainWindow mw)
         {
             InitializeComponent();
             this.mw = mw;
         }
-        private void poi1_Click(object sender, RoutedEventArgs e)
+        private void stampede_Click(object sender, RoutedEventArgs e)
         {
-            //MapEvent me = new MapEvent("6 Street SW");
-            // me.ShowDialog();
-            EventPopUpWindow epw = new EventPopUpWindow(mw);
-            epw.EventName = "6 Street SW";
-            epw.ShowDialog();
-
-
-        }
-        private void poi2_Click(object sender, RoutedEventArgs e)
-        {
-            //MapEvent me = new MapEvent("Stampede");
-            // me.ShowDialog();
-            EventPopUpWindow epw = new EventPopUpWindow(mw);
-            epw.EventName = "Stampede";
-            epw.ShowDialog();
-        }
-        private void poi3_Click(object sender, RoutedEventArgs e)
-        {
-            //MapEvent me = new MapEvent("Prince Island Park");
-            // me.ShowDialog();
-            EventPopUpWindow epw = new EventPopUpWindow(mw);
-            epw.EventName = "Prince Island Park";
+            EventPopUpWindow epw = new EventPopUpWindow(mw)
+                .SetTitle((sender as MapEventButton).Text)
+                .SetImage(new BitmapImage(new Uri("CalgaryStampedeEvent.jpg", UriKind.Relative)))
+                .SetTime("11:00 AM - 12:00 AM")
+                .SetDate("July 3 - 12 2020")
+                .SetLocation("Stampede Grounds (1410 Olympic Way SE, Calgary, AB T2G 2W1)")
+                .SetDescription("At the heart of the Calgary Stampede, you’ll find more than 2,500 dedicated volunteers. They embody western values by hosting events across the city, supporting community celebrations and making the Calgary Stampede The Greatest Outdoor Show on Earth. In addition, the Board of Directors are unpaid volunteers who contribute their time to govern the affairs of the Calgary Stampede.")
+                .SetLinks("https://www.calgarystampede.com/");
             epw.ShowDialog();
         }
 
-        private void mapGrid_MouseMove(object sender, MouseEventArgs e)
+        private void map_MouseMove(object sender, MouseEventArgs e)
         {
             if (mouseHeld)
             {
+                Point current = e.GetPosition(null);
+                Vector displacement = current - lastPoint;
                 Thickness margin = mapGrid.Margin;
-                margin.Left = mapGrid.Margin.Left + (e.GetPosition(null).X - lastX);
-                margin.Top = mapGrid.Margin.Top + (e.GetPosition(null).Y - lastY);
-                
+                margin.Left += displacement.X;
+                margin.Top += displacement.Y;
                 mapGrid.Margin = margin;
-                lastX = e.GetPosition(null).X;
-                lastY = e.GetPosition(null).Y;
-
-               
-
+                lastPoint = current;
             }
         }
 
-        private void mapGrid_MouseDown(object sender, MouseButtonEventArgs e)
+        private void map_MouseDown(object sender, MouseButtonEventArgs e)
         {
             mouseHeld = true;
-            lastX = e.GetPosition(null).X;
-            lastY = e.GetPosition(null).Y;
-            
-
+            lastPoint = e.GetPosition(null);
         }
 
-        private void mapGrid_MouseUp(object sender, MouseButtonEventArgs e)
+        private void map_MouseUp(object sender, MouseButtonEventArgs e) => mouseHeld = false;
+
+        private void map_MouseWheel(object sender, MouseWheelEventArgs e)
         {
-            mouseHeld = false;
+            if(e.Delta > 0)
+            {
+                mapScale.ScaleX += SCROLLSENSITIVITY;
+                mapScale.ScaleY += SCROLLSENSITIVITY;
+            }
+            else
+            {
+                mapScale.ScaleX -= SCROLLSENSITIVITY;
+                mapScale.ScaleY -= SCROLLSENSITIVITY;
+            }
         }
 
         private void plusButton_Click(object sender, RoutedEventArgs e)

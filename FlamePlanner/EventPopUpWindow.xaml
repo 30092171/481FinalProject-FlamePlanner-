@@ -6,31 +6,42 @@
         xmlns:local="clr-namespace:FlamePlanner"
         mc:Ignorable="d"
         Title="Event Details" Height="460" Width="800">
-    <Grid>
+    <Grid HorizontalAlignment="Left">
         <Image x:Name="EventImage" Margin="10,10,596,217" Source="EricNamEvent.jpg"/>
-        <Label x:Name="EventTitle" Content="Eric Nam: Before We Begin World Tour 2020" HorizontalAlignment="Center" Margin="0,10,0,0" VerticalAlignment="Top" FontSize="17" FontWeight="Bold"/>
+        <Label x:Name="Title" Content="Event Title" HorizontalAlignment="Center" Margin="0,10,0,0" VerticalAlignment="Top" FontSize="17" FontWeight="Bold"/>
         <Button x:Name="AddButton" HorizontalAlignment="Left" Margin="154,359,0,0" VerticalAlignment="Top" Height="50" Width="50" Background="White" Click="AddButton_Click">
             <Image HorizontalAlignment="Center" Height="50" VerticalAlignment="Center" Width="50" Source="/plus sign.jpg"/>
         </Button>
-        <TextBlock x:Name="TimeLabel" HorizontalAlignment="Center" Margin="0,41,0,0" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="15">
-            <Bold>Time:</Bold> 7:00pm - 11:00pm
+        <Label HorizontalAlignment="Left" Margin="241,35,0,0" VerticalAlignment="Top" FontSize="15">
+            <Bold>Time:</Bold>
+        </Label>
+        <TextBlock x:Name="Time" Text="-:-- PM" HorizontalAlignment="Left" Margin="290,40,0,0" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="15"/>
+        <Label HorizontalAlignment="Left" Margin="241,65,0,0" VerticalAlignment="Top" FontSize="15">
+            <Bold>Date:</Bold>
+        </Label>
+        <TextBlock x:Name="Date" HorizontalAlignment="Left" Margin="288,70,0,0" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="15">
+            November -, 202-
         </TextBlock>
-        <TextBlock x:Name="DescriptionLabel" HorizontalAlignment="Left" Margin="246,130,0,0" TextWrapping="Wrap" VerticalAlignment="Top" MaxHeight="100" MaxWidth="500">
-            <Bold>Description: </Bold><LineBreak/> 
+        <Label HorizontalAlignment="Left" Margin="241,98,0,0" VerticalAlignment="Top">
+            <Bold>Location:</Bold>
+        </Label>
+        <TextBlock x:Name="Location" HorizontalAlignment="Left" Margin="303,103,0,0" TextWrapping="Wrap" VerticalAlignment="Top">
+            MacEwan Hall (402 Collegiate Blvd NW, Calgary, AB T2N 1N4)
+        </TextBlock>
+        <Label HorizontalAlignment="Left" Margin="241,125,0,0" VerticalAlignment="Top">
+            <Bold>Description:</Bold>
+        </Label>
+        <TextBlock x:Name="Description" HorizontalAlignment="Left" Margin="246,144,0,0" TextWrapping="Wrap" VerticalAlignment="Top" MaxHeight="100" MaxWidth="500">
             A regular in Korea's music scene, Eric has promoted two mini albums and multiple singles in Korea. 
             He has charted at #1 on several occasions and held shows in the U.A.E., Australia, Canada, Malaysia, Morocco, and the United States.
         </TextBlock>
-        <TextBlock x:Name="LinkLabel" HorizontalAlignment="Left" Margin="246,225,0,0" TextWrapping="Wrap" VerticalAlignment="Top" MaxHeight="110" MaxWidth="500">
-            <Bold>Links:</Bold> <LineBreak/>
-                  <Hyperlink>https://www.ericnam.com/</Hyperlink> <LineBreak/>
-                  <Hyperlink>https://www.instagram.com/ericnam/?hl=en</Hyperlink><LineBreak/>
-                  <Hyperlink>https://open.spotify.com/artist/2FLqlgckDKdmpBrvLAT5BM</Hyperlink><LineBreak/>
-        </TextBlock>
-        <TextBlock x:Name="DateLabel" HorizontalAlignment="Center" Margin="0,64,0,0" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="15">
-            <Bold>Date:</Bold> March 3, 2020
-        </TextBlock>
-        <TextBlock x:Name="LocationLabel" HorizontalAlignment="Left" Margin="246,98,0,0" TextWrapping="Wrap" VerticalAlignment="Top">
-            <Bold>Location:</Bold> MacEwan Hall (402 Collegiate Blvd NW, Calgary, AB T2N 1N4)
+        <Label HorizontalAlignment="Left" Margin="241,220,0,0" VerticalAlignment="Top">
+            <Bold>Links:</Bold>
+        </Label>
+        <TextBlock x:Name="Links" HorizontalAlignment="Left" Margin="246,239,0,0" TextWrapping="Wrap" VerticalAlignment="Top" MaxHeight="110" MaxWidth="500">
+            <Hyperlink>https://www.ericnam.com/</Hyperlink> <LineBreak/>
+            <Hyperlink>https://www.instagram.com/ericnam/?hl=en</Hyperlink><LineBreak/>
+            <Hyperlink>https://open.spotify.com/artist/2FLqlgckDKdmpBrvLAT5BM</Hyperlink><LineBreak/>
         </TextBlock>
         <Label Content="Booked?" HorizontalAlignment="Left" Margin="465,371,0,0" VerticalAlignment="Top"/>
         <TextBlock x:Name="BookedLabel" Text="NO" HorizontalAlignment="Left" Margin="526,359,0,0" VerticalAlignment="Top" Height="50" Width="50" TextAlignment="Center" Padding="0,16,0,0" Background="PapayaWhip"/>
