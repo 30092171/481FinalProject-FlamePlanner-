@@ -7,7 +7,7 @@
         mc:Ignorable="d"
         Title="Event Details" Height="460" Width="800">
     <Grid HorizontalAlignment="Left">
-        <Image x:Name="EventImage" Margin="10,10,596,217" Source="EricNamEvent.jpg"/>
+        <Image x:Name="EventImage" Margin="10,10,596,98" Source="EricNamEvent.jpg"/>
         <Label x:Name="Title" Content="Event Title" HorizontalAlignment="Center" Margin="0,10,0,0" VerticalAlignment="Top" FontSize="17" FontWeight="Bold"/>
         <Button x:Name="AddButton" HorizontalAlignment="Left" Margin="154,359,0,0" VerticalAlignment="Top" Height="50" Width="50" Background="White" Click="AddButton_Click">
             <Image HorizontalAlignment="Center" Height="50" VerticalAlignment="Center" Width="50" Source="/plus sign.jpg"/>
@@ -31,10 +31,12 @@
         <Label HorizontalAlignment="Left" Margin="241,125,0,0" VerticalAlignment="Top">
             <Bold>Description:</Bold>
         </Label>
-        <TextBlock x:Name="Description" HorizontalAlignment="Left" Margin="246,144,0,0" TextWrapping="Wrap" VerticalAlignment="Top" MaxHeight="100" MaxWidth="500">
+        <ScrollViewer Margin="246,144,0,0" HorizontalAlignment="Left" VerticalAlignment="Top" Height="78" Width="500">
+            <TextBlock x:Name="Description" HorizontalAlignment="Left" TextWrapping="Wrap" VerticalAlignment="Top" MaxWidth="500">
             A regular in Korea's music scene, Eric has promoted two mini albums and multiple singles in Korea. 
             He has charted at #1 on several occasions and held shows in the U.A.E., Australia, Canada, Malaysia, Morocco, and the United States.
-        </TextBlock>
+            </TextBlock>
+        </ScrollViewer>
         <Label HorizontalAlignment="Left" Margin="241,220,0,0" VerticalAlignment="Top">
             <Bold>Links:</Bold>
         </Label>
