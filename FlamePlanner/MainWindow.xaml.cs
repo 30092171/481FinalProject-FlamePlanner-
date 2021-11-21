@@ -96,7 +96,7 @@ namespace FlamePlanner
                 if (mainFrame.Content != null && mainFrame.Content.GetType() == typeof(threeFramePage))
                 {
                     threeFramePage tfp = mainFrame.Content as threeFramePage;
-                    tfp.topRightFrame.Content = new Map(this);
+                    tfp.topRightFrame.Content = new MapLarge();
                     tfp.bottomRightFrame.Content = new MapBottom(this);
                     if(tfp.leftFrame.Content == null || tfp.leftFrame.Content.GetType() != typeof(Event_left))
                     {

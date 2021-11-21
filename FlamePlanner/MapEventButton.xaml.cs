@@ -34,15 +34,16 @@ namespace FlamePlanner
         {
             InitializeComponent();
         }
-        public MapEventButton(int width = 50, int height = 50) : this()
-        {
-            marker.Width = width;
-            marker.Height = height;
-        }
-        public MapEventButton(bool hideLabel)
+        public MapEventButton(bool hideLabel, int width, int height)
         {
             InitializeComponent();
-            if (hideLabel) label.Visibility = Visibility.Hidden;
+            if (hideLabel)
+            {
+                label.Visibility = Visibility.Hidden;
+                label.Content = "";
+            }
+            marker.Width = width;
+            marker.Height = height;
         }
         private void button_Click(object sender, RoutedEventArgs e)
             => RaiseEvent(new RoutedEventArgs(ClickEvent));

@@ -8,9 +8,25 @@
       d:DesignHeight="400" d:DesignWidth="700"
       Title="MapLarge">
 
-    <Grid>
-        <Canvas>
-            
+    <Grid MouseMove="map_MouseMove" MouseDown="map_MouseDown" MouseUp="map_MouseUp" MouseWheel="map_MouseWheel">
+        <Canvas ClipToBounds="True">
+            <Grid x:Name="mapGrid" Margin="-500,-750,0,0">
+                <Grid.RenderTransform>
+                    <TransformGroup>
+                        <ScaleTransform x:Name="mapScale" ScaleX="0.5" ScaleY="0.5"/>
+                        <SkewTransform/>
+                        <RotateTransform/>
+                        <TranslateTransform/>
+                    </TransformGroup>
+                </Grid.RenderTransform>
+                <Image x:Name="mapImage" Source="Resources/calgaryLarge.jpg" Stretch="None"/>
+            </Grid>
         </Canvas>
+        <Button x:Name="minusButton" Width="60" Height="60" VerticalAlignment="Bottom" HorizontalAlignment="Right" Margin="0,0,25,25" Click="minusButton_Click">
+            <Image Source="Resources/negativeIcon.png"  Width="50" Height="50"/>
+        </Button>
+        <Button x:Name="plusButton" Width="60" Height="60" VerticalAlignment="Bottom" HorizontalAlignment="Right" Margin="0,0,25,85" Click="plusButton_Click">
+            <Image Source="Resources/plusIcon.png"  Width="50" Height="50"/>
+        </Button>
     </Grid>
 </Page>
