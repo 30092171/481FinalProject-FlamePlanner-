@@ -20,12 +20,12 @@
             <TextBlock Text="Sports and Recreation" TextWrapping="Wrap"/>
 
         </ComboBox>
-        <DatePicker HorizontalAlignment="Left" Margin="75,100,0,0" VerticalAlignment="Top"/>
+        <DatePicker x:Name="dp1" HorizontalAlignment="Left" Margin="75,100,0,0" VerticalAlignment="Top" DisplayDate="2021-09-01" SelectedDateChanged="dp1_change_date"/>
         <Label Content="to" HorizontalAlignment="Left" Margin="192,100,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.206,0.539"/>
-        <DatePicker HorizontalAlignment="Left" Margin="228,100,0,0" VerticalAlignment="Top"/>
+        <DatePicker x:Name="dp2" HorizontalAlignment="Left" Margin="228,100,0,0" VerticalAlignment="Top" DisplayDate="2021-09-01" SelectedDateChanged="dp2_change_date"/>
         <Label Content="Event Search:" HorizontalAlignment="Left" Margin="513,10,0,0" VerticalAlignment="Top" FontSize="24"/>
-        <TextBox HorizontalAlignment="Left" Margin="668,22,0,0" Text="" TextWrapping="Wrap" VerticalAlignment="Top" Width="150" FontSize="17"/>
-        <Button x:Name="EventSearchButton" Content="Go" HorizontalAlignment="Left" Margin="823,26,0,0" VerticalAlignment="Top" Height="18" Width="32" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="10"/>
+        <TextBox x:Name="textBox" HorizontalAlignment="Left" Margin="668,22,0,0" Text="" TextWrapping="Wrap" VerticalAlignment="Top" Width="150" FontSize="17"/>
+        <Button x:Name="EventSearchButton" Content="Go" HorizontalAlignment="Left" Margin="823,26,0,0" VerticalAlignment="Top" Height="18" Width="32" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="10" Click="Event_Search_Button_Click"/>
 
 
     </Grid>

@@ -23,8 +23,8 @@ namespace FlamePlanner
         private MainWindow mw;
         public EventControls(MainWindow mw)
         {
-            InitializeComponent();
             this.mw = mw;
+            InitializeComponent();
         }
 
         private void cbValueType_DropDownClosed(object sender, EventArgs e)
@@ -57,6 +57,48 @@ namespace FlamePlanner
 
                     }
                 }
+            }
+        }
+
+        private void Event_Search_Button_Click(object sender, RoutedEventArgs e)
+        {
+            string var;
+            string calgaryFlames = "calgary flames";
+            string wineEvent = "wine";
+            var = textBox.Text;
+            if (String.Equals(var, calgaryFlames))
+            {
+                threeFramePage tfp = mw.mainFrame.Content as threeFramePage;
+                tfp.topRightFrame.Content = new EventSearchCalgaryFlames(mw);
+                textBox.Text = String.Empty;
+            }
+            if (String.Equals(var, wineEvent))
+            {
+                threeFramePage tfp = mw.mainFrame.Content as threeFramePage;
+                tfp.topRightFrame.Content = new EventSearchWine(mw);
+                textBox.Text = String.Empty;
+            }
+        }
+
+        private void dp1_change_date(object sender, SelectionChangedEventArgs e)
+        {
+            if (dp1.SelectedDate == new DateTime(2021, 9, 12) && (dp2.SelectedDate == new DateTime(2021, 9, 18)))
+            {
+                threeFramePage tfp = mw.mainFrame.Content as threeFramePage;
+                tfp.topRightFrame.Content = new EventDateRange(mw);
+                dp1.SelectedDate = null;
+                dp2.SelectedDate = null;
+            }    
+        }
+
+        private void dp2_change_date(object sender, SelectionChangedEventArgs e)
+        {
+            if (dp1.SelectedDate == new DateTime(2021, 9, 12) && (dp2.SelectedDate == new DateTime(2021, 9, 18)))
+            {
+                threeFramePage tfp = mw.mainFrame.Content as threeFramePage;
+                tfp.topRightFrame.Content = new EventDateRange(mw);
+                dp1.SelectedDate = null;
+                dp2.SelectedDate = null;
             }
         }
     }
