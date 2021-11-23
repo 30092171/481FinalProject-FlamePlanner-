@@ -25,7 +25,6 @@ namespace FlamePlanner
         private MainWindow mw;
         private string[] Time_Array = new string[24];   //This array contain all the hours of the day in the correct format. 
         
-
         public Itinerarypage(MainWindow mw)
         {
             InitializeComponent();
@@ -68,22 +67,28 @@ namespace FlamePlanner
         {
             string firstRowTime = timerow1.Text;
             int i_num = Array.IndexOf(Time_Array, firstRowTime);
-            int change_num;
-            if(i_num == 0)
+            int change_num = i_num;
+
+            if(change_num > 0)
             {
-                change_num = Time_Array.Length;
+                timerow1.Text = Time_Array[(change_num - 1)];
+                timerow2.Text = Time_Array[(change_num)];
+                timerow3.Text = Time_Array[(change_num + 1) % 24];
+                timerow4.Text = Time_Array[(change_num + 2) % 24];
+                timerow5.Text = Time_Array[(change_num + 3) % 24];
+                timerow6.Text = Time_Array[(change_num + 4) % 24];
             }
-            else
+            
+            if (change_num == 0)
             {
-                change_num = i_num;
+                timerow1.Text = Time_Array[Time_Array.Length - 1];
+                timerow2.Text = Time_Array[(change_num)];
+                timerow3.Text = Time_Array[(change_num + 1) % 24];
+                timerow4.Text = Time_Array[(change_num + 2) % 24];
+                timerow5.Text = Time_Array[(change_num + 3) % 24];
+                timerow6.Text = Time_Array[(change_num + 4) % 24];
             }
 
-            timerow1.Text = Time_Array[(change_num - 1) % 24];
-            timerow2.Text = Time_Array[(change_num - 2) % 24];
-            timerow3.Text = Time_Array[(change_num - 3) % 24];
-            timerow4.Text = Time_Array[(change_num - 4) % 24];
-            timerow5.Text = Time_Array[(change_num - 5) % 24];
-            timerow6.Text = Time_Array[(change_num - 6) % 24];
         }
 
         /*
