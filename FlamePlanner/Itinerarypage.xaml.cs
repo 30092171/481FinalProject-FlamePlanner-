@@ -23,12 +23,12 @@ namespace FlamePlanner
     public partial class Itinerarypage : Page
     {
         private MainWindow mw;
-        private static int no_of_days = 28;
+        private static int no_of_days = 28; //Conatins the size of the arrays and the number of days we consider in our program. to increase or decrease days simply increase this number. 
         private string[] Time_Array = new string[24];   //This array contain all the hours of the day in the correct format. 
-        private DateTime[] Date_Array = new DateTime[no_of_days];
-        private string[] Date_string_Array = new string[no_of_days];
-        
-        
+        private DateTime[] Date_Array = new DateTime[no_of_days];   //Contains all the dates from september 5 2021 to october 2 2021.
+        private string[] Date_string_Array = new string[no_of_days];    //Contains all the dates in Date_Array in string format. ddd d, mmm
+
+
         public Itinerarypage(MainWindow mw)
         {
             InitializeComponent();
