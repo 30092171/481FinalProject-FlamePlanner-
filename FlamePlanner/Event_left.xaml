@@ -25,15 +25,15 @@
         <StackPanel Orientation="Horizontal" Grid.Row="0" HorizontalAlignment="Center">
 
             <Button x:Name="leftDateButton" Grid.Row="0" HorizontalAlignment="Center" Width="40" Height="40" Background="Transparent" Margin="10,0,0,0">
-                <Image Source="/Event_leftArrow.png" Stretch="Fill"/>
+                <Image Source="/Event_leftArrow.png" MouseLeftButtonDown="MouseLeftButtonDown_LeftArrow" Stretch="Fill"/>
             </Button>
-            
-            <TextBlock Grid.Row="0" TextAlignment="Center" HorizontalAlignment="Center" TextWrapping="Wrap" VerticalAlignment="Center" FontSize="24" Background="Linen" Margin="10,0">Sat 25, <LineBreak/> September 2021</TextBlock>
+
+            <TextBlock x:Name="DateCol1" Grid.Row="0" TextAlignment="Center" HorizontalAlignment="Center" TextWrapping="Wrap" VerticalAlignment="Center" FontSize="24" Background="Linen" Margin="10,0">Sun 5, Sep</TextBlock>
 
         
 
             <Button x:Name="rightDateButton" Grid.Row="0" HorizontalAlignment="Center" Width="40" Height="40" Background="Transparent" Margin="0,0,10,0" Padding="0,0,0,0">
-                <Image   Source="/Event_leftArrow.png" RenderTransformOrigin="0.5,0.5" Stretch="Fill">
+                <Image   Source="/Event_leftArrow.png" MouseLeftButtonDown="MouseLeftButtonDown_RightArrow" RenderTransformOrigin="0.5,0.5" Stretch="Fill">
                 <Image.RenderTransform>
                     <TransformGroup>
                         <ScaleTransform/>
