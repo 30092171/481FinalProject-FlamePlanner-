@@ -37,13 +37,13 @@
         <!--Stackpanel is here just to add color to the date panel-->
         <StackPanel Orientation="Vertical" Grid.Column="0" Grid.Row="2" Grid.RowSpan="6" Background="LightCyan" />
 
-        <TextBlock Grid.Column="1" Grid.Row="1" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="16"> Sat, 25 <LineBreak /> September</TextBlock>
-        <TextBlock Grid.Column="2" Grid.Row="1" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="16"> Sun, 26 <LineBreak /> September</TextBlock>
-        <TextBlock Grid.Column="3" Grid.Row="1" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="16"> Mon, 27 <LineBreak /> September</TextBlock>
-        <TextBlock Grid.Column="4" Grid.Row="1" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="16"> Tue, 28 <LineBreak /> September</TextBlock>
-        <TextBlock Grid.Column="5" Grid.Row="1" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="16"> Wed, 29 <LineBreak /> September</TextBlock>
-        <TextBlock Grid.Column="6" Grid.Row="1" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="16"> Thu, 30 <LineBreak /> September</TextBlock>
-        <TextBlock Grid.Column="7" Grid.Row="1" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="16"> Fri, 1 <LineBreak /> October</TextBlock>
+        <TextBlock x:Name="DateCol1" Grid.Column="1" Grid.Row="1" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="16"> Sun 5, Sep</TextBlock>
+        <TextBlock x:Name="DateCol2" Grid.Column="2" Grid.Row="1" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="16"> Mon 6, Sep</TextBlock>
+        <TextBlock x:Name="DateCol3" Grid.Column="3" Grid.Row="1" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="16"> Tue 7, Sep</TextBlock>
+        <TextBlock x:Name="DateCol4" Grid.Column="4" Grid.Row="1" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="16"> Wed 8, Sep</TextBlock>
+        <TextBlock x:Name="DateCol5" Grid.Column="5" Grid.Row="1" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="16"> Thu 9, Sep</TextBlock>
+        <TextBlock x:Name="DateCol6" Grid.Column="6" Grid.Row="1" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="16"> Fri 10, Sep</TextBlock>
+        <TextBlock x:Name="DateCol7" Grid.Column="7" Grid.Row="1" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="16"> Sat 11, Sep</TextBlock>
 
         <TextBlock Grid.Column="0" x:Name="timerow1" Grid.Row="2" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="20">1:00am</TextBlock>
         <TextBlock Grid.Column="0" x:Name="timerow2" Grid.Row="3" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="20">2:00am</TextBlock>
@@ -83,7 +83,7 @@
             </TextBlock>
         </Button>
         
-        <Button x:Name="TimeUpButton" Grid.Row="1" Background="Transparent" Click="TimeUpButton_Click">
+        <Button x:Name="TimeUpButton" Grid.Row="1" Background="Transparent">
         <Image Stretch="Uniform" Source="/leftArrow2.jpg" MouseLeftButtonDown="Image_MouseLeftButtonDown_TopArrow" RenderTransformOrigin="0.5,0.5">
             <Image.RenderTransform>
                 <TransformGroup>
