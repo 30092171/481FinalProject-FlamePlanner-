@@ -55,5 +55,14 @@ namespace FlamePlanner
             EventScreenSpecialEvents eventscreenspecialevents = new EventScreenSpecialEvents(mw);
             this.NavigationService.Navigate(eventscreenspecialevents);
         }
+
+        private void Eric_Nam_Event_Display_Button_Click(object sender, RoutedEventArgs e)
+        {
+            EventPopUpWindow epw = new EventPopUpWindow(mw)
+                .SetTitle("Eric Nam Before We Begin World Tour")
+                .SetTime("8:00 PM - 11:00 PM")
+                .SetDate("September 5, 2021");
+            epw.ShowDialog();
+        }
     }
 }

@@ -34,13 +34,15 @@ namespace FlamePlanner
 
         private void Event_Display_Button_Click(object sender, RoutedEventArgs e)
         {
-            var tag = ((Button)sender).Tag; //allows for us to determine which of the events were clicked
-            //MessageBox.Show(tag.ToString()); //Displays tag content, for debugging
-            EventPopUpWindow epw = new EventPopUpWindow(mw);
-            //populate epw via getters and setters here?
-            epw.ShowDialog(); //Displays event info pop up and locks main window
-
-
+            EventPopUpWindow epw = new EventPopUpWindow(mw)
+                .SetTitle("Calgary Flames Game")
+                .SetImage(new BitmapImage(new Uri("CalgaryFlamesEvent.jpg", UriKind.Relative)))
+                .SetTime("7:00 PM - 10:00 PM")
+                .SetDate("September 15, 2021")
+                .SetLocation("Scotiabank Saddledome (555 Saddledome Rise SE, Calgary, AB T2G 2W1)")
+                .SetDescription("For almost four decades, the Flames have been electrifying hockey fans in southern Alberta. In that time, not only has the team established itself as a successful NHL franchise, \nbut it has grown into a vital and integral part of our community.\nFrom their on - ice victories and awards to their off - ice charitable endeavours, the Flames have become one of the premier professional sports organizations in North America.")
+                .SetLinks("https://www.nhl.com/flames");
+            epw.ShowDialog();
         }
 
         private void Event_Up_Button_Click(object sender, RoutedEventArgs e)
