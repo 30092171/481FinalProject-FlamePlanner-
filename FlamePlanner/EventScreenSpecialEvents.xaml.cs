@@ -54,5 +54,44 @@ namespace FlamePlanner
             EventScreenSportsAndRecreation eventscreensportsandrecreation = new EventScreenSportsAndRecreation(mw);
             this.NavigationService.Navigate(eventscreensportsandrecreation);
         }
+
+        private void Glass_Fusion_Event_Display_Button_Click(object sender, RoutedEventArgs e)
+        {
+            EventPopUpWindow epw = new EventPopUpWindow(mw)
+                .SetTitle("Glass Fusion 101")
+                .SetImage(new BitmapImage(new Uri("GlassFusionEvent.jpg", UriKind.Relative)))
+                .SetTime("12:00 PM - 2:00 PM")
+                .SetDate("October 3, 2021")
+                .SetLocation("14 St NW, Calgary, AB T2N 1Z7")
+                .SetDescription("Under the gaze of an expert, guests arrange colourful pieces of glass to be fused into bowls, candy dishes, plaques, or vases.\nTurn bits and strips of specialty glass into twinkling kiln-fired treasures! Nothing beats the sparkle of glass. We’ll show you how to create sparkling glass functional artwork! This art form is positively UNIQUE and comes with guaranteed bragging rights! The results are dazzling, and the fun is addictive!")
+                .SetLinks("https://allevents.in/calgary/glass-fusion-101-nov-15th/200021694739624");
+            epw.ShowDialog();
+        }
+
+        private void Job_Fair_Event_Display_Button_Click(object sender, RoutedEventArgs e)
+        {
+            EventPopUpWindow epw = new EventPopUpWindow(mw)
+                .SetTitle("Startup Job Fair Online")
+                .SetImage(new BitmapImage(new Uri("JobFairEvent.jpg", UriKind.Relative)))
+                .SetTime("10:00 AM - 11:00 AM")
+                .SetDate("September 12, 2021")
+                .SetLocation("Online")
+                .SetDescription("Exploring new job opportunities? Looking to join a high-growth company? Join our Job Fair Online.\nChat with an actual recruiter or hiring manager. This is not an applicant tracking system. We have representatives from companies that are directly hiring.")
+                .SetLinks("https://allevents.in/calgary/startup-job-fair-online-connect-with-the-fastest-growing-companies/10000185369504177");
+            epw.ShowDialog();
+        }
+
+        private void Tim_Event_Display_Button_Click(object sender, RoutedEventArgs e)
+        {
+            EventPopUpWindow epw = new EventPopUpWindow(mw)
+                .SetTitle("Tim & The Glory Boys")
+                .SetImage(new BitmapImage(new Uri("TimAndTheGloryBoysEvent.jpg", UriKind.Relative)))
+                .SetTime("7:00 PM - 9:30 PM")
+                .SetDate("September 28, 2021")
+                .SetLocation("First Alliance Church Calgary (FAC Deerfoot), 12345 40 Street Southeast, Calgary, Canada")
+                .SetDescription("Been missing Live music? Tim & The Glory Boys bring you a Barn Burnin' Banjo Bash! Don't miss it!\nWith a whole new batch of songs, they are as eager as Canadian beavers to visit your neck o’ the woods. Don’t miss a rare night of live music and fun in your own backyard!")
+                .SetLinks("https://allevents.in/calgary/tim-and-the-glory-boys-the-home-town-hoedown-tour-calgary-ab/10000165490218699");
+            epw.ShowDialog();
+        }
     }
 }
