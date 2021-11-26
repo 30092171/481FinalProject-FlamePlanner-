@@ -26,6 +26,12 @@
             <Button x:Name="saveItineraryButton" Width="150" Height="50" Margin="0,20,0,0" FontSize="10" Click="saveItineraryButton_Click">
                 <TextBlock TextWrapping="Wrap" TextAlignment="Center" FontSize="17">Save Itinerary</TextBlock>
             </Button>
+            <Button x:Name="errorMessageBlock1" Click="errorMessage1_Click" Width="200" Height="40" HorizontalAlignment="Center" VerticalAlignment="Center"  FontSize="12" Foreground="Red" Visibility="Collapsed">
+            </Button>
+            <Button x:Name="errorMessageBlock2" Click="errorMessage2_Click" Width="200" Height="40" HorizontalAlignment="Center" VerticalAlignment="Center"  FontSize="12" Foreground="Red" Visibility="Collapsed">
+            </Button>
+            <Button x:Name="errorMessageBlock3" Click="errorMessage3_Click" Width="200" Height="40" HorizontalAlignment="Center" VerticalAlignment="Center"  FontSize="12" Foreground="Red" Visibility="Collapsed">
+            </Button>
         </StackPanel>
 
         <StackPanel Orientation="Vertical" HorizontalAlignment="Left"  VerticalAlignment="Center">
