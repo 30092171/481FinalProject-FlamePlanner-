@@ -67,5 +67,31 @@ namespace FlamePlanner
                 .SetLinks("https://www.nhl.com/flames");
             epw.ShowDialog();
         }
+
+        private void Soccer_Event_Display_Button_Click(object sender, RoutedEventArgs e)
+        {
+            EventPopUpWindow epw = new EventPopUpWindow(mw)
+                .SetTitle("CAVS vs PACIFIC")
+                .SetImage(new BitmapImage(new Uri("SoccerEvent.jpg", UriKind.Relative)))
+                .SetTime("11:00 AM – 3:30 PM")
+                .SetDate("September 19, 2021")
+                .SetLocation("The Ship & Anchor (534 17 Avenue Southwest Calgary, AB T2S 0B1)")
+                .SetDescription("Don't miss this exciting match of Cavalary verus Pacific battle it out!\nCavalry FC is looking to advance to its second Canadian Premier League Final in three years, as it hosts Pacific FC which is searching for its first-ever playoff win.")
+                .SetLinks("https://www.eventbrite.ca/e/bus-only-nov-20-cavs-vs-pacific-playoff-semi-final-tickets-209446318577?aff=ebdssbdestsearch");
+            epw.ShowDialog();
+        }
+
+        private void Boxing_Event_Display_Button_Click(object sender, RoutedEventArgs e)
+        {
+            EventPopUpWindow epw = new EventPopUpWindow(mw)
+                .SetTitle("Boxing Bootcamp")
+                .SetImage(new BitmapImage(new Uri("BoxingEvent.jpg", UriKind.Relative)))
+                .SetTime("1:30 PM – 2:30 PM")
+                .SetDate("September 25, 2021")
+                .SetLocation("5149 Country Hills Boulevard Northwest #Unit 310 Calgary, AB T3A 5K8")
+                .SetDescription("Airswift is passionate about this cause and our goal is to promote cancer research and education and raise funds for various cancer societies around the world.\nThis year in Calgary, Airswift has partnered with Kimani and Martina of Rumble Boxing to host a boot-camp workout.")
+                .SetLinks("https://www.eventbrite.ca/e/airswift-rumble-boxing-bootcamp-for-the-canadian-cancer-society-tickets-194081983437?aff=ebdssbdestsearch");
+            epw.ShowDialog();
+        }
     }
 }
