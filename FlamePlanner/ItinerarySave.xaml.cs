@@ -41,13 +41,12 @@ namespace FlamePlanner
                 //Check if itinerary name exists
                 if (acc.itineraryDict.ContainsKey(itinName))
                 {
+                    MessageBoxResult result = MessageBox.Show("An itinerary with this name already exists.\nDo you want to overwrite into the previously saved itinerary?", "My App", MessageBoxButton.YesNo);
                     
                     //Modify, if user chooses to rewrite into an existing itinerary
-                    {
-                        //Show error message
-                        errorMessage2_Click(sender, e);
+                    if (result.ToString().Equals("Yes")){ //If user wants to overwrite
 
-                        //Itinerary does not exist previously, so adding a new itinerary would not be a problem
+                        //Itinerary wants to be overwritten
 
                         //Switch to bufferItinerary, convert from string to itinerary
                         mw.bufferItinerary.itineraryTitle = itinName;
@@ -64,7 +63,11 @@ namespace FlamePlanner
                     else
                     {
                         //If user does not want to re-write then it stays on the same page with error message
-                        errorMessage3_Click(sender, e);
+                        //exit out of everything, abort save
+                        MessageBox.Show("Save Aborted");
+                        this.Close();
+                        return;
+                       
                     }
                 }
                 else {

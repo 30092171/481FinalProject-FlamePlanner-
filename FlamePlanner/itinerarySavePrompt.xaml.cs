@@ -34,7 +34,7 @@ namespace FlamePlanner
             {
                 ListViewItem item = new ListViewItem();//Call list view to print out itinerary names
                 item.Content = name;
-                item.HorizontalContentAlignment = HorizontalAlignment.Center;//Center the text
+                //item.HorizontalContentAlignment = HorizontalAlignment.Center;//Center the text
                 savedList.Items.Add(item);//Add new names
             }
 

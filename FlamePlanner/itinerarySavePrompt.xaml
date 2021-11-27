@@ -8,14 +8,20 @@
         Title="Save Successful" Height="450" Width="800">
     <Grid>
         <StackPanel Orientation="Vertical" HorizontalAlignment="Center"  VerticalAlignment="Center" Width="400">
-            
+
             <TextBlock Width="400" Height="40" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="20" TextAlignment="Center">
             <Underline>List of Saved Itineraries on this Account</Underline>
             </TextBlock>
-            
+
             <ListView x:Name="savedList" MaxHeight="360" Width="400">
+                <ListView.ItemContainerStyle>
+                    <Style TargetType="ListViewItem">
+                        <Setter Property="Focusable" Value="false"/>
+                    </Style>
+                </ListView.ItemContainerStyle>
+                
                 <ListViewItem>
-                    "Text"
+                    "Placeholder Text"
                 </ListViewItem>
             </ListView>
 
@@ -35,3 +41,4 @@
         </StackPanel>
     </Grid>
 </Window>
+
