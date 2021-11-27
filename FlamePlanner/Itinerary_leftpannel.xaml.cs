@@ -30,8 +30,9 @@ namespace FlamePlanner
             populateEventPanel();
         }
 
-        private void populateEventPanel()
+        public void populateEventPanel()
         {
+            eventPanel.Children.Clear();
             foreach (EventObject e in mw.bufferItinerary.eventList)
             {
                 EventItineraryBanner eib = new EventItineraryBanner(mw, ItinPage, this, e);

@@ -31,6 +31,7 @@ namespace FlamePlanner
         public int endTime;
         public int dateWeek; //0 is week of 5 sep, 3 is week of 29 Sep
         private Itinerary itin;
+        public int filterCriteria = 0;
 
 
         public Itinerarypage(MainWindow mw)
@@ -42,6 +43,8 @@ namespace FlamePlanner
             
             Time_Array_populator();
             InitialTimePopulator();
+
+            this.filterCriteria = 0;
 
             DateTime startDate = new DateTime(2021,9,5);
             dateWeek = 0;
@@ -234,6 +237,10 @@ namespace FlamePlanner
         {
             customEventInputWindow ceiw = new customEventInputWindow(mw);
             ceiw.ShowDialog();
+            Itinerary_leftpannel lp = (mw.mainFrame.Content as threeFramePage).leftFrame.Content as Itinerary_leftpannel;
+            lp.populateEventPanel();
+            displayEvents();
+
         }
 
         public void changeDateRange(int week)
@@ -303,7 +310,7 @@ namespace FlamePlanner
                     if (week == dateWeek)
                     {
                         Boolean crossOver = false;
-                        if (e.endTime >= startTime && e.startTime < startTime)
+                        if (e.endTime > startTime && e.startTime < startTime)
                         {
                             crossOver = true;
                         }
@@ -397,8 +404,18 @@ namespace FlamePlanner
                             t2.VerticalAlignment = VerticalAlignment.Center;
                             t2.Margin = margin;
 
-                            sp.Children.Add(t);
-                            sp.Children.Add(t2);
+                            if (e.endTime - e.startTime < 100)
+                            {
+                                //Title only view due to reduced space
+                                t.FontSize = 8;
+                                sp.Children.Add(t);
+
+                            }
+                            else
+                            {
+                                sp.Children.Add(t);
+                                sp.Children.Add(t2);
+                            }
 
 
                             newGrid.Children.Add(sp);
@@ -417,15 +434,27 @@ namespace FlamePlanner
                                 span = 8 - row;
                             }
                             else {
-                                margin.Bottom = ((60 - de_min) / 60) * 49 + 2;
+                                if (e_min == 0)
+                                {
+                                    margin.Bottom = 0;
+                                    if (span > 1)
+                                    {
+                                        span = span - 1;
+                                    }
+                                }
+                                else
+                                {
+                                    margin.Bottom = ((60 - de_min) / 60) * 49 + 2;
+                                }
                             }
                             
-                            newGrid.Margin = margin;
+                            
 
                             Boolean conflict = false;
 
                             for (int i = 0; i < span; i++)
                             {
+                                
                                 if (i+row-2 < 6 && b[i+row-2,col-1]==true) //checks for conflict
                                 {
                                     conflict = true;
@@ -447,16 +476,24 @@ namespace FlamePlanner
 
                                 for (int i = 0; i < span; i++)
                                 {
+                                    
                                     if (i < 6) //just in case, should always be true
                                     {
                                         b[i+row-2, col - 1] = true;
                                     }
                                 }
 
-                                mainGrid.Children.Add(newGrid);
-                                Grid.SetRow(newGrid, row);
-                                Grid.SetColumn(newGrid, col);
-                                Grid.SetRowSpan(newGrid, span);
+                                Border border = new Border();
+                                border.BorderBrush = Brushes.Black;
+                                border.BorderThickness = new Thickness(0,2,0,2);
+                                border.Child = newGrid;
+                                border.Margin = margin;
+
+
+                                mainGrid.Children.Add(border);
+                                Grid.SetRow(border, row);
+                                Grid.SetColumn(border, col);
+                                Grid.SetRowSpan(border, span);
 
                                 //Currently does not account for day overflow
                             }
@@ -502,7 +539,7 @@ namespace FlamePlanner
                 return 3;
             }
 
-            return -1;
+            return -1; //not in display range
         }
 
         public int getDayIndex(DateTime dt)

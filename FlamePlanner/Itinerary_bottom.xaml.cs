@@ -27,7 +27,8 @@ namespace FlamePlanner
             this.mw = mw;
             this.ItinPage = ip;
             InitializeComponent();
-            
+
+            //Add filter options to filter           
 
         }
 

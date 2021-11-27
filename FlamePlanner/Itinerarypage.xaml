@@ -112,9 +112,12 @@
         <Button x:Name="DateLeftButton" Grid.Column="1" Background="Transparent" Click="DateLeftButton_Click">
             <Image Stretch="Uniform"  Source="/leftArrow2.jpg" Width="35" Height="30"/>
         </Button>
-        <Border Grid.Column="7" Grid.Row="8" BorderBrush="DarkRed" BorderThickness="2">
+        <Border Grid.Column="7" Grid.Row="8" BorderBrush="Green" BorderThickness="3" Background="AliceBlue">
             <Button x:Name="customEventButton" Grid.Column="8"  Grid.Row="8" Background="Transparent" Padding="5" Click="customEventButton_Click">
-                <Image Grid.Column="8" Grid.Row="8" Stretch="Uniform" Source="/plus sign.jpg"/>
+                <TextBlock TextAlignment="Center" FontWeight="Bold">
+                    Add<LineBreak/>
+                    Custom Event
+                </TextBlock>
             </Button>
         </Border>
         <Button x:Name="DateRightButton" Background="Transparent" Grid.Column="7" Click="DateRightButton_Click" >

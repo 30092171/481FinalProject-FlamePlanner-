@@ -225,7 +225,7 @@ namespace FlamePlanner
                     if (e.startDate.Day == currentDate.Day)
                     {
                         Boolean crossOver = false;
-                        if (e.endTime >= startTime && e.startTime < startTime)
+                        if (e.endTime > startTime && e.startTime < startTime)
                         {
                             crossOver = true;
                         }
@@ -319,8 +319,18 @@ namespace FlamePlanner
                             t2.VerticalAlignment = VerticalAlignment.Center;
                             t2.Margin = margin;
 
-                            sp.Children.Add(t);
-                            sp.Children.Add(t2);
+                            if (e.endTime - e.startTime < 100)
+                            {
+                                //Title only view due to reduced space
+                                t.FontSize = 8;
+                                sp.Children.Add(t);
+
+                            }
+                            else
+                            {
+                                sp.Children.Add(t);
+                                sp.Children.Add(t2);
+                            }
 
 
                             newGrid.Children.Add(sp);
@@ -340,17 +350,29 @@ namespace FlamePlanner
                             }
                             else
                             {
-                                margin.Bottom = ((60 - de_min) / 60) * 52 + 2;
+                                if (e_min == 0)
+                                {
+                                    if (span > 1)
+                                    {
+                                        span = span - 1; //This way you don't have a 0 span
+                                    }
+                                    margin.Bottom = 0;
+                                }
+                                else
+                                {
+                                    margin.Bottom = ((60 - de_min) / 60) * 52 + 2;
+                                }
                             }
 
-                            newGrid.Margin = margin;
+                            
 
 
                             Boolean conflict = false;
 
                             for(int i = 0; i < span; i++)
                             {
-                                if(i+row-1<6 && b[i + row - 1] == true)
+                                
+                                if (i+row-1<6 && b[i + row - 1] == true)
                                 {
                                     conflict = true;
                                     break;
@@ -365,13 +387,21 @@ namespace FlamePlanner
                             else
                             {
 
-                                mainGrid.Children.Add(newGrid);
-                                Grid.SetRow(newGrid, row);
-                                Grid.SetColumn(newGrid, col);
-                                Grid.SetRowSpan(newGrid, span);
+                                Border border = new Border();
+                                border.BorderBrush = Brushes.Black;
+                                border.BorderThickness = new Thickness(0, 2, 0, 2);
+                                border.Child = newGrid;
+                                border.Margin = margin;
 
+                                mainGrid.Children.Add(border);
+                                Grid.SetRow(border, row);
+                                Grid.SetColumn(border, col);
+                                Grid.SetRowSpan(border, span);
+
+                                
                                 for (int i = 0; i < span; i++)
                                 {
+                                    
                                     if (i + row - 1 < 6)
                                     {
                                         b[i + row - 1] = true;
