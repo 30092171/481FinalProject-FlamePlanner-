@@ -30,12 +30,16 @@ namespace FlamePlanner
         public int startTime;
         public int endTime;
         public int dateWeek; //0 is week of 5 sep, 3 is week of 29 Sep
+        private Itinerary itin;
 
 
         public Itinerarypage(MainWindow mw)
         {
-            InitializeComponent();
             this.mw = mw;
+            this.itin = mw.bufferItinerary;
+            InitializeComponent();
+            
+            
             Time_Array_populator();
             InitialTimePopulator();
 
@@ -43,6 +47,9 @@ namespace FlamePlanner
             dateWeek = 0;
             Date_Array_populator(startDate);
             changeDateDisplay(dateWeek);
+            //itin.eventList.Add(new EventObject("apple", "", "", new DateTime(2021, 9, 5), 600, 2145));
+            //itin.eventList.Add(new EventObject("apple", "", "", new DateTime(2021, 10, 2), 2100, 2230));
+            displayEvents();
         }
 
         private void InitialTimePopulator()
@@ -80,6 +87,7 @@ namespace FlamePlanner
                 timerow6.Text = Time_Array[(i_num + 8) % 24];
                 startTime += 300;
                 endTime += 300;
+                displayEvents();
             }
         }
 
@@ -98,6 +106,7 @@ namespace FlamePlanner
                 timerow6.Text = Time_Array[(i_num + 2) % 24];
                 startTime -= 300;
                 endTime -= 300;
+                displayEvents();
             }
             
             if (i_num == 0)
@@ -112,7 +121,7 @@ namespace FlamePlanner
 
         }
 
-        private void Right_Click_date_Updator()
+        private void Right_Click_date_Updator(Boolean b = true)
         {
             string firstColTime = DateCol1.Text;
             Trace.WriteLine(DateCol1.Text);
@@ -132,9 +141,13 @@ namespace FlamePlanner
             DateCol5.Text = Date_Array[(i_num + 5 + 6) % no_of_days].ToString("ddd") + " " + Date_Array[(i_num + 5 + 6) % no_of_days].Day.ToString() + ", " + Date_Array[(i_num + 5 + 6) % no_of_days].ToString("MMM");
             DateCol6.Text = Date_Array[(i_num + 6 + 6) % no_of_days].ToString("ddd") + " " + Date_Array[(i_num + 6 + 6) % no_of_days].Day.ToString() + ", " + Date_Array[(i_num + 6 + 6) % no_of_days].ToString("MMM");
             DateCol7.Text = Date_Array[(i_num + 7 + 6) % no_of_days].ToString("ddd") + " " + Date_Array[(i_num + 7 + 6) % no_of_days].Day.ToString() + ", " + Date_Array[(i_num + 7 + 6) % no_of_days].ToString("MMM");
+            if (b)
+            {
+                displayEvents();
+            }
         }
 
-        private void Left_Click_date_Updatoe()
+        private void Left_Click_date_Updatoe(Boolean b = true)
         {
             string firstColTime = DateCol1.Text;
             int i_num = Array.IndexOf(Date_string_Array, firstColTime);
@@ -154,6 +167,10 @@ namespace FlamePlanner
                 DateCol5.Text = Date_Array[(i_num + 3 - 6) % no_of_days].ToString("ddd") + " " + Date_Array[(i_num + 3 - 6) % no_of_days].Day.ToString() + ", " + Date_Array[(i_num + 3 - 6) % no_of_days].ToString("MMM");
                 DateCol6.Text = Date_Array[(i_num + 4 - 6) % no_of_days].ToString("ddd") + " " + Date_Array[(i_num + 4 - 6) % no_of_days].Day.ToString() + ", " + Date_Array[(i_num + 4 - 6) % no_of_days].ToString("MMM");
                 DateCol7.Text = Date_Array[(i_num + 5 - 6) % no_of_days].ToString("ddd") + " " + Date_Array[(i_num + 5 - 6) % no_of_days].Day.ToString() + ", " + Date_Array[(i_num + 5 - 6) % no_of_days].ToString("MMM");
+                if (b)
+                {
+                    displayEvents();
+                }
             }
         }
 
@@ -225,15 +242,259 @@ namespace FlamePlanner
             {
                 while (week < dateWeek)
                 {
-                    Left_Click_date_Updatoe();
+                    Left_Click_date_Updatoe(false);
                 }
 
                 while (week > dateWeek)
                 {
-                    Right_Click_date_Updator();
+                    Right_Click_date_Updator(false);
                 }
+
+                displayEvents();
             }
             
+        }
+
+        private UIElement getChildFromCoordinate(int row, int column)
+        {
+            UIElement a = null;
+            try
+            {
+                a = mainGrid.Children
+                    .Cast<UIElement>()
+                    .First(e => Grid.GetRow(e) == row && Grid.GetColumn(e) == column);
+
+                return a;
+            }
+            catch (InvalidOperationException e)
+            {
+                return null;
+            }
+
+        }
+
+        public void displayEvents()
+        {
+            //removes all children from a grid range
+            for (int i = 2; i <= 7; i++)
+            {
+                for (int j = 1; j <= 7; j++)
+                {
+                    UIElement a = getChildFromCoordinate(i, j);
+                    if (a != null)
+                    {
+                        mainGrid.Children.Remove(a);
+                    }
+                }
+            }
+
+            foreach (EventObject e in itin.eventList)
+            {
+                
+                if(e.isVisible == true)
+                {
+                    
+                    int week = getDateWeekFromDate(e.startDate);
+                    if (week == dateWeek)
+                    {
+                        Boolean crossOver = false;
+                        if (e.endTime >= startTime && e.startTime < startTime)
+                        {
+                            crossOver = true;
+                        }
+
+                        if (crossOver || (e.startTime >= startTime && e.startTime <= endTime))
+                        {
+                            int s_min, display_s_min;
+                            int s_hour, display_s_hour;
+                            if (crossOver)
+                            { //sets start time to earliest time slot since the event was started earlier
+                                s_min = startTime % 100;
+                                s_hour = (startTime) / 100;
+                                display_s_min = e.startTime % 100;
+                                display_s_hour = (e.startTime - s_min) / 100;
+                            }
+                            else
+                            {
+                                s_min = e.startTime % 100;
+                                s_hour = (e.startTime - s_min) / 100;
+                                display_s_min = s_min;
+                                display_s_hour = s_hour;
+                            }
+
+                            int e_min = e.endTime % 100;
+                            int e_hour = (e.endTime - e_min)/100;
+
+                            int row = s_hour-(startTime-startTime%100)/100 + 2;
+                            int col = getDayIndex(e.startDate) + 1;
+
+                            int span = e_hour - s_hour + 1;
+
+                            Brush eventColor = (Brush)(new BrushConverter().ConvertFrom("#FF5BEED3"));
+
+                            Grid newGrid = new Grid();
+                            newGrid.Background = eventColor;
+
+                            StackPanel sp = new StackPanel();
+                            sp.Orientation = Orientation.Vertical;
+                            sp.VerticalAlignment = VerticalAlignment.Center;
+                            sp.HorizontalAlignment = HorizontalAlignment.Center;
+
+                            TextBlock t = new TextBlock();
+                            t.Text = e.eventName;
+                            //t.Background = Brushes.LightGray;
+                            t.HorizontalAlignment = HorizontalAlignment.Center;
+                            t.VerticalAlignment = VerticalAlignment.Center;
+
+                            Thickness margin = new Thickness();
+                            margin.Top = 5;
+                            margin.Left = 0;
+                            margin.Right = 0;
+                            margin.Bottom = 0;
+                            t.Margin = margin;
+
+                            t.FontSize=15;
+
+                            TextBlock t2 = new TextBlock();
+                            if(e.startTime < 1300)
+                            {
+                                if(e.endTime < 1300)
+                                {
+                                    if (e.startTime < 1200)
+                                    {
+                                        t2.Text = display_s_hour + ":" + display_s_min.ToString("D2") + " am - " + e_hour + ":" + e_min.ToString("D2") + " am";
+                                    }
+                                    else
+                                    {
+                                        t2.Text = display_s_hour + ":" + display_s_min.ToString("D2") + " pm - " + e_hour + ":" + e_min.ToString("D2") + " am";
+                                    }
+                                }                               
+                                else
+                                {
+                                    if (e.startTime < 1200)
+                                    {
+                                        t2.Text = display_s_hour + ":" + display_s_min.ToString("D2") + " am - " + (e_hour % 12) + ":" + e_min.ToString("D2") + " pm";
+                                    }
+                                    else
+                                    {
+                                        t2.Text = display_s_hour + ":" + display_s_min.ToString("D2") + " pm - " + (e_hour % 12) + ":" + e_min.ToString("D2") + " pm";
+                                    }
+                                    
+                                }
+                            }
+                            else
+                            {
+                                //End time must be > 1300
+                                t2.Text = (display_s_hour % 12) + ":" + display_s_min.ToString("D2") + " pm - " + (e_hour % 12) + ":" + e_min.ToString("D2") + " pm";
+                            }
+
+                            t2.HorizontalAlignment = HorizontalAlignment.Center;
+                            t2.VerticalAlignment = VerticalAlignment.Center;
+                            t2.Margin = margin;
+
+                            sp.Children.Add(t);
+                            sp.Children.Add(t2);
+
+
+                            newGrid.Children.Add(sp);
+
+
+                            double ds_min = s_min;
+                            double de_min = e_min;
+
+                            //Figure out intertime margin
+                            margin.Left = 2;
+                            margin.Top = (ds_min / 60 * 49) + 2;
+                            margin.Right = 2;
+                            if (row + span > 8)
+                            {
+                                margin.Bottom = 0; //runs off grid
+                                span = 8 - row;
+                            }
+                            else {
+                                margin.Bottom = ((60 - de_min) / 60) * 49 + 2;
+                            }
+                            
+                            newGrid.Margin = margin;
+                            
+                            
+
+                            mainGrid.Children.Add(newGrid);
+                            Grid.SetRow(newGrid, row);
+                            Grid.SetColumn(newGrid, col);
+                            Grid.SetRowSpan(newGrid, span);
+                            
+
+
+                            //Currently does not account for day overflow
+                        }
+                    }
+                }
+            }
+        }
+
+        /// <summary>
+        /// Pass in a dateTime object, returns week index in display
+        /// </summary>
+        /// <param name="dt"></param>
+        /// <returns>-1 if not in range or 0-3 if in range</returns>
+        public int getDateWeekFromDate(DateTime dt)
+        {
+            int day = dt.Day;
+            if (dt.Month == 09)
+            {
+                if (day >= 5 && day <= 11)
+                {
+                    return 0;
+                }
+                else if (day >= 12 && day <= 18)
+                {
+                    return 1;
+                }
+                else if (day >= 19 && day <= 25)
+                {
+                    return 2;
+                }
+                else if (day >= 26 && day <= 30)
+                {
+                    return 3;
+                }
+            }
+            else if (dt.Month == 10 && (day == 1 || day == 2))
+            {
+                return 3;
+            }
+
+            return -1;
+        }
+
+        public int getDayIndex(DateTime dt)
+        {
+            DayOfWeek dw = dt.DayOfWeek;
+            if (dw.Equals(DayOfWeek.Sunday)){
+                return 0;
+            }else if (dw.Equals(DayOfWeek.Monday)){
+                return 1;
+            }else if (dw.Equals(DayOfWeek.Tuesday))
+            {
+                return 2;
+            }
+            else if (dw.Equals(DayOfWeek.Wednesday))
+            {
+                return 3;
+            }
+            else if (dw.Equals(DayOfWeek.Thursday))
+            {
+                return 4;
+            }
+            else if (dw.Equals(DayOfWeek.Friday))
+            {
+                return 5;
+            }
+            else //Saturday
+            {
+                return 6;
+            }
         }
 
         private void DateLeftButton_Click(object sender, RoutedEventArgs e)

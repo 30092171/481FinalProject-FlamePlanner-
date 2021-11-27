@@ -8,7 +8,7 @@
       Title="Itinerarypage"
       Background="White" Height="481" Width="980">
 
-    <Grid HorizontalAlignment="Stretch" Opacity="0.98">
+    <Grid x:Name="mainGrid" HorizontalAlignment="Stretch" Opacity="0.98">
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="1*"/>
             <ColumnDefinition Width="1*"/>
