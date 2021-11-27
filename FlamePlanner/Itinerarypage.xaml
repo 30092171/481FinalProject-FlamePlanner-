@@ -82,9 +82,9 @@
                 PRINT
             </TextBlock>
         </Button>
-        
-        <Button x:Name="TimeUpButton" Grid.Row="1" Background="Transparent">
-        <Image Stretch="Uniform" Source="/leftArrow2.jpg" MouseLeftButtonDown="Image_MouseLeftButtonDown_TopArrow" RenderTransformOrigin="0.5,0.5">
+
+        <Button x:Name="TimeUpButton" Grid.Row="1" Background="Transparent" Click="TimeUpButton_Click">
+        <Image Stretch="Uniform" Source="/leftArrow2.jpg" RenderTransformOrigin="0.5,0.5">
             <Image.RenderTransform>
                 <TransformGroup>
                     <ScaleTransform ScaleX="0.5" ScaleY="0.5"/>
@@ -96,8 +96,8 @@
         </Image>
         </Button>
 
-        <Button x:Name="TimeDownButton" Grid.Row="8" Grid.Column="0" Background="Transparent">
-            <Image Stretch="Uniform" Source="/leftArrow2.jpg" MouseLeftButtonDown="Image_MouseLeftButtonDown_DownArrow"  RenderTransformOrigin="0.5,0.5">
+        <Button x:Name="TimeDownButton" Grid.Row="8" Grid.Column="0" Background="Transparent" Click="TimeDownButton_Click">
+            <Image Stretch="Uniform" Source="/leftArrow2.jpg"  RenderTransformOrigin="0.5,0.5">
                 <Image.RenderTransform>
                     <TransformGroup>
                         <ScaleTransform ScaleX="0.5" ScaleY="0.5"/>
@@ -109,16 +109,16 @@
             </Image>
         </Button>
 
-        <Button x:Name="DateLeftButton" Grid.Column="1" Background="Transparent">
-            <Image Stretch="Uniform" MouseLeftButtonDown="Image_MouseLeftButtonDown_LeftArrow"  Source="/leftArrow2.jpg" Width="35" Height="30"/>
+        <Button x:Name="DateLeftButton" Grid.Column="1" Background="Transparent" Click="DateLeftButton_Click">
+            <Image Stretch="Uniform"  Source="/leftArrow2.jpg" Width="35" Height="30"/>
         </Button>
         <Border Grid.Column="7" Grid.Row="8" BorderBrush="DarkRed" BorderThickness="2">
             <Button x:Name="customEventButton" Grid.Column="8"  Grid.Row="8" Background="Transparent" Padding="5" Click="customEventButton_Click">
                 <Image Grid.Column="8" Grid.Row="8" Stretch="Uniform" Source="/plus sign.jpg"/>
             </Button>
         </Border>
-        <Button x:Name="DateRightButton" Background="Transparent" Grid.Column="7" >
-            <Image Margin="31,14,15,10" MouseLeftButtonDown="Image_MouseLeftButtonDown_RightArrow" Stretch="Uniform" Source="/leftArrow2.jpg" RenderTransformOrigin="0.5,0.5">
+        <Button x:Name="DateRightButton" Background="Transparent" Grid.Column="7" Click="DateRightButton_Click" >
+            <Image Margin="31,14,15,10" Stretch="Uniform" Source="/leftArrow2.jpg" RenderTransformOrigin="0.5,0.5">
                 <Image.RenderTransform>
                     <TransformGroup>
                         <ScaleTransform/>
@@ -129,5 +129,8 @@
                 </Image.RenderTransform>
             </Image>
         </Button>
+        <TextBlock x:Name="WeekDisplay" Grid.Row="0" Grid.Column="2" Grid.ColumnSpan="5" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="20" Margin="15,0,15,0" Background="Linen">
+            Date Goes Here
+        </TextBlock>
     </Grid>
 </Page>

@@ -15,7 +15,7 @@
             <ComboBoxItem Content="Filter2"></ComboBoxItem>
         </ComboBox>
         <TextBlock HorizontalAlignment="Left" Margin="20,75,0,0" Text="Date of Week:" TextWrapping="Wrap" VerticalAlignment="Top" Height="34" Width="170" FontSize="22" RenderTransformOrigin="0.499,0.536"/>
-        <DatePicker x:Name="Date1" HorizontalAlignment="Left" Margin="189,75,0,0" VerticalAlignment="Top"  Height="34" Width="122" FontSize="15"/>
+        <DatePicker x:Name="Date1" HorizontalAlignment="Left" Margin="189,75,0,0" VerticalAlignment="Top"  Height="34" Width="122" FontSize="15" SelectedDateChanged="Date1_SelectedDateChanged"/>
 
 
     </Grid>

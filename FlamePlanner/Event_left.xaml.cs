@@ -15,6 +15,9 @@ namespace FlamePlanner
         private string[] Time_Array = new string[24];   //This array contain all the hours of the day in the correct format. 
         private DateTime[] Date_Array = new DateTime[no_of_days];   //Contains all the dates from september 5 2021 to october 2 2021.
         private string[] Date_string_Array = new string[no_of_days];    //Contains all the dates in Date_Array in string format. ddd d, mmm
+        public int startTime;
+        public int endTime;
+        public DateTime currentDate;
 
         public Event_left(MainWindow mw)
         {
@@ -23,15 +26,18 @@ namespace FlamePlanner
             InitialTimePopulator();
             Time_Array_populator();
             DateTime startDate = new DateTime(2021, 9, 5);
+            currentDate = new DateTime(2021, 09, 05); //= new DateTime(year,month,day)
             Date_Array_populator(startDate);
         }
 
         private void InitialTimePopulator()
         {
+            startTime = 600;
+            endTime = 1100;
             string[] Display_time_array = new string[6];
             for (int i = 1; i <= 6; i++)
             {
-                Display_time_array[i - 1] = i + ":00" + "pm";
+                Display_time_array[i - 1] = (i + 5) + ":00" + "am";
             }
 
             timerow1.Text = Display_time_array[0];
@@ -77,12 +83,18 @@ namespace FlamePlanner
             string firstRowTime = timerow1.Text;
             int i_num = Array.IndexOf(Time_Array, firstRowTime);
 
-            timerow1.Text = Time_Array[(i_num + 1) % 24];
-            timerow2.Text = Time_Array[(i_num + 2) % 24];
-            timerow3.Text = Time_Array[(i_num + 3) % 24];
-            timerow4.Text = Time_Array[(i_num + 4) % 24];
-            timerow5.Text = Time_Array[(i_num + 5) % 24];
-            timerow6.Text = Time_Array[(i_num + 6) % 24];
+            if (endTime < 2300)
+            {
+
+                timerow1.Text = Time_Array[(i_num + 3) % 24];
+                timerow2.Text = Time_Array[(i_num + 4) % 24];
+                timerow3.Text = Time_Array[(i_num + 5) % 24];
+                timerow4.Text = Time_Array[(i_num + 6) % 24];
+                timerow5.Text = Time_Array[(i_num + 7) % 24];
+                timerow6.Text = Time_Array[(i_num + 8) % 24];
+                startTime += 300;
+                endTime += 300;
+            }
 
         }
         private void Up_Click_time_Updator()
@@ -90,24 +102,26 @@ namespace FlamePlanner
             string firstRowTime = timerow1.Text;
             int i_num = Array.IndexOf(Time_Array, firstRowTime);
 
-            if (i_num > 0)
+            if (i_num > 0 && startTime > 0)
             {
-                timerow1.Text = Time_Array[(i_num - 1)];
-                timerow2.Text = Time_Array[(i_num)];
-                timerow3.Text = Time_Array[(i_num + 1) % 24];
-                timerow4.Text = Time_Array[(i_num + 2) % 24];
-                timerow5.Text = Time_Array[(i_num + 3) % 24];
-                timerow6.Text = Time_Array[(i_num + 4) % 24];
+                timerow1.Text = Time_Array[(i_num - 3)];
+                timerow2.Text = Time_Array[(i_num - 2)];
+                timerow3.Text = Time_Array[(i_num - 1) % 24];
+                timerow4.Text = Time_Array[(i_num) % 24];
+                timerow5.Text = Time_Array[(i_num + 1) % 24];
+                timerow6.Text = Time_Array[(i_num + 2) % 24];
+                startTime -= 300;
+                endTime -= 300;
             }
 
             if (i_num == 0)
             {
-                timerow1.Text = Time_Array[Time_Array.Length - 1];
-                timerow2.Text = Time_Array[(i_num)];
-                timerow3.Text = Time_Array[(i_num + 1) % 24];
-                timerow4.Text = Time_Array[(i_num + 2) % 24];
-                timerow5.Text = Time_Array[(i_num + 3) % 24];
-                timerow6.Text = Time_Array[(i_num + 4) % 24];
+                //timerow1.Text = Time_Array[Time_Array.Length - 1];
+                //timerow2.Text = Time_Array[(i_num)];
+                //timerow3.Text = Time_Array[(i_num + 1) % 24];
+                //timerow4.Text = Time_Array[(i_num + 2) % 24];
+                //timerow5.Text = Time_Array[(i_num + 3) % 24];
+                //timerow6.Text = Time_Array[(i_num + 4) % 24];
             }
 
         }
@@ -123,8 +137,17 @@ namespace FlamePlanner
                 return;
             }
 
-            DateCol1.Text = Date_Array[(i_num + 1) % no_of_days].ToString("ddd") + " " + Date_Array[(i_num + 1) % no_of_days].Day.ToString() + ", " + Date_Array[(i_num + 1) % no_of_days].ToString("MMM");
+            if (currentDate.Day == 30)
+            {
+                currentDate = new DateTime(2021, 10, 1);
             }
+            else {
+                currentDate = new DateTime(currentDate.Year, currentDate.Month, currentDate.Day + 1);
+             }
+            
+            DateCol1.Text = Date_Array[(i_num + 1) % no_of_days].ToString("ddd") + " " + Date_Array[(i_num + 1) % no_of_days].Day.ToString() + ", " + Date_Array[(i_num + 1) % no_of_days].ToString("MMM");
+            
+        }
 
         private void Left_Click_date_Updator()
         {
@@ -137,6 +160,14 @@ namespace FlamePlanner
 
             if (i_num > 0)
             {
+                if(currentDate.Day == 1)
+                {
+                    currentDate = new DateTime(2021, 09, 30);
+                }
+                else
+                {
+                    currentDate = new DateTime(currentDate.Year, currentDate.Month, currentDate.Day - 1);
+                }
                 DateCol1.Text = Date_Array[(i_num - 1) % no_of_days].ToString("ddd") + " " + Date_Array[(i_num - 1) % no_of_days].Day.ToString() + ", " + Date_Array[(i_num - 1) % no_of_days].ToString("MMM");
             }
         }
@@ -151,15 +182,14 @@ namespace FlamePlanner
             Down_Click_time_Updator();
         }
 
-        private void MouseLeftButtonDown_LeftArrow(object sender, System.Windows.Input.MouseButtonEventArgs e)
-        {
-            Left_Click_date_Updator();
-        }
-
-        private void MouseLeftButtonDown_RightArrow(object sender, System.Windows.Input.MouseButtonEventArgs e)
+        private void rightDateButton_Click(object sender, RoutedEventArgs e)
         {
             Right_Click_date_Updator();
         }
 
+        private void leftDateButton_Click(object sender, RoutedEventArgs e)
+        {
+            Left_Click_date_Updator();
+        }
     }
 }

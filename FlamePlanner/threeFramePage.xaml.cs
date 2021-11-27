@@ -35,14 +35,16 @@ namespace FlamePlanner
                 type = 0;
             }
 
-            InitializeComponent();
             this.mw = mw;
+            InitializeComponent();
+            
 
             if (type == 0)
             {
                 leftFrame.Content = new Itinerary_leftpannel(mw);
-                bottomRightFrame.Content = new Itinerary_bottom(mw);
-                topRightFrame.Content = new Itinerarypage(mw);
+                Itinerarypage ip = new Itinerarypage(mw);
+                topRightFrame.Content = ip;
+                bottomRightFrame.Content = new Itinerary_bottom(mw,ip);
                 mw.nav_itinerary.Background = mw.NAV_SELECT_COLOUR;
 
             }

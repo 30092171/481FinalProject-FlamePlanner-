@@ -72,8 +72,9 @@ namespace FlamePlanner
                 if (mainFrame.Content != null && mainFrame.Content.GetType() == typeof(threeFramePage))
                 {
                     threeFramePage tfp = mainFrame.Content as threeFramePage;
-                    tfp.topRightFrame.Content = new Itinerarypage(this);
-                    tfp.bottomRightFrame.Content = new Itinerary_bottom(this);
+                    Itinerarypage ip = new Itinerarypage(this);
+                    tfp.topRightFrame.Content = ip;
+                    tfp.bottomRightFrame.Content = new Itinerary_bottom(this,ip);
                     
                     if (tfp.leftFrame.Content == null || tfp.leftFrame.Content.GetType() != typeof(Itinerary_leftpannel))
                     {
