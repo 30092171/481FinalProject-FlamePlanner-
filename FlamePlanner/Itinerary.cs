@@ -26,5 +26,10 @@ namespace FlamePlanner
             this.eventList = new List<EventObject>();
             this.itineraryTitle = title;
         }
+        public Itinerary(Itinerary i2)
+        {
+            this.eventList = new List<EventObject>(i2.eventList);
+            this.itineraryTitle = i2.itineraryTitle;
+        }
     }
 }

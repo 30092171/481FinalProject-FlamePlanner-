@@ -13,25 +13,10 @@
             <Underline>List of Saved Itineraries on this Account</Underline>
             </TextBlock>
             
-            <ListView x:Name="savedList" MaxHeight="360" Width="400">    
-                <TextBlock Width="200" Height="40" HorizontalAlignment="Center" VerticalAlignment="Center">
-                Itinerary 1
-                </TextBlock>
-                <TextBlock Width="200" Height="40" HorizontalAlignment="Center" VerticalAlignment="Center">
-                Itinerary 2
-                </TextBlock>
-                <TextBlock Width="200" Height="40" HorizontalAlignment="Center" VerticalAlignment="Center">
-                Itinerary 3
-                </TextBlock>
-                <TextBlock Width="200" Height="40" HorizontalAlignment="Center" VerticalAlignment="Center">
-                Itinerary 4
-                </TextBlock>
-                <TextBlock Width="200" Height="40" HorizontalAlignment="Center" VerticalAlignment="Center">
-                Itinerary 5
-                </TextBlock>
-                <TextBlock Width="200" Height="40" HorizontalAlignment="Center" VerticalAlignment="Center">
-                Itinerary 6
-                </TextBlock>
+            <ListView x:Name="savedList" MaxHeight="360" Width="400">
+                <ListViewItem>
+                    "Text"
+                </ListViewItem>
             </ListView>
 
             <Button x:Name="returnButton" Width="100" Height="75" Margin="100,0" FontSize="10" Click="returnButton_Click">
