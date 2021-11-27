@@ -41,10 +41,10 @@ namespace FlamePlanner
 
             if (type == 0)
             {
-                leftFrame.Content = new Itinerary_leftpannel(mw);
                 Itinerarypage ip = new Itinerarypage(mw);
                 topRightFrame.Content = ip;
                 bottomRightFrame.Content = new Itinerary_bottom(mw,ip);
+                leftFrame.Content = new Itinerary_leftpannel(mw,ip);
                 mw.nav_itinerary.Background = mw.NAV_SELECT_COLOUR;
 
             }

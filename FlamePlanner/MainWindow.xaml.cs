@@ -40,6 +40,15 @@ namespace FlamePlanner
             this.loggedIn = false; //No one has logged in yet
             this.bufferItinerary = new Itinerary("");
 
+            //Testing************************************************
+            bufferItinerary.eventList.Add(new EventObject("Apple", "", "", new DateTime(2021, 9, 5), 600, 2145));
+            bufferItinerary.eventList.Add(new EventObject("Banana", "", "", new DateTime(2021, 10, 2), 2100, 2230));
+            bufferItinerary.eventList.Add(new EventObject("Conflict", "", "", new DateTime(2021, 10, 2), 2100, 2230));
+            bufferItinerary.eventList.Add(new EventObject("Pear", "", "", new DateTime(2021, 9, 15), 730, 1030));
+            bufferItinerary.eventList.Add(new EventObject("Pineapple", "", "", new DateTime(2021, 9, 15), 1100, 1245));
+            bufferItinerary.eventList.Add(new EventObject("Mango", "", "", new DateTime(2021, 9, 16), 1100, 1245));
+            //Remove Later********************************************
+
             mainFrame.Content = new startPage(this); //Program starts with the start page loaded in the main frame
             navBarStackPanel.Visibility = Visibility.Hidden; //Hides nav bar until user starts itinerary proccess
             helpButton.Visibility = Visibility.Hidden;
@@ -78,7 +87,7 @@ namespace FlamePlanner
                     
                     if (tfp.leftFrame.Content == null || tfp.leftFrame.Content.GetType() != typeof(Itinerary_leftpannel))
                     {
-                        Itinerary_leftpannel ilp = new Itinerary_leftpannel(this);
+                        Itinerary_leftpannel ilp = new Itinerary_leftpannel(this,ip);
                         tfp.leftFrame.Content = ilp;
                     }
                     //ensure itinerary frame is loaded in left, if it is not load it...

@@ -275,6 +275,8 @@ namespace FlamePlanner
 
         public void displayEvents()
         {
+            Boolean[,] b = new Boolean[6, 7]; //row major. Row=time col=day
+
             //removes all children from a grid range
             for (int i = 2; i <= 7; i++)
             {
@@ -285,8 +287,11 @@ namespace FlamePlanner
                     {
                         mainGrid.Children.Remove(a);
                     }
+                    b[i - 2, j - 1] = false;
                 }
             }
+
+            
 
             foreach (EventObject e in itin.eventList)
             {
@@ -416,17 +421,49 @@ namespace FlamePlanner
                             }
                             
                             newGrid.Margin = margin;
-                            
-                            
 
-                            mainGrid.Children.Add(newGrid);
-                            Grid.SetRow(newGrid, row);
-                            Grid.SetColumn(newGrid, col);
-                            Grid.SetRowSpan(newGrid, span);
-                            
+                            Boolean conflict = false;
+
+                            for (int i = 0; i < span; i++)
+                            {
+                                if (i+row-2 < 6 && b[i+row-2,col-1]==true) //checks for conflict
+                                {
+                                    conflict = true;
+                                    break;
+                                }
+                            }
+
+                            if (conflict)
+                            {
+                                e.isVisible = false;
+                                //Redo checks in eventPanel of left panel
+                                Itinerary_leftpannel lp = (mw.mainFrame.Content as threeFramePage).leftFrame.Content as Itinerary_leftpannel;
+                                lp.redoCheckboxSelections();
+                                MessageBox.Show("The event \""+e.eventName+"\" conflicts with another event.\nIt is unable to be displayed on the current itineary configuration.");
+                            }
+                            else //no conflict
+                            {
 
 
-                            //Currently does not account for day overflow
+                                for (int i = 0; i < span; i++)
+                                {
+                                    if (i < 6) //just in case, should always be true
+                                    {
+                                        b[i+row-2, col - 1] = true;
+                                    }
+                                }
+
+                                mainGrid.Children.Add(newGrid);
+                                Grid.SetRow(newGrid, row);
+                                Grid.SetColumn(newGrid, col);
+                                Grid.SetRowSpan(newGrid, span);
+
+                                //Currently does not account for day overflow
+                            }
+
+
+
+
                         }
                     }
                 }

@@ -204,6 +204,8 @@ namespace FlamePlanner
 
         public void displayEvents()
         {
+            Boolean[] b = new Boolean[6]; //row major. Each row repersents a time slot
+
             //removes all children from a grid column
             for (int i = 1; i <= 6; i++)
             {
@@ -212,6 +214,7 @@ namespace FlamePlanner
                 {
                     mainGrid.Children.Remove(a);
                 }
+                b[i - 1] = false;
             }
 
             foreach (EventObject e in itin.eventList)
@@ -343,15 +346,40 @@ namespace FlamePlanner
                             newGrid.Margin = margin;
 
 
+                            Boolean conflict = false;
 
-                            mainGrid.Children.Add(newGrid);
-                            Grid.SetRow(newGrid, row);
-                            Grid.SetColumn(newGrid, col);
-                            Grid.SetRowSpan(newGrid, span);
+                            for(int i = 0; i < span; i++)
+                            {
+                                if(i+row-1<6 && b[i + row - 1] == true)
+                                {
+                                    conflict = true;
+                                    break;
+                                }
+                            }
 
+                            if (conflict)
+                            {
+                                e.isVisible = false;
+                                //Don't need to say anything as they will see it is unchecked on the itinerary page
+                            }
+                            else
+                            {
 
+                                mainGrid.Children.Add(newGrid);
+                                Grid.SetRow(newGrid, row);
+                                Grid.SetColumn(newGrid, col);
+                                Grid.SetRowSpan(newGrid, span);
 
-                            //Currently does not account for day overflow
+                                for (int i = 0; i < span; i++)
+                                {
+                                    if (i + row - 1 < 6)
+                                    {
+                                        b[i + row - 1] = true;
+                                    }
+                                }
+
+                                //Currently does not account for day overflow
+                            }
                         }
                     }
                 }

@@ -21,15 +21,37 @@ namespace FlamePlanner
     public partial class Itinerary_leftpannel : Page
     {
         private MainWindow mw;
-        public Itinerary_leftpannel(MainWindow mw)
+        private Itinerarypage ItinPage;
+        public Itinerary_leftpannel(MainWindow mw, Itinerarypage ip)
         {
-            InitializeComponent();
             this.mw = mw;
+            this.ItinPage = ip;
+            InitializeComponent();
+            populateEventPanel();
         }
 
-        private void CheckBox_Checked(object sender, RoutedEventArgs e)
+        private void populateEventPanel()
         {
+            foreach (EventObject e in mw.bufferItinerary.eventList)
+            {
+                EventItineraryBanner eib = new EventItineraryBanner(mw, ItinPage, this, e);
+                eventPanel.Children.Add(eib);
+            }
+        }
 
+        /// <summary>
+        /// This function ensures checks match the visibility of each event, Could occur when a conflict is detected
+        /// </summary>
+        public void redoCheckboxSelections()
+        {
+            foreach (object o in eventPanel.Children)
+            {
+                if (o != null && o.GetType() == typeof(EventItineraryBanner))
+                {
+                    EventItineraryBanner e = o as EventItineraryBanner;
+                    e.setCheck(e.eventO.isVisible); //sets check to reflect whether it should be visible or not
+                }
+            }
         }
 
         private void deleteButton_Click(object sender, RoutedEventArgs e)
