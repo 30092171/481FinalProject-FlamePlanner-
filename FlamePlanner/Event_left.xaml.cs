@@ -118,6 +118,10 @@ namespace FlamePlanner
             Trace.WriteLine(DateCol1.Text);
             Trace.WriteLine(Date_string_Array[1]);
             int i_num = Array.IndexOf(Date_string_Array, firstColTime);
+            if (i_num == Date_string_Array.Length -1)
+            {
+                return;
+            }
 
             DateCol1.Text = Date_Array[(i_num + 1) % no_of_days].ToString("ddd") + " " + Date_Array[(i_num + 1) % no_of_days].Day.ToString() + ", " + Date_Array[(i_num + 1) % no_of_days].ToString("MMM");
             }
@@ -126,15 +130,14 @@ namespace FlamePlanner
         {
             string firstColTime = DateCol1.Text;
             int i_num = Array.IndexOf(Date_string_Array, firstColTime);
+            if (i_num == 0)
+            {
+                return;
+            }
 
             if (i_num > 0)
             {
                 DateCol1.Text = Date_Array[(i_num - 1) % no_of_days].ToString("ddd") + " " + Date_Array[(i_num - 1) % no_of_days].Day.ToString() + ", " + Date_Array[(i_num - 1) % no_of_days].ToString("MMM");
-            }
-
-            if (i_num == 0)
-            {
-                DateCol1.Text = Date_Array[no_of_days - 1].ToString("ddd") + " " + Date_Array[no_of_days - 1].Day.ToString() + ", " + Date_Array[no_of_days - 1].ToString("MMM");
             }
         }
 

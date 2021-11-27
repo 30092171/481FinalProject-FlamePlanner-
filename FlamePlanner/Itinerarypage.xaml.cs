@@ -104,44 +104,38 @@ namespace FlamePlanner
             Trace.WriteLine(Date_string_Array[1]);
             int i_num = Array.IndexOf(Date_string_Array, firstColTime);
 
-            DateCol1.Text = Date_Array[(i_num + 1) % no_of_days].ToString("ddd") + " " + Date_Array[(i_num + 1) % no_of_days].Day.ToString() + ", " + Date_Array[(i_num + 1) % no_of_days].ToString("MMM");
-            DateCol2.Text = Date_Array[(i_num + 2) % no_of_days].ToString("ddd") + " " + Date_Array[(i_num + 2) % no_of_days].Day.ToString() + ", " + Date_Array[(i_num + 2) % no_of_days].ToString("MMM");
-            DateCol3.Text = Date_Array[(i_num + 3) % no_of_days].ToString("ddd") + " " + Date_Array[(i_num + 3) % no_of_days].Day.ToString() + ", " + Date_Array[(i_num + 3) % no_of_days].ToString("MMM");
-            DateCol4.Text = Date_Array[(i_num + 4) % no_of_days].ToString("ddd") + " " + Date_Array[(i_num + 4) % no_of_days].Day.ToString() + ", " + Date_Array[(i_num + 4) % no_of_days].ToString("MMM");
-            DateCol5.Text = Date_Array[(i_num + 5) % no_of_days].ToString("ddd") + " " + Date_Array[(i_num + 5) % no_of_days].Day.ToString() + ", " + Date_Array[(i_num + 5) % no_of_days].ToString("MMM");
-            DateCol6.Text = Date_Array[(i_num + 6) % no_of_days].ToString("ddd") + " " + Date_Array[(i_num + 6) % no_of_days].Day.ToString() + ", " + Date_Array[(i_num + 6) % no_of_days].ToString("MMM");
-            DateCol7.Text = Date_Array[(i_num + 7) % no_of_days].ToString("ddd") + " " + Date_Array[(i_num + 7) % no_of_days].Day.ToString() + ", " + Date_Array[(i_num + 7) % no_of_days].ToString("MMM");
+            if(i_num == Date_string_Array.Length - 7)
+            {
+                return;
+            }
+
+            DateCol1.Text = Date_Array[(i_num + 1 + 6) % no_of_days].ToString("ddd") + " " + Date_Array[(i_num + 1 + 6) % no_of_days].Day.ToString() + ", " + Date_Array[(i_num + 1 + 6) % no_of_days].ToString("MMM");
+            DateCol2.Text = Date_Array[(i_num + 2 + 6) % no_of_days].ToString("ddd") + " " + Date_Array[(i_num + 2 + 6) % no_of_days].Day.ToString() + ", " + Date_Array[(i_num + 2 + 6) % no_of_days].ToString("MMM");
+            DateCol3.Text = Date_Array[(i_num + 3 + 6) % no_of_days].ToString("ddd") + " " + Date_Array[(i_num + 3 + 6) % no_of_days].Day.ToString() + ", " + Date_Array[(i_num + 3 + 6) % no_of_days].ToString("MMM");
+            DateCol4.Text = Date_Array[(i_num + 4 + 6) % no_of_days].ToString("ddd") + " " + Date_Array[(i_num + 4 + 6) % no_of_days].Day.ToString() + ", " + Date_Array[(i_num + 4 + 6) % no_of_days].ToString("MMM");
+            DateCol5.Text = Date_Array[(i_num + 5 + 6) % no_of_days].ToString("ddd") + " " + Date_Array[(i_num + 5 + 6) % no_of_days].Day.ToString() + ", " + Date_Array[(i_num + 5 + 6) % no_of_days].ToString("MMM");
+            DateCol6.Text = Date_Array[(i_num + 6 + 6) % no_of_days].ToString("ddd") + " " + Date_Array[(i_num + 6 + 6) % no_of_days].Day.ToString() + ", " + Date_Array[(i_num + 6 + 6) % no_of_days].ToString("MMM");
+            DateCol7.Text = Date_Array[(i_num + 7 + 6) % no_of_days].ToString("ddd") + " " + Date_Array[(i_num + 7 + 6) % no_of_days].Day.ToString() + ", " + Date_Array[(i_num + 7 + 6) % no_of_days].ToString("MMM");
         }
 
         private void Left_Click_date_Updatoe()
         {
             string firstColTime = DateCol1.Text;
             int i_num = Array.IndexOf(Date_string_Array, firstColTime);
+            if (i_num == 0)
+            {
+                return;
+            }
 
             if (i_num > 0)
             {
-                DateCol1.Text = Date_Array[(i_num - 1) % no_of_days].ToString("ddd") + " " + Date_Array[(i_num - 1) % no_of_days].Day.ToString() + ", " + Date_Array[(i_num - 1) % no_of_days].ToString("MMM");
-                DateCol2.Text = Date_Array[i_num % no_of_days].ToString("ddd") + " " + Date_Array[i_num % no_of_days].Day.ToString() + ", " + Date_Array[i_num % no_of_days].ToString("MMM");
-                DateCol3.Text = Date_Array[(i_num + 1) % no_of_days].ToString("ddd") + " " + Date_Array[(i_num + 1) % no_of_days].Day.ToString() + ", " + Date_Array[(i_num + 1) % no_of_days].ToString("MMM");
-                DateCol4.Text = Date_Array[(i_num + 2) % no_of_days].ToString("ddd") + " " + Date_Array[(i_num + 2) % no_of_days].Day.ToString() + ", " + Date_Array[(i_num + 2) % no_of_days].ToString("MMM");
-                DateCol5.Text = Date_Array[(i_num + 3) % no_of_days].ToString("ddd") + " " + Date_Array[(i_num + 3) % no_of_days].Day.ToString() + ", " + Date_Array[(i_num + 3) % no_of_days].ToString("MMM");
-                DateCol6.Text = Date_Array[(i_num + 4) % no_of_days].ToString("ddd") + " " + Date_Array[(i_num + 4) % no_of_days].Day.ToString() + ", " + Date_Array[(i_num + 4) % no_of_days].ToString("MMM");
-                DateCol7.Text = Date_Array[(i_num + 5) % no_of_days].ToString("ddd") + " " + Date_Array[(i_num + 5) % no_of_days].Day.ToString() + ", " + Date_Array[(i_num + 5) % no_of_days].ToString("MMM");
-                
-
-            }
-
-            if (i_num == 0)
-            {
-                DateCol1.Text = Date_Array[no_of_days - 1].ToString("ddd") + " " + Date_Array[no_of_days - 1].Day.ToString() + ", " + Date_Array[no_of_days - 1].ToString("MMM");
-                DateCol2.Text = Date_Array[i_num % no_of_days].ToString("ddd") + " " + Date_Array[i_num % no_of_days].Day.ToString() + ", " + Date_Array[i_num % no_of_days].ToString("MMM");
-                DateCol3.Text = Date_Array[(i_num + 1) % no_of_days].ToString("ddd") + " " + Date_Array[(i_num + 1) % no_of_days].Day.ToString() + ", " + Date_Array[(i_num + 1) % no_of_days].ToString("MMM");
-                DateCol4.Text = Date_Array[(i_num + 2) % no_of_days].ToString("ddd") + " " + Date_Array[(i_num + 2) % no_of_days].Day.ToString() + ", " + Date_Array[(i_num + 2) % no_of_days].ToString("MMM");
-                DateCol5.Text = Date_Array[(i_num + 3) % no_of_days].ToString("ddd") + " " + Date_Array[(i_num + 3) % no_of_days].Day.ToString() + ", " + Date_Array[(i_num + 3) % no_of_days].ToString("MMM");
-                DateCol6.Text = Date_Array[(i_num + 4) % no_of_days].ToString("ddd") + " " + Date_Array[(i_num + 4) % no_of_days].Day.ToString() + ", " + Date_Array[(i_num + 4) % no_of_days].ToString("MMM");
-                DateCol7.Text = Date_Array[(i_num + 5) % no_of_days].ToString("ddd") + " " + Date_Array[(i_num + 5) % no_of_days].Day.ToString() + ", " + Date_Array[(i_num + 5) % no_of_days].ToString("MMM");
-                
-
+                DateCol1.Text = Date_Array[(i_num - 1 - 6) % no_of_days].ToString("ddd") + " " + Date_Array[(i_num - 1 - 6) % no_of_days].Day.ToString() + ", " + Date_Array[(i_num - 1 - 6) % no_of_days].ToString("MMM");
+                DateCol2.Text = Date_Array[(i_num - 6) % no_of_days].ToString("ddd") + " " + Date_Array[(i_num - 6) % no_of_days].Day.ToString() + ", " + Date_Array[(i_num - 6) % no_of_days].ToString("MMM");
+                DateCol3.Text = Date_Array[(i_num + 1 - 6) % no_of_days].ToString("ddd") + " " + Date_Array[(i_num + 1 - 6) % no_of_days].Day.ToString() + ", " + Date_Array[(i_num + 1 - 6) % no_of_days].ToString("MMM");
+                DateCol4.Text = Date_Array[(i_num + 2 - 6) % no_of_days].ToString("ddd") + " " + Date_Array[(i_num + 2 - 6) % no_of_days].Day.ToString() + ", " + Date_Array[(i_num + 2 - 6) % no_of_days].ToString("MMM");
+                DateCol5.Text = Date_Array[(i_num + 3 - 6) % no_of_days].ToString("ddd") + " " + Date_Array[(i_num + 3 - 6) % no_of_days].Day.ToString() + ", " + Date_Array[(i_num + 3 - 6) % no_of_days].ToString("MMM");
+                DateCol6.Text = Date_Array[(i_num + 4 - 6) % no_of_days].ToString("ddd") + " " + Date_Array[(i_num + 4 - 6) % no_of_days].Day.ToString() + ", " + Date_Array[(i_num + 4 - 6) % no_of_days].ToString("MMM");
+                DateCol7.Text = Date_Array[(i_num + 5 - 6) % no_of_days].ToString("ddd") + " " + Date_Array[(i_num + 5 - 6) % no_of_days].Day.ToString() + ", " + Date_Array[(i_num + 5 - 6) % no_of_days].ToString("MMM");
             }
         }
 
