@@ -10,7 +10,7 @@
 
     <Grid Background="White">
         <Image HorizontalAlignment="Left" Height="133" Margin="31,70,0,0" VerticalAlignment="Top" Width="266" Source="/TimAndTheGloryBoysEvent.jpg"/>
-        <Button HorizontalAlignment="Left" Margin="31,181,0,0" VerticalAlignment="Top" Height="22" Width="22" Background="White" Click="Button_Click">
+        <Button HorizontalAlignment="Left" Margin="31,181,0,0" VerticalAlignment="Top" Height="22" Width="22" Background="White" Click="Tims_Button_Click">
             <Image HorizontalAlignment="Center" Height="20" VerticalAlignment="Center" Width="20" Source="/plus sign.jpg" Stretch="Uniform"/>
         </Button>
         <Button HorizontalAlignment="Left" Margin="273,179,0,0" VerticalAlignment="Top" Background="White" Click="Tim_Event_Display_Button_Click" Tag="19">
@@ -46,7 +46,7 @@
         <Button HorizontalAlignment="Left" Margin="256,400,0,0" VerticalAlignment="Top" Background="White" Click="Glass_Fusion_Event_Display_Button_Click" Tag="22">
             <Image HorizontalAlignment="Center" Height="20" VerticalAlignment="Top" Width="20" Source="/right-arrow (1).png"/>
         </Button>
-        <Button HorizontalAlignment="Left" Margin="48,402,0,0" VerticalAlignment="Top" Height="22" Width="22" Background="White" Click="Button_Click">
+        <Button HorizontalAlignment="Left" Margin="48,402,0,0" VerticalAlignment="Top" Height="22" Width="22" Background="White" Click="Glass_Fusion_Button_Click">
             <Image HorizontalAlignment="Center" Height="20" VerticalAlignment="Center" Width="20" Source="/plus sign.jpg" Stretch="Fill"/>
         </Button>
         <Button HorizontalAlignment="Left" Margin="325,395,0,0" VerticalAlignment="Top" Height="22" Width="22" Background="White" Click="Button_Click">
@@ -64,7 +64,7 @@
         <Button HorizontalAlignment="Left" Margin="922,190,0,0" VerticalAlignment="Top" Background="White" Width="24" Click="Job_Fair_Event_Display_Button_Click" Tag="21">
             <Image HorizontalAlignment="Center" Height="20" VerticalAlignment="Top" Width="20" Source="/right-arrow (1).png" Stretch="Fill"/>
         </Button>
-        <Button HorizontalAlignment="Left" Margin="671,192,0,0" VerticalAlignment="Top" Height="22" Width="22" Background="White" Click="Button_Click">
+        <Button HorizontalAlignment="Left" Margin="671,192,0,0" VerticalAlignment="Top" Height="22" Width="22" Background="White" Click="Job_Fair_Button_Click">
             <Image HorizontalAlignment="Center" Height="20" VerticalAlignment="Center" Width="20" Source="/plus sign.jpg" Stretch="Fill"/>
         </Button>
         <Button HorizontalAlignment="Left" Margin="626,195,0,0" VerticalAlignment="Top" Background="White" Width="24" Click="Event_Display_Button_Click" Tag="20">

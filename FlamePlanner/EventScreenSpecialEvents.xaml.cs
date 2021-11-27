@@ -74,7 +74,7 @@ namespace FlamePlanner
                 .SetTitle("Startup Job Fair Online")
                 .SetImage(new BitmapImage(new Uri("JobFairEvent.jpg", UriKind.Relative)))
                 .SetTime("10:00 AM - 11:00 AM")
-                .SetDate("September 12, 2021")
+                .SetDate("September 20, 2021")
                 .SetLocation("Online")
                 .SetDescription("Exploring new job opportunities? Looking to join a high-growth company? Join our Job Fair Online.\nChat with an actual recruiter or hiring manager. This is not an applicant tracking system. We have representatives from companies that are directly hiring.")
                 .SetLinks("https://allevents.in/calgary/startup-job-fair-online-connect-with-the-fastest-growing-companies/10000185369504177");
@@ -92,6 +92,42 @@ namespace FlamePlanner
                 .SetDescription("Been missing Live music? Tim & The Glory Boys bring you a Barn Burnin' Banjo Bash! Don't miss it!\nWith a whole new batch of songs, they are as eager as Canadian beavers to visit your neck o’ the woods. Don’t miss a rare night of live music and fun in your own backyard!")
                 .SetLinks("https://allevents.in/calgary/tim-and-the-glory-boys-the-home-town-hoedown-tour-calgary-ab/10000165490218699");
             epw.ShowDialog();
+        }
+
+        private void Glass_Fusion_Button_Click(object sender, RoutedEventArgs e)
+        {
+            EventObject eventObject = new EventObject();
+            eventObject.eventName = "Glass Fusion 101";
+            eventObject.eventDetails = "Under the gaze of an expert, guests arrange colourful pieces of glass to be fused into bowls, candy dishes, plaques, or vases.\nTurn bits and strips of specialty glass into twinkling kiln-fired treasures! Nothing beats the sparkle of glass. We’ll show you how to create sparkling glass functional artwork! This art form is positively UNIQUE and comes with guaranteed bragging rights! The results are dazzling, and the fun is addictive!";
+            eventObject.eventLocation = "14 St NW, Calgary, AB T2N 1Z7";
+            eventObject.startDate = new DateTime(2021, 10, 03);
+            eventObject.startTime = 1200;
+            eventObject.endTime = 1400;
+            eventObject.filterID = 4;
+        }
+
+        private void Job_Fair_Button_Click(object sender, RoutedEventArgs e)
+        {
+            EventObject eventObject = new EventObject();
+            eventObject.eventName = "Startup Job Fair Online";
+            eventObject.eventDetails = "Exploring new job opportunities? Looking to join a high-growth company? Join our Job Fair Online.\nChat with an actual recruiter or hiring manager. This is not an applicant tracking system. We have representatives from companies that are directly hiring.";
+            eventObject.eventLocation = "Online";
+            eventObject.startDate = new DateTime(2021, 09, 20);
+            eventObject.startTime = 1000;
+            eventObject.endTime = 1100;
+            eventObject.filterID = 4;
+        }
+
+        private void Tims_Button_Click(object sender, RoutedEventArgs e)
+        {
+            EventObject eventObject = new EventObject();
+            eventObject.eventName = "Tim & The Glory Boys";
+            eventObject.eventDetails = "Been missing Live music? Tim & The Glory Boys bring you a Barn Burnin' Banjo Bash! Don't miss it!\nWith a whole new batch of songs, they are as eager as Canadian beavers to visit your neck o’ the woods. Don’t miss a rare night of live music and fun in your own backyard!";
+            eventObject.eventLocation = "First Alliance Church Calgary (FAC Deerfoot), 12345 40 Street Southeast, Calgary, Canada";
+            eventObject.startDate = new DateTime(2021, 09, 28);
+            eventObject.startTime = 1900;
+            eventObject.endTime = 2130;
+            eventObject.filterID = 2;
         }
     }
 }

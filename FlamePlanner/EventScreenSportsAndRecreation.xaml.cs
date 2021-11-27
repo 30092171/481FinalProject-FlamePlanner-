@@ -102,9 +102,57 @@ namespace FlamePlanner
                 .SetTime("4:30 PM – 6:30 PM")
                 .SetDate("September 18, 2021")
                 .SetLocation("Markin Macphail Centre at Canada Olympic Park")
-                .SetDescription("Since 2015 the Yonex Canada Open has taken place in Calgary, bringing with it some of the top badminton players in the world. The 2019 event saw 260 competitors from 34 nations, including 5 former world #1 players. With a USD $75,000 prize purse it is the top badminton event in Canada and has found a home at the Markin Macphail Centre at Canada Olympic Park. The competition would not be possible without the people at Badminton Alberta who have made the event into what it is. ")
+                .SetDescription("Since 2015 the Yonex Canada Open has taken place in Calgary, bringing with it some of the top badminton players in the world. The 2019 event saw 260 competitors from 34 nations, including 5 former world #1 players. With a USD $75,000 prize purse it is the top badminton event in Canada and has found a home at the Markin Macphail Centre at Canada Olympic Park. The competition would not be possible without the people at Badminton Alberta who have made the event into what it is.")
                 .SetLinks("https://www.visitcalgary.com/sport-and-culture/success-stories/yonex-canada-open");
             epw.ShowDialog();
+        }
+
+        private void Calgary_Flames_Button_Click(object sender, RoutedEventArgs e)
+        {
+            EventObject eventObject = new EventObject();
+            eventObject.eventName = "Calgary Flames Game";
+            eventObject.eventDetails = "For almost four decades, the Flames have been electrifying hockey fans in southern Alberta. In that time, not only has the team established itself as a successful NHL franchise, \nbut it has grown into a vital and integral part of our community.\nFrom their on - ice victories and awards to their off - ice charitable endeavours, the Flames have become one of the premier professional sports organizations in North America.";
+            eventObject.eventLocation = "Scotiabank Saddledome (555 Saddledome Rise SE, Calgary, AB T2G 2W1)";
+            eventObject.startDate = new DateTime(2021, 09, 15);
+            eventObject.startTime = 1900;
+            eventObject.endTime = 2200;
+            eventObject.filterID = 8;
+        }
+
+        private void Boxing_Button_Click(object sender, RoutedEventArgs e)
+        {
+            EventObject eventObject = new EventObject();
+            eventObject.eventName = "Boxing Bootcamp";
+            eventObject.eventDetails = "Airswift is passionate about this cause and our goal is to promote cancer research and education and raise funds for various cancer societies around the world.\nThis year in Calgary, Airswift has partnered with Kimani and Martina of Rumble Boxing to host a boot-camp workout.";
+            eventObject.eventLocation = "5149 Country Hills Boulevard Northwest #Unit 310 Calgary, AB T3A 5K8";
+            eventObject.startDate = new DateTime(2021, 09, 12);
+            eventObject.startTime = 1330;
+            eventObject.endTime = 1430;
+            eventObject.filterID = 8;
+        }
+
+        private void Yonex_Button_Click(object sender, RoutedEventArgs e)
+        {
+            EventObject eventObject = new EventObject();
+            eventObject.eventName = "Yonex Canada Open";
+            eventObject.eventDetails = "Since 2015 the Yonex Canada Open has taken place in Calgary, bringing with it some of the top badminton players in the world. The 2019 event saw 260 competitors from 34 nations, including 5 former world #1 players. With a USD $75,000 prize purse it is the top badminton event in Canada and has found a home at the Markin Macphail Centre at Canada Olympic Park. The competition would not be possible without the people at Badminton Alberta who have made the event into what it is.";
+            eventObject.eventLocation = "Markin Macphail Centre at Canada Olympic Park";
+            eventObject.startDate = new DateTime(2021, 09, 18);
+            eventObject.startTime = 1630;
+            eventObject.endTime = 1830;
+            eventObject.filterID = 8;
+        }
+
+        private void Soccer_Button_Click(object sender, RoutedEventArgs e)
+        {
+            EventObject eventObject = new EventObject();
+            eventObject.eventName = "CAVS vs PACIFIC";
+            eventObject.eventDetails = "Don't miss this exciting match of Cavalary verus Pacific battle it out!\nCavalry FC is looking to advance to its second Canadian Premier League Final in three years, as it hosts Pacific FC which is searching for its first-ever playoff win.";
+            eventObject.eventLocation = "The Ship & Anchor (534 17 Avenue Southwest Calgary, AB T2S 0B1)";
+            eventObject.startDate = new DateTime(2021, 09, 19);
+            eventObject.startTime = 1100;
+            eventObject.endTime = 1530;
+            eventObject.filterID = 8;
         }
     }
 }

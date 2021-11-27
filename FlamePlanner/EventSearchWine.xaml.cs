@@ -80,5 +80,29 @@ namespace FlamePlanner
                 .SetLinks("https://www.eventbrite.ca/e/wine-u-premium-wines-tickets-211249782787?aff=ebdssbdestsearch");
             epw.ShowDialog();
         }
+
+        private void Wine_Tasting_Button_Click(object sender, RoutedEventArgs e)
+        {
+            EventObject eventObject = new EventObject();
+            eventObject.eventName = "Wine Tasting Event";
+            eventObject.eventDetails = "Join us for a walk-around showcase of the finest Italian wines in current release. This is Calgary's ultimate industry-only tasting.\n50 Italian wineries will be pouring their unique and delicious wines exclusively for members of the trade and media, with an emphasis on wines that combine affordability and excellence, making them ideal choices for by-the-glass programs in restaurants.";
+            eventObject.eventLocation = "The Hudson (at The Guild) (200 8 Avenue Southwest Calgary, AB T2P 1B5)";
+            eventObject.startDate = new DateTime(2021, 10, 01);
+            eventObject.startTime = 1300;
+            eventObject.endTime = 1700;
+            eventObject.filterID = 3;
+        }
+
+        private void WineU_Button_Click(object sender, RoutedEventArgs e)
+        {
+            EventObject eventObject = new EventObject();
+            eventObject.eventName = "Wine U: Premium Wines!";
+            eventObject.eventDetails = "We are popping open premium wines tonight!\nIf you’re thinking about stocking your cellar or need an extra special gift, don’t miss out on this epic night! Join us for our Wine U series as we guide you through a selection of 6 different wines alongside cheese & charcuterie from Soffritto.";
+            eventObject.eventLocation = "4109 University Avenue Northwest Calgary, AB T3B 6K3";
+            eventObject.startDate = new DateTime(2021, 09, 09);
+            eventObject.startTime = 1830;
+            eventObject.endTime = 2030;
+            eventObject.filterID = 3;
+        }
     }
 }

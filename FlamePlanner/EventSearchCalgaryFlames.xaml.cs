@@ -29,7 +29,14 @@ namespace FlamePlanner
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-
+            EventObject eventObject = new EventObject();
+            eventObject.eventName = "Calgary Flames Game";
+            eventObject.eventDetails = "For almost four decades, the Flames have been electrifying hockey fans in southern Alberta. In that time, not only has the team established itself as a successful NHL franchise, \nbut it has grown into a vital and integral part of our community.\nFrom their on - ice victories and awards to their off - ice charitable endeavours, the Flames have become one of the premier professional sports organizations in North America.";
+            eventObject.eventLocation = "Scotiabank Saddledome (555 Saddledome Rise SE, Calgary, AB T2G 2W1)";
+            eventObject.startDate = new DateTime(2021,09,15);
+            eventObject.startTime = 1900;
+            eventObject.endTime = 2200;
+            eventObject.filterID = 8;
         }
 
         private void Event_Display_Button_Click(object sender, RoutedEventArgs e)
