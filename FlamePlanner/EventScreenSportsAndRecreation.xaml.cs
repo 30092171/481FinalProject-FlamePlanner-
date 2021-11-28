@@ -116,7 +116,6 @@ namespace FlamePlanner
             eventObject.startDate = new DateTime(2021, 09, 15);
             eventObject.startTime = 1900;
             eventObject.endTime = 2200;
-            eventObject.filterID = 8;
         }
 
         private void Boxing_Button_Click(object sender, RoutedEventArgs e)
@@ -128,7 +127,6 @@ namespace FlamePlanner
             eventObject.startDate = new DateTime(2021, 09, 12);
             eventObject.startTime = 1330;
             eventObject.endTime = 1430;
-            eventObject.filterID = 8;
         }
 
         private void Yonex_Button_Click(object sender, RoutedEventArgs e)
@@ -140,7 +138,6 @@ namespace FlamePlanner
             eventObject.startDate = new DateTime(2021, 09, 18);
             eventObject.startTime = 1630;
             eventObject.endTime = 1830;
-            eventObject.filterID = 8;
         }
 
         private void Soccer_Button_Click(object sender, RoutedEventArgs e)
@@ -152,7 +149,6 @@ namespace FlamePlanner
             eventObject.startDate = new DateTime(2021, 09, 19);
             eventObject.startTime = 1100;
             eventObject.endTime = 1530;
-            eventObject.filterID = 8;
         }
     }
 }

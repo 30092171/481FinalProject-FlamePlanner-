@@ -12,7 +12,7 @@
         <Image HorizontalAlignment="Left" Height="152" Margin="30,67,0,0" VerticalAlignment="Top" Width="270" Source="/YonexCanadaOpenEvent.jpg"/>
         <Image HorizontalAlignment="Center" Height="147" Margin="0,72,0,0" VerticalAlignment="Top" Width="294" Source="/BoxingEvent.jpg"/>
         <Image HorizontalAlignment="Left" Height="169" Margin="686,50,0,0" VerticalAlignment="Top" Width="241" Source="/CalgaryFlamesEvent.jpg"/>
-        <Button HorizontalAlignment="Left" Margin="30,197,0,0" VerticalAlignment="Top" Height="22" Width="22" Background="White" Click="Button_Click">
+        <Button HorizontalAlignment="Left" Margin="30,197,0,0" VerticalAlignment="Top" Height="22" Width="22" Background="White" Click="Yonex_Button_Click">
             <Image HorizontalAlignment="Center" Height="20" VerticalAlignment="Center" Width="20" Source="/plus sign.jpg" Stretch="Uniform"/>
         </Button>
         <Button HorizontalAlignment="Left" Margin="276,195,0,0" VerticalAlignment="Top" Background="White" Click="Yonex_Event_Display_Button_Click" Tag="13">
@@ -21,13 +21,13 @@
         <Button HorizontalAlignment="Left" Margin="608,195,0,0" VerticalAlignment="Top" Background="White" Width="24" Click="Boxing_Event_Display_Button_Click" Tag="14">
             <Image HorizontalAlignment="Center" Height="20" VerticalAlignment="Top" Width="20" Source="/right-arrow (1).png" Stretch="Fill"/>
         </Button>
-        <Button HorizontalAlignment="Left" Margin="338,197,0,0" VerticalAlignment="Top" Height="22" Width="22" Background="White" Click="Button_Click">
+        <Button HorizontalAlignment="Left" Margin="338,197,0,0" VerticalAlignment="Top" Height="22" Width="22" Background="White" Click="Boxing_Button_Click">
             <Image HorizontalAlignment="Center" Height="20" VerticalAlignment="Center" Width="20" Source="/plus sign.jpg" Stretch="Fill"/>
         </Button>
         <Button HorizontalAlignment="Left" Margin="903,195,0,0" VerticalAlignment="Top" Background="White" Width="24" Click="Calgary_Flames_Event_Display_Button_Click" Tag="15">
             <Image HorizontalAlignment="Center" Height="20" VerticalAlignment="Top" Width="20" Source="/right-arrow (1).png" Stretch="Fill"/>
         </Button>
-        <Button HorizontalAlignment="Left" Margin="686,197,0,0" VerticalAlignment="Top" Height="22" Width="22" Background="White" Click="Button_Click">
+        <Button HorizontalAlignment="Left" Margin="686,197,0,0" VerticalAlignment="Top" Height="22" Width="22" Background="White" Click="Calgary_Flames_Button_Click">
             <Image HorizontalAlignment="Center" Height="20" VerticalAlignment="Center" Width="20" Source="/plus sign.jpg" Stretch="Fill"/>
         </Button>
         <Image Margin="472,12,473,450" Stretch="Fill" Source="right-arrow.png" RenderTransformOrigin="0.5,0.5">

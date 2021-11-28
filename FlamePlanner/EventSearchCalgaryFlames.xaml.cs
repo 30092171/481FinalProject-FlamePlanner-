@@ -36,7 +36,6 @@ namespace FlamePlanner
             eventObject.startDate = new DateTime(2021,09,15);
             eventObject.startTime = 1900;
             eventObject.endTime = 2200;
-            eventObject.filterID = 8;
         }
 
         private void Event_Display_Button_Click(object sender, RoutedEventArgs e)

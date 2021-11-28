@@ -103,7 +103,6 @@ namespace FlamePlanner
             eventObject.startDate = new DateTime(2021, 10, 03);
             eventObject.startTime = 1200;
             eventObject.endTime = 1400;
-            eventObject.filterID = 4;
         }
 
         private void Job_Fair_Button_Click(object sender, RoutedEventArgs e)
@@ -115,7 +114,6 @@ namespace FlamePlanner
             eventObject.startDate = new DateTime(2021, 09, 20);
             eventObject.startTime = 1000;
             eventObject.endTime = 1100;
-            eventObject.filterID = 4;
         }
 
         private void Tims_Button_Click(object sender, RoutedEventArgs e)
@@ -127,7 +125,6 @@ namespace FlamePlanner
             eventObject.startDate = new DateTime(2021, 09, 28);
             eventObject.startTime = 1900;
             eventObject.endTime = 2130;
-            eventObject.filterID = 2;
         }
     }
 }

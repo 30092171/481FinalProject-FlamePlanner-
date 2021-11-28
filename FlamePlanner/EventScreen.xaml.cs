@@ -87,7 +87,6 @@ namespace FlamePlanner
             eventObject.startDate = new DateTime(2021, 09, 05);
             eventObject.startTime = 2000;
             eventObject.endTime = 2300;
-            eventObject.filterID = 2;
         }
 
         private void Thriller_Button_Click(object sender, RoutedEventArgs e)
@@ -99,7 +98,6 @@ namespace FlamePlanner
             eventObject.startDate = new DateTime(2021, 10, 04);
             eventObject.startTime = 2100;
             eventObject.endTime = 200;
-            eventObject.filterID = 4;
         }
     }
 }

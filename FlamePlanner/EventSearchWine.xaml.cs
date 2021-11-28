@@ -90,7 +90,6 @@ namespace FlamePlanner
             eventObject.startDate = new DateTime(2021, 10, 01);
             eventObject.startTime = 1300;
             eventObject.endTime = 1700;
-            eventObject.filterID = 3;
         }
 
         private void WineU_Button_Click(object sender, RoutedEventArgs e)
@@ -102,7 +101,6 @@ namespace FlamePlanner
             eventObject.startDate = new DateTime(2021, 09, 09);
             eventObject.startTime = 1830;
             eventObject.endTime = 2030;
-            eventObject.filterID = 3;
         }
     }
 }
