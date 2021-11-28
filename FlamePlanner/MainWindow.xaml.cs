@@ -196,6 +196,7 @@ namespace FlamePlanner
                 t.Text = "LOG IN / REGISTER";
                 this.loggedIn = false;
                 logInOutButton.Content = t;
+                currentAcount = "";
 
                 if (mainFrame.Content.GetType() == typeof(threeFramePage))
                 {

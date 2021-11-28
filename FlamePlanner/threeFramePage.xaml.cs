@@ -74,12 +74,34 @@ namespace FlamePlanner
 
         private void createNewItineraryButton_Click(object sender, RoutedEventArgs e)
         {
-            //Create New ITINERARY (Prompt to save?)
-            if (!mw.loggedIn)
-            {
-                itinerarySaveOptions isow = new itinerarySaveOptions(mw);
-                isow.ShowDialog();
+            //Confirm
+
+            MessageBoxResult result = MessageBox.Show("Are you sure you want to Clear the Itineary and\nDiscard any Unsaved Progress?", "Clear Itinerary", MessageBoxButton.YesNo);
+
+            //Modify, if user chooses to rewrite into an existing itinerary
+            if (result.ToString().Equals("Yes"))
+            { //If user wants to wipe current buffer for new one
+                mw.bufferItinerary = new Itinerary(""); //Wipes buffer itinerary
+
+                //If an itinerary was previously displayed, reset it to reflect new load
+                if (mw.mainFrame.Content.GetType() == typeof(threeFramePage))
+                {
+                    if ((mw.mainFrame.Content as threeFramePage).topRightFrame.Content.GetType() == typeof(Itinerarypage))
+                    {
+                        Itinerarypage ip = new Itinerarypage(mw);
+                        (mw.mainFrame.Content as threeFramePage).topRightFrame.Content = ip;
+                        Itinerary_leftpannel lp = new Itinerary_leftpannel(mw, ip);
+                        (mw.mainFrame.Content as threeFramePage).leftFrame.Content = lp;
+                    }
+                    else //navigate to itinerary page
+                    {
+                        mw.switchToItineraryMode();
+                    }
+
+                }
             }
+
+            
         }
 
         private void loadItineraryButton_Click(object sender, RoutedEventArgs e)

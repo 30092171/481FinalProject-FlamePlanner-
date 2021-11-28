@@ -86,7 +86,7 @@ namespace FlamePlanner
 
 
                 //Confirm
-                MessageBoxResult result = MessageBox.Show("Are you sure you want to delete the Itineary Named \'"+ selectedName+"\' from your account?", "My App", MessageBoxButton.YesNo);
+                MessageBoxResult result = MessageBox.Show("Are you sure you want to delete the Itineary Named \'"+ selectedName+"\' from your account?", "Delete Confirmation", MessageBoxButton.YesNo);
 
                 //Modify, if user chooses to rewrite into an existing itinerary
                 if (result.ToString().Equals("Yes"))
