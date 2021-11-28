@@ -46,18 +46,27 @@ namespace FlamePlanner
             }
             else //logged in
             {
-                itineraryLoadWindow ilw = new itineraryLoadWindow(mw);
-                ilw.ShowDialog(); //Allows user to select itinerary to load
+                Account acc = mw.AccountDatabase[mw.currentAcount];
+                if (acc.itineraryDict.Count == 0)
+                {
+                    MessageBox.Show("There are No Itinearies Saved on this Account to Load");
+                    return;
+                }
+                else
+                {
+                    itineraryLoadWindow ilw = new itineraryLoadWindow(mw);
+                    ilw.ShowDialog();
 
-                //Communication should be done within other window
 
-                //Sets up application, itinerary should already be populated
-                mw.navBarStackPanel.Visibility = Visibility.Visible;
-                mw.helpButton.Visibility = Visibility.Visible;
-                mw.mainFrame.Content = new threeFramePage(0, mw); //Navigates to new Itinerary Page
+                    //Communication should be done within other window
+
+                    //Sets up application, itinerary should already be populated
+                    mw.navBarStackPanel.Visibility = Visibility.Visible;
+                    mw.helpButton.Visibility = Visibility.Visible;
+                    mw.mainFrame.Content = new threeFramePage(0, mw); //Navigates to new Itinerary Page
+                }
             }
-            //mw.navBarStackPanel.Visibility = Visibility.Visible;
-            //mw.nav_itinerary.Background = mw.NAV_SELECT_COLOUR; //Selects the appropriate nav tab
+            
         }
     }
 }

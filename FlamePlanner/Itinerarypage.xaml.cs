@@ -55,6 +55,17 @@ namespace FlamePlanner
             displayEvents();
         }
 
+        /// <summary>
+        /// Switches the private itin field and re displays
+        /// Should not be used for mw, just for displaying in the load window
+        /// </summary>
+        /// <param name="i">A copy of an itinerary Object to be displayed</param>
+        public void switchItineraryToDisplay(Itinerary i)
+        {
+            this.itin = i;
+            displayEvents();
+        }
+
         private void InitialTimePopulator()
         {
             startTime = 600;

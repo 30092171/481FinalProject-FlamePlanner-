@@ -95,6 +95,30 @@ namespace FlamePlanner
             }
         }
 
+        public void switchToItineraryMode()
+        {
+            resetNavButtonColours(Brushes.LightGray);
+            nav_itinerary.Background = NAV_SELECT_COLOUR;
+            //Navigate to itinary page
+            if (mainFrame.Content != null && mainFrame.Content.GetType() == typeof(threeFramePage))
+            {
+                threeFramePage tfp = mainFrame.Content as threeFramePage;
+                Itinerarypage ip = new Itinerarypage(this);
+                tfp.topRightFrame.Content = ip;
+                tfp.bottomRightFrame.Content = new Itinerary_bottom(this, ip);
+
+                if (tfp.leftFrame.Content == null || tfp.leftFrame.Content.GetType() != typeof(Itinerary_leftpannel))
+                {
+                    Itinerary_leftpannel ilp = new Itinerary_leftpannel(this, ip);
+                    tfp.leftFrame.Content = ilp;
+                }
+                //ensure itinerary frame is loaded in left, if it is not load it...
+            }
+            
+        }
+
+
+
         private void nav_map_Click(object sender, RoutedEventArgs e)
         {
             //This should only matter if the page is not currently selected, we use button colour to track this

@@ -92,8 +92,16 @@ namespace FlamePlanner
             }
             else //logged in
             {
-                itineraryLoadWindow ilw = new itineraryLoadWindow(mw);
-                ilw.ShowDialog();
+                Account acc = mw.AccountDatabase[mw.currentAcount];
+                if (acc.itineraryDict.Count == 0)
+                {
+                    MessageBox.Show("There are No Itinearies Saved on this Account to Load");
+                }
+                else
+                {
+                    itineraryLoadWindow ilw = new itineraryLoadWindow(mw);
+                    ilw.ShowDialog();
+                }
             }
         }
 

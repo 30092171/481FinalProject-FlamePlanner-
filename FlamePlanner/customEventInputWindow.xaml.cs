@@ -82,6 +82,9 @@ namespace FlamePlanner
             if(amPm1.SelectedIndex == 1) //PM
             {
                 startHour += 12;
+            }else if (amPm1.SelectedIndex == 0 && hour1.SelectedIndex ==11)//12am
+            {
+                startHour = 0; //midnight
             }
 
             int startTime = startHour * 100 + startMinute;
@@ -92,6 +95,10 @@ namespace FlamePlanner
             if (amPm2.SelectedIndex == 1) //PM
             {
                 endHour += 12;
+            }
+            else if (amPm2.SelectedIndex == 0 && hour2.SelectedIndex == 11)//12am
+            {
+                endHour = 0; //midnight
             }
 
             int endTime = endHour * 100 + endMinute;
