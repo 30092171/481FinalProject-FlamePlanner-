@@ -28,6 +28,18 @@ namespace FlamePlanner
             this.ItinPage = ip;
             InitializeComponent();
             populateEventPanel();
+
+            if (mw.loggedIn)
+            {
+                accountBanner.Text = "Username: " + mw.currentAcount;
+                accountBanner.Background = Brushes.LightBlue;
+            }
+            else
+            {
+                accountBanner.Text = "Not Logged In";
+                accountBanner.Background = Brushes.LightYellow;
+                deleteButton.Visibility = Visibility.Hidden;
+            }
         }
 
         public void populateEventPanel()

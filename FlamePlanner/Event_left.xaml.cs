@@ -36,6 +36,17 @@ namespace FlamePlanner
             //itin.eventList.Add(new EventObject("apple", "", "", new DateTime(2021, 9, 5), 600, 2145));
             //itin.eventList.Add(new EventObject("Banana", "", "", new DateTime(2021, 10, 2), 1000, 1330));
             displayEvents();
+
+            if (mw.loggedIn)
+            {
+                accountBanner.Text = "Username: " + mw.currentAcount;
+                accountBanner.Background = Brushes.LightBlue;
+            }
+            else
+            {
+                accountBanner.Text = "Not Logged In";
+                accountBanner.Background = Brushes.LightYellow;
+            }
         }
 
         private void InitialTimePopulator()

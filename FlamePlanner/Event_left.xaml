@@ -85,6 +85,6 @@
         </Grid>
 
 
-     <TextBlock TextAlignment="Center" HorizontalAlignment="Center" Grid.Row="2" Text="Not Logged In" TextWrapping="Wrap" VerticalAlignment="Top" Height="29" Width="290" Background="LightYellow" Margin="0,5,0,0"/>
+     <TextBlock x:Name="accountBanner" TextAlignment="Center" HorizontalAlignment="Center" Grid.Row="2" Text="Not Logged In" TextWrapping="Wrap" VerticalAlignment="Top" Height="29" Width="290" Background="LightYellow" Margin="0,5,0,0"/>
     </Grid>
 </Page>

@@ -30,7 +30,7 @@
 
         </ScrollViewer>
         </Border>
-        <TextBlock x:Name="logInBanner" TextAlignment="Center" HorizontalAlignment="Center" Grid.Row="2" Text="Username: User123" TextWrapping="Wrap" VerticalAlignment="Center" Height="29" Width="308" Background="LightBlue"/>
+        <TextBlock x:Name="accountBanner" TextAlignment="Center" HorizontalAlignment="Center" Grid.Row="2" Text="Username: User123" TextWrapping="Wrap" VerticalAlignment="Center" Height="29" Width="308" Background="LightBlue"/>
         <Button x:Name="deleteButton" Content="Delete Itinerary" HorizontalAlignment="Center" Grid.Row="3" VerticalAlignment="Top" Height="35" Width="308"  Margin="0,5,0,0" Click="deleteButton_Click" Background="LightCoral"/>
 
     </Grid>

@@ -196,6 +196,23 @@ namespace FlamePlanner
                 t.Text = "LOG IN / REGISTER";
                 this.loggedIn = false;
                 logInOutButton.Content = t;
+
+                if (mainFrame.Content.GetType() == typeof(threeFramePage))
+                {
+                    if ((mainFrame.Content as threeFramePage).leftFrame.Content.GetType() == typeof(Itinerary_leftpannel))
+                    {
+                        Itinerary_leftpannel lp = (mainFrame.Content as threeFramePage).leftFrame.Content as Itinerary_leftpannel;
+                        lp.accountBanner.Text = "Not Logged In";
+                        lp.accountBanner.Background = Brushes.LightYellow;
+                        lp.deleteButton.Visibility = Visibility.Hidden;
+                    }
+                    else if ((mainFrame.Content as threeFramePage).leftFrame.Content.GetType() == typeof(Event_left))
+                    {
+                        Event_left lp = (mainFrame.Content as threeFramePage).leftFrame.Content as Event_left;
+                        lp.accountBanner.Text = "Not Logged In";
+                        lp.accountBanner.Background = Brushes.LightYellow;
+                    }
+                }
             }
             //logInOutButton.Content = t;
         }
