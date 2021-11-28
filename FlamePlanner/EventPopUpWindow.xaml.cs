@@ -31,37 +31,22 @@ namespace FlamePlanner
             this.ev = ev;
             InitializeFields();
         }
+
+        private static string To12(int time24)
+        {
+            int hour = time24 / 100;
+            int min = time24 % 100;
+            string ampm = (hour <= 12) ? "AM" : "PM";
+            hour %= 12;
+            if (hour == 0) hour = 12;
+            return string.Format("{0}:{1:D2} {2}", hour, min, ampm);
+        }
+
         private void InitializeFields()
         {
             Title.Content = ev.eventName;
             EventImage.Source = new BitmapImage(ev.eventImage);
-            string startampm = " AM";
-            int startH = ev.startTime / 100;
-            if (startH >= 12)
-            {
-                startH %= 12;
-                startampm = " PM";
-            }
-            if (startH == 0) startH = 12;
-            int startM = ev.startTime % 100;
-            string startTime = startH + ":";
-            if (startM < 10)
-                startTime += "0";
-            startTime += startM + startampm;
-            string endampm = " AM";
-            int endH = ev.endTime / 100;
-            if (endH >= 12)
-            {
-                endH %= 12;
-                endampm = " PM";
-            }
-            if (endH == 0) endH = 12;
-            int endM = ev.endTime % 100;
-            string endTime = endH + ":";
-            if (endM < 10)
-                endTime += "0";
-            endTime += endM + endampm;
-            Time.Text = startTime + " - " + endTime;
+            Time.Text = To12(ev.startTime) + " - " + To12(ev.endTime);
 
             string sd = ev.startDate.ToString();
             Date.Text = sd.Substring(0, sd.IndexOf(' '));

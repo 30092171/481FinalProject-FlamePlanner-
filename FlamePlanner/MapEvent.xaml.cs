@@ -29,6 +29,17 @@ namespace FlamePlanner
             InitializeComboBox();
             event_label.Content = ev.eventName;
             datePicker.SelectedDate = ev.startDate;
+            timeRestrictBlock.Text = To12(ev.startTime) + " to " + To12(ev.endTime);
+        }
+
+        private static string To12(int time24)
+        {
+            int hour = time24 / 100;
+            int min = time24 % 100;
+            string ampm = (hour <= 12) ? "AM" : "PM";
+            hour %= 12;
+            if (hour == 0) hour = 12;
+            return string.Format("{0}:{1:D2} {2}", hour, min, ampm);
         }
 
         private void InitializeComboBox()
