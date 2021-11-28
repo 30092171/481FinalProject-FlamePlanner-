@@ -608,5 +608,11 @@ namespace FlamePlanner
         {
             Up_Click_time_Updator();
         }
+
+        private void printButton_Click(object sender, RoutedEventArgs e)
+        {
+            PrintWindow pw = new PrintWindow(mw);
+            pw.ShowDialog();
+        }
     }
 }

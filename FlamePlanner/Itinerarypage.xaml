@@ -77,7 +77,7 @@
         <Border Grid.Column="0" Grid.Row="7" BorderBrush="Black" BorderThickness="2" Grid.ColumnSpan="8" />
 
 
-        <Button x:Name="printButton" Grid.Row="0" Background="Transparent">
+        <Button x:Name="printButton" Grid.Row="0" Background="Transparent" Click="printButton_Click">
             <TextBlock Background="LightGray" FontSize="20" FontWeight="Bold">
                 PRINT
             </TextBlock>
