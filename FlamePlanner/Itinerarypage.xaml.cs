@@ -381,6 +381,13 @@ namespace FlamePlanner
                             TextBlock t2 = new TextBlock();
                             if(e.startTime < 1300)
                             {
+                                if (display_s_hour == 0)
+                                {
+                                    display_s_hour = 12;
+                                }
+
+                               
+                                
                                 if(e.endTime < 1300)
                                 {
                                     if (e.startTime < 1200)

@@ -55,10 +55,10 @@ namespace FlamePlanner
         {
             if (itineraryList.SelectedItem != null)
             {
-                loadingWarning.Visibility = Visibility.Collapsed;
-                loadingMessage.Visibility = Visibility.Visible;
+                //loadingWarning.Visibility = Visibility.Collapsed;
+                //loadingMessage.Visibility = Visibility.Visible;
 
-                //Load preview frame here
+                
                 ListViewItem item = itineraryList.SelectedItem as ListViewItem;
                 string selectedName = item.Tag.ToString();                
 

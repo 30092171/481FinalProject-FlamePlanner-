@@ -57,8 +57,27 @@ namespace FlamePlanner
 
         private void deleteButton_Click(object sender, RoutedEventArgs e)
         {
-            deleteConfirmation dc = new deleteConfirmation(mw);
-            dc.ShowDialog();
+            //Load another itinerary (Have they logged in?) Prompt to save?
+            if (!mw.loggedIn)
+            {
+                itinerarySaveOptions isow = new itinerarySaveOptions(mw);
+                isow.ShowDialog();
+            }
+            else //logged in
+            {
+                Account acc = mw.AccountDatabase[mw.currentAcount];
+                if (acc.itineraryDict.Count == 0)
+                {
+                    MessageBox.Show("There are No Itinearies Saved on this Account to Delete");
+                }
+                else
+                {
+                    deleteConfirmation dc = new deleteConfirmation(mw);
+                    dc.ShowDialog();
+                }
+            }
+
+            
         }
     }
 }
