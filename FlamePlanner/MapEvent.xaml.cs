@@ -20,30 +20,54 @@ namespace FlamePlanner
     public partial class MapEvent : Window
     {
         private MainWindow mw;
-        private EventPopUpWindow epw = null;
-
-        public MapEvent(MainWindow mw, string eventName)
+        private EventObject ev;
+        public MapEvent(MainWindow mw, EventObject ev)
         {
-            InitializeComponent();
-            event_label.Content = eventName;
             this.mw = mw;
+            this.ev = ev;
+            InitializeComponent();
+            InitializeComboBox();
+            event_label.Content = ev.eventName;
+            datePicker.SelectedDate = ev.startDate;
         }
 
-        public MapEvent(MainWindow mw, string eventName, EventPopUpWindow epw)
+        private void InitializeComboBox()
         {
-            InitializeComponent();
-            event_label.Content = eventName;
-            this.mw = mw;
-            this.epw = epw;
-        }
-
-        private void button_Click(object sender, RoutedEventArgs e)
-        {
-            this.Close();
-            if (epw != null)
+            ComboBoxItem t1 = new(), t2 = new();
+            t1.Content = t2.Content = "12";
+            startHour.Items.Add(t1);
+            endHour.Items.Add(t2);
+            for (int i = 1; i <= 11; i++)
             {
-                epw.BookedLabel.Text = "Yes";
+                ComboBoxItem i1 = new(), i2 = new();
+                if (i < 10)
+                    i1.Content = i2.Content = " " + i;
+                else
+                    i1.Content = i2.Content = i;
+                startHour.Items.Add(i1);
+                endHour.Items.Add(i2);
             }
+            for (int i = 0; i <= 59; i++)
+            {
+                ComboBoxItem i1 = new(), i2 = new();
+                if (i < 10)
+                    i1.Content = i2.Content = "0" + i;
+                else
+                    i1.Content = i2.Content = i;
+                startMinute.Items.Add(i1);
+                endMinute.Items.Add(i2);
+            }
+            startHour.SelectedIndex = ev.startTime / 100 % 12;
+            endHour.SelectedIndex = ev.endTime / 100 % 12;
+            startMinute.SelectedIndex = ev.startTime % 100;
+            endMinute.SelectedIndex = ev.endTime % 100;
+        }
+
+        private void okbutton_Click(object sender, RoutedEventArgs e)
+        {
+
+            DialogResult = true;
+            Close();
         }
     }
 }
