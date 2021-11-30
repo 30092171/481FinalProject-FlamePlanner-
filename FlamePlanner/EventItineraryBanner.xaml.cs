@@ -52,6 +52,11 @@ namespace FlamePlanner
 
             if (e.startTime < 1300)
             {
+                if (s_hour == 0)
+                {
+                    s_hour = 12;
+                }
+
                 if (e.endTime < 1300)
                 {
                     if (e.startTime < 1200)

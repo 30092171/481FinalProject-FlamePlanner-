@@ -22,7 +22,7 @@ namespace FlamePlanner
 
         public bool isVisible = true; //boolean to represent whether or not event should be displayed
 
-        public int filterID = 0; //0 = no filter, integer used to identify filter criteria in iterinary
+        //public int filterID = 0; //0 = no filter, integer used to identify filter criteria in iterinary
 
         /// <summary>
         /// Default Event class Constructor all values are defaultly populated
