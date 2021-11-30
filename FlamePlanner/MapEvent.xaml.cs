@@ -30,6 +30,10 @@ namespace FlamePlanner
             event_label.Content = ev.eventName;
             datePicker.SelectedDate = ev.startDate;
             timeRestrictBlock.Text = To12(ev.startTime) + " to " + To12(ev.endTime);
+            DateTime restrict = ev.startDate;
+            string days = "";
+            days += (Month)restrict.Month + " " + restrict.Day;
+            dateRestrictBlock.Text = days;
         }
 
         private static string To12(int time24)
@@ -76,9 +80,27 @@ namespace FlamePlanner
 
         private void okbutton_Click(object sender, RoutedEventArgs e)
         {
-
+            int starth = int.Parse((startHour.SelectedItem as ComboBoxItem).Content as string);
+            int startm = int.Parse((startMinute.SelectedItem as ComboBoxItem).Content as string);
+            int endh = int.Parse((endHour.SelectedItem as ComboBoxItem).Content as string);
+            int endm = int.Parse((endMinute.SelectedItem as ComboBoxItem).Content as string);
+            if (amPm.SelectedIndex == 1 && starth < 12) starth += 12;
+            else if (amPm.SelectedIndex == 0 && starth == 12) starth = 0;
+            if (amPm2.SelectedIndex == 1 && endh < 12) endh += 12;
+            else if (amPm2.SelectedIndex == 0 && endh == 12) endh = 0;
+            int start24 = starth * 100 + startm;
+            int end24 = endh * 100 + endm;
+            EventObject eventObject = ev.Copy() // heres the event object
+                .SetStartTime(start24)
+                .SetEndTime(end24);
+            if (datePicker.SelectedDate.HasValue)
+                eventObject.SetStartDate(datePicker.SelectedDate.Value);
             DialogResult = true;
             Close();
         }
+    }
+    public enum Month
+    {
+        NONE, January, February, March, April, May, June, July, August, September, October, November, December
     }
 }

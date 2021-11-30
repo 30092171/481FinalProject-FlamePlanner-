@@ -106,7 +106,18 @@ namespace FlamePlanner
 
         public EventObject Copy()
         {
-            return this;
+            EventObject ret = new EventObject()
+                .SetEventName(eventName)
+                .SetEventDetails(eventDetails)
+                .SetLocation(eventLocation)
+                .SetImage(eventImage)
+                .SetLinks(eventLinks)
+                .SetStartDate(startDate)
+                .SetEndDate(endDate)
+                .SetStartTime(startTime)
+                .SetEndTime(endTime)
+                .SetFilter(filterID);
+            return ret;
         }
     }
     public enum EventFilter
