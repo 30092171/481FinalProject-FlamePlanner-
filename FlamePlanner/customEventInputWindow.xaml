@@ -10,12 +10,17 @@
 
 
         <Label x:Name="label" Content="Event Name: " HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" FontSize="24"/>
-        <TextBox x:Name="nameInput" HorizontalAlignment="Left" Margin="160,17,0,0" VerticalAlignment="Top" FontSize="20" Width="250" Text="Enter Event Name Here"/>
+        <TextBox x:Name="nameInput" HorizontalAlignment="Left" Margin="160,17,0,0" VerticalAlignment="Top" FontSize="20" Width="250" />
 
         <Label x:Name="label_Copy" Content="Date:" HorizontalAlignment="Left" Margin="10,57,0,0" VerticalAlignment="Top" FontSize="24"/>
         <DatePicker x:Name="datePicker" HorizontalAlignment="Left" Margin="80,57,0,0" VerticalAlignment="Top" Height="42" FontSize="24"/>
 
-        <Button x:Name="submitButton" Content="✓" HorizontalAlignment="Left" Margin="321,523,0,0" VerticalAlignment="Top" FontSize="36" Width="120" Click="submitButton_Click"/>
+        <Button x:Name="submitButton" HorizontalAlignment="Left" Margin="321,523,0,0" VerticalAlignment="Top"  Width="120" Click="submitButton_Click">
+            <TextBlock TextAlignment="Center" FontSize="20">
+                Create<LineBreak/> 
+                Event
+            </TextBlock>
+        </Button>
         <Label x:Name="startTime" Content="Time:" HorizontalAlignment="Left" Margin="10,109,0,0" VerticalAlignment="Top" FontSize="24"/>
         <ComboBox x:Name="hour1" HorizontalAlignment="Left" Margin="82,109,0,0" VerticalAlignment="Top" Width="56" FontSize="24" SelectedIndex="11">
             <ComboBoxItem Content="1"/>
@@ -46,7 +51,7 @@
             <ComboBoxItem Content="11"/>
             <ComboBoxItem Content="12"/>
         </ComboBox>
-        <ComboBox x:Name="amPm1" HorizontalAlignment="Left" Margin="214,109,0,0" VerticalAlignment="Top" Width="64" FontSize="24" SelectedIndex="1">
+        <ComboBox x:Name="amPm1" HorizontalAlignment="Left" Margin="214,109,0,0" VerticalAlignment="Top" Width="64" FontSize="24" SelectedIndex="0">
             <ComboBoxItem Content="AM"/>
             <ComboBoxItem Content="PM"/>
         </ComboBox>
@@ -84,16 +89,16 @@
             <ComboBoxItem Content="11"/>
             <ComboBoxItem Content="12"/>
         </ComboBox>
-        <ComboBox x:Name="amPm2" HorizontalAlignment="Left" Margin="214,158,0,0" VerticalAlignment="Top" Width="64" FontSize="24" SelectedIndex="1">
+        <ComboBox x:Name="amPm2" HorizontalAlignment="Left" Margin="214,158,0,0" VerticalAlignment="Top" Width="64" FontSize="24" SelectedIndex="0">
             <ComboBoxItem Content="AM"/>
             <ComboBoxItem Content="PM"/>
         </ComboBox>
 
         <Label HorizontalAlignment="Left" VerticalAlignment="Top" FontSize="24" Margin="5,215,0,0">Location:</Label>
-        <TextBox x:Name="locationInput" HorizontalAlignment="Left"  VerticalAlignment="Top" FontSize="20" Width="250" Text="Enter Location Here" Margin="121,222,0,0"/>
+        <TextBox x:Name="locationInput" HorizontalAlignment="Left"  VerticalAlignment="Top" FontSize="20" Width="250"  Margin="121,222,0,0"/>
 
         <Label HorizontalAlignment="Left" VerticalAlignment="Top" FontSize="24" Margin="10,262,0,0">Description:</Label>
-        <TextBox x:Name="descriptionInput" HorizontalAlignment="Left" TextWrapping="Wrap"   VerticalAlignment="Top" FontSize="20" Width="400" Height="200" Text="Enter Event Details Here" Margin="21,304,0,0"/>
+        <TextBox x:Name="descriptionInput" HorizontalAlignment="Left" TextWrapping="Wrap"   VerticalAlignment="Top" FontSize="20" Width="400" Height="200" Margin="21,304,0,0"/>
 
     </Grid>
 </Window>
