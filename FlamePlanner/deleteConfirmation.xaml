@@ -5,18 +5,52 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:FlamePlanner"
         mc:Ignorable="d"
-        Title="Delete Itinerary Confirmation" Height="450" Width="800">
-    <Grid>
-        <StackPanel Orientation="Vertical">
-            <Label FontSize="25" HorizontalAlignment="Center" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Margin="0,100,0,0">Are you sure you wish to delete your itinerary?</Label>
-            <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0,60,0,0">
-                <StackPanel Orientation="Vertical" Margin="15,0">
-                <Button x:Name="deleteButton" Height="70" FontSize="15" Width="200" Click="deleteButton_Click">Yes, Delete The Itinerary</Button>
-                    <Label>
-                        <Italic>This Action Can Not Be Undone</Italic> </Label>
-                </StackPanel>
-                <Button x:Name="goBackButton" Height="70" Width="200" FontSize="15" VerticalAlignment="Top" Margin="15,0" Click="goBackButton_Click">No, Go Back</Button>
+        Title="Delete Itinerary Confirmation" Height="645" Width="1400">
+    <Grid x:Name="itineraryScreen">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="370*"/>
+            <ColumnDefinition Width="3*"/>
+            <ColumnDefinition Width="967*"/>
+        </Grid.ColumnDefinitions>
+        <Rectangle Fill="White" Grid.ColumnSpan="3"/>
+
+        <Grid Grid.Column="0">
+
+            <StackPanel Grid.Row="1" Orientation="Vertical" HorizontalAlignment="Center" VerticalAlignment="Center">
+                <TextBlock Width="280" Height="50" TextAlignment="Center" Padding="0,15,0,0" FontSize="16" Background="PaleVioletRed">
+                <Bold>
+                    <Underline>CHOOSE AN ITINERARY TO DELETE</Underline>
+                </Bold>
+                </TextBlock>
+
+                <ListBox x:Name="itineraryList" HorizontalAlignment="Center" VerticalAlignment="Top" Height="400" Width="280" SelectionChanged="itineraryList_SelectionChanged">
+
+                    <ListBoxItem Content="Place Holder Itinerary Title" FontSize="20"/>
+                    <ListBoxItem Content="Place Holder Itinerary Title" FontSize="20"/>
+                    <ListBoxItem Content="Place Holder Itinerary Title" FontSize="20"/>
+                    <ListBoxItem Content="Place Holder Itinerary Title" FontSize="20"/>
+                    <ListBoxItem Content="Place Holder Itinerary Title" FontSize="20"/>
+
+                </ListBox>
+
+                <Button x:Name="DeleteItinerary" Width="280" Height="40" VerticalAlignment="Center" Click="DeleteItinerary_Click" Background="Red">
+                    <TextBlock TextWrapping="Wrap" FontSize="20" TextAlignment="Center" FontWeight="Bold">Delete Itinerary</TextBlock>
+                </Button>
+                <TextBlock x:Name="warning" Margin="0,10,0,0" HorizontalAlignment="Center">
+                    Please Note: This Action Can Not be Reversed.
+                </TextBlock>
+                <TextBlock x:Name="loadingMessage" Margin="0,10,0,0" HorizontalAlignment="Center" FontSize="18" Visibility="Collapsed">
+                    LOADING...
+                </TextBlock>
+
             </StackPanel>
-        </StackPanel>
+
+
+
+        </Grid>
+        <Rectangle Grid.Column="1" Fill="Black"/>
+        <!-- This is to seperate left from right sides-->
+        <Frame x:Name="previewFrame" Grid.Column="2" NavigationUIVisibility="Hidden"></Frame>
+
     </Grid>
 </Window>

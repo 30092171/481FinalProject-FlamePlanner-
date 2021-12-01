@@ -21,15 +21,61 @@ namespace FlamePlanner
     public partial class Itinerary_bottom : Page
     {
         private MainWindow mw;
-        public Itinerary_bottom(MainWindow mw)
+        private Itinerarypage ItinPage;
+        public Itinerary_bottom(MainWindow mw,Itinerarypage ip)
         {
-            InitializeComponent();
             this.mw = mw;
+            this.ItinPage = ip;
+            InitializeComponent();
+
+            //Add filter options to filter           
+
         }
 
         private void ComboBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
 
+        }
+
+        private void Date1_SelectedDateChanged(object sender, SelectionChangedEventArgs e)
+        {
+            if (mw.mainFrame.Content.GetType() == typeof(threeFramePage))
+            {
+                threeFramePage tfp = mw.mainFrame.Content as threeFramePage;
+                if (tfp.topRightFrame.Content.GetType() == typeof(Itinerarypage))
+                {
+                    this.ItinPage = tfp.topRightFrame.Content as Itinerarypage;
+
+                    DatePicker dp = sender as DatePicker;
+                    DateTime dt = dp.SelectedDate.Value;
+                    int day = dt.Day;
+                    if (dt.Month == 09)
+                    {
+                        if (day >= 5 && day <= 11)
+                        {
+                            ItinPage.changeDateRange(0);
+                        }
+                        else if (day >= 12 && day <= 18)
+                        {
+                            ItinPage.changeDateRange(1);
+                        }
+                        else if (day >= 19 && day <= 25)
+                        {
+                            ItinPage.changeDateRange(2);
+                        }
+                        else if (day >= 26 && day <= 30)
+                        {
+                            ItinPage.changeDateRange(3);
+                        }
+                    }
+                    else if (dt.Month == 10 && (day == 1 || day == 2))
+                    {
+                        ItinPage.changeDateRange(3);
+                    }
+                }
+            }
+
+           
         }
     }
 }

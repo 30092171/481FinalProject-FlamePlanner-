@@ -40,6 +40,15 @@ namespace FlamePlanner
             this.loggedIn = false; //No one has logged in yet
             this.bufferItinerary = new Itinerary("");
 
+            ////Testing************************************************
+            //bufferItinerary.eventList.Add(new EventObject("Apple", "", "", new DateTime(2021, 9, 5), 600, 2145));
+            //bufferItinerary.eventList.Add(new EventObject("Banana", "", "", new DateTime(2021, 10, 2), 2100, 2230));
+            //bufferItinerary.eventList.Add(new EventObject("Conflict", "", "", new DateTime(2021, 10, 2), 2100, 2230));
+            //bufferItinerary.eventList.Add(new EventObject("Pear", "", "", new DateTime(2021, 9, 15), 730, 1030));
+            //bufferItinerary.eventList.Add(new EventObject("Pineapple", "", "", new DateTime(2021, 9, 15), 1100, 1245));
+            //bufferItinerary.eventList.Add(new EventObject("Mango", "", "", new DateTime(2021, 9, 16), 1100, 1245));
+            ////Remove Later********************************************
+
             mainFrame.Content = new startPage(this); //Program starts with the start page loaded in the main frame
             navBarStackPanel.Visibility = Visibility.Hidden; //Hides nav bar until user starts itinerary proccess
             helpButton.Visibility = Visibility.Hidden;
@@ -72,18 +81,43 @@ namespace FlamePlanner
                 if (mainFrame.Content != null && mainFrame.Content.GetType() == typeof(threeFramePage))
                 {
                     threeFramePage tfp = mainFrame.Content as threeFramePage;
-                    tfp.topRightFrame.Content = new Itinerarypage(this);
-                    tfp.bottomRightFrame.Content = new Itinerary_bottom(this);
+                    Itinerarypage ip = new Itinerarypage(this);
+                    tfp.topRightFrame.Content = ip;
+                    tfp.bottomRightFrame.Content = new Itinerary_bottom(this,ip);
                     
                     if (tfp.leftFrame.Content == null || tfp.leftFrame.Content.GetType() != typeof(Itinerary_leftpannel))
                     {
-                        Itinerary_leftpannel ilp = new Itinerary_leftpannel(this);
+                        Itinerary_leftpannel ilp = new Itinerary_leftpannel(this,ip);
                         tfp.leftFrame.Content = ilp;
                     }
                     //ensure itinerary frame is loaded in left, if it is not load it...
                 }
             }
         }
+
+        public void switchToItineraryMode()
+        {
+            resetNavButtonColours(Brushes.LightGray);
+            nav_itinerary.Background = NAV_SELECT_COLOUR;
+            //Navigate to itinary page
+            if (mainFrame.Content != null && mainFrame.Content.GetType() == typeof(threeFramePage))
+            {
+                threeFramePage tfp = mainFrame.Content as threeFramePage;
+                Itinerarypage ip = new Itinerarypage(this);
+                tfp.topRightFrame.Content = ip;
+                tfp.bottomRightFrame.Content = new Itinerary_bottom(this, ip);
+
+                if (tfp.leftFrame.Content == null || tfp.leftFrame.Content.GetType() != typeof(Itinerary_leftpannel))
+                {
+                    Itinerary_leftpannel ilp = new Itinerary_leftpannel(this, ip);
+                    tfp.leftFrame.Content = ilp;
+                }
+                //ensure itinerary frame is loaded in left, if it is not load it...
+            }
+            
+        }
+
+
 
         private void nav_map_Click(object sender, RoutedEventArgs e)
         {
@@ -162,6 +196,24 @@ namespace FlamePlanner
                 t.Text = "LOG IN / REGISTER";
                 this.loggedIn = false;
                 logInOutButton.Content = t;
+                currentAcount = "";
+
+                if (mainFrame.Content.GetType() == typeof(threeFramePage))
+                {
+                    if ((mainFrame.Content as threeFramePage).leftFrame.Content.GetType() == typeof(Itinerary_leftpannel))
+                    {
+                        Itinerary_leftpannel lp = (mainFrame.Content as threeFramePage).leftFrame.Content as Itinerary_leftpannel;
+                        lp.accountBanner.Text = "Not Logged In";
+                        lp.accountBanner.Background = Brushes.LightYellow;
+                        lp.deleteButton.Visibility = Visibility.Hidden;
+                    }
+                    else if ((mainFrame.Content as threeFramePage).leftFrame.Content.GetType() == typeof(Event_left))
+                    {
+                        Event_left lp = (mainFrame.Content as threeFramePage).leftFrame.Content as Event_left;
+                        lp.accountBanner.Text = "Not Logged In";
+                        lp.accountBanner.Background = Brushes.LightYellow;
+                    }
+                }
             }
             //logInOutButton.Content = t;
         }

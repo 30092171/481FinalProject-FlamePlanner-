@@ -1,0 +1,33 @@
+﻿<Window x:Class="FlamePlanner.PrintWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:FlamePlanner"
+        mc:Ignorable="d"
+        Title="PrintWindow" Height="450" Width="800">
+    <Grid>
+        <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center">
+            <TextBlock Margin="0,40,0,0" FontSize="20">Please Select the Dates of the Weeks You Want to Print</TextBlock>
+
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" Margin="0,20,0,0">
+                <StackPanel Orientation="Vertical">
+                    <Label FontSize="15" Margin="0,0,0,10">Date within Starting Week:</Label>
+                    <Label FontSize="15">Date within Ending Week:</Label>
+                </StackPanel>
+
+                <StackPanel Orientation="Vertical" Margin="15,0,0,0">
+                    <DatePicker x:Name="d1" FontSize="15" Margin="0,0,0,14"/>
+                    <DatePicker x:Name="d2" FontSize="15"/>
+                </StackPanel>
+            </StackPanel>
+            
+            <TextBlock Margin="0,10,0,0" HorizontalAlignment="Center" FontStyle="Italic">Each Page will Contain a Whole Week from Sunday to Saturday</TextBlock>
+
+            <Button x:Name="printButton" Width="100" FontSize="20" Margin="0,50,0,0" HorizontalAlignment="Right" Click="printButton_Click">PRINT</Button>
+        </StackPanel>
+        
+        
+        
+    </Grid>
+</Window>

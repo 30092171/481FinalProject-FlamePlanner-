@@ -93,6 +93,25 @@ namespace FlamePlanner
                 mw.logInOutButton.Content = t;
                 mw.loggedIn = true;
                 mw.currentAcount = usernameField.Text;
+
+                if(mw.mainFrame.Content.GetType() == typeof(threeFramePage))
+                {
+                    if((mw.mainFrame.Content as threeFramePage).leftFrame.Content.GetType() == typeof(Itinerary_leftpannel))
+                    {
+                        Itinerary_leftpannel lp = (mw.mainFrame.Content as threeFramePage).leftFrame.Content as Itinerary_leftpannel;
+                        lp.accountBanner.Text = "Username: " + mw.currentAcount;
+                        lp.accountBanner.Background = Brushes.LightBlue;
+                        lp.deleteButton.Visibility = Visibility.Visible;
+
+                    }
+                    else if ((mw.mainFrame.Content as threeFramePage).leftFrame.Content.GetType() == typeof(Event_left))
+                    {
+                        Event_left lp = (mw.mainFrame.Content as threeFramePage).leftFrame.Content as Event_left;
+                        lp.accountBanner.Text = "Username: " + mw.currentAcount;
+                        lp.accountBanner.Background = Brushes.LightBlue;
+                    }
+                }
+
                 this.Close();
             }
         }
