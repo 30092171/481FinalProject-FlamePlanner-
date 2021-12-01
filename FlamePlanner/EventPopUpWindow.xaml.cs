@@ -36,7 +36,7 @@ namespace FlamePlanner
         {
             int hour = time24 / 100;
             int min = time24 % 100;
-            string ampm = (hour <= 12) ? "AM" : "PM";
+            string ampm = (hour >= 12) ? "PM" : "AM";
             hour %= 12;
             if (hour == 0) hour = 12;
             return string.Format("{0}:{1:D2} {2}", hour, min, ampm);

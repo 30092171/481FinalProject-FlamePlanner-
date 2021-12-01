@@ -10,7 +10,7 @@
     xmlns:System="clr-namespace:System;assembly=System.Runtime">
 
     <Grid x:Name="overGrid" MouseMove="map_MouseMove" MouseDown="map_MouseDown" MouseUp="map_MouseUp" MouseWheel="map_MouseWheel" Background="#FF2D2D30">
-        <Canvas ClipToBounds="True">
+        <Canvas >
             <Grid x:Name="mapGrid" Margin="-150,-150,0,0" RenderTransformOrigin="0.5,0.5">
                 <Grid.RenderTransform>
                     <TransformGroup>
@@ -39,7 +39,7 @@
                 <local:MapEventButton HorizontalAlignment="Left" Margin="493,87,0,0" VerticalAlignment="Top" Text="Peace Bridge" Tag="Exhibit"/>
                 <local:MapEventButton HorizontalAlignment="Left" Margin="674,546,0,0" VerticalAlignment="Top" Text="Pigeonhole" Tag="Food"/>
                 <local:MapEventButton HorizontalAlignment="Left" Margin="413,555,0,0" VerticalAlignment="Top" Text="The Coup" Tag="Food"/>
-                <local:MapEventButton HorizontalAlignment="Left" Margin="704,303,0,0" VerticalAlignment="Top" Text="The Palace Theatre" Tag="Concert" Source="/Resources/blueMarker.png"/>
+                <local:MapEventButton HorizontalAlignment="Left" Margin="744,275,0,0" VerticalAlignment="Top" Text="The Palace Theatre" Tag="Concert" Source="/Resources/blueMarker.png"/>
                 <local:MapEventButton HorizontalAlignment="Left" Margin="811,347,0,0" VerticalAlignment="Top" Text="Jack Singer Concert Hall" Tag="Concert" Source="/Resources/blueMarker.png"/>
                 <local:MapEventButton HorizontalAlignment="Left" Margin="932,320,0,0" VerticalAlignment="Top" Text="Central Library" Tag="Exhibit"/>
                 <local:MapEventButton HorizontalAlignment="Left" Margin="293,329,0,0" VerticalAlignment="Top" Text="Ground Zero Theatre" Tag="Video"/>
@@ -59,6 +59,7 @@
                 <local:MapEventButton HorizontalAlignment="Left" Margin="756,376,0,0" VerticalAlignment="Top" Text="LunchBox Theatre" Tag="Theatre"/>
                 <local:MapEventButton HorizontalAlignment="Left" Margin="558,343,0,0" VerticalAlignment="Top" Text="Painted Fish Family Theatre" Tag="Theatre"/>
                 <local:MapEventButton HorizontalAlignment="Left" Margin="201,551,0,0" VerticalAlignment="Top" Text="Halloween Thriller" Tag="Special" Source="/Resources/blueMarker.png" Click="thriller_Click"/>
+                <local:MapEventButton HorizontalAlignment="Left" Margin="707,320,0,0" VerticalAlignment="Top" Text="Wine Tasting" Tag="Food" Click="winetasting_Click"/>
             </Grid>
         </Canvas>
         <Button x:Name="minusButton" Width="60" Height="60" VerticalAlignment="Bottom" HorizontalAlignment="Right" Margin="0,0,25,25" Click="minusButton_Click">
