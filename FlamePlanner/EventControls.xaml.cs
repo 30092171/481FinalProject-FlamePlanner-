@@ -30,6 +30,16 @@ namespace FlamePlanner
         private void cbValueType_DropDownClosed(object sender, EventArgs e)
         {
             {
+                if (cb.SelectedIndex == 0)
+                {
+                    if (mw.mainFrame.Content.GetType() == typeof(threeFramePage))
+                    {
+                        threeFramePage tfp = mw.mainFrame.Content as threeFramePage;
+                        tfp.topRightFrame.Content = new EventScreen(mw);
+
+                    }
+                }
+
                 if (cb.SelectedIndex == 1)
                 {
                     if (mw.mainFrame.Content.GetType() == typeof(threeFramePage))

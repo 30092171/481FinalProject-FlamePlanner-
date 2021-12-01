@@ -35,11 +35,11 @@ namespace FlamePlanner
 
         private void Event_Display_Button_Click(object sender, RoutedEventArgs e)
         {
-            var tag = ((Button)sender).Tag; //allows for us to determine which of the events were clicked
-            //MessageBox.Show(tag.ToString()); //Displays tag content, for debugging
-            EventPopUpWindow epw = new EventPopUpWindow(mw);
-            //populate epw via getters and setters here?
-            epw.ShowDialog(); //Displays event info pop up and locks main window
+            //var tag = ((Button)sender).Tag; //allows for us to determine which of the events were clicked
+            ////MessageBox.Show(tag.ToString()); //Displays tag content, for debugging
+            //EventPopUpWindow epw = new EventPopUpWindow(mw);
+            ////populate epw via getters and setters here?
+            //epw.ShowDialog(); //Displays event info pop up and locks main window
 
 
         }
@@ -58,23 +58,25 @@ namespace FlamePlanner
 
         private void Eric_Nam_Event_Display_Button_Click(object sender, RoutedEventArgs e)
         {
-            EventPopUpWindow epw = new EventPopUpWindow(mw)
-                .SetTitle("Eric Nam Before We Begin World Tour")
-                .SetTime("8:00 PM - 11:00 PM")
-                .SetDate("September 5, 2021");
+            //EventPopUpWindow epw = new EventPopUpWindow(mw)
+            //    .SetTitle("Eric Nam Before We Begin World Tour")
+            //    .SetTime("8:00 PM - 11:00 PM")
+            //    .SetDate("September 5, 2021");
+            EventPopUpWindow epw = new EventPopUpWindow(mw, AllEvents.EricNam);
             epw.ShowDialog();
         }
 
         private void Thriller_Event_Display_Button_Click(object sender, RoutedEventArgs e)
         {
-            EventPopUpWindow epw = new EventPopUpWindow(mw)
-                .SetTitle("Halloween Thriller")
-                .SetImage(new BitmapImage(new Uri("HalloweenEvent.jpg", UriKind.Relative)))
-                .SetTime("9:00 PM - 2:00 AM")
-                .SetDate("October 4 2021")
-                .SetLocation("Chakalaka (1410 17 Ave SW, Calgary, AB T2T 5S8)")
-                .SetDescription("CALGARY'S OFFICIAL HALLOWEEN MEGA PARTY !\n★ CALGARY HALLOWEEN THRILLER 2021 ★\n@ Chakalaka Bar - Sunday October 31st (18+) \nTHE BIGGEST HALLOWEEN PARTY IN CALGARY !\nOFFICIAL MEGA PARTY // SOLD OUT YEARLY\nPRIZES FOR BEST MALE & FEMALE COSTUMES !\nEVERYONE IS WELCOMED ! \n● LIMITED $10.00 TICKETS ARE AVAILABLE\nCLUB ANTHEMS / TOP 40 / HIP HOP / HOUSE / MASHUPS\nProfessional Photographer / Videographer in Attendance\n*** PURCHASE ADVANCE TICKETS FOR GUARANTEED ENTRY ! ***\nPROOF OF VACCINATION NEEDED\n1410 17 AVE SW")
-                .SetLinks("https://www.eventbrite.ca/e/calgary-halloween-thriller-2021-sun-oct-31-official-mega-party-tickets-177438101137");
+            //EventPopUpWindow epw = new EventPopUpWindow(mw)
+            //    .SetTitle("Halloween Thriller")
+            //    .SetImage(new BitmapImage(new Uri("HalloweenEvent.jpg", UriKind.Relative)))
+            //    .SetTime("9:00 PM - 2:00 AM")
+            //    .SetDate("October 4 2021")
+            //    .SetLocation("Chakalaka (1410 17 Ave SW, Calgary, AB T2T 5S8)")
+            //    .SetDescription("CALGARY'S OFFICIAL HALLOWEEN MEGA PARTY !\n★ CALGARY HALLOWEEN THRILLER 2021 ★\n@ Chakalaka Bar - Sunday October 31st (18+) \nTHE BIGGEST HALLOWEEN PARTY IN CALGARY !\nOFFICIAL MEGA PARTY // SOLD OUT YEARLY\nPRIZES FOR BEST MALE & FEMALE COSTUMES !\nEVERYONE IS WELCOMED ! \n● LIMITED $10.00 TICKETS ARE AVAILABLE\nCLUB ANTHEMS / TOP 40 / HIP HOP / HOUSE / MASHUPS\nProfessional Photographer / Videographer in Attendance\n*** PURCHASE ADVANCE TICKETS FOR GUARANTEED ENTRY ! ***\nPROOF OF VACCINATION NEEDED\n1410 17 AVE SW")
+            //    .SetLinks("https://www.eventbrite.ca/e/calgary-halloween-thriller-2021-sun-oct-31-official-mega-party-tickets-177438101137");
+            EventPopUpWindow epw = new EventPopUpWindow(mw, AllEvents.Thriller);
             epw.ShowDialog();
         }
 

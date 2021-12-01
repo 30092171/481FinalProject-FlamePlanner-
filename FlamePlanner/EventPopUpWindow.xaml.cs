@@ -42,7 +42,7 @@ namespace FlamePlanner
             return string.Format("{0}:{1:D2} {2}", hour, min, ampm);
         }
 
-        private void InitializeFields()
+        private void InitializeFields(bool disableIfBooked = true)
         {
             Title.Content = ev.eventName;
             EventImage.Source = new BitmapImage(ev.eventImage);
@@ -59,6 +59,21 @@ namespace FlamePlanner
                 l.Inlines.Add(s);
                 l.NavigateUri = new Uri(s);
                 Links.Inlines.Add(l);
+            }
+
+            //Added to check whether event is already booked. Disables ability to add the event again
+            //Only if bool is true. Intialize with false if event can be booked again
+            if (disableIfBooked)
+            {
+                foreach (EventObject e in mw.bufferItinerary.eventList)
+                {
+                    if (e.eventName == ev.eventName && e.eventDetails == ev.eventDetails && e.eventLocation == ev.eventLocation && e.filterID == ev.filterID)
+                    {
+                        // Booking code here
+                        BookedLabel.Text = "YES";
+                        AddButton.Visibility = Visibility.Hidden;
+                    }
+                }
             }
         }
 
