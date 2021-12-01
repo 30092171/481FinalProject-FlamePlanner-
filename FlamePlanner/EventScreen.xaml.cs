@@ -87,6 +87,16 @@ namespace FlamePlanner
             eventObject.startDate = new DateTime(2021, 09, 05);
             eventObject.startTime = 2000;
             eventObject.endTime = 2300;
+            mw.bufferItinerary.eventList.Add(eventObject);
+
+            if (mw.mainFrame.Content.GetType() == typeof(threeFramePage))
+            {
+                if ((mw.mainFrame.Content as threeFramePage).leftFrame.Content.GetType() == typeof(Event_left))
+                {
+                    Event_left el = new Event_left(mw); //This reloads the single day itinerary off the new buffer
+                    (mw.mainFrame.Content as threeFramePage).leftFrame.Content = el;
+                }
+            }
         }
 
         private void Thriller_Button_Click(object sender, RoutedEventArgs e)
@@ -98,6 +108,16 @@ namespace FlamePlanner
             eventObject.startDate = new DateTime(2021, 10, 04);
             eventObject.startTime = 2100;
             eventObject.endTime = 200;
+            mw.bufferItinerary.eventList.Add(eventObject);
+
+            if (mw.mainFrame.Content.GetType() == typeof(threeFramePage))
+            {
+                if ((mw.mainFrame.Content as threeFramePage).leftFrame.Content.GetType() == typeof(Event_left))
+                {
+                    Event_left el = new Event_left(mw); //This reloads the single day itinerary off the new buffer
+                    (mw.mainFrame.Content as threeFramePage).leftFrame.Content = el;
+                }
+            }
         }
     }
 }

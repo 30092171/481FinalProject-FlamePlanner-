@@ -90,6 +90,16 @@ namespace FlamePlanner
             eventObject.startDate = new DateTime(2021, 10, 01);
             eventObject.startTime = 1300;
             eventObject.endTime = 1700;
+            mw.bufferItinerary.eventList.Add(eventObject);
+
+            if (mw.mainFrame.Content.GetType() == typeof(threeFramePage))
+            {
+                if ((mw.mainFrame.Content as threeFramePage).leftFrame.Content.GetType() == typeof(Event_left))
+                {
+                    Event_left el = new Event_left(mw); //This reloads the single day itinerary off the new buffer
+                    (mw.mainFrame.Content as threeFramePage).leftFrame.Content = el;
+                }
+            }
         }
 
         private void WineU_Button_Click(object sender, RoutedEventArgs e)
@@ -101,6 +111,16 @@ namespace FlamePlanner
             eventObject.startDate = new DateTime(2021, 09, 09);
             eventObject.startTime = 1830;
             eventObject.endTime = 2030;
+            mw.bufferItinerary.eventList.Add(eventObject);
+
+            if (mw.mainFrame.Content.GetType() == typeof(threeFramePage))
+            {
+                if ((mw.mainFrame.Content as threeFramePage).leftFrame.Content.GetType() == typeof(Event_left))
+                {
+                    Event_left el = new Event_left(mw); //This reloads the single day itinerary off the new buffer
+                    (mw.mainFrame.Content as threeFramePage).leftFrame.Content = el;
+                }
+            }
         }
     }
 }

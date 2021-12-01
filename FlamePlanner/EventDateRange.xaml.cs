@@ -105,6 +105,16 @@ namespace FlamePlanner
             eventObject.startDate = new DateTime(2021, 09, 18);
             eventObject.startTime = 1630;
             eventObject.endTime = 1830;
+            mw.bufferItinerary.eventList.Add(eventObject);
+
+            if (mw.mainFrame.Content.GetType() == typeof(threeFramePage))
+            {
+                if ((mw.mainFrame.Content as threeFramePage).leftFrame.Content.GetType() == typeof(Event_left))
+                {
+                    Event_left el = new Event_left(mw); //This reloads the single day itinerary off the new buffer
+                    (mw.mainFrame.Content as threeFramePage).leftFrame.Content = el;
+                }
+            }
         }
 
         private void Boxing_Button_Click(object sender, RoutedEventArgs e)
@@ -116,6 +126,16 @@ namespace FlamePlanner
             eventObject.startDate = new DateTime(2021, 09, 12);
             eventObject.startTime = 1330;
             eventObject.endTime = 1430;
+            mw.bufferItinerary.eventList.Add(eventObject);
+
+            if (mw.mainFrame.Content.GetType() == typeof(threeFramePage))
+            {
+                if ((mw.mainFrame.Content as threeFramePage).leftFrame.Content.GetType() == typeof(Event_left))
+                {
+                    Event_left el = new Event_left(mw); //This reloads the single day itinerary off the new buffer
+                    (mw.mainFrame.Content as threeFramePage).leftFrame.Content = el;
+                }
+            }
         }
 
         private void Calgary_Flames_Button_Click(object sender, RoutedEventArgs e)
@@ -127,6 +147,16 @@ namespace FlamePlanner
             eventObject.startDate = new DateTime(2021, 09, 15);
             eventObject.startTime = 1900;
             eventObject.endTime = 2200;
+            mw.bufferItinerary.eventList.Add(eventObject);
+
+            if (mw.mainFrame.Content.GetType() == typeof(threeFramePage))
+            {
+                if ((mw.mainFrame.Content as threeFramePage).leftFrame.Content.GetType() == typeof(Event_left))
+                {
+                    Event_left el = new Event_left(mw); //This reloads the single day itinerary off the new buffer
+                    (mw.mainFrame.Content as threeFramePage).leftFrame.Content = el;
+                }
+            }
         }
     }
 }
