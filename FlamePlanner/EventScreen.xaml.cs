@@ -107,7 +107,7 @@ namespace FlamePlanner
             eventObject.eventLocation = "Chakalaka (1410 17 Ave SW, Calgary, AB T2T 5S8)";
             eventObject.startDate = new DateTime(2021, 10, 04);
             eventObject.startTime = 2100;
-            eventObject.endTime = 200;
+            eventObject.endTime = 2359;
             mw.bufferItinerary.eventList.Add(eventObject);
 
             if (mw.mainFrame.Content.GetType() == typeof(threeFramePage))
