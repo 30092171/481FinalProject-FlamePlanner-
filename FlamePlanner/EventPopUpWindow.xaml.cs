@@ -19,61 +19,58 @@ namespace FlamePlanner
     /// </summary>
     public partial class EventPopUpWindow : Window
     {
-        public string EventName;
+        private EventObject ev;
         private MainWindow mw;
-        public EventPopUpWindow(MainWindow mw) //Later we will add more parameters so that construction is easier
+        public EventPopUpWindow(MainWindow mw)
         {
-            InitializeComponent();
             this.mw = mw;
+            InitializeComponent();
+        }
+        public EventPopUpWindow(MainWindow mw, EventObject ev) : this(mw)
+        {
+            this.ev = ev;
+            InitializeFields();
         }
 
-        private void AddButton_Click(object sender, RoutedEventArgs e)
+        private static string To12(int time24)
         {
-            MapEvent me = new MapEvent(mw,this.EventName,this);
-            me.ShowDialog();
+            int hour = time24 / 100;
+            int min = time24 % 100;
+            string ampm = (hour <= 12) ? "AM" : "PM";
+            hour %= 12;
+            if (hour == 0) hour = 12;
+            return string.Format("{0}:{1:D2} {2}", hour, min, ampm);
         }
 
-        public EventPopUpWindow SetTitle(string title)
+        private void InitializeFields()
         {
-            Title.Content = title;
-            return this;
-        }
-        public EventPopUpWindow SetImage(ImageSource image)
-        {
-            EventImage.Source = image;
-            return this;
-        }
-        public EventPopUpWindow SetTime(string time)
-        {
-            Time.Text = time;
-            return this;
-        }
-        public EventPopUpWindow SetDate(string date)
-        {
-            Date.Text = date;
-            return this;
-        }
-        public EventPopUpWindow SetLocation(string location)
-        {
-            Location.Text = location;
-            return this;
-        }
-        public EventPopUpWindow SetDescription(string description)
-        {
-            Description.Text = description;
-            return this;
-        }
-        public EventPopUpWindow SetLinks(params string[] links)
-        {
+            Title.Content = ev.eventName;
+            EventImage.Source = new BitmapImage(ev.eventImage);
+            Time.Text = To12(ev.startTime) + " - " + To12(ev.endTime);
+
+            string sd = ev.startDate.ToString();
+            Date.Text = sd.Substring(0, sd.IndexOf(' '));
+            Location.Text = ev.eventLocation;
+            Description.Text = ev.eventDetails;
             Links.Inlines.Clear();
-            foreach(string s in links)
+            foreach (string s in ev.eventLinks)
             {
                 Hyperlink l = new Hyperlink();
                 l.Inlines.Add(s);
                 l.NavigateUri = new Uri(s);
                 Links.Inlines.Add(l);
             }
-            return this;
+        }
+
+        private void AddButton_Click(object sender, RoutedEventArgs e)
+        {
+            MapEvent me = new MapEvent(mw, ev);
+            bool? result = me.ShowDialog();
+            if (result.Value)
+            {
+                // Booking code here
+                BookedLabel.Text = "YES";
+            }
         }
     }
 }

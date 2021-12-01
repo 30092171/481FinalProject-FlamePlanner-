@@ -64,8 +64,4 @@ namespace FlamePlanner
             tfp.topRightFrame.Content = new Map(mw);
         }
     }
-    public enum EventFilter
-    {
-        NONE, Family, Concert, Food, Special, Video, Exhibit, Shop, Sport, Theatre
-    }
 }

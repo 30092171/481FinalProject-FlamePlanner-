@@ -23,27 +23,19 @@ namespace FlamePlanner
         }
         private void stampede_Click(object sender, RoutedEventArgs e)
         {
-            EventPopUpWindow epw = new EventPopUpWindow(mw)
-                .SetTitle("Calgary Stampede")
-                .SetImage(new BitmapImage(new Uri("CalgaryStampedeEvent.jpg", UriKind.Relative)))
-                .SetTime("11:00 AM - 12:00 AM")
-                .SetDate("July 3 - 12 2020")
-                .SetLocation("Stampede Grounds (1410 Olympic Way SE, Calgary, AB T2G 2W1)")
-                .SetDescription("At the heart of the Calgary Stampede, you’ll find more than 2,500 dedicated volunteers. They embody western values by hosting events across the city, supporting community celebrations and making the Calgary Stampede The Greatest Outdoor Show on Earth. In addition, the Board of Directors are unpaid volunteers who contribute their time to govern the affairs of the Calgary Stampede.")
-                .SetLinks("https://www.calgarystampede.com/");
+            EventPopUpWindow epw = new EventPopUpWindow(mw, AllEvents.Stampede);
             epw.ShowDialog();
         }
 
         private void thriller_Click(object sender, RoutedEventArgs e)
         {
-            EventPopUpWindow epw = new EventPopUpWindow(mw)
-                .SetTitle("Halloween Thriller")
-                .SetImage(new BitmapImage(new Uri("HalloweenEvent.jpg", UriKind.Relative)))
-                .SetTime("9:00 PM - 2:00 AM")
-                .SetDate("October 31 2021")
-                .SetLocation("Chakalaka (1410 17 Ave SW, Calgary, AB T2T 5S8)")
-                .SetDescription("CALGARY'S OFFICIAL HALLOWEEN MEGA PARTY !\n★ CALGARY HALLOWEEN THRILLER 2021 ★\n@ Chakalaka Bar - Sunday October 31st (18+) \nTHE BIGGEST HALLOWEEN PARTY IN CALGARY !\nOFFICIAL MEGA PARTY // SOLD OUT YEARLY\nPRIZES FOR BEST MALE & FEMALE COSTUMES !\nEVERYONE IS WELCOMED ! \n● LIMITED $10.00 TICKETS ARE AVAILABLE\nCLUB ANTHEMS / TOP 40 / HIP HOP / HOUSE / MASHUPS\nProfessional Photographer / Videographer in Attendance\n*** PURCHASE ADVANCE TICKETS FOR GUARANTEED ENTRY ! ***\nPROOF OF VACCINATION NEEDED\n1410 17 AVE SW")
-                .SetLinks("https://www.eventbrite.ca/e/calgary-halloween-thriller-2021-sun-oct-31-official-mega-party-tickets-177438101137");
+            EventPopUpWindow epw = new EventPopUpWindow(mw, AllEvents.Thriller);
+            epw.ShowDialog();
+        }
+
+        private void flamesgame_Click(object sender, RoutedEventArgs e)
+        {
+            EventPopUpWindow epw = new EventPopUpWindow(mw, AllEvents.CalgaryFlames);
             epw.ShowDialog();
         }
 

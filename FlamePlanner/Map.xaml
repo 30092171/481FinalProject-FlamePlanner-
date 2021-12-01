@@ -28,7 +28,7 @@
                 <local:MapEventButton Margin="771,664,0,0" HorizontalAlignment="Left" VerticalAlignment="Top" Text="Talisman Centre" Tag="Sport"/>
                 <local:MapEventButton Margin="226,836,0,0" HorizontalAlignment="Left" VerticalAlignment="Top" Text="South MR Park" Tag="Family"/>
                 <local:MapEventButton Margin="904,690,0,0" HorizontalAlignment="Left" VerticalAlignment="Top" Text="Stampede Grandstand" Tag="Special" Source="/Resources/blueMarker.png"/>
-                <local:MapEventButton Margin="996,560,0,0" HorizontalAlignment="Left" VerticalAlignment="Top" Text="Saddledome" Tag="Special"/>
+                <local:MapEventButton Margin="996,560,0,0" HorizontalAlignment="Left" VerticalAlignment="Top" Text="Saddledome" Tag="Special" Click="flamesgame_Click"/>
                 <local:MapEventButton Margin="826,456,0,0" HorizontalAlignment="Left" VerticalAlignment="Top" Text="Sunterra Market" Tag="Shop"/>
                 <local:MapEventButton Margin="744,190,448,0" HorizontalAlignment="Left" VerticalAlignment="Top" Text="Sun Life Plaza" Tag="Family"/>
                 <local:MapEventButton Margin="609,131,602,0" HorizontalAlignment="Left" VerticalAlignment="Top" Text="Eau Claire Market" Tag="Shop"/>
