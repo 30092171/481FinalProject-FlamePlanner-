@@ -14,7 +14,7 @@ namespace FlamePlanner
         public string eventName = ""; //name of event
         public string eventDetails = ""; //details of event
         public string eventLocation = "";//location of event
-        public Uri eventImage = new Uri("EricNamEvent.jpg", UriKind.Relative); // uri to appropriate image for the event
+        public Uri eventImage = null; // uri to appropriate image for the event
         public string[] eventLinks = new string[0]; // array of any hyperlinks
 
         public DateTime startDate = new DateTime(2001,01,01); //= new DateTime(year,month,day)

@@ -31,6 +31,7 @@
     <None Remove="MediterraneanFoodEvent.jpg" />
     <None Remove="NewYearsEveEvent.jpg" />
     <None Remove="NickiMinajEvent.jpg" />
+    <None Remove="noImage.jpg" />
     <None Remove="PuptoberfestEvent.jpg" />
     <None Remove="Resources\blue.png" />
     <None Remove="Resources\blueMarker.png" />
@@ -86,6 +87,9 @@
     <Resource Include="MediterraneanFoodEvent.jpg" />
     <Resource Include="NewYearsEveEvent.jpg" />
     <Resource Include="NickiMinajEvent.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="noImage.jpg">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Resource>
     <Resource Include="PuptoberfestEvent.jpg" />

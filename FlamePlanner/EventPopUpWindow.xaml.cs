@@ -45,7 +45,16 @@ namespace FlamePlanner
         private void InitializeFields(bool disableIfBooked = true)
         {
             Title.Content = ev.eventName;
-            EventImage.Source = new BitmapImage(ev.eventImage);
+            if (ev.eventImage != null)
+            {
+                EventImage.Source = new BitmapImage(ev.eventImage);
+            }
+            else
+            {
+                //Instead display default image
+                EventImage.Source = new BitmapImage(new Uri("noImage.jpg", UriKind.Relative));
+                
+            }
             Time.Text = To12(ev.startTime) + " - " + To12(ev.endTime);
 
             string sd = ev.startDate.ToString();

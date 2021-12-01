@@ -13,6 +13,7 @@ namespace FlamePlanner
     {
         public static EventObject EricNam = new EventObject()
             .SetEventName("Eric Nam Before We Begin World Tour")
+            .SetImage(new Uri("EricNamEvent.jpg", UriKind.Relative))
             .SetEventDetails("A regular in Korea's music scene, Eric has promoted two mini albums and multiple singles in Korea.\nHe has charted at #1 on several occasions and held shows in the U.A.E., Australia, Canada, Malaysia, Morocco, and the United States.")
             .SetLocation("MacEwan Hall (402 Collegiate Blvd NW, Calgary, AB T2N 1N4)")
             .SetStartDate(new DateTime(2021, 09, 05))

@@ -131,7 +131,10 @@ namespace FlamePlanner
 
         private void expandButton_Click(object sender, RoutedEventArgs e)
         {
+
             //Connect to window display
+            EventPopUpWindow epw = new EventPopUpWindow(mw, this.eventO);
+            epw.ShowDialog();
         }
     }
 }
