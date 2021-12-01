@@ -33,6 +33,12 @@ namespace FlamePlanner
             epw.ShowDialog();
         }
 
+        private void flamesgame_Click(object sender, RoutedEventArgs e)
+        {
+            EventPopUpWindow epw = new EventPopUpWindow(mw, AllEvents.CalgaryFlames);
+            epw.ShowDialog();
+        }
+
         private void map_MouseMove(object sender, MouseEventArgs e)
         {
             if (mouseHeld)

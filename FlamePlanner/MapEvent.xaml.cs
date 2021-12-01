@@ -48,17 +48,13 @@ namespace FlamePlanner
 
         private void InitializeComboBox()
         {
-            ComboBoxItem t1 = new(), t2 = new();
-            t1.Content = t2.Content = "12";
-            startHour.Items.Add(t1);
-            endHour.Items.Add(t2);
-            for (int i = 1; i <= 11; i++)
+            for (int i = 1; i <= 12; i++)
             {
                 ComboBoxItem i1 = new(), i2 = new();
                 if (i < 10)
                     i1.Content = i2.Content = " " + i;
                 else
-                    i1.Content = i2.Content = i;
+                    i1.Content = i2.Content = i + "";
                 startHour.Items.Add(i1);
                 endHour.Items.Add(i2);
             }
@@ -68,14 +64,17 @@ namespace FlamePlanner
                 if (i < 10)
                     i1.Content = i2.Content = "0" + i;
                 else
-                    i1.Content = i2.Content = i;
+                    i1.Content = i2.Content = i + "";
                 startMinute.Items.Add(i1);
                 endMinute.Items.Add(i2);
             }
-            startHour.SelectedIndex = ev.startTime / 100 % 12;
-            endHour.SelectedIndex = ev.endTime / 100 % 12;
+
+            startHour.SelectedIndex = (ev.startTime / 100 - 1) % 12;
+            endHour.SelectedIndex = (ev.endTime / 100 - 1) % 12;
             startMinute.SelectedIndex = ev.startTime % 100;
             endMinute.SelectedIndex = ev.endTime % 100;
+            amPm.SelectedIndex = (ev.startTime / 100 > 11) ? 1 : 0;
+            amPm2.SelectedIndex = (ev.endTime / 100 > 11) ? 1 : 0;
         }
 
         private void okbutton_Click(object sender, RoutedEventArgs e)
@@ -95,6 +94,9 @@ namespace FlamePlanner
                 .SetEndTime(end24);
             if (datePicker.SelectedDate.HasValue)
                 eventObject.SetStartDate(datePicker.SelectedDate.Value);
+            mw.bufferItinerary.eventList.Add(eventObject);
+            Event_left el = new Event_left(mw);
+            (mw.mainFrame.Content as threeFramePage).leftFrame.Content = el;
             DialogResult = true;
             Close();
         }
