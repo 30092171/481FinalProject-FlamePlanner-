@@ -44,7 +44,7 @@ namespace FlamePlanner
                 hour2.Items.Add(cbi2);
             }
 
-            for(int i = 0; i <= 60; i++)
+            for(int i = 0; i <= 59; i++)
             {
                 ComboBoxItem cbi = new ComboBoxItem();
                 cbi.Content = i.ToString("D2");
