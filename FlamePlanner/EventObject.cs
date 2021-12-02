@@ -22,7 +22,7 @@ namespace FlamePlanner
         public int startTime = 0;  //24 hr 1300 = 1:00pm and so on
         public int endTime = 0; //24 hr 900 = 9:00am and so on
         public bool reoccurring = false;
-        public Weekday[] reoccurringdays = new Weekday[0];
+        public DayOfWeek[] reoccurringdays = { DayOfWeek.Monday, DayOfWeek.Wednesday, DayOfWeek.Friday };
 
         public EventFilter filterID = EventFilter.NONE; //0 = no filter, integer used to identify filter criteria in iterinary
         
@@ -130,9 +130,5 @@ namespace FlamePlanner
     public enum EventFilter
     {
         NONE, Family, Concert, Food, Special, Video, Exhibit, Shop, Sport, Theatre
-    }
-    public enum Weekday
-    {
-        Sunday, Monday, Tuesday, Wednesday, Thursday, Friday, Saturday
     }
 }

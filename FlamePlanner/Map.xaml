@@ -10,7 +10,7 @@
     xmlns:System="clr-namespace:System;assembly=System.Runtime">
 
     <Grid x:Name="overGrid" MouseMove="map_MouseMove" MouseDown="map_MouseDown" MouseUp="map_MouseUp" MouseWheel="map_MouseWheel" Background="#FF2D2D30">
-        <Canvas >
+        <Canvas ClipToBounds="True">
             <Grid x:Name="mapGrid" Margin="-150,-150,0,0" RenderTransformOrigin="0.5,0.5">
                 <Grid.RenderTransform>
                     <TransformGroup>

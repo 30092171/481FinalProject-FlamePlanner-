@@ -33,6 +33,7 @@ namespace FlamePlanner
             if(ev.reoccurring)
             {
                 dateRestrictBlock.Text = "Monday, Wednesday, Friday";
+                datePicker.IsEnabled = true;
             } else
             {
                 DateTime restrict = ev.startDate;
@@ -109,7 +110,19 @@ namespace FlamePlanner
             mw.bufferItinerary.eventList.Add(eventObject);
             Event_left el = new Event_left(mw);
             (mw.mainFrame.Content as threeFramePage).leftFrame.Content = el;
-            if (start24 >= ev.startTime && end24 <= ev.endTime && start24 < end24)
+            bool validday = false;
+            if (ev.reoccurring)
+            {
+                foreach(DayOfWeek d in ev.reoccurringdays)
+                {
+                    if (d == datePicker.SelectedDate.Value.DayOfWeek)
+                        validday = true;
+                }
+            } else
+            {
+                validday = true;
+            }
+            if (start24 >= ev.startTime && end24 <= ev.endTime && start24 < end24 && validday)
             {
                 DialogResult = true;
                 Close();
@@ -119,6 +132,7 @@ namespace FlamePlanner
                 if (start24 < ev.startTime) errors += "Start time must be on or after " + To12(ev.startTime) + "\n";
                 if (end24 > ev.endTime) errors += "End time must be on or before " + To12(ev.endTime) + "\n";
                 if (start24 >= end24) errors += "Start time must not be on or after End time.\n";
+                if (!validday) errors += "Date must be on one of the restricted days.\n";
                 errorBlock.Text = errors;
                 errorBlock.Visibility = Visibility.Visible;
             }

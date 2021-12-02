@@ -10,7 +10,7 @@
         <Label Content="Event: " HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" FontSize="24"/>
         <Label x:Name="event_label" Content="&lt;event here&gt;" HorizontalAlignment="Left" Margin="95,10,0,0" VerticalAlignment="Top" FontSize="24" MaxWidth="345"/>
         <Label Content="Date:" HorizontalAlignment="Left" Margin="10,57,0,0" VerticalAlignment="Top" FontSize="24"/>
-        <DatePicker x:Name="datePicker" HorizontalAlignment="Left" Margin="80,57,0,0" VerticalAlignment="Top" Height="42" FontSize="24"/>
+        <DatePicker x:Name="datePicker" HorizontalAlignment="Left" Margin="80,57,0,0" VerticalAlignment="Top" Height="42" FontSize="24" IsEnabled="False"/>
 
         <Button x:Name="button" Content="✓" HorizontalAlignment="Left" Margin="320,0,0,10" VerticalAlignment="Bottom" FontSize="36" Width="120" Click="okbutton_Click"/>
 
@@ -44,7 +44,7 @@
                 <TextBlock x:Name="timeRestrictBlock"  Margin="0,25,0,0" FontSize="20" Foreground="DarkRed">10:00am to 4:00pm</TextBlock>
             </StackPanel>
             <Label Content="Date Restrictions: " FontSize="20"/>
-            <TextBlock x:Name="dateRestrictBlock" FontSize="20" Foreground="DarkRed"><Run Text="Mondays, Wednesdays, Fridays"/></TextBlock>
+            <TextBlock x:Name="dateRestrictBlock" FontSize="20" Foreground="DarkRed" Width="387"><Run Text="Mondays, Wednesdays, Fridays"/></TextBlock>
             <TextBlock x:Name="errorBlock" Text="&lt;error here&gt;" Margin="0,19,0,0" Foreground="Red" FontSize="18" Visibility="Hidden"/>
         </StackPanel>
     </Grid>
