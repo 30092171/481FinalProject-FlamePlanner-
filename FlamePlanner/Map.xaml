@@ -21,7 +21,7 @@
                     </TransformGroup>
                 </Grid.RenderTransform>
                 <Image x:Name="mapImage" Source="Resources/calgary.png" Stretch="None"/>
-                <Image Source="Resources/blue.png"  Width="40" Height="40" Margin="642,403,636,489"/>
+                <Image x:Name="blueDot" Source="Resources/blue.png"  Width="40" Height="40" Margin="642,403,636,489"/>
                 <local:MapEventButton Margin="944,586,0,0" HorizontalAlignment="Left" VerticalAlignment="Top" Text="Stampede" Tag="Special" Source="/Resources/blueMarker.png" Click="stampede_Click"/>
                 <local:MapEventButton Margin="631,27,0,0" HorizontalAlignment="Left" VerticalAlignment="Top" Text="Prince Island Park" Tag="Family"/>
                 <local:MapEventButton Margin="90,658,0,0" HorizontalAlignment="Left" VerticalAlignment="Top" Text="Buckmaster Park" Tag="Family"/>

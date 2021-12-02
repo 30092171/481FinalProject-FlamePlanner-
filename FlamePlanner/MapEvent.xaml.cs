@@ -102,14 +102,7 @@ namespace FlamePlanner
             else if (amPm2.SelectedIndex == 0 && endh == 12) endh = 0;
             int start24 = starth * 100 + startm;
             int end24 = endh * 100 + endm;
-            EventObject eventObject = ev.Copy() // heres the event object
-                .SetStartTime(start24)
-                .SetEndTime(end24);
-            if (datePicker.SelectedDate.HasValue)
-                eventObject.SetStartDate(datePicker.SelectedDate.Value);
-            mw.bufferItinerary.eventList.Add(eventObject);
-            Event_left el = new Event_left(mw);
-            (mw.mainFrame.Content as threeFramePage).leftFrame.Content = el;
+            
             bool validday = false;
             if (ev.reoccurring)
             {
@@ -124,6 +117,14 @@ namespace FlamePlanner
             }
             if (start24 >= ev.startTime && end24 <= ev.endTime && start24 < end24 && validday)
             {
+                EventObject eventObject = ev.Copy() // heres the event object
+                .SetStartTime(start24)
+                .SetEndTime(end24);
+                if (datePicker.SelectedDate.HasValue)
+                    eventObject.SetStartDate(datePicker.SelectedDate.Value);
+                mw.bufferItinerary.eventList.Add(eventObject);
+                Event_left el = new Event_left(mw);
+                (mw.mainFrame.Content as threeFramePage).leftFrame.Content = el;
                 DialogResult = true;
                 Close();
             } else

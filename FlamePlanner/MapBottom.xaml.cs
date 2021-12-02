@@ -63,5 +63,37 @@ namespace FlamePlanner
             threeFramePage tfp = mw.mainFrame.Content as threeFramePage;
             tfp.topRightFrame.Content = new Map(mw);
         }
+
+        private static Thickness stampedeMargin = new Thickness(-938, -638, 0, 0);
+        private static Thickness stampedeDotMargin = new Thickness(983, 645, 295, 247);
+        private static int stampedeScale = 2;
+
+        private static Thickness ecMargin = new Thickness(-188, 380, 0, 0);
+        private static Thickness ecDotMargin = new Thickness(642, 230, 636, 662);
+        private static float ecScale = 2.3f;
+
+        private void eventSearchGoButton_Click(object sender, RoutedEventArgs e)
+        {
+            string evt = eventSearchbox.Text;
+            if (evt.Equals("Stampede"))
+            {
+                threeFramePage tfp = mw.mainFrame.Content as threeFramePage;
+                Map map = new Map(mw);
+                tfp.topRightFrame.Content = map;
+                map.mapGrid.Margin = stampedeMargin;
+                map.blueDot.Margin = stampedeDotMargin;
+                map.mapScale.ScaleX = map.mapScale.ScaleY = stampedeScale;
+                addressSearchbox.Text = "Stampede Grounds";
+            } else if (evt.Equals("Eau Claire"))
+            {
+                threeFramePage tfp = mw.mainFrame.Content as threeFramePage;
+                Map map = new Map(mw);
+                tfp.topRightFrame.Content = map;
+                map.mapGrid.Margin = ecMargin;
+                map.blueDot.Margin = ecDotMargin;
+                map.mapScale.ScaleX = map.mapScale.ScaleY = ecScale;
+                addressSearchbox.Text = "Eau Claire";
+            }
+        }
     }
 }
