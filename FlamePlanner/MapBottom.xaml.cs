@@ -72,6 +72,9 @@ namespace FlamePlanner
         private static Thickness ecDotMargin = new Thickness(642, 230, 636, 662);
         private static float ecScale = 2.3f;
 
+        private static Thickness wtMargin = new Thickness(-350, -40, 0, 0);
+        private static float wtScale = 2;
+
         private void eventSearchGoButton_Click(object sender, RoutedEventArgs e)
         {
             string evt = eventSearchbox.Text;
@@ -81,18 +84,28 @@ namespace FlamePlanner
                 Map map = new Map(mw);
                 tfp.topRightFrame.Content = map;
                 map.mapGrid.Margin = stampedeMargin;
-                map.blueDot.Margin = stampedeDotMargin;
+                //map.blueDot.Margin = stampedeDotMargin;
                 map.mapScale.ScaleX = map.mapScale.ScaleY = stampedeScale;
-                addressSearchbox.Text = "Stampede Grounds";
+                //addressSearchbox.Text = "Stampede Grounds";
             } else if (evt.Equals("Eau Claire"))
             {
                 threeFramePage tfp = mw.mainFrame.Content as threeFramePage;
                 Map map = new Map(mw);
                 tfp.topRightFrame.Content = map;
                 map.mapGrid.Margin = ecMargin;
-                map.blueDot.Margin = ecDotMargin;
+                //map.blueDot.Margin = ecDotMargin;
                 map.mapScale.ScaleX = map.mapScale.ScaleY = ecScale;
-                addressSearchbox.Text = "Eau Claire";
+                //addressSearchbox.Text = "Eau Claire";
+            }else if (evt.Equals("Wine Tasting"))
+            {
+                threeFramePage tfp = mw.mainFrame.Content as threeFramePage;
+                Map map = new Map(mw);
+                tfp.topRightFrame.Content = map;
+                map.mapGrid.Margin = wtMargin;
+
+                //map.blueDot.Margin = ecDotMargin;
+                map.mapScale.ScaleX = map.mapScale.ScaleY = wtScale;
+                //addressSearchbox.Text = "Eau Claire";
             }
         }
     }

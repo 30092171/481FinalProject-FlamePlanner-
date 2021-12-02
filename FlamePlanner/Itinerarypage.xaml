@@ -132,7 +132,7 @@
                 </Image.RenderTransform>
             </Image>
         </Button>
-        <TextBlock x:Name="WeekDisplay" Grid.Row="0" Grid.Column="2" Grid.ColumnSpan="5" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="20" Margin="15,0,15,0" Background="Linen">
+        <TextBlock x:Name="WeekDisplay" Grid.Row="0" Grid.Column="2" Grid.ColumnSpan="5" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="20" Margin="15,0,15,0" Background="LightGoldenrodYellow">
             Date Goes Here
         </TextBlock>
     </Grid>
