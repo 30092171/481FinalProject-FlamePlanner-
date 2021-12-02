@@ -32,11 +32,6 @@ namespace FlamePlanner
 
         }
 
-        private void ComboBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
-        {
-
-        }
-
         private void Date1_SelectedDateChanged(object sender, SelectionChangedEventArgs e)
         {
             if (mw.mainFrame.Content.GetType() == typeof(threeFramePage))
@@ -76,6 +71,30 @@ namespace FlamePlanner
             }
 
            
+        }
+
+        private void FilterButton_Click(object sender, RoutedEventArgs e)
+        {
+            int filterIndex = filterComboBox.SelectedIndex;
+            foreach (EventObject eo in mw.bufferItinerary.eventList)
+            {
+                int eventFilter = (int)eo.filterID;
+                //MessageBox.Show(eo.eventName + eventFilter.ToString());
+
+                if (filterIndex == 0 || filterIndex == eventFilter)
+                {
+                    eo.isVisible = true;
+                }
+                else
+                {
+                    eo.isVisible = false;
+                }
+            }
+
+            threeFramePage tfp = mw.mainFrame.Content as threeFramePage;
+            this.ItinPage = tfp.topRightFrame.Content as Itinerarypage;
+            (tfp.leftFrame.Content as Itinerary_leftpannel).redoCheckboxSelections(); //Resets checks to reflect new visability
+            ItinPage.displayEvents(); //Re displays events on current itinpage
         }
     }
 }

@@ -112,7 +112,7 @@ namespace FlamePlanner
 
             //If not returned by now everything checks out
             EventObject eo = new EventObject(name,description,location,dt,startTime,endTime);
-            //eo.filterID = 0; //Custom events don't have filter criteria and are always displayed
+            eo.filterID = EventFilter.Custom;
             mw.bufferItinerary.eventList.Add(eo);
             this.Close();
         }

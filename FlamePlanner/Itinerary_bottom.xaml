@@ -9,13 +9,28 @@
       Title="Itinerary_bottom">
 
     <Grid Background="#FFE4E0E0">
-        <TextBlock HorizontalAlignment="Left" Padding="0,5,0,0" Margin="20,10,0,0" Text="Filter:" TextWrapping="Wrap" VerticalAlignment="Top" Height="42" Width="132" FontSize="22" RenderTransformOrigin="0.499,0.536"/>
-        <ComboBox HorizontalAlignment="Left" Margin="189,11,0,0" VerticalAlignment="Top" Width="244" Height="42" SelectionChanged="ComboBox_SelectionChanged" SelectedIndex="0" HorizontalContentAlignment="Left" VerticalContentAlignment="Center">
-            <ComboBoxItem Content="NONE"></ComboBoxItem>
-            <ComboBoxItem Content="Filter2"></ComboBoxItem>
-        </ComboBox>
+        <TextBlock HorizontalAlignment="Left" Padding="0,5,0,0" Margin="20,10,0,0" Text="DIsplay Events by Filter:" TextWrapping="Wrap" VerticalAlignment="Top" Height="42" Width="235" FontSize="22" RenderTransformOrigin="0.499,0.536"/>
+        <StackPanel Orientation="Horizontal" Margin="269,10,0,0" VerticalAlignment="Top">
+            <ComboBox x:Name="filterComboBox" HorizontalAlignment="Left"  Width="244" Height="42" SelectedIndex="0" HorizontalContentAlignment="Left" VerticalContentAlignment="Center">
+                <ComboBoxItem Content="All Events at Once"/>
+                <ComboBoxItem Content="Family Events"/>
+                <ComboBoxItem Content="Concerts"/>
+                <ComboBoxItem Content="Food and Drink"/>
+                <ComboBoxItem Content="Special Events"/>
+                <ComboBoxItem Content="Movies and Cinema"/>
+                <ComboBoxItem Content="Museums, Galleries and Exhibitions"/>
+                <ComboBoxItem Content="Shopping and Markets"/>
+                <ComboBoxItem Content="Sports and Recreation"/>
+                <ComboBoxItem Content="Theatre Productions"/>
+                <ComboBoxItem Content="Custom Events Only"/>
+                <!--Family, Concert, Food, Special, Video, Exhibit, Shop, Sport, Theatre-->
+
+            </ComboBox>
+            <Button x:Name="FilterButton" Width="100" Height="30" Margin="20,0,0,0" Click="FilterButton_Click">Display Events</Button>
+        </StackPanel>
+        
         <TextBlock HorizontalAlignment="Left" Margin="20,75,0,0" Text="Date of Week:" TextWrapping="Wrap" VerticalAlignment="Top" Height="34" Width="170" FontSize="22" RenderTransformOrigin="0.499,0.536"/>
-        <DatePicker x:Name="Date1" HorizontalAlignment="Left" Margin="189,75,0,0" VerticalAlignment="Top"  Height="34" Width="122" FontSize="15" SelectedDateChanged="Date1_SelectedDateChanged"/>
+        <DatePicker x:Name="Date1" HorizontalAlignment="Left" Margin="175,78,0,0" VerticalAlignment="Top"  Height="28" Width="122" FontSize="15" SelectedDateChanged="Date1_SelectedDateChanged"/>
 
 
     </Grid>

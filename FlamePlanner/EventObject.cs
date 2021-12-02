@@ -122,6 +122,6 @@ namespace FlamePlanner
     }
     public enum EventFilter
     {
-        NONE, Family, Concert, Food, Special, Video, Exhibit, Shop, Sport, Theatre
+        NONE, Family, Concert, Food, Special, Video, Exhibit, Shop, Sport, Theatre, Custom
     }
 }
