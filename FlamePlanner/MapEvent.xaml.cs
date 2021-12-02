@@ -30,17 +30,25 @@ namespace FlamePlanner
             event_label.Content = ev.eventName;
             datePicker.SelectedDate = ev.startDate;
             timeRestrictBlock.Text = To12(ev.startTime) + " to " + To12(ev.endTime);
-            DateTime restrict = ev.startDate;
-            string days = "";
-            days += (Month)restrict.Month + " " + restrict.Day;
-            dateRestrictBlock.Text = days;
+            if(ev.reoccurring)
+            {
+                dateRestrictBlock.Text = "Monday, Wednesday, Friday";
+                datePicker.IsEnabled = true;
+            } else
+            {
+                DateTime restrict = ev.startDate;
+                string days = "";
+                days += (Month)restrict.Month + " " + restrict.Day;
+                dateRestrictBlock.Text = days;
+            }
+            
         }
 
         private static string To12(int time24)
         {
             int hour = time24 / 100;
             int min = time24 % 100;
-            string ampm = (hour <= 12) ? "AM" : "PM";
+            string ampm = (hour >= 12) ? "PM" : "AM";
             hour %= 12;
             if (hour == 0) hour = 12;
             return string.Format("{0}:{1:D2} {2}", hour, min, ampm);
@@ -68,9 +76,14 @@ namespace FlamePlanner
                 startMinute.Items.Add(i1);
                 endMinute.Items.Add(i2);
             }
-
-            startHour.SelectedIndex = (ev.startTime / 100 - 1) % 12;
-            endHour.SelectedIndex = (ev.endTime / 100 - 1) % 12;
+            int starth = (ev.startTime / 100) - 1;
+            if (starth == -1) starth = 11;
+            if (starth > 11) starth -= 12;
+            startHour.SelectedIndex = starth;
+            int endh = (ev.endTime / 100) - 1;
+            if (endh == -1) endh = 11;
+            if (endh > 11) endh -= 12;
+            endHour.SelectedIndex = endh;
             startMinute.SelectedIndex = ev.startTime % 100;
             endMinute.SelectedIndex = ev.endTime % 100;
             amPm.SelectedIndex = (ev.startTime / 100 > 11) ? 1 : 0;
@@ -97,8 +110,32 @@ namespace FlamePlanner
             mw.bufferItinerary.eventList.Add(eventObject);
             Event_left el = new Event_left(mw);
             (mw.mainFrame.Content as threeFramePage).leftFrame.Content = el;
-            DialogResult = true;
-            Close();
+            bool validday = false;
+            if (ev.reoccurring)
+            {
+                foreach(DayOfWeek d in ev.reoccurringdays)
+                {
+                    if (d == datePicker.SelectedDate.Value.DayOfWeek)
+                        validday = true;
+                }
+            } else
+            {
+                validday = true;
+            }
+            if (start24 >= ev.startTime && end24 <= ev.endTime && start24 < end24 && validday)
+            {
+                DialogResult = true;
+                Close();
+            } else
+            {
+                string errors = "";
+                if (start24 < ev.startTime) errors += "Start time must be on or after " + To12(ev.startTime) + "\n";
+                if (end24 > ev.endTime) errors += "End time must be on or before " + To12(ev.endTime) + "\n";
+                if (start24 >= end24) errors += "Start time must not be on or after End time.\n";
+                if (!validday) errors += "Date must be on one of the restricted days.\n";
+                errorBlock.Text = errors;
+                errorBlock.Visibility = Visibility.Visible;
+            }
         }
     }
     public enum Month

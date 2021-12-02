@@ -28,7 +28,7 @@ namespace FlamePlanner
             .SetStartDate(new DateTime(2021, 7, 3))
             .SetEndDate(new DateTime(2021, 7, 12))
             .SetStartTime(1100)
-            .SetEndTime(0000)
+            .SetEndTime(2359)
             .SetLinks("https://www.calgarystampede.com/")
             .SetFilter(EventFilter.Special);
         public static EventObject Thriller = new EventObject()
@@ -79,6 +79,7 @@ namespace FlamePlanner
             .SetStartDate(new DateTime(2021, 10, 01))
             .SetStartTime(1300)
             .SetEndTime(1700)
+            .SetReoccurring(true)
             .SetLinks("https://www.eventbrite.ca/e/gambero-rosso-top-italian-wines-roadshow-calgary-2021-tickets-191839476037?aff=ebdssbdestsearch&keep_tld=1")
             .SetFilter(EventFilter.Food);
         public static EventObject Cocktail = new EventObject()
@@ -99,6 +100,7 @@ namespace FlamePlanner
             .SetStartDate(new DateTime(2021, 09, 30))
             .SetStartTime(1930)
             .SetEndTime(2200)
+            .SetReoccurring(true)
             .SetLinks("https://www.eventbrite.com/e/cocktail-class-at-the-distillery-dec-edition-tickets-193807071167?aff=ebdssbdestsearch")
             .SetFilter(EventFilter.Food);
         public static EventObject WineU = new EventObject()

@@ -21,6 +21,8 @@ namespace FlamePlanner
         public DateTime endDate = new DateTime(2001, 01, 01);
         public int startTime = 0;  //24 hr 1300 = 1:00pm and so on
         public int endTime = 0; //24 hr 900 = 9:00am and so on
+        public bool reoccurring = false;
+        public DayOfWeek[] reoccurringdays = { DayOfWeek.Monday, DayOfWeek.Wednesday, DayOfWeek.Friday };
 
         public EventFilter filterID = EventFilter.NONE; //0 = no filter, integer used to identify filter criteria in iterinary
         
@@ -95,6 +97,11 @@ namespace FlamePlanner
         public EventObject SetEndTime(int end)
         {
             endTime = end;
+            return this;
+        }
+        public EventObject SetReoccurring(bool set)
+        {
+            reoccurring = set;
             return this;
         }
         public EventObject SetFilter(EventFilter filter)

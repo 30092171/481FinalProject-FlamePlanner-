@@ -39,6 +39,12 @@ namespace FlamePlanner
             epw.ShowDialog();
         }
 
+        private void winetasting_Click(object sender, RoutedEventArgs e)
+        {
+            EventPopUpWindow epw = new EventPopUpWindow(mw, AllEvents.WineTasting);
+            epw.ShowDialog();
+        }
+
         private void map_MouseMove(object sender, MouseEventArgs e)
         {
             if (mouseHeld)
