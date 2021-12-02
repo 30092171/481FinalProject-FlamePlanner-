@@ -100,13 +100,14 @@ namespace FlamePlanner
 
         private void Wine_Tasting_Button_Click(object sender, RoutedEventArgs e)
         {
-            EventObject eventObject = new EventObject();
-            eventObject.eventName = "Wine Tasting Event";
-            eventObject.eventDetails = "Join us for a walk-around showcase of the finest Italian wines in current release. This is Calgary's ultimate industry-only tasting.\n50 Italian wineries will be pouring their unique and delicious wines exclusively for members of the trade and media, with an emphasis on wines that combine affordability and excellence, making them ideal choices for by-the-glass programs in restaurants.";
-            eventObject.eventLocation = "The Hudson (at The Guild) (200 8 Avenue Southwest Calgary, AB T2P 1B5)";
-            eventObject.startDate = new DateTime(2021, 10, 01);
-            eventObject.startTime = 1300;
-            eventObject.endTime = 1700;
+            //EventObject eventObject = new EventObject();
+            //eventObject.eventName = "Wine Tasting Event";
+            //eventObject.eventDetails = "Join us for a walk-around showcase of the finest Italian wines in current release. This is Calgary's ultimate industry-only tasting.\n50 Italian wineries will be pouring their unique and delicious wines exclusively for members of the trade and media, with an emphasis on wines that combine affordability and excellence, making them ideal choices for by-the-glass programs in restaurants.";
+            //eventObject.eventLocation = "The Hudson (at The Guild) (200 8 Avenue Southwest Calgary, AB T2P 1B5)";
+            //eventObject.startDate = new DateTime(2021, 10, 01);
+            //eventObject.startTime = 1300;
+            //eventObject.endTime = 1700;
+            EventObject eventObject = AllEvents.WineTasting;
             mw.bufferItinerary.eventList.Add(eventObject);
 
             if (mw.mainFrame.Content.GetType() == typeof(threeFramePage))
@@ -121,13 +122,14 @@ namespace FlamePlanner
 
         private void Cocktail_Button_Click(object sender, RoutedEventArgs e)
         {
-            EventObject eventObject = new EventObject();
-            eventObject.eventName = "Cocktail Class";
-            eventObject.eventDetails = "A cocktail class that goes above and beyond! Tour the distillery, access premium spirits, drink cocktails and gain life-long skills!\nIf you haven't been to Confluence Distilling, this is the ideal way to experience this inner-city craft distillery. Learn from the 10+ years of our cocktail professionals and be immersed in the whole process from conception of the spirit to the tingle of your taste buds.";
-            eventObject.eventLocation = "Confluence Distilling (507 36 Avenue Southeast Calgary, AB T2G 1W5)";
-            eventObject.startDate = new DateTime(2021, 09, 29);
-            eventObject.startTime = 1700;
-            eventObject.endTime = 2000;
+            //EventObject eventObject = new EventObject();
+            //eventObject.eventName = "Cocktail Class";
+            //eventObject.eventDetails = "A cocktail class that goes above and beyond! Tour the distillery, access premium spirits, drink cocktails and gain life-long skills!\nIf you haven't been to Confluence Distilling, this is the ideal way to experience this inner-city craft distillery. Learn from the 10+ years of our cocktail professionals and be immersed in the whole process from conception of the spirit to the tingle of your taste buds.";
+            //eventObject.eventLocation = "Confluence Distilling (507 36 Avenue Southeast Calgary, AB T2G 1W5)";
+            //eventObject.startDate = new DateTime(2021, 09, 29);
+            //eventObject.startTime = 1700;
+            //eventObject.endTime = 2000;
+            EventObject eventObject = AllEvents.Cocktail;
             mw.bufferItinerary.eventList.Add(eventObject);
 
             if (mw.mainFrame.Content.GetType() == typeof(threeFramePage))
@@ -142,13 +144,14 @@ namespace FlamePlanner
 
         private void Chefs_Table_Dinner_Button_Click(object sender, RoutedEventArgs e)
         {
-            EventObject eventObject = new EventObject();
-            eventObject.eventName = "Chef's Table Dinner";
-            eventObject.eventDetails = "Executive chef Christopher Hyde first Chef's Table Dinner at Lina's Italian Mercato. The only, true Italian dinner in Calgary.\nIt's all about the experience. And at Lina's Italian Mercato, you'll feel like you're having dinner in Italy.\nWhen Chef Hyde starts to cook, magic happens. His dishes and recipes are full of flavor and show what true love for cooking really is.";
-            eventObject.eventLocation = "5108 Elbow Drive Southwest Calgary, AB";
-            eventObject.startDate = new DateTime(2021, 09, 30);
-            eventObject.startTime = 1930;
-            eventObject.endTime = 2200;
+            //EventObject eventObject = new EventObject();
+            //eventObject.eventName = "Chef's Table Dinner";
+            //eventObject.eventDetails = "Executive chef Christopher Hyde first Chef's Table Dinner at Lina's Italian Mercato. The only, true Italian dinner in Calgary.\nIt's all about the experience. And at Lina's Italian Mercato, you'll feel like you're having dinner in Italy.\nWhen Chef Hyde starts to cook, magic happens. His dishes and recipes are full of flavor and show what true love for cooking really is.";
+            //eventObject.eventLocation = "5108 Elbow Drive Southwest Calgary, AB";
+            //eventObject.startDate = new DateTime(2021, 09, 30);
+            //eventObject.startTime = 1930;
+            //eventObject.endTime = 2200;
+            EventObject eventObject = AllEvents.ChefsTableDinner;
             mw.bufferItinerary.eventList.Add(eventObject);
 
             if (mw.mainFrame.Content.GetType() == typeof(threeFramePage))
