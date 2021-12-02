@@ -82,13 +82,14 @@ namespace FlamePlanner
 
         private void Eric_Nam_Button_Click(object sender, RoutedEventArgs e)
         {
-            EventObject eventObject = new EventObject();
-            eventObject.eventName = "Eric Nam Before We Begin World Tour";
-            eventObject.eventDetails = "A regular in Korea's music scene, Eric has promoted two mini albums and multiple singles in Korea.\nHe has charted at #1 on several occasions and held shows in the U.A.E., Australia, Canada, Malaysia, Morocco, and the United States.";
-            eventObject.eventLocation = "MacEwan Hall (402 Collegiate Blvd NW, Calgary, AB T2N 1N4)";
-            eventObject.startDate = new DateTime(2021, 09, 05);
-            eventObject.startTime = 2000;
-            eventObject.endTime = 2300;
+            //EventObject eventObject = new EventObject();
+            //eventObject.eventName = "Eric Nam Before We Begin World Tour";
+            //eventObject.eventDetails = "A regular in Korea's music scene, Eric has promoted two mini albums and multiple singles in Korea.\nHe has charted at #1 on several occasions and held shows in the U.A.E., Australia, Canada, Malaysia, Morocco, and the United States.";
+            //eventObject.eventLocation = "MacEwan Hall (402 Collegiate Blvd NW, Calgary, AB T2N 1N4)";
+            //eventObject.startDate = new DateTime(2021, 09, 05);
+            //eventObject.startTime = 2000;
+            //eventObject.endTime = 2300;
+            EventObject eventObject = AllEvents.EricNam;
             mw.bufferItinerary.eventList.Add(eventObject);
 
             if (mw.mainFrame.Content.GetType() == typeof(threeFramePage))
@@ -103,13 +104,14 @@ namespace FlamePlanner
 
         private void Thriller_Button_Click(object sender, RoutedEventArgs e)
         {
-            EventObject eventObject = new EventObject();
-            eventObject.eventName = "Halloween Thriller";
-            eventObject.eventDetails = "CALGARY'S OFFICIAL HALLOWEEN MEGA PARTY !\n★ CALGARY HALLOWEEN THRILLER 2021 ★\n@ Chakalaka Bar - Sunday October 31st (18+) \nTHE BIGGEST HALLOWEEN PARTY IN CALGARY !\nOFFICIAL MEGA PARTY // SOLD OUT YEARLY\nPRIZES FOR BEST MALE & FEMALE COSTUMES !\nEVERYONE IS WELCOMED ! \n● LIMITED $10.00 TICKETS ARE AVAILABLE\nCLUB ANTHEMS / TOP 40 / HIP HOP / HOUSE / MASHUPS\nProfessional Photographer / Videographer in Attendance\n*** PURCHASE ADVANCE TICKETS FOR GUARANTEED ENTRY ! ***\nPROOF OF VACCINATION NEEDED\n1410 17 AVE SW";
-            eventObject.eventLocation = "Chakalaka (1410 17 Ave SW, Calgary, AB T2T 5S8)";
-            eventObject.startDate = new DateTime(2021, 10, 04);
-            eventObject.startTime = 2100;
-            eventObject.endTime = 2359;
+            //EventObject eventObject = new EventObject();
+            //eventObject.eventName = "Halloween Thriller";
+            //eventObject.eventDetails = "CALGARY'S OFFICIAL HALLOWEEN MEGA PARTY !\n★ CALGARY HALLOWEEN THRILLER 2021 ★\n@ Chakalaka Bar - Sunday October 31st (18+) \nTHE BIGGEST HALLOWEEN PARTY IN CALGARY !\nOFFICIAL MEGA PARTY // SOLD OUT YEARLY\nPRIZES FOR BEST MALE & FEMALE COSTUMES !\nEVERYONE IS WELCOMED ! \n● LIMITED $10.00 TICKETS ARE AVAILABLE\nCLUB ANTHEMS / TOP 40 / HIP HOP / HOUSE / MASHUPS\nProfessional Photographer / Videographer in Attendance\n*** PURCHASE ADVANCE TICKETS FOR GUARANTEED ENTRY ! ***\nPROOF OF VACCINATION NEEDED\n1410 17 AVE SW";
+            //eventObject.eventLocation = "Chakalaka (1410 17 Ave SW, Calgary, AB T2T 5S8)";
+            //eventObject.startDate = new DateTime(2021, 10, 04);
+            //eventObject.startTime = 2100;
+            //eventObject.endTime = 2359;
+            EventObject eventObject = AllEvents.Thriller;
             mw.bufferItinerary.eventList.Add(eventObject);
 
             if (mw.mainFrame.Content.GetType() == typeof(threeFramePage))

@@ -292,6 +292,7 @@ namespace FlamePlanner
                             t.Margin = margin;
 
                             t.FontSize = 15;
+                            t.TextWrapping = TextWrapping.WrapWithOverflow;
 
                             TextBlock t2 = new TextBlock();
                             if (e.startTime < 1300)

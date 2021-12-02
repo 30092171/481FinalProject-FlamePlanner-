@@ -100,13 +100,14 @@ namespace FlamePlanner
 
         private void Glass_Fusion_Button_Click(object sender, RoutedEventArgs e)
         {
-            EventObject eventObject = new EventObject();
-            eventObject.eventName = "Glass Fusion 101";
-            eventObject.eventDetails = "Under the gaze of an expert, guests arrange colourful pieces of glass to be fused into bowls, candy dishes, plaques, or vases.\nTurn bits and strips of specialty glass into twinkling kiln-fired treasures! Nothing beats the sparkle of glass. We’ll show you how to create sparkling glass functional artwork! This art form is positively UNIQUE and comes with guaranteed bragging rights! The results are dazzling, and the fun is addictive!";
-            eventObject.eventLocation = "14 St NW, Calgary, AB T2N 1Z7";
-            eventObject.startDate = new DateTime(2021, 10, 03);
-            eventObject.startTime = 1200;
-            eventObject.endTime = 1400;
+            //EventObject eventObject = new EventObject();
+            //eventObject.eventName = "Glass Fusion 101";
+            //eventObject.eventDetails = "Under the gaze of an expert, guests arrange colourful pieces of glass to be fused into bowls, candy dishes, plaques, or vases.\nTurn bits and strips of specialty glass into twinkling kiln-fired treasures! Nothing beats the sparkle of glass. We’ll show you how to create sparkling glass functional artwork! This art form is positively UNIQUE and comes with guaranteed bragging rights! The results are dazzling, and the fun is addictive!";
+            //eventObject.eventLocation = "14 St NW, Calgary, AB T2N 1Z7";
+            //eventObject.startDate = new DateTime(2021, 10, 03);
+            //eventObject.startTime = 1200;
+            //eventObject.endTime = 1400;
+            EventObject eventObject = AllEvents.GlassFusion;
             mw.bufferItinerary.eventList.Add(eventObject);
 
             if (mw.mainFrame.Content.GetType() == typeof(threeFramePage))
@@ -121,13 +122,14 @@ namespace FlamePlanner
 
         private void Job_Fair_Button_Click(object sender, RoutedEventArgs e)
         {
-            EventObject eventObject = new EventObject();
-            eventObject.eventName = "Startup Job Fair Online";
-            eventObject.eventDetails = "Exploring new job opportunities? Looking to join a high-growth company? Join our Job Fair Online.\nChat with an actual recruiter or hiring manager. This is not an applicant tracking system. We have representatives from companies that are directly hiring.";
-            eventObject.eventLocation = "Online";
-            eventObject.startDate = new DateTime(2021, 09, 20);
-            eventObject.startTime = 1000;
-            eventObject.endTime = 1100;
+            //EventObject eventObject = new EventObject();
+            //eventObject.eventName = "Startup Job Fair Online";
+            //eventObject.eventDetails = "Exploring new job opportunities? Looking to join a high-growth company? Join our Job Fair Online.\nChat with an actual recruiter or hiring manager. This is not an applicant tracking system. We have representatives from companies that are directly hiring.";
+            //eventObject.eventLocation = "Online";
+            //eventObject.startDate = new DateTime(2021, 09, 20);
+            //eventObject.startTime = 1000;
+            //eventObject.endTime = 1100;
+            EventObject eventObject = AllEvents.JobFair;
             mw.bufferItinerary.eventList.Add(eventObject);
 
             if (mw.mainFrame.Content.GetType() == typeof(threeFramePage))
@@ -142,13 +144,14 @@ namespace FlamePlanner
 
         private void Tims_Button_Click(object sender, RoutedEventArgs e)
         {
-            EventObject eventObject = new EventObject();
-            eventObject.eventName = "Tim & The Glory Boys";
-            eventObject.eventDetails = "Been missing Live music? Tim & The Glory Boys bring you a Barn Burnin' Banjo Bash! Don't miss it!\nWith a whole new batch of songs, they are as eager as Canadian beavers to visit your neck o’ the woods. Don’t miss a rare night of live music and fun in your own backyard!";
-            eventObject.eventLocation = "First Alliance Church Calgary (FAC Deerfoot), 12345 40 Street Southeast, Calgary, Canada";
-            eventObject.startDate = new DateTime(2021, 09, 28);
-            eventObject.startTime = 1900;
-            eventObject.endTime = 2130;
+            //EventObject eventObject = new EventObject();
+            //eventObject.eventName = "Tim & The Glory Boys";
+            //eventObject.eventDetails = "Been missing Live music? Tim & The Glory Boys bring you a Barn Burnin' Banjo Bash! Don't miss it!\nWith a whole new batch of songs, they are as eager as Canadian beavers to visit your neck o’ the woods. Don’t miss a rare night of live music and fun in your own backyard!";
+            //eventObject.eventLocation = "First Alliance Church Calgary (FAC Deerfoot), 12345 40 Street Southeast, Calgary, Canada";
+            //eventObject.startDate = new DateTime(2021, 09, 28);
+            //eventObject.startTime = 1900;
+            //eventObject.endTime = 2130;
+            EventObject eventObject = AllEvents.TimAndTheGloryBoys;
             mw.bufferItinerary.eventList.Add(eventObject);
 
             if (mw.mainFrame.Content.GetType() == typeof(threeFramePage))
