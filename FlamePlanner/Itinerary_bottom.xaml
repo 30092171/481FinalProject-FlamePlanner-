@@ -26,7 +26,7 @@
                 <!--Family, Concert, Food, Special, Video, Exhibit, Shop, Sport, Theatre-->
 
             </ComboBox>
-            <Button x:Name="FilterButton" Width="100" Height="30" Margin="20,0,0,0" Click="FilterButton_Click">Display Events</Button>
+            <Button x:Name="FilterButton" Width="130" Height="30" Margin="20,0,0,0" Click="FilterButton_Click">Change Visible Events</Button>
         </StackPanel>
         
         <TextBlock HorizontalAlignment="Left" Margin="20,75,0,0" Text="Date of Week:" TextWrapping="Wrap" VerticalAlignment="Top" Height="34" Width="170" FontSize="22" RenderTransformOrigin="0.499,0.536"/>

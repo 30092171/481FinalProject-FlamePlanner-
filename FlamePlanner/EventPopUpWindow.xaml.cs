@@ -94,6 +94,7 @@ namespace FlamePlanner
             {
                 // Booking code here
                 BookedLabel.Text = "YES";
+                AddButton.Visibility = Visibility.Hidden;
             }
         }
     }
