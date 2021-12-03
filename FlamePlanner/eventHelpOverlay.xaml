@@ -79,8 +79,8 @@
         <Border  VerticalAlignment="Top" Margin="242,207,775,0" BorderBrush="Transparent" BorderThickness="3" >
             <TextBlock x:Name="leftDescription" TextWrapping="Wrap" Height="340"  Background="White" TextAlignment="Left" FontSize="15" Visibility="Hidden">
             To the left you will see Itinary controls and a single day initinary view.<LineBreak/> <LineBreak/>
-            The Create, Load, and Save buttons on the top relate to the <LineBreak/>
-            creation/storage operations on itineraries within your account. <LineBreak/>
+            The Clear, Load, and Save buttons on the top relate to the <LineBreak/>
+            clearing/storage operations on itineraries within your account. <LineBreak/>
             <Italic>Note that to save/load an itinerary you must be logged in.</Italic> <LineBreak/> <LineBreak/>
             Underneath the Itinerary Buttons is simply a single-day view of your currently selected itinerary.<LineBreak/>
             The very bottom displays your username or current logged in status.

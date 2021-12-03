@@ -38,12 +38,12 @@
 
             <StackPanel Grid.Row="0" Orientation="Vertical" HorizontalAlignment="Center" VerticalAlignment="Center">
                 <StackPanel Orientation="Horizontal">
-                    <Button x:Name="createNewItineraryButton" Width="140" Height="40" Click="createNewItineraryButton_Click">CLEAR ITINERARY</Button>
-                    <Button x:Name="loadItineraryButton" Width="140" Height="40" Click="loadItineraryButton_Click">
-                        <TextBlock TextWrapping="Wrap" TextAlignment="Center">LOAD A DIFFERENT ITINERARY</TextBlock>
+                    <Button x:Name="createNewItineraryButton" Width="140" Height="40" Click="createNewItineraryButton_Click" Background="NavajoWhite">CLEAR ITINERARY</Button>
+                    <Button x:Name="loadItineraryButton" Width="140" Height="40" Click="loadItineraryButton_Click" Background="LightSkyBlue">
+                        <TextBlock TextWrapping="Wrap" TextAlignment="Center">LOAD ITINERARY</TextBlock>
                     </Button>
                 </StackPanel>
-                <Button x:Name="saveButton" Height="40" Click="saveButton_Click">SAVE ITINERARY</Button>
+                <Button x:Name="saveButton" Height="40" Click="saveButton_Click" Background="PaleGreen">SAVE ITINERARY</Button>
 
             </StackPanel>
 

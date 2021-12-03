@@ -62,6 +62,7 @@ namespace FlamePlanner
             //change view
             threeFramePage tfp = mw.mainFrame.Content as threeFramePage;
             tfp.topRightFrame.Content = new Map(mw);
+            addressSearchbox.Text = "9 Ave SW";
         }
 
         private static Thickness stampedeMargin = new Thickness(-938, -638, 0, 0);

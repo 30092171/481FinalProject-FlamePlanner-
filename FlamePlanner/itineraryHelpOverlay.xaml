@@ -52,7 +52,7 @@
             Each time row indicates the start of the label going until the next label, so if 10:00am is highlighted it means the event spans from 10:00am-11:00am.<LineBreak/>
             The arrows above and below the times allow you to switch between time frames.<LineBreak/>
             The arrows above the grid, pointing left and right, allow you to cycle between weekly date ranges.<LineBreak/>
-            The + at the bottom right allows you to add a custom event to the itinerary.
+            The custom event button at the bottom right allows you to add a custom event to the itinerary.
             </TextBlock>
         </Border>
 
@@ -79,8 +79,8 @@
         <Border  VerticalAlignment="Top" Margin="220,249,499,0" BorderBrush="Transparent" BorderThickness="3" >
             <TextBlock x:Name="leftDetails" TextWrapping="Wrap" Height="328"  Background="White" TextAlignment="Left" FontSize="15" Visibility="Hidden">
             To the left you will see Itinary controls and which events are currently loaded in your itinerary.<LineBreak/> <LineBreak/>
-            The Create, Load, and Save buttons on the top relate to the <LineBreak/>
-            creation/storage operations on itineraries within your account. <LineBreak/>
+            The Clear, Load, and Save buttons on the top relate to the <LineBreak/>
+            clearing/storage operations on itineraries within your account. <LineBreak/>
             <Italic>Note that to save/load an itinerary you must be logged in.</Italic> <LineBreak/> <LineBreak/>
             Underneath the Save Button is all of the events you have added to your itinerary.<LineBreak/>
             You can toggle which events are disoplayed by clicking the checkbox on the left of the event.<LineBreak/>
