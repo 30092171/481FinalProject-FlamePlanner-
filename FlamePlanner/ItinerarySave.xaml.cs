@@ -110,17 +110,17 @@ namespace FlamePlanner
 
         private void errorMessage1_Click(object sender, RoutedEventArgs e)
         {
-            MessageBox.Show("Itinerary name cannot be blank", "My App", MessageBoxButton.OK);
+            MessageBox.Show("Itinerary name cannot be blank", "Name Required", MessageBoxButton.OK);
         }
 
         private void errorMessage2_Click(object sender, RoutedEventArgs e)
         {
-            MessageBox.Show("Confirm if you want to re-write into this itinerary", "My App", MessageBoxButton.YesNo);
+            MessageBox.Show("Confirm if you want to re-write into this itinerary", "Overwrite Confirm", MessageBoxButton.YesNo);
         }
 
         private void errorMessage3_Click(object sender, RoutedEventArgs e)
         {
-            MessageBox.Show("Re-enter itinerary name", "My App", MessageBoxButton.YesNo);
+            MessageBox.Show("Re-enter itinerary name", "Re-enter Name", MessageBoxButton.YesNo);
         }
 
 

@@ -118,22 +118,22 @@ namespace FlamePlanner
 
         private void errorMessage1_Click(object sender, RoutedEventArgs e)
         {
-            MessageBox.Show("Wrong confirmed password, signup Unsuccesful!", "My App", MessageBoxButton.OK);
+            MessageBox.Show("Wrong confirmed password, signup Unsuccesful!", "Password Does Not Match", MessageBoxButton.OK);
         }
 
         private void errorMessage2_Click(object sender, RoutedEventArgs e)
         {
-            MessageBox.Show("User already exists, signup Unsuccesful!", "My App", MessageBoxButton.OK);
+            MessageBox.Show("User already exists, signup Unsuccesful!", "User Already Exists", MessageBoxButton.OK);
         }
 
         private void errorMessage3_Click(object sender, RoutedEventArgs e)
         {
-            MessageBox.Show("You have not entered a username, signup Unsuccesful!", "My App", MessageBoxButton.OK);
+            MessageBox.Show("You have not entered a username, signup Unsuccesful!", "No Username Entered", MessageBoxButton.OK);
         }
 
         private void errorMessage4_Click(object sender, RoutedEventArgs e)
         {
-            MessageBox.Show("You have not entered a password or confirmed password, signup Unsuccesful!", "My App", MessageBoxButton.OK);
+            MessageBox.Show("You have not entered a password or confirmed password, signup Unsuccesful!", "No Password Entered", MessageBoxButton.OK);
         }
 
     }

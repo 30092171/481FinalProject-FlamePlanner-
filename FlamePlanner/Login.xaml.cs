@@ -113,21 +113,21 @@ namespace FlamePlanner
 
         private void errorMessage1_Click(object sender, RoutedEventArgs e)
         {
-            MessageBox.Show("Incorrect password, log In Unsuccesful!", "My App", MessageBoxButton.OK);
+            MessageBox.Show("Incorrect password, log In Unsuccesful!", "Incorrect Password", MessageBoxButton.OK);
         }
 
         private void errorMessage2_Click(object sender, RoutedEventArgs e)
         {
-            MessageBox.Show("User does not exist, log In Unsuccesful!", "My App", MessageBoxButton.OK);
+            MessageBox.Show("User does not exist, log In Unsuccesful!", "User Not Found", MessageBoxButton.OK);
         }
         private void errorMessage3_Click(object sender, RoutedEventArgs e)
         {
-            MessageBox.Show("You have not entered a username, log In Unsuccesful!", "My App", MessageBoxButton.OK);
+            MessageBox.Show("You have not entered a username, log In Unsuccesful!", "No Username Entered", MessageBoxButton.OK);
         }
 
         private void errorMessage4_Click(object sender, RoutedEventArgs e)
         {
-            MessageBox.Show("You have not entered a password, log In Unsuccesful!", "My App", MessageBoxButton.OK);
+            MessageBox.Show("You have not entered a password, log In Unsuccesful!", "No Password Entered", MessageBoxButton.OK);
         }
 
 
