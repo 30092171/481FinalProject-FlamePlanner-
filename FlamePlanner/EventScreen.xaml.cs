@@ -123,5 +123,26 @@ namespace FlamePlanner
                 }
             }
         }
+
+        private void stampedePlus_Click(object sender, RoutedEventArgs e)
+        {
+            EventObject eventObject = AllEvents.Stampede;
+            mw.bufferItinerary.eventList.Add(eventObject);
+
+            if (mw.mainFrame.Content.GetType() == typeof(threeFramePage))
+            {
+                if ((mw.mainFrame.Content as threeFramePage).leftFrame.Content.GetType() == typeof(Event_left))
+                {
+                    Event_left el = new Event_left(mw); //This reloads the single day itinerary off the new buffer
+                    (mw.mainFrame.Content as threeFramePage).leftFrame.Content = el;
+                }
+            }
+        }
+
+        private void stampedeExpand_Click(object sender, RoutedEventArgs e)
+        {
+            EventPopUpWindow epw = new EventPopUpWindow(mw, AllEvents.Stampede);
+            epw.ShowDialog();
+        }
     }
 }

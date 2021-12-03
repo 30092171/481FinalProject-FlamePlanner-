@@ -5,10 +5,10 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:FlamePlanner"
         mc:Ignorable="d"
-        Title="Event" Height="312" Width="862">
+        Title="Event" Height="312" Width="1000">
     <Grid>
         <Label Content="Event: " HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" FontSize="24"/>
-        <Label x:Name="event_label" Content="&lt;event here&gt;" HorizontalAlignment="Left" Margin="95,10,0,0" VerticalAlignment="Top" FontSize="24" MaxWidth="345"/>
+        <Label x:Name="event_label" Content="&lt;event here&gt;" HorizontalAlignment="Left" Margin="95,10,0,0" VerticalAlignment="Top" FontSize="24" MaxWidth="500"/>
         <Label Content="Date:" HorizontalAlignment="Left" Margin="10,57,0,0" VerticalAlignment="Top" FontSize="24"/>
         <DatePicker x:Name="datePicker" HorizontalAlignment="Left" Margin="80,57,0,0" VerticalAlignment="Top" Height="42" FontSize="24" IsEnabled="False"/>
 
