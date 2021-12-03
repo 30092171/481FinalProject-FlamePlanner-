@@ -58,7 +58,7 @@
         <Button HorizontalAlignment="Left" Margin="935,403,0,0" VerticalAlignment="Top" Background="White" Click="Chefs_Table_Dinner_Event_Display_Button_Click" Tag="12">
             <Image HorizontalAlignment="Center" Height="20" VerticalAlignment="Top" Width="20" Source="/right-arrow (1).png"/>
         </Button>
-        <Button HorizontalAlignment="Left" Margin="675,405,0,0" VerticalAlignment="Top" Height="22" Width="22" Background="White" Click="Chefs_Table_Dinner_Button_Click">
+        <Button HorizontalAlignment="Left" Margin="675,405,0,0" VerticalAlignment="Top" Height="22" Width="22" Background="White" Click="Chefs_Table_Dinner_Button_Click" Visibility="Hidden">
             <Image HorizontalAlignment="Center" Height="20" VerticalAlignment="Center" Width="20" Source="/plus sign.jpg"/>
         </Button>
         <Button HorizontalAlignment="Left" Margin="937,196,0,0" VerticalAlignment="Top" Background="White" Width="24" Click="Event_Display_Button_Click" Tag="9">
@@ -70,7 +70,7 @@
         <Button HorizontalAlignment="Left" Margin="622,196,0,0" VerticalAlignment="Top" Background="White" Width="24" Click="Wine_Tasting_Event_Display_Button_Click" Tag="8">
             <Image HorizontalAlignment="Center" Height="20" VerticalAlignment="Top" Width="20" Source="/right-arrow (1).png" Stretch="Fill"/>
         </Button>
-        <Button HorizontalAlignment="Left" Margin="324,198,0,0" VerticalAlignment="Top" Height="22" Width="22" Background="White" Click="Wine_Tasting_Button_Click">
+        <Button HorizontalAlignment="Left" Margin="324,198,0,0" VerticalAlignment="Top" Height="22" Width="22" Background="White" Click="Wine_Tasting_Button_Click" Visibility="Hidden">
             <Image HorizontalAlignment="Center" Height="20" VerticalAlignment="Center" Width="20" Source="/plus sign.jpg" Stretch="Fill"/>
         </Button>
 

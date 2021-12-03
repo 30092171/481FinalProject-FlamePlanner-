@@ -316,6 +316,10 @@ namespace FlamePlanner
                 
                 if(e.isVisible == true)
                 {
+                    if(e.startTime >= e.endTime)
+                    {
+                        continue; //prevents crashing
+                    }
                     
                     int week = getDateWeekFromDate(e.startDate);
                     if (week == dateWeek)

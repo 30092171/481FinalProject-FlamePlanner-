@@ -38,7 +38,7 @@ namespace FlamePlanner
             .SetLocation("Chakalaka (1410 17 Ave SW, Calgary, AB T2T 5S8)")
             .SetStartDate(new DateTime(2021, 10, 01))
             .SetStartTime(2100)
-            .SetEndTime(200)
+            .SetEndTime(2359)
             .SetLinks("https://www.eventbrite.ca/e/calgary-halloween-thriller-2021-sun-oct-31-official-mega-party-tickets-177438101137")
             .SetFilter(EventFilter.Special);
         public static EventObject CalgaryFlames = new EventObject()

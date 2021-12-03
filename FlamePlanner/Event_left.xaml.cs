@@ -233,6 +233,11 @@ namespace FlamePlanner
 
                 if (e.isVisible == true)
                 {
+                    if (e.startTime >= e.endTime)
+                    {
+                        continue; //prevents crashing
+                    }
+
                     if (e.startDate.Day == currentDate.Day)
                     {
                         Boolean crossOver = false;
