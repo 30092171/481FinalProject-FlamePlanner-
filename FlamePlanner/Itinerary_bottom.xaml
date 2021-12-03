@@ -16,12 +16,12 @@
                 <ComboBoxItem Content="Family Events"/>
                 <ComboBoxItem Content="Concerts"/>
                 <ComboBoxItem Content="Food and Drink"/>
-                <ComboBoxItem Content="Special Events"/>
-                <ComboBoxItem Content="Movies and Cinema"/>
+                <ComboBoxItem Content="Festivals and Special Events"/>
+                <ComboBoxItem Content="Film and Video"/>
                 <ComboBoxItem Content="Museums, Galleries and Exhibitions"/>
                 <ComboBoxItem Content="Shopping and Markets"/>
                 <ComboBoxItem Content="Sports and Recreation"/>
-                <ComboBoxItem Content="Theatre Productions"/>
+                <ComboBoxItem Content="Theatre, Comedy and Performing Arts"/>
                 <ComboBoxItem Content="Custom Events Only"/>
                 <!--Family, Concert, Food, Special, Video, Exhibit, Shop, Sport, Theatre-->
 

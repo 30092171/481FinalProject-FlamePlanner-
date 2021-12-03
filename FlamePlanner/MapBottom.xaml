@@ -9,8 +9,8 @@
         <Label x:Name="label" Content="Filter:" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" FontSize="24"/>
         <ComboBox x:Name="comboBox" HorizontalAlignment="Left" Margin="77,10,0,0" VerticalAlignment="Top" Width="318" Height="42" SelectedIndex="0" VerticalContentAlignment="Center" SelectionChanged="comboBox_SelectionChanged">
             <TextBlock Text="NONE" TextWrapping="Wrap"/>
-            <TextBlock Text="Family" TextWrapping="Wrap"/>
-            <TextBlock Text="Concert" TextWrapping="Wrap"/>
+            <TextBlock Text="Family Events" TextWrapping="Wrap"/>
+            <TextBlock Text="Concerts" TextWrapping="Wrap"/>
             <TextBlock Text="Food and Drink" TextWrapping="Wrap"/>
             <TextBlock Text="Festivals and Special Events" TextWrapping="Wrap"/>
             <TextBlock Text="Film and Video" TextWrapping="Wrap"/>
