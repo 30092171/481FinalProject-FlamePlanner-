@@ -80,7 +80,7 @@ namespace FlamePlanner
             epw.ShowDialog();
         }
 
-        private void Eric_Nam_Button_Click(object sender, RoutedEventArgs e)
+        private void Eric_Nam_Button_Click(object sender, RoutedEventArgs ea)
         {
             //EventObject eventObject = new EventObject();
             //eventObject.eventName = "Eric Nam Before We Begin World Tour";
@@ -90,6 +90,16 @@ namespace FlamePlanner
             //eventObject.startTime = 2000;
             //eventObject.endTime = 2300;
             EventObject eventObject = AllEvents.EricNam;
+
+
+            foreach (EventObject e in mw.bufferItinerary.eventList)
+            {
+                if (e.eventName == eventObject.eventName && e.eventDetails == eventObject.eventDetails && e.eventLocation == eventObject.eventLocation && e.filterID == eventObject.filterID)
+                {
+                    return;
+                }
+            }
+
             mw.bufferItinerary.eventList.Add(eventObject);
 
             if (mw.mainFrame.Content.GetType() == typeof(threeFramePage))
@@ -102,7 +112,7 @@ namespace FlamePlanner
             }
         }
 
-        private void Thriller_Button_Click(object sender, RoutedEventArgs e)
+        private void Thriller_Button_Click(object sender, RoutedEventArgs ea)
         {
             //EventObject eventObject = new EventObject();
             //eventObject.eventName = "Halloween Thriller";
@@ -112,6 +122,15 @@ namespace FlamePlanner
             //eventObject.startTime = 2100;
             //eventObject.endTime = 2359;
             EventObject eventObject = AllEvents.Thriller;
+
+            foreach (EventObject e in mw.bufferItinerary.eventList)
+            {
+                if (e.eventName == eventObject.eventName && e.eventDetails == eventObject.eventDetails && e.eventLocation == eventObject.eventLocation && e.filterID == eventObject.filterID)
+                {
+                    return;
+                }
+            }
+
             mw.bufferItinerary.eventList.Add(eventObject);
 
             if (mw.mainFrame.Content.GetType() == typeof(threeFramePage))
@@ -124,9 +143,18 @@ namespace FlamePlanner
             }
         }
 
-        private void stampedePlus_Click(object sender, RoutedEventArgs e)
+        private void stampedePlus_Click(object sender, RoutedEventArgs ea)
         {
             EventObject eventObject = AllEvents.Stampede;
+
+            foreach (EventObject e in mw.bufferItinerary.eventList)
+            {
+                if (e.eventName == eventObject.eventName && e.eventDetails == eventObject.eventDetails && e.eventLocation == eventObject.eventLocation && e.filterID == eventObject.filterID)
+                {
+                    return;
+                }
+            }
+
             mw.bufferItinerary.eventList.Add(eventObject);
 
             if (mw.mainFrame.Content.GetType() == typeof(threeFramePage))

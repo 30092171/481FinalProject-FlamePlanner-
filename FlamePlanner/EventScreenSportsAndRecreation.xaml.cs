@@ -111,7 +111,7 @@ namespace FlamePlanner
             epw.ShowDialog();
         }
 
-        private void Calgary_Flames_Button_Click(object sender, RoutedEventArgs e)
+        private void Calgary_Flames_Button_Click(object sender, RoutedEventArgs ea)
         {
             //EventObject eventObject = new EventObject();
             //eventObject.eventName = "Calgary Flames Game";
@@ -121,6 +121,15 @@ namespace FlamePlanner
             //eventObject.startTime = 1900;
             //eventObject.endTime = 2200;
             EventObject eventObject = AllEvents.CalgaryFlames;
+
+            foreach (EventObject e in mw.bufferItinerary.eventList)
+            {
+                if (e.eventName == eventObject.eventName && e.eventDetails == eventObject.eventDetails && e.eventLocation == eventObject.eventLocation && e.filterID == eventObject.filterID)
+                {
+                    return;
+                }
+            }
+
             mw.bufferItinerary.eventList.Add(eventObject);
 
             if (mw.mainFrame.Content.GetType() == typeof(threeFramePage))
@@ -133,7 +142,7 @@ namespace FlamePlanner
             }
         }
 
-        private void Boxing_Button_Click(object sender, RoutedEventArgs e)
+        private void Boxing_Button_Click(object sender, RoutedEventArgs ea)
         {
             //EventObject eventObject = new EventObject();
             //eventObject.eventName = "Boxing Bootcamp";
@@ -143,6 +152,15 @@ namespace FlamePlanner
             //eventObject.startTime = 1330;
             //eventObject.endTime = 1430;
             EventObject eventObject = AllEvents.Boxing;
+
+            foreach (EventObject e in mw.bufferItinerary.eventList)
+            {
+                if (e.eventName == eventObject.eventName && e.eventDetails == eventObject.eventDetails && e.eventLocation == eventObject.eventLocation && e.filterID == eventObject.filterID)
+                {
+                    return;
+                }
+            }
+
             mw.bufferItinerary.eventList.Add(eventObject);
 
             if (mw.mainFrame.Content.GetType() == typeof(threeFramePage))
@@ -155,7 +173,7 @@ namespace FlamePlanner
             }
         }
 
-        private void Yonex_Button_Click(object sender, RoutedEventArgs e)
+        private void Yonex_Button_Click(object sender, RoutedEventArgs ea)
         {
             //EventObject eventObject = new EventObject();
             //eventObject.eventName = "Yonex Canada Open";
@@ -165,6 +183,15 @@ namespace FlamePlanner
             //eventObject.startTime = 1630;
             //eventObject.endTime = 1830;
             EventObject eventObject = AllEvents.Yonex;
+
+            foreach (EventObject e in mw.bufferItinerary.eventList)
+            {
+                if (e.eventName == eventObject.eventName && e.eventDetails == eventObject.eventDetails && e.eventLocation == eventObject.eventLocation && e.filterID == eventObject.filterID)
+                {
+                    return;
+                }
+            }
+
             mw.bufferItinerary.eventList.Add(eventObject);
 
             if (mw.mainFrame.Content.GetType() == typeof(threeFramePage))
@@ -177,7 +204,7 @@ namespace FlamePlanner
             }
         }
 
-        private void Soccer_Button_Click(object sender, RoutedEventArgs e)
+        private void Soccer_Button_Click(object sender, RoutedEventArgs ea)
         {
             //EventObject eventObject = new EventObject();
             //eventObject.eventName = "CAVS vs PACIFIC";
@@ -187,6 +214,16 @@ namespace FlamePlanner
             //eventObject.startTime = 1100;
             //eventObject.endTime = 1530;
             EventObject eventObject = AllEvents.Soccer;
+
+            foreach (EventObject e in mw.bufferItinerary.eventList)
+            {
+                if (e.eventName == eventObject.eventName && e.eventDetails == eventObject.eventDetails && e.eventLocation == eventObject.eventLocation && e.filterID == eventObject.filterID)
+                {
+                    return;
+                }
+            }
+
+
             mw.bufferItinerary.eventList.Add(eventObject);
 
             if (mw.mainFrame.Content.GetType() == typeof(threeFramePage))

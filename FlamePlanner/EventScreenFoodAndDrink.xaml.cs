@@ -98,7 +98,7 @@ namespace FlamePlanner
             epw.ShowDialog();
         }
 
-        private void Wine_Tasting_Button_Click(object sender, RoutedEventArgs e)
+        private void Wine_Tasting_Button_Click(object sender, RoutedEventArgs ea)
         {
             //EventObject eventObject = new EventObject();
             //eventObject.eventName = "Wine Tasting Event";
@@ -108,6 +108,15 @@ namespace FlamePlanner
             //eventObject.startTime = 1300;
             //eventObject.endTime = 1700;
             EventObject eventObject = AllEvents.WineTasting;
+
+            foreach (EventObject e in mw.bufferItinerary.eventList)
+            {
+                if (e.eventName == eventObject.eventName && e.eventDetails == eventObject.eventDetails && e.eventLocation == eventObject.eventLocation && e.filterID == eventObject.filterID)
+                {
+                    return;
+                }
+            }
+
             mw.bufferItinerary.eventList.Add(eventObject);
 
             if (mw.mainFrame.Content.GetType() == typeof(threeFramePage))
@@ -120,7 +129,7 @@ namespace FlamePlanner
             }
         }
 
-        private void Cocktail_Button_Click(object sender, RoutedEventArgs e)
+        private void Cocktail_Button_Click(object sender, RoutedEventArgs ea)
         {
             //EventObject eventObject = new EventObject();
             //eventObject.eventName = "Cocktail Class";
@@ -130,6 +139,16 @@ namespace FlamePlanner
             //eventObject.startTime = 1700;
             //eventObject.endTime = 2000;
             EventObject eventObject = AllEvents.Cocktail;
+
+
+            foreach (EventObject e in mw.bufferItinerary.eventList)
+            {
+                if (e.eventName == eventObject.eventName && e.eventDetails == eventObject.eventDetails && e.eventLocation == eventObject.eventLocation && e.filterID == eventObject.filterID)
+                {
+                    return;
+                }
+            }
+
             mw.bufferItinerary.eventList.Add(eventObject);
 
             if (mw.mainFrame.Content.GetType() == typeof(threeFramePage))
@@ -142,7 +161,7 @@ namespace FlamePlanner
             }
         }
 
-        private void Chefs_Table_Dinner_Button_Click(object sender, RoutedEventArgs e)
+        private void Chefs_Table_Dinner_Button_Click(object sender, RoutedEventArgs ea)
         {
             //EventObject eventObject = new EventObject();
             //eventObject.eventName = "Chef's Table Dinner";
@@ -152,6 +171,15 @@ namespace FlamePlanner
             //eventObject.startTime = 1930;
             //eventObject.endTime = 2200;
             EventObject eventObject = AllEvents.ChefsTableDinner;
+
+            foreach (EventObject e in mw.bufferItinerary.eventList)
+            {
+                if (e.eventName == eventObject.eventName && e.eventDetails == eventObject.eventDetails && e.eventLocation == eventObject.eventLocation && e.filterID == eventObject.filterID)
+                {
+                    return;
+                }
+            }
+
             mw.bufferItinerary.eventList.Add(eventObject);
 
             if (mw.mainFrame.Content.GetType() == typeof(threeFramePage))

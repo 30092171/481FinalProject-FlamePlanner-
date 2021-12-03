@@ -98,7 +98,7 @@ namespace FlamePlanner
             epw.ShowDialog();
         }
 
-        private void Glass_Fusion_Button_Click(object sender, RoutedEventArgs e)
+        private void Glass_Fusion_Button_Click(object sender, RoutedEventArgs ea)
         {
             //EventObject eventObject = new EventObject();
             //eventObject.eventName = "Glass Fusion 101";
@@ -108,6 +108,15 @@ namespace FlamePlanner
             //eventObject.startTime = 1200;
             //eventObject.endTime = 1400;
             EventObject eventObject = AllEvents.GlassFusion;
+
+            foreach (EventObject e in mw.bufferItinerary.eventList)
+            {
+                if (e.eventName == eventObject.eventName && e.eventDetails == eventObject.eventDetails && e.eventLocation == eventObject.eventLocation && e.filterID == eventObject.filterID)
+                {
+                    return;
+                }
+            }
+
             mw.bufferItinerary.eventList.Add(eventObject);
 
             if (mw.mainFrame.Content.GetType() == typeof(threeFramePage))
@@ -120,7 +129,7 @@ namespace FlamePlanner
             }
         }
 
-        private void Job_Fair_Button_Click(object sender, RoutedEventArgs e)
+        private void Job_Fair_Button_Click(object sender, RoutedEventArgs ea)
         {
             //EventObject eventObject = new EventObject();
             //eventObject.eventName = "Startup Job Fair Online";
@@ -130,6 +139,15 @@ namespace FlamePlanner
             //eventObject.startTime = 1000;
             //eventObject.endTime = 1100;
             EventObject eventObject = AllEvents.JobFair;
+
+            foreach (EventObject e in mw.bufferItinerary.eventList)
+            {
+                if (e.eventName == eventObject.eventName && e.eventDetails == eventObject.eventDetails && e.eventLocation == eventObject.eventLocation && e.filterID == eventObject.filterID)
+                {
+                    return;
+                }
+            }
+
             mw.bufferItinerary.eventList.Add(eventObject);
 
             if (mw.mainFrame.Content.GetType() == typeof(threeFramePage))
@@ -142,7 +160,7 @@ namespace FlamePlanner
             }
         }
 
-        private void Tims_Button_Click(object sender, RoutedEventArgs e)
+        private void Tims_Button_Click(object sender, RoutedEventArgs ea)
         {
             //EventObject eventObject = new EventObject();
             //eventObject.eventName = "Tim & The Glory Boys";
@@ -152,6 +170,16 @@ namespace FlamePlanner
             //eventObject.startTime = 1900;
             //eventObject.endTime = 2130;
             EventObject eventObject = AllEvents.TimAndTheGloryBoys;
+
+            foreach (EventObject e in mw.bufferItinerary.eventList)
+            {
+                if (e.eventName == eventObject.eventName && e.eventDetails == eventObject.eventDetails && e.eventLocation == eventObject.eventLocation && e.filterID == eventObject.filterID)
+                {
+                    return;
+                }
+            }
+
+
             mw.bufferItinerary.eventList.Add(eventObject);
 
             if (mw.mainFrame.Content.GetType() == typeof(threeFramePage))

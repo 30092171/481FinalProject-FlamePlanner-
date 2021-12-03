@@ -27,7 +27,7 @@ namespace FlamePlanner
             InitializeComponent();
         }
 
-        private void Button_Click(object sender, RoutedEventArgs e)
+        private void Button_Click(object sender, RoutedEventArgs ea)
         {
             //EventObject eventObject = new EventObject();
             //eventObject.eventName = "Calgary Flames Game";
@@ -37,6 +37,15 @@ namespace FlamePlanner
             //eventObject.startTime = 1900;
             //eventObject.endTime = 2200;
             EventObject eventObject = AllEvents.CalgaryFlames;
+
+            foreach (EventObject e in mw.bufferItinerary.eventList)
+            {
+                if (e.eventName == eventObject.eventName && e.eventDetails == eventObject.eventDetails && e.eventLocation == eventObject.eventLocation && e.filterID == eventObject.filterID)
+                {
+                    return;
+                }
+            }
+
             mw.bufferItinerary.eventList.Add(eventObject);
 
             if (mw.mainFrame.Content.GetType() == typeof(threeFramePage))

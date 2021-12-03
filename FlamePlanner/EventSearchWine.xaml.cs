@@ -83,7 +83,7 @@ namespace FlamePlanner
             epw.ShowDialog();
         }
 
-        private void Wine_Tasting_Button_Click(object sender, RoutedEventArgs e)
+        private void Wine_Tasting_Button_Click(object sender, RoutedEventArgs ea)
         {
             //EventObject eventObject = new EventObject();
             //eventObject.eventName = "Wine Tasting Event";
@@ -93,6 +93,15 @@ namespace FlamePlanner
             //eventObject.startTime = 1300;
             //eventObject.endTime = 1700;
             EventObject eventObject = AllEvents.WineTasting;
+
+            foreach (EventObject e in mw.bufferItinerary.eventList)
+            {
+                if (e.eventName == eventObject.eventName && e.eventDetails == eventObject.eventDetails && e.eventLocation == eventObject.eventLocation && e.filterID == eventObject.filterID)
+                {
+                    return;
+                }
+            }
+
             mw.bufferItinerary.eventList.Add(eventObject);
 
             if (mw.mainFrame.Content.GetType() == typeof(threeFramePage))
@@ -105,7 +114,7 @@ namespace FlamePlanner
             }
         }
 
-        private void WineU_Button_Click(object sender, RoutedEventArgs e)
+        private void WineU_Button_Click(object sender, RoutedEventArgs ea)
         {
             //EventObject eventObject = new EventObject();
             //eventObject.eventName = "Wine U: Premium Wines!";
@@ -115,6 +124,16 @@ namespace FlamePlanner
             //eventObject.startTime = 1830;
             //eventObject.endTime = 2030;
             EventObject eventObject = AllEvents.WineU;
+
+            foreach (EventObject e in mw.bufferItinerary.eventList)
+            {
+                if (e.eventName == eventObject.eventName && e.eventDetails == eventObject.eventDetails && e.eventLocation == eventObject.eventLocation && e.filterID == eventObject.filterID)
+                {
+                    return;
+                }
+            }
+
+
             mw.bufferItinerary.eventList.Add(eventObject);
 
             if (mw.mainFrame.Content.GetType() == typeof(threeFramePage))
