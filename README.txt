@@ -14,7 +14,7 @@ Compilation:
 	Click the Start FlamePlanner button in the top of the screen once the project is loaded
 
 Dependency issue:
-	Should you have an issue with the "MaterialDesignColors" dependency unzip the submitted zip file "MaterialDesignColors.zip"
+	Should you have an issue with the "MaterialDesignColors" dependency unzip the submitted zip file "materialdesigncolors.zip"
 	into the dirrectory C:\Users\%user%\.nuget\packages\
 	You might have to create the '.nuget' and 'packages' folders.
 
