@@ -1,8 +1,6 @@
-# 481FinalProject-FlamePlanner-
-flame planner project
-
 CPSC 481 Final Project Fall 2021
 University of Calgary
+
 Group 20:
 	Nick Zhao  	(30092171)
 	Austin Shawaga  (30086103)
