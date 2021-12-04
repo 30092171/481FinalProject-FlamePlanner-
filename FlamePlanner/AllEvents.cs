@@ -76,7 +76,7 @@ namespace FlamePlanner
             .SetImage(new Uri("WineTastingEvent.jpg", UriKind.Relative))
             .SetEventDetails("Join us for a walk-around showcase of the finest Italian wines in current release. This is Calgary's ultimate industry-only tasting.\n50 Italian wineries will be pouring their unique and delicious wines exclusively for members of the trade and media, with an emphasis on wines that combine affordability and excellence, making them ideal choices for by-the-glass programs in restaurants.")
             .SetLocation("The Hudson (at The Guild) (200 8 Avenue Southwest Calgary, AB T2P 1B5)")
-            .SetStartDate(new DateTime(2021, 10, 01))
+            .SetStartDate(new DateTime(2021, 09, 06))
             .SetStartTime(1300)
             .SetEndTime(1700)
             .SetReoccurring(true)
