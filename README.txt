@@ -22,6 +22,8 @@ Dependency issue:
 Code Limitations
 
 These are what fields can be entered for each screen.
+Everything must be inputted directly as typed/specified below (case sensitive).
+
 	Map Screen:
 		Location Search: When 'go' is clicked, automatically goes to smaller, more detailed map (9 Ave SW)
 		Event Search:
@@ -55,7 +57,7 @@ Things it can't do:
 	Schedule Event over two or more days (this must be done by creating two seperate events)
 	Itinerary only acts over 4 weeks Sep 5 until Oct 2. Assume the current date is Sep 5 2021.
 	If you schedule an event outside of the date range, you will not see the event displayed intuitvely.
-	Can't load itinerary from main screen due to the project not requiring persistant accounts across compilations
+	Can't load itinerary from start screen due to the project not requiring persistant accounts across compilations
 	If you click on an event/map icon that is not populated simply nothing will happen.
 
 No fatal errors are known at this time, nothing you do should crash the system.
