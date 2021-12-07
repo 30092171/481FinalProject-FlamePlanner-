@@ -57,6 +57,9 @@ Things it can't do:
 	Schedule Event over two or more days (this must be done by creating two seperate events)
 	Itinerary only acts over 4 weeks Sep 5 until Oct 2. Assume the current date is Sep 5 2021.
 	If you schedule an event outside of the date range, you will not see the event displayed intuitvely.
+	Any two events which occur within the same hour number are considered conflicting. 
+		So ending at 7:15 conflicts with starting at 7:30, the event must start at 8.
+		This is due to the way our system displays events.
 	Can't load itinerary from start screen due to the project not requiring persistant accounts across compilations
 	If you click on an event/map icon that is not populated simply nothing will happen.
 
