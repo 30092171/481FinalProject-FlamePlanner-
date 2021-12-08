@@ -2,11 +2,11 @@ CPSC 481 Final Project Fall 2021
 University of Calgary
 
 Group 20:
-	Nick Zhao  	(30092171)
-	Austin Shawaga  (30086103)
-	Jason Nguyen	(30085909)
-	Abhay Sharma	(30095410)
-	Xingyu Zhu	(30095123)
+	Nick Zhao  		(30092171)
+	Austin Shawaga  	(30086103)
+	Jason Nguyen		(30085909)
+	Abhay Sharma		(30095410)
+	Xingyu (Steven) Zhu	(30095123)
 
 
 Compilation:
@@ -54,7 +54,7 @@ List of Clickable Events
 	Tim & The Glory Boys
 
 Things it can't do:
-	Schedule Event over two or more days (this must be done by creating two seperate events)
+	Schedule events over two or more days (this must be done by creating two seperate events)
 	Itinerary only acts over 4 weeks Sep 5 until Oct 2. Assume the current date is Sep 5 2021.
 	If you schedule an event outside of the date range, you will not see the event displayed intuitvely.
 	Any two events which occur within the same hour number are considered conflicting. 
